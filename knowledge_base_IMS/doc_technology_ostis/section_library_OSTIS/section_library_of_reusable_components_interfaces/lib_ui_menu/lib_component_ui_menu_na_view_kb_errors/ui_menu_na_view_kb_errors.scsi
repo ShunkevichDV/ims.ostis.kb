@@ -1,0 +1,9 @@
+ui_menu_na_view_kb_base	<- ui_user_command_class_noatom;;
+
+ui_menu_na_view_kb_base	=> nrel_main_idtf: [Команды поиска ошибок] (* <- lang_ru;; *);;
+ui_menu_na_view_kb_base => nrel_main_idtf: [Commands for errors searching] (* <- lang_en;; *);;
+
+ui_menu_na_view_kb_base <= nrel_ui_commands_decomposition:
+{
+	ui_menu_view_errors
+};;
