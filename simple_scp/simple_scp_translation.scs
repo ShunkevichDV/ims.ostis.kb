@@ -1,0 +1,18 @@
+nrel_simple_scp_translation
+<- sc_node_norole_relation;
+=> nrel_main_idtf: 
+  [трансляция SimpleSCP*]
+  (*
+  <- lang_ru;;
+  *);
+<- rrel_sc_key_element: ... (*
+  <- sc_explanation;;
+  <= sc_text_translation: ... (*
+    -> rrel_example: [Отношение, которому принадлежат кортежи вида <a, b>, где a - текст SimpleSCP-программы, b - узел, принадлежащий множеству SCP-программ];;
+  *);;
+*);
+=> nrel_second_domain:
+  scp_program;
+=> nrel_first_domain:
+  simple_scp_program
+;;
