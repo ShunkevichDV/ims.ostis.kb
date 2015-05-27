@@ -1,0 +1,216 @@
+oscar_award
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[премия Оскар]
+	(* <- lang_ru;;	*);
+	[Oscar award]
+	(* <- lang_en;;	*);;
+
+oscar_award_type
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[тип премии оскар]
+	(* <- lang_ru;;	*);
+	[Oscar award type*]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[тип премии оскар]
+	(* <- lang_ru;;	*);;
+
+oscar_award_base_type
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[основная премия Оскар]
+	(* <- lang_ru;;	*);
+	[base Oscar award]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[основная премия Оскар]
+	(* <- lang_ru;;	*);;
+
+oscar_award_special_type
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[специальная премия Оскар]
+	(* <- lang_ru;;	*);
+	[concatenative paradigm]
+	(* <- lang_en;;	*);
+=> nrel_idtf:
+	[специальная премия Оскар]
+	(* <- lang_ru;;	*);;
+
+/**********   -----------------   Категории премий Оскар(виды)   -------------------   ***********/
+
+oscar_award_best_picture
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best picture]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_director
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best director]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_actor_in_a_leading_role
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best actor in a leading role]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_actress_in_a_leading_role
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best actress in a leading role]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_actor_in_a_supporting_role
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best actor in a supporting role]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_actress_in_a_supporting_role
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best actress in a supporting role]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_original_screenplay
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best original screenplay]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_adapted_screenplay
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best adapted screenplay]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_animated_feature
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best animated feature]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_original_score
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best original score]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_original_song
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best original song]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_foreign_language_film
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best foreign language film]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_art_direction
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best art direction]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_cinematography
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best cinematography]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_sound_mixing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best sound mixing]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_animated_short_film
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best animated short film]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_live_action_short_film
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best live action short film]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_film_editing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best film editing]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_visual_effects
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best visual effects]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_documentary_feature
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best documentary film]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_documentary_short_subject
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best documentary short film]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_costume_design
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best costume design]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_sound_editing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best sound editing]
+	(* <- lang_en;;	*);;
+
+oscar_award_best_makeup
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[best makeup]
+	(* <- lang_en;;	*);;
+
+oscar_award_honorary_oscar
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[honourable oscar]
+	(* <- lang_en;;	*);;
+
+oscar_award_scientific_and_technical
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[php]
+	(* <- lang_en;;	*);;
+
+oscar_award_gordon_e_sawyer
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[award by name ]
+	(* <- lang_en;;	*);;
+
+oscar_award_jean_hersholt_humanitarian_award
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[award by name ]
+	(* <- lang_en;;	*);;
+
+oscar_award_irving_g_thalberg_memorial_award
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[award by name ]
+	(* <- lang_en;;	*);;
