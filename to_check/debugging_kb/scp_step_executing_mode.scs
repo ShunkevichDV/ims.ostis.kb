@@ -1,0 +1,22 @@
+sc_node_not_relation -> scp_step_executing_mode;;
+
+scp_step_executing_mode => nrel_main_idtf:
+	[пошаговое выполнение]			(* <- lang_ru;; *);
+	[step by step executing] 		(* <- lang_en;; *);;
+
+scp_step_executing_mode <- rrel_key_sc_element: 
+        ...
+	(*
+	<- sc_definition;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[ пошаговое выполнение - scp-программа, 
+			выполняемая пошагово, с остановкой после выполнения каждого оператора]
+				(* <- lang_ru;; *);
+			[ step by step executing - scp-program with breakpoints executing 
+			step by step, with pauses after executing every scp-operator]
+				(* <- lang_en;; *);;
+		*);;
+	*);;

@@ -1,0 +1,24 @@
+sc_node_not_relation -> scp_paused_operator;;
+
+scp_paused_operator => nrel_main_idtf:
+	[приостановленный scp-оператор] 	(* <- lang_ru;; *);
+	[paused scp-operator] 		(* <- lang_en;; *);;
+
+
+
+scp_paused_operator <- rrel_key_sc_element: 
+        ...
+	(*
+	<- sc_definition;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[ приостановленный scp-оператор - scp-оператор, 
+			выполнение которого приостановлено]
+				(* <- lang_ru;; *);
+			[ paused scp-operator - scp-operator execution 
+			is suspended]
+				(* <- lang_en;; *);;
+		*);;
+	*);;
