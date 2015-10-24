@@ -1,0 +1,27 @@
+sc_node_not_relation -> scp_debug_mode;;
+
+scp_debug_mode => nrel_main_idtf:
+	[режим отладки]		(* <- lang_ru;; *);
+	[debugging mode] 	(* <- lang_en;; *);;
+
+scp_debug_mode <- rrel_key_sc_element: 
+        ...
+	(*
+	<- sc_definition;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[ режим отладки - scp-программа, 
+			выполняемая в режиме отладки]
+				(* <- lang_ru;; *);
+			[ debugging mode - scp-program executing 
+			in debugging mode]
+				(* <- lang_en;; *);;
+		*);;
+	*);;
+
+scp_debug_mode => nrel_inclusion:
+	scp_breakpoint_executing_mode;
+	scp_step_executing_mode;;
+

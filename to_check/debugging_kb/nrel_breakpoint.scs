@@ -1,0 +1,22 @@
+sc_node_norole_relation -> nrel_breakpoints;;
+
+
+nrel_breakpoints => nrel_main_idtf:
+	[точки останова*]	(* <- lang_ru;; *);
+	[breakpoints*]		(* <- lang_en;; *);;
+
+
+nrel_breakpoints <- sc_relation;;
+
+nrel_breakpoints <- binary_relation;;
+
+nrel_breakpoints <- oriented_relation;;
+
+
+nrel_breakpoints => nrel_first_domain: 
+	scp_program;;
+	
+
+nrel_breakpoints => nrel_second_domain:
+	scp_operator;;
+	
