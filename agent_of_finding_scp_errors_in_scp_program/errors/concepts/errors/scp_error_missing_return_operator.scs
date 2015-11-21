@@ -1,0 +1,30 @@
+scp_error_missing_return_operator
+<- scp_error;
+<- scp_syntax_error;
+<- scp_error_on_operator_set_level;
+=> nrel_scp_error_program: 
+  proc_of_finding_scp_error_missing_return_operator;
+=> nrel_main_idtf:
+  [Оператор return отсутствует] (*
+    <- lang_ru;;
+  *);
+<- rrel_sc_key_element: ... (*
+  <- sc_explanation;;
+  <= nrel_sc_text_translation: ... (*
+    -> rrel_example: [В конце программы требуется return оператор как однозначное условие завершения программы.];;
+  *);;
+*);
+-> rrel_example: [*
+  scp_program -> ..proc_example (*
+    -> rrel_operators: ... (*
+      -> rrel_init: ..operator1 (*
+        <- printNl;;
+        -> rrel_1: rrel_fixed: rrel_scp_const: hello_ostis;;
+      *);;
+    *);;
+  *);;  
+*] (*
+  <= nrel_sc_text_translation: ... (*
+    -> rrel_example: [В программе отсутствует оператор return];;
+  *);;
+*);;

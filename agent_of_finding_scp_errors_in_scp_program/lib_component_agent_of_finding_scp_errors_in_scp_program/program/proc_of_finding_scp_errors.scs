@@ -1,0 +1,35 @@
+scp_program -> proc_of_finding_scp_errors (*
+    -> rrel_params: ... (*
+        -> rrel_1: rrel_in: _scp_program;;
+        -> rrel_2: rrel_in: _answer;;
+    *);;
+    -> rrel_operators: ... (*
+        ->rrel_init: ..operator29251 (*
+            <- call;;
+            -> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_scp_errors_in_scp_program;;
+            -> rrel_2: ... (*
+                -> rrel_1: rrel_fixed: rrel_scp_var: _scp_program;;
+            *);;
+            -> rrel_3: rrel_assign: rrel_scp_var: _argument20909;;
+            => nrel_goto: ..operator33090;;
+        *);;
+        ->..operator33090 (*
+            <- waitReturn;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _argument20909;;
+            => nrel_goto: ..operator49865;;
+        *);;
+        ->..operator49865 (*
+            <- sys_search;;
+            -> rrel_1: rrel_fixed: rrel_scp_const: finding_scp_errors_pattern;;
+            -> rrel_2: rrel_scp_var: rrel_assign: _results;;
+            -> rrel_3: rrel_fixed: rrel_scp_const: finding_scp_errors_params;;
+            -> rrel_4: rrel_fixed: rrel_scp_var: _answer;;
+            => nrel_goto: ..operator37188;;
+        *);;
+        ->..operator37188 (*
+            <- return;;
+        *);;
+    *);;
+*);;
+finding_scp_errors_pattern = [*   _target_scp_program _=> nrel_scp_error:: _construction;;   _error_class _-> _construction;; *];; 
+  finding_scp_errors_params -> ... (*     -> rrel_1: rrel_fixed: rrel_scp_const: _target_scp_program;;     -> rrel_2: rrel_fixed: rrel_scp_var: _scp_program;;   *);;

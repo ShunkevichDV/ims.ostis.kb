@@ -1,0 +1,4 @@
+scp_error_missing_return_operator_pattern = [*
+  _target_operator_set _-> _operator;;
+  return _-> _operator;;
+*];;

@@ -1,0 +1,8 @@
+scp_error_call_is_not_finished_pattern = [*
+  _target_operator _-> rrel_3:: _process;;
+  _some_operator _-> rrel_1:: _process;;
+  waitReturn _-> _some_operator;;
+  _operator_set _-> _target_operator;;
+  _operator_set _-> _some_operator;;
+*];;
+

@@ -1,0 +1,32 @@
+scp_error
+=> nrel_main_idtf:
+  [ошибка в SCP программе] (*
+    <- lang_ru;;
+  *);
+<- rrel_sc_key_element: ... (*
+  <- sc_explanation;;
+  <= sc_text_translation: ... (*
+    -> rrel_example: [Вид некорректности в SCP-программе, при наличии которой ее выполнение становится невозможным];;
+  *);;
+*);
+<= nrel_subdividing:
+{
+  scp_canonical_error;
+  scp_non_canonical_error
+};
+<= nrel_subdividing:
+{
+  scp_syntax_error;
+  scp_semantic_error;
+  scp_logical_error
+}
+;
+<= nrel_subdividing:
+{
+  scp_error_on_scp_program_level;
+  scp_error_on_operator_set_level;
+  scp_error_on_operator_level;
+  scp_error_on_operand_level
+}
+;;
+

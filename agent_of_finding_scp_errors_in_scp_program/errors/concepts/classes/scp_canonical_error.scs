@@ -1,0 +1,11 @@
+scp_canonical_error
+=> nrel_main_idtf:
+  [Типичная ошибка в SCP программе] (*
+    <- lang_ru;;
+  *);
+<- rrel_sc_key_element: ... (*
+  <- sc_explanation;;
+  <= sc_text_translation: ... (*
+    -> rrel_example: [Вид ошибки в SCP-программе, для поиска которого необходимо нахождение в программе одного из шаблонов ошибки];;
+  *);;
+*);;

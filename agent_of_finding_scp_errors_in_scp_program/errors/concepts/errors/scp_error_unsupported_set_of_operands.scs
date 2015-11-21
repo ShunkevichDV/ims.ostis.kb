@@ -1,0 +1,39 @@
+scp_error_unsupported_set_of_operands
+<- scp_error;
+<- scp_syntax_error;
+//<- scp_error_on_operator_level;
+=> nrel_scp_error_program:
+  proc_of_finding_scp_error_unsupported_set_of_operands;
+=> nrel_main_idtf:
+  [Временно не поддерживаемая комбинация операндов в операторе] (*
+    <- lang_ru;;
+  *);
+<- rrel_sc_key_element: ... (*
+  <- sc_explanation;;
+  <= nrel_sc_text_translation: ... (*
+    -> rrel_example: [На данный момент невозможно использование некоторых комбинаций операндов для операторов. Например, пока что нельзя вызвать оператор searchELStr5 с 2-ым и 4-ым fixed-операндами ];;
+  *);;
+*);
+-> rrel_example: [*
+  scp_program -> ..proc_example (*
+    -> rrel_operators: ... (*
+      -> rrel_init: ..operator1 (*
+        <- searchElStr5;;
+        -> rrel_1: rrel_fixed: rrel_scp_const: ...;;
+        -> rrel_2: rrel_fixed: rrel_scp_const: ...;;
+        -> rrel_3: rrel_assign: rrel_scp_var: _...;;
+        -> rrel_4: rrel_fixed: rrel_scp_const: ...;;
+        -> rrel_5: rrel_assign: rrel_scp_var: _...;;
+        => nrel_goto: ..operator_return;;
+      *);;
+      -> ..operator_return (*
+        <- return;;
+      *);;
+    *);;
+  *);;  
+
+*] (*
+  <= nrel_sc_text_translation: ... (*
+    -> rrel_example: [К сожалению, пока что невозможно найти пятиэлементную конструкцию по известным первому, второму и четветому операндам];;
+  *);;
+*);;

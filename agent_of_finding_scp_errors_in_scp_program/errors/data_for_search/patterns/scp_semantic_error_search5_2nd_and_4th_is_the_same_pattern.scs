@@ -1,0 +1,21 @@
+//Error if one of these blocks is included
+/*scp_error_search5_2nd_and_4th_is_the_same_pattern = [*
+  scp_program _-> _target_scp_program (*
+    _-> rrel_operators:: .._operators (*
+      _-> .._operator (*
+        _<- .._operator_type;;
+        _-> rrel_2:: .._variable2;;
+        _-> rrel_4:: .._variable2;;
+      *);;
+    *);;
+  *);;
+*];;
+*/
+scp_error_search5_2nd_and_4th_is_the_same_pattern = [*
+  _target_scp_program _-> .._operators (*
+    _-> .._operator (*
+      _-> rrel_2:: .._variable;;
+      _-> rrel_4:: .._variable;;
+    *);;
+  *);;
+*];;

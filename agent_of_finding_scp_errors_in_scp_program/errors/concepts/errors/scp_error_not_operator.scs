@@ -1,0 +1,27 @@
+scp_error_not_operator
+<- scp_error;
+<- scp_syntax_error;
+<- scp_error_on_operator_level;
+=> nrel_scp_error_program: 
+  proc_of_finding_scp_error_not_operator;
+=> nrel_main_idtf:
+  [Узел не является scp-оператором] (*
+    <- lang_ru;;
+  *);
+<- rrel_sc_key_element: ... (*
+  <- sc_explanation;;
+  <= nrel_sc_text_translation: ... (*
+    -> rrel_example: [Узел не принадлежит ни одному из классов операторов программы];;
+  *);;
+*);
+-> rrel_example: [*
+  scp_program -> ..proc_example (*
+    -> rrel_operators: ... (*
+      -> rrel_init: ..operator1;;
+    *);;
+  *);;  
+*];;/* (*
+  <= nrel_sc_text_translation: ... (*
+    -> rrel_example: [Узел, принадлежащий множеству операторов программы, не принадлежит ни одному из классов операторов программы];;
+  *);;
+*);;*/

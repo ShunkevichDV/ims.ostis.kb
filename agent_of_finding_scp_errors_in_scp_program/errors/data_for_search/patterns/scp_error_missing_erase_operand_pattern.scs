@@ -1,0 +1,5 @@
+scp_error_missing_erase_operand_pattern = [*
+  scp_operator_of_sc_structure_deleting _<= nrel_subdividing:: _subdividing;;
+  _subdividing _-> _class;;
+  _class _-> _target_operator;;
+*];;

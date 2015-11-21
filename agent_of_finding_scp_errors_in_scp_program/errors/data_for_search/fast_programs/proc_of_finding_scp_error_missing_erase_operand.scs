@@ -1,0 +1,48 @@
+scp_program -> proc_of_finding_scp_error_missing_erase_operand (*
+    -> rrel_params: ... (*
+        -> rrel_1: rrel_in: _operator;;
+        -> rrel_2: rrel_out: _subconstruction;;
+    *);;
+    -> rrel_operators: ... (*
+        ->rrel_init: ..operator52073 (*
+            <- sys_search;;
+            -> rrel_1: rrel_fixed: rrel_scp_const: scp_error_missing_erase_operand_pattern;;
+            -> rrel_2: rrel_scp_var: rrel_assign: _results;;
+            -> rrel_3: rrel_fixed: rrel_scp_const: scp_error_missing_erase_operand_params;;
+            -> rrel_4: rrel_scp_var: rrel_assign: _all_elements;;
+            => nrel_goto: ..operator14131;;
+        *);;
+        ->..operator14131 (*
+            <- ifVarAssign;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _results;;
+            => nrel_then: ..operator57824;;
+            => nrel_else: ..operator46994;;
+        *);;
+        ->..operator57824 (*
+            <- searchElStr5;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _operator;;
+            -> rrel_2: rrel_scp_var: rrel_assign: _tmp_arc1;;
+            -> rrel_3: rrel_scp_var: rrel_assign: _operand;;
+            -> rrel_4: rrel_scp_var: rrel_assign: _tmp_arc2;;
+            -> rrel_5: rrel_fixed: rrel_scp_const: rrel_erase;;
+            => nrel_else: ..operator48598;;
+            => nrel_then: ..operator46994;;
+        *);;
+        ->..operator48598 (*
+            <- genEl;;
+            -> rrel_1: rrel_scp_var: rrel_assign: rrel_node: rrel_const: _subconstruction;;
+            => nrel_goto: ..operator12200;;
+        *);;
+        ->..operator12200 (*
+            <- genElStr3;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _subconstruction;;
+            -> rrel_2: rrel_scp_var: rrel_assign: rrel_pos_const_perm: _arc;;
+            -> rrel_3: rrel_fixed: rrel_scp_var: _operator;;
+            => nrel_goto: ..operator46994;;
+        *);;
+        ->..operator46994 (*
+            <- return;;
+        *);;
+    *);;
+*);;
+scp_error_missing_erase_operand_params -> ... (*   -> rrel_1: rrel_scp_const: rrel_fixed: _target_operator;;   -> rrel_2: rrel_scp_var: rrel_fixed: _operator;; *);;

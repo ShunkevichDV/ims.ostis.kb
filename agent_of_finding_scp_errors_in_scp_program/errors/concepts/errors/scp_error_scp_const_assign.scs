@@ -1,0 +1,34 @@
+scp_error_scp_const_assign
+<- scp_error_on_operand_level;
+<- scp_syntax_error;
+<- scp_canonical_error;
+=> nrel_scp_error_program: 
+  proc_of_finding_scp_error_scp_const_assign;
+=> nrel_main_idtf:
+  [Константа помечена как assign] (*
+    <- lang_ru;;
+  *);
+<- rrel_sc_key_element: ... (*
+  <- sc_explanation;;
+  <= nrel_sc_text_translation: ... (*
+    -> rrel_example: [В операторе один и тот же узел не может быть помечен атрибутами rrel_assign и rrel_scp_const];;
+  *);;
+*);
+-> rrel_example: [*
+  scp_program -> ..proc_example (*
+    -> rrel_operators: ... (*
+      -> rrel_init: ..operator1 (*
+        <- printNl;;
+        -> rrel_1: rrel_assign: rrel_scp_const: hello_ostis;;
+        => nrel_goto: ..operator_return;;
+      *);;
+      -> ..operator_return (*
+        <- return;;
+      *);;
+    *);;
+  *);;  
+*] (*
+  <= nrel_sc_text_translation: ... (*
+    -> rrel_example: [Первый операнд в операторе 1 одновременно помечен атрибутами rrel_scp_const и rrel_assign];;
+  *);;
+*);;

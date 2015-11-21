@@ -1,0 +1,9 @@
+scp_error_operand_without_a_number_pattern_element = [*
+  _rrel_number _-> _target_operand_arc;;
+  order_role_relation _-> _rrel_number;;
+*];;
+
+scp_error_operand_without_a_number_pattern_set = [*
+  _rrel_set_number _-> _target_operand_arc;;
+  rrel_set _=> nrel_inclusion:: _rrel_set_number;;
+*];;

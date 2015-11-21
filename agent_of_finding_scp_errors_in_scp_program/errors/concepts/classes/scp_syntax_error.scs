@@ -1,0 +1,12 @@
+scp_syntax_error
+=> nrel_main_idtf:
+  [Синтаксическая ошибка в SCP-программе] (*
+    <- lang_ru;;
+  *);
+<- rrel_sc_key_element: ... (*
+  <- sc_explanation;;
+  <= sc_text_translation: ... (*
+    -> rrel_example: [Множество подмножеств элементов sc-конструкций, из-за наличия или отсутствия которых sc-конструкция не может принадлежать языку SCP];;
+  *);;
+*);;
+

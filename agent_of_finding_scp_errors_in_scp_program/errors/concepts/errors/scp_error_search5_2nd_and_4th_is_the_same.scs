@@ -1,0 +1,38 @@
+scp_error_search5_2nd_and_4th_is_the_same
+<- scp_error;
+<- scp_canonical_error;
+<- scp_error_on_operator_level;
+=> nrel_scp_error_program: 
+  proc_of_finding_scp_error_search5_2nd_and_4th_is_the_same;
+=> nrel_main_idtf:
+  [В операторе search5 совпадают 2 и 4 -ый операнды] (*
+    <- lang_ru;;
+  *);
+<- rrel_sc_key_element: ... (*
+  <- sc_explanation;;
+  <= nrel_sc_text_translation: ... (*
+    -> rrel_example: [В операторе поиска пятиэлементной конструкции второй и четвертый операнды не должны совпадать];;
+  *);;
+*);
+-> rrel_example: [*
+  scp_program -> ..proc_example (*
+    -> rrel_operators: ... (*
+      -> rrel_init: ..operator1 (*
+        <- searchElStr5;;
+        -> rrel_1: rrel_fixed: rrel_scp_const: ...;;
+        -> rrel_2: rrel_assign: rrel_scp_var: _variable;;
+        -> rrel_3: rrel_fixed: rrel_scp_const: ...;;
+        -> rrel_4: rrel_assign: rrel_scp_var: _variable;;
+        -> rrel_5: rrel_fixed: rrel_scp_const: ...;;
+        => nrel_goto: ..operator_return;;
+      *);;
+      -> ..operator_return (*
+        <- return;;
+      *);;
+    *);;
+  *);;  
+*] (*
+  <= nrel_sc_text_translation: ... (*
+    -> rrel_example: [В операторе 1 операнды 2 и 4 совпадают];;
+  *);;
+*);;

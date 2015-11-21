@@ -1,0 +1,12 @@
+scp_error_fixed_set_pattern = [*
+  _target_operator _=> _rrel_n:: rrel_fixed:: _operand;;
+  _target_operator _=> _rrel_set_n:: _operand_set;;
+  _rrel_n _=> order_relations_and_order_set_relations:: _rrel_set_n;;
+*];;
+
+
+rrel_1 -> order_relations_and_order_set_relations: rrel_set_1;;
+rrel_2 -> order_relations_and_order_set_relations: rrel_set_2;;
+rrel_3 -> order_relations_and_order_set_relations: rrel_set_3;;
+rrel_4 -> order_relations_and_order_set_relations: rrel_set_4;;
+rrel_5 -> order_relations_and_order_set_relations: rrel_set_5;;
