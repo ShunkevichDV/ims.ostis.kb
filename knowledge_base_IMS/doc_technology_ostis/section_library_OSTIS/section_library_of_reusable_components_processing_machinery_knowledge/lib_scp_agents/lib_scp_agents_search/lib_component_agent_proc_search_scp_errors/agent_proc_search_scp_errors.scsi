@@ -18,14 +18,16 @@ scp_program -> agent_proc_search_scp_errors (*
 -> rrel_1: rrel_assign: rrel_scp_var: .._tmp;;
 -> rrel_2: rrel_fixed: rrel_scp_var: .._input_arc;;
 -> rrel_3: rrel_assign: rrel_scp_var: .._quest;;
-=> nrel_goto: ..operator24097;;
+=> nrel_then: ..operator24097;;
+=> nrel_else: ..operator37086;;
 *);;
 -> ..operator24097(*
 <- searchElStr3;;
 -> rrel_1: rrel_fixed: rrel_scp_const: question_search_errors;;
 -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: .._quest_arc;;
 -> rrel_3: rrel_fixed: rrel_scp_var: .._quest;;
-=> nrel_goto: ..operator41664;;
+=> nrel_then: ..operator41664;;
+=> nrel_else: ..operator37086;;
 *);;
 -> ..operator41664(*
 <- genEl;;
@@ -46,7 +48,8 @@ scp_program -> agent_proc_search_scp_errors (*
 *);;
 -> ..operator5230(*
 <- call;;
--> rrel_1: rrel_scp_const: rrel_fixed: proc_search_scp_errors;;
+//-> rrel_1: rrel_scp_const: rrel_fixed: proc_search_scp_errors;;
+-> rrel_1: rrel_scp_const: rrel_fixed: proc_search_canonical_errors;;
 -> rrel_2: ... (*
 -> rrel_1: rrel_fixed: rrel_scp_var: .._parameter;;
 *);;
@@ -55,7 +58,7 @@ scp_program -> agent_proc_search_scp_errors (*
 *);;
 -> ..operator26156(*
 <- waitReturn;;
--> rrel_3: rrel_assign: rrel_scp_var: .._process;;
+-> rrel_1: rrel_assign: rrel_scp_var: .._process;;
 => nrel_goto: ..operator63328;;
 *);;
 -> ..operator63328(*
