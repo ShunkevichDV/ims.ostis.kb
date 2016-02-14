@@ -7,11 +7,6 @@ section_technique_of_designing_unified_semantic_models_of_kb
 	
 <= nrel_section_decomposition:
 	{
-		section_subjdomain_kb_developers_actions
-		(*
-		=> nrel_section_base_order: 
-			section_demonstrational_dialog_with_kb_developers;;
-		*);
 		section_demonstrational_dialog_with_kb_developers
 		(*
 		=> nrel_section_base_order: 
