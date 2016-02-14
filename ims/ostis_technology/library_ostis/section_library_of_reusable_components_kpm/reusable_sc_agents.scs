@@ -40,8 +40,18 @@ section_library_of_reusable_sc_agents
 		section_kpm_agent_library_of_garbage_collection
 		(*
 		=> nrel_section_base_order:
-			section_kpm_agent_library_of_coordination;;
+			section_library_of_knowledge_bases_verification_agents;;
 		*);
+		section_library_of_knowledge_bases_verification_agents
+		(*
+		=> nrel_section_base_order:
+			section_library_of_knowledge_bases_editing_agents;;
+		*);
+		section_library_of_knowledge_bases_editing_agents
+		(*
+		=> nrel_section_base_order:
+			section_kpm_agent_library_of_coordination;;
+		*);		
 		section_kpm_agent_library_of_coordination
 		(*
 		=> nrel_section_base_order:
