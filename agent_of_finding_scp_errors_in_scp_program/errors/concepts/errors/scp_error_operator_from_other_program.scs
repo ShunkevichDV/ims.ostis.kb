@@ -1,0 +1,33 @@
+scp_error_operator_from_other_program
+<- scp_error;
+<- scp_non_canonical_error;
+=> nrel_scp_error_program: 
+  proc_of_finding_scp_error_operator_from_other_program;
+=> nrel_main_idtf:
+  [Использован оператор из другой программы] (*
+    <- lang_ru;;
+  *);
+<- rrel_sc_key_element: ... (*
+  <- sc_explanation;;
+  <= nrel_sc_text_translation: ... (*
+    -> rrel_example: [Невозможно использование оператора, не принадлежащего множеству операторов scp-программы];;
+  *);;
+*);
+-> rrel_example: [*
+  scp_program -> ..proc_example (*
+    -> rrel_operators: ... (*
+      -> rrel_init: ..operator1 (*
+        <- printNl;;
+        -> rrel_1: rrel_fixed: rrel_scp_const: hello_ostis;;
+        => nrel_goto: ..operator_from_another_program;;
+      *);;
+      -> ..operator_return (*
+        <- return;;
+      *);;
+    *);;
+  *);;  
+*] (*
+  <= nrel_sc_text_translation: ... (*
+    -> rrel_example: [В операторе 1 осуществляется безусловный переход к оператору, который не принадлежит множеству операторов программы];;
+  *);;
+*);;

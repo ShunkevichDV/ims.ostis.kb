@@ -1,0 +1,69 @@
+scp_program -> proc_of_finding_scp_errors_in_operator_set (*
+    -> rrel_params: ... (*
+        -> rrel_1: rrel_in: _operator_set;;
+        -> rrel_2: rrel_in: _scp_program;;
+    *);;
+    -> rrel_operators: ... (*
+        ->rrel_init: ..operator25109 (*
+            <- call;;
+            -> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_scp_errors_on_level;;
+            -> rrel_2: ... (*
+                -> rrel_1: rrel_fixed: rrel_scp_var: _operator_set;;
+                -> rrel_2: rrel_fixed: rrel_scp_var: _scp_program;;
+                -> rrel_3: rrel_fixed: rrel_scp_const: scp_error_on_operator_set_level;;
+            *);;
+            -> rrel_3: rrel_assign: rrel_scp_var: _argument63025;;
+            => nrel_goto: ..operator9921;;
+        *);;
+        ->..operator9921 (*
+            <- waitReturn;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _argument63025;;
+            => nrel_goto: ..operator27957;;
+        *);;
+        ->..operator27957 (*
+            <- searchSetStr3;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _operator_set;;
+            -> rrel_2: rrel_scp_var: rrel_assign: rrel_pos_const_perm: _tmp_arc;;
+            -> rrel_3: rrel_scp_var: rrel_assign: _operator;;
+            -> rrel_set_3: rrel_scp_var: rrel_assign: _operators;;
+            => nrel_goto: ..operator36906;;
+        *);;
+        ->..operator36906 (*
+            <- ifVarAssign;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _operators;;
+            => nrel_then: ..operator35863;;
+            => nrel_else: ..operator30677;;
+        *);;
+        ->..operator35863 (*
+            <- searchElStr3;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _operators;;
+            -> rrel_2: rrel_scp_var: rrel_assign: _arc;;
+            -> rrel_3: rrel_scp_var: rrel_assign: _operator;;
+            => nrel_then: ..operator28228;;
+            => nrel_else: ..operator30677;;
+        *);;
+        ->..operator28228 (*
+            <- call;;
+            -> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_scp_errors_in_operator;;
+            -> rrel_2: ... (*
+                -> rrel_1: rrel_fixed: rrel_scp_var: _operator;;
+                -> rrel_2: rrel_fixed: rrel_scp_var: _scp_program;;
+            *);;
+            -> rrel_3: rrel_assign: rrel_scp_var: _argument41867;;
+            => nrel_goto: ..operator9782;;
+        *);;
+        ->..operator9782 (*
+            <- waitReturn;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _argument41867;;
+            => nrel_goto: ..operator6095;;
+        *);;
+        ->..operator6095 (*
+            <- eraseEl;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc;;
+            => nrel_goto: ..operator35863;;
+        *);;
+        ->..operator30677 (*
+            <- return;;
+        *);;
+    *);;
+*);;

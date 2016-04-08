@@ -1,0 +1,14 @@
+nrel_scp_error_program
+<- sc_node_norole_relation;
+=> nrel_main_idtf: 
+  [программа поиска ошибки*]
+  (*
+  <- lang_ru;;
+  *);
+<- rrel_sc_key_element: ... (*
+  <- sc_explanation;;
+  <= sc_text_translation: ... (*
+    -> rrel_example: [Отношение, которому принадлежат кортежи вида <a, b>, где a - SCP-ошибка, b - программа, проверяющая любую scp-программу на наличие данной ошибки];;
+  *);;
+*)
+;;

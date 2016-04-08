@@ -1,0 +1,5 @@
+scp_error_not_operator_pattern = [*
+  _class _-> _target_operator;;
+  scp_operator_atomic_type _-> _class;;
+*];;
+

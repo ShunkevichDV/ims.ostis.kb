@@ -1,0 +1,4 @@
+incorrect_scp_program_pattern = [*
+  _target_scp_program _=> nrel_scp_error:: _target_scp_construction;;
+  _target_scp_error _-> _target_scp_construction;;
+*];;

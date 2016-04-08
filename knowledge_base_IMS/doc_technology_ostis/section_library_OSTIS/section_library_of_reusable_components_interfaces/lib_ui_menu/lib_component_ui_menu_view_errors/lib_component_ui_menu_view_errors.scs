@@ -1,0 +1,11 @@
+lib_component_ui_menu_view_errors
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса поиска ошибок в scp-программе]
+	(* <- lang_ru;; *);
+	[Library component. User interface command of scp errors search]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;;
+
+lib_component_ui_menu_view_translation = [*^"file://ui_menu_view_errors.scsi"*];;

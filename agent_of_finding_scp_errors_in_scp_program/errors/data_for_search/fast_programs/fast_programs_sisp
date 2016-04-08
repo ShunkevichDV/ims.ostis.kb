@@ -1,0 +1,223 @@
+function proc_of_finding_scp_error_missing_return_operator(_operator_set) {
+  return _subconstruction;
+  sys_search(
+    scp_error_missing_return_operator_pattern,
+    [assign, _results],
+    scp_error_missing_return_operator_pattern_params,
+    [assign, _all_elements]
+  );
+  if (_results); else {
+    generate([assign, node, constant, _subconstruction]);
+    generate(_subconstruction, [assign, pos_const_perm, _arc], _operator_set);
+  }
+}
+/*scs
+ scp_error_missing_return_operator_pattern_params -> ... (*
+  -> rrel_1: rrel_fixed: rrel_scp_const: _target_operator_set;;
+  -> rrel_2: rrel_fixed: rrel_scp_var: _operator_set;;
+*);;
+scs*/
+
+function proc_of_finding_scp_error_missing_erase_operand(_operator) {
+  return _subconstruction;
+/*scs
+scp_error_missing_erase_operand_params -> ... (*
+  -> rrel_1: rrel_scp_const: rrel_fixed: _target_operator;;
+  -> rrel_2: rrel_scp_var: rrel_fixed: _operator;;
+*);;
+scs*/
+  sys_search(
+    scp_error_missing_erase_operand_pattern,
+    [assign, _results],
+    scp_error_missing_erase_operand_params,
+    [assign, _all_elements]
+  );
+  if (_results)
+    if (search(_operator, [assign, _tmp_arc1], [assign, _operand], [assign, _tmp_arc2], rrel_erase)); else {
+      generate([assign, node, constant, _subconstruction]);
+      generate(_subconstruction, [assign, pos_const_perm, _arc], _operator);
+    }
+}
+
+function proc_of_finding_scp_error_scp_const_assign(_operand_arc) {
+  return _subconstruction;
+  if (search(rrel_scp_const, [assign, _arc_to_scp_const], _operand_arc))
+    if (search(rrel_assign, [assign, _arc_to_assign], _operand_arc)) {
+      generate([assign, node, constant, _subconstruction]);
+      generate(_subconstruction, [assign, pos_const_perm, _arc], _operand_arc);
+      generate(_subconstruction, [assign, pos_const_perm, _arc], _arc_to_scp_const);
+      generate(_subconstruction, [assign, pos_const_perm, _arc], _arc_to_assign);
+      generate(_subconstruction, [assign, pos_const_perm, _arc], rrel_scp_const);
+      generate(_subconstruction, [assign, pos_const_perm, _arc], rrel_assign);
+      search([assign, _operator], _operand_arc, [assign, _operand]);
+      generate(_subconstruction, [assign, pos_const_perm, _arc], _operator);
+      generate(_subconstruction, [assign, pos_const_perm, _arc], _operand);
+    }
+}
+
+function proc_of_finding_scp_error_missing_init_operator(_operator_set) {
+  return _subconstruction;
+  if (search(_operator_set, [assign, _arc1], [assign, _operator], [assign, _arc2], rrel_init)); else {
+    generate([assign, node, constant, _subconstruction]);
+    generate(_subconstruction, [assign, pos_const_perm, _arc], _operator_set);
+  }
+}
+
+function proc_of_finding_scp_error_search5_2nd_and_4th_is_the_same(_operator) {
+  return _subconstruction;
+  if (search(_operator, [assign, _arc_to_operand1], [assign, _operand], [assign, _arc_to_rrel2], rrel_2))
+    if (search(_operator, [assign, _arc_to_operand2], _operand, [assign, _arc_to_rrel4], rrel_4)) {
+      generate([assign, node, constant, _subconstruction]);
+      generate(_subconstruction, [assign, pos_const_perm, _arc], _operator);
+      generate(_subconstruction, [assign, pos_const_perm, _arc], rrel_2);
+      generate(_subconstruction, [assign, pos_const_perm, _arc], rrel_4);
+      generate(_subconstruction, [assign, pos_const_perm, _arc], _arc_to_operand1);
+      generate(_subconstruction, [assign, pos_const_perm, _arc], _arc_to_operand2);
+      generate(_subconstruction, [assign, pos_const_perm, _arc], _arc_to_rrel2);
+      generate(_subconstruction, [assign, pos_const_perm, _arc], _arc_to_rrel4);
+      generate(_subconstruction, [assign, pos_const_perm, _arc], _operand);
+    }
+}
+
+//Remake!!!
+function proc_of_finding_scp_error_operator_from_other_program(_operator_set) {
+  search(
+    _operator_set,
+    [assign, _tmp_arc],
+    [assign, _operator],
+    [], [], [assign, _operator_set_copy]
+  );
+  while(search(_operator_set_copy, [assign, _arc1], [assign, _operator])) {
+   generate([assign, node, _next_operators]);
+    search(
+      _operator, 
+      [assign, common, _tmp_arc1],
+      [assign, _operand],
+      [assign, pos_const_perm, _tmp_arc2],
+      nrel_goto,
+      [], [],  _next_operators, [], []
+    );
+    search(
+      _operator, 
+      [assign, common, _tmp_arc1],
+      [assign, _operand],
+      [assign, pos_const_perm, _tmp_arc2],
+      nrel_then,
+      [], [], _next_operators, [], []
+    );
+    search(
+      _operator, 
+      [assign, common, _tmp_arc1],
+      [assign, _operand],
+      [assign, pos_const_perm, _tmp_arc2],
+      nrel_else,
+      [], [], _next_operators, [], []
+    );
+    while(search(_next_operators, [assign, _arc2], [assign, _next_operator])) {
+      if (search(_operator_set, [assign, _arc_to_operator], _next_operator)); else {
+        if (_subconstruction); else
+          generate([assign, node, constant, _subconstruction]);
+        generate(_subconstruction, [assign, pos_const_perm, _arc], _next_operator);
+      }
+      erase([erase, _arc2]);
+    }
+    erase([erase, _arc1]);
+  }
+}
+
+function proc_of_finding_scp_error_operand_without_a_number(_operand_arc) {
+  return _subconstruction;
+  sys_search(
+    scp_error_operand_without_a_number_pattern_element,
+    [assign, _results],
+    scp_error_operand_without_a_number_params, []
+  );
+  if (_results); else {
+    sys_search(
+      scp_error_operand_without_a_number_pattern_set,
+      [assign, _results],
+      scp_error_operand_without_a_number_params, []
+    );
+    if (_results); else generate([assign, node, constant, _subconstruction]);
+  }
+  if (_subconstruction) {
+    search([assign, _operator], _operand_arc, [assign, _operand]);
+    generate(_subconstruction, [assign, pos_const_perm, _arc], _operand_arc);
+    generate(_subconstruction, [assign, pos_const_perm, _arc], _operator);
+    generate(_subconstruction, [assign, pos_const_perm, _arc], _operand);
+  }
+}
+
+/*scs
+scp_error_operand_without_a_number_params -> ... (*
+  -> rrel_1: rrel_fixed: rrel_scp_const: _target_operand_arc;;
+  -> rrel_2: rrel_fixed: rrel_scp_var: _operand_arc;;
+*);;
+scs*/
+
+function proc_of_finding_scp_error_unsupported_set_of_operands(_operator) {
+  
+  return _subconstruction;
+}
+
+function proc_of_finding_scp_error_call_is_not_finished(_operator) {
+  return _subconstruction;  
+  if (search(call, [assign, _arc], _operator)) {
+/*scs
+scp_error_call_is_not_finished_params -> ... (*
+  -> rrel_1: rrel_fixed: rrel_scp_const: _target_operator;;
+  -> rrel_2: rrel_fixed: rrel_scp_var: _operator;;
+*);;    
+scs*/
+    sys_search(
+      scp_error_call_is_not_finished_pattern,
+      [assign, _results],
+      scp_error_call_is_not_finished_params,
+      [assign, _all_elements]
+    );
+    if (_results); else {
+      generate([assign, node, constant, _subconstruction]);
+      generate(_subconstruction, [assign, pos_const_perm, _arc], _operator);
+    }
+  }
+}
+
+function proc_of_finding_scp_error_fixed_set(_operator) {
+  return _subconstruction;  
+/*scs
+scp_error_fixed_set_params -> ... (*
+  -> rrel_1: rrel_scp_const: rrel_fixed: _target_operator;;
+  -> rrel_2: rrel_scp_var: rrel_fixed: _operator;;
+*);;
+scs*/
+  sys_search(
+    scp_error_fixed_set_pattern,
+    [assign, _results],
+    scp_error_fixed_set_params,
+    [assign, _all_elements]
+  );
+  if (_results) {
+    var_assign([assign, _subconstruction], _all_elements);
+    generate(_subconstruction, [assign, pos_const_perm, _arc], rrel_fixed);
+  }
+}
+
+function proc_of_finding_scp_error_not_operator(_operator) {
+  return _subconstruction;  
+/*scs
+scp_error_not_operator_params -> ... (*
+  -> rrel_1: rrel_fixed: rrel_scp_const: _target_operator;;
+  -> rrel_2: rrel_fixed: rrel_scp_var: _operator;;
+*);;    
+scs*/
+  sys_search(
+    scp_error_not_operator_pattern,
+    [assign, _results],
+    scp_error_not_operator_params,
+    [assign, _all_elements]
+  );
+  if (_results); else {
+    generate([assign, node, constant, _subconstruction]);
+    generate(_subconstruction, [assign, pos_const_perm, _arc], _operator);
+  }
+}

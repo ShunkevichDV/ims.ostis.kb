@@ -1,0 +1,12 @@
+//Error if in operator
+scp_error_missing_erase_operator_pattern_1 = [*
+  _target_operator _<- .._operator_type;;
+  scp_operator_of_sc_structure_deleting 
+  _<= nrel_subdividing:: .._subdividing (*
+    _-> .._operator_type;;
+  *);;
+*];;
+
+scp_error_missing_erase_operator_pattern_2 = [*
+  _target_operator _-> rrel_erase:: .._variable;;
+*];;

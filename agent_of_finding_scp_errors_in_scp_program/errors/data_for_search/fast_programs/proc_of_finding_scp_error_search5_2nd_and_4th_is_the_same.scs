@@ -1,0 +1,92 @@
+scp_program -> proc_of_finding_scp_error_search5_2nd_and_4th_is_the_same (*
+    -> rrel_params: ... (*
+        -> rrel_1: rrel_in: _operator;;
+        -> rrel_2: rrel_out: _subconstruction;;
+    *);;
+    -> rrel_operators: ... (*
+        ->rrel_init: ..operator6495 (*
+            <- searchElStr5;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _operator;;
+            -> rrel_2: rrel_scp_var: rrel_assign: _arc_to_operand1;;
+            -> rrel_3: rrel_scp_var: rrel_assign: _operand;;
+            -> rrel_4: rrel_scp_var: rrel_assign: _arc_to_rrel2;;
+            -> rrel_5: rrel_fixed: rrel_scp_const: rrel_2;;
+            => nrel_then: ..operator58981;;
+            => nrel_else: ..operator39405;;
+        *);;
+        ->..operator58981 (*
+            <- searchElStr5;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _operator;;
+            -> rrel_2: rrel_scp_var: rrel_assign: _arc_to_operand2;;
+            -> rrel_3: rrel_fixed: rrel_scp_var: _operand;;
+            -> rrel_4: rrel_scp_var: rrel_assign: _arc_to_rrel4;;
+            -> rrel_5: rrel_fixed: rrel_scp_const: rrel_4;;
+            => nrel_then: ..operator42080;;
+            => nrel_else: ..operator39405;;
+        *);;
+        ->..operator42080 (*
+            <- genEl;;
+            -> rrel_1: rrel_scp_var: rrel_assign: rrel_node: rrel_const: _subconstruction;;
+            => nrel_goto: ..operator8354;;
+        *);;
+        ->..operator8354 (*
+            <- genElStr3;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _subconstruction;;
+            -> rrel_2: rrel_scp_var: rrel_assign: rrel_pos_const_perm: _arc;;
+            -> rrel_3: rrel_fixed: rrel_scp_var: _operator;;
+            => nrel_goto: ..operator32469;;
+        *);;
+        ->..operator32469 (*
+            <- genElStr3;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _subconstruction;;
+            -> rrel_2: rrel_scp_var: rrel_assign: rrel_pos_const_perm: _arc;;
+            -> rrel_3: rrel_fixed: rrel_scp_const: rrel_2;;
+            => nrel_goto: ..operator50816;;
+        *);;
+        ->..operator50816 (*
+            <- genElStr3;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _subconstruction;;
+            -> rrel_2: rrel_scp_var: rrel_assign: rrel_pos_const_perm: _arc;;
+            -> rrel_3: rrel_fixed: rrel_scp_const: rrel_4;;
+            => nrel_goto: ..operator28132;;
+        *);;
+        ->..operator28132 (*
+            <- genElStr3;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _subconstruction;;
+            -> rrel_2: rrel_scp_var: rrel_assign: rrel_pos_const_perm: _arc;;
+            -> rrel_3: rrel_fixed: rrel_scp_var: _arc_to_operand1;;
+            => nrel_goto: ..operator50836;;
+        *);;
+        ->..operator50836 (*
+            <- genElStr3;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _subconstruction;;
+            -> rrel_2: rrel_scp_var: rrel_assign: rrel_pos_const_perm: _arc;;
+            -> rrel_3: rrel_fixed: rrel_scp_var: _arc_to_operand2;;
+            => nrel_goto: ..operator59859;;
+        *);;
+        ->..operator59859 (*
+            <- genElStr3;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _subconstruction;;
+            -> rrel_2: rrel_scp_var: rrel_assign: rrel_pos_const_perm: _arc;;
+            -> rrel_3: rrel_fixed: rrel_scp_var: _arc_to_rrel2;;
+            => nrel_goto: ..operator24907;;
+        *);;
+        ->..operator24907 (*
+            <- genElStr3;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _subconstruction;;
+            -> rrel_2: rrel_scp_var: rrel_assign: rrel_pos_const_perm: _arc;;
+            -> rrel_3: rrel_fixed: rrel_scp_var: _arc_to_rrel4;;
+            => nrel_goto: ..operator37006;;
+        *);;
+        ->..operator37006 (*
+            <- genElStr3;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _subconstruction;;
+            -> rrel_2: rrel_scp_var: rrel_assign: rrel_pos_const_perm: _arc;;
+            -> rrel_3: rrel_fixed: rrel_scp_var: _operand;;
+            => nrel_goto: ..operator39405;;
+        *);;
+        ->..operator39405 (*
+            <- return;;
+        *);;
+    *);;
+*);;

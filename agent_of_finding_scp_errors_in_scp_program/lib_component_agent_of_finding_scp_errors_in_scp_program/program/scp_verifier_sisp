@@ -1,0 +1,145 @@
+function proc_of_finding_scp_errors(_scp_program, _answer) {
+  proc_of_finding_scp_errors_in_scp_program(_scp_program);
+  sys_search(
+    finding_scp_errors_pattern,
+    [assign, _results],
+    finding_scp_errors_params,
+    _answer
+  );
+}
+
+/*scs
+finding_scp_errors_pattern = [*
+  _target_scp_program _=> nrel_scp_error:: _construction;;
+  _error_class _-> _construction;;
+*];;
+scs*/
+
+/*scs
+  finding_scp_errors_params -> ... (*
+    -> rrel_1: rrel_fixed: rrel_scp_const: _target_scp_program;;
+    -> rrel_2: rrel_fixed: rrel_scp_var: _scp_program;;
+  *);;
+scs*/
+
+function proc_of_finding_scp_errors_in_scp_program(_scp_program) {
+  proc_of_finding_scp_errors_on_level(
+    _scp_program, 
+    _scp_program, 
+    scp_error_on_scp_program_level
+  );
+  search(
+    _scp_program, 
+    [assign, _tmp_arc1],
+    [assign, _operators],
+    [assign, _tmp_arc2],
+    rrel_operators
+  );
+  if (_operators)
+    proc_of_finding_scp_errors_in_operator_set(_operators, _scp_program);
+}
+
+function proc_of_finding_scp_errors_on_level(
+  _scp_construction,
+  _scp_program,
+  _scp_error_level
+) {
+  search(
+    _scp_error_level,
+    [assign, pos_const_perm, _tmp_arc],
+    [assign, _scp_error],
+    [], [], [assign, _scp_errors]
+  );
+  if (_scp_errors)
+    while(search(_scp_errors, [assign, _arc], [assign, _scp_error])) {
+      search(
+        _scp_error,
+        [assign, _tmp_arc1],
+        [assign, _proc_of_finding_scp_error],
+        [assign, _tmp_arc2],
+        nrel_scp_error_program
+      );
+      _proc_of_finding_scp_error(
+        _scp_construction, 
+        [assign, _scp_subconstruction]
+      );
+      if (_scp_subconstruction) {
+        proc_of_generate_scp_error(_scp_program, _scp_subconstruction, _scp_error);
+      }
+      erase([erase, _arc]);
+    }
+}
+
+function proc_of_finding_scp_errors_in_operator_set(_operator_set, _scp_program) {
+  proc_of_finding_scp_errors_on_level(
+    _operator_set, 
+    _scp_program, 
+    scp_error_on_operator_set_level
+  );
+  search(
+    _operator_set, 
+    [assign, pos_const_perm, _tmp_arc],
+    [assign, _operator],
+    [], [], [assign, _operators]
+  );
+  if (_operator_set)
+    while(search(_operators, [assign, _arc], [assign, _operator])) {
+      proc_of_finding_scp_errors_in_operator(_operator, _scp_program);
+      erase([erase, _arc]);
+    }
+}
+
+function proc_of_finding_scp_errors_in_operator(_operator, _scp_program) {
+  proc_of_finding_scp_errors_on_level(
+    _operator, 
+    _scp_program, 
+    scp_error_on_operator_level
+  );
+  search(
+    _operator, 
+    [assign, pos_const_perm, _tmp_arc],
+    [assign, _operand],
+    [], [], [assign, _operands]
+  );
+  if (_operands)
+    while(search(_operands, [assign, _arc], [assign, _operand])) {
+      search(_operator, [assign, _operand_arc], _operand);
+      proc_of_finding_scp_errors_in_operand(_operand_arc, _scp_program);
+      erase([erase, _arc]);
+    }
+}
+
+function proc_of_finding_scp_errors_in_operand(_operand_arc, _scp_program) {
+  proc_of_finding_scp_errors_on_level(
+    _operand_arc, 
+    _scp_program, 
+    scp_error_on_operand_level
+  );
+}
+
+function proc_of_generate_scp_error(_scp_program, _scp_construction, _scp_error) {
+  sys_generate(
+    incorrect_scp_program_pattern,
+    [assign, _results],
+    incorrect_scp_program_params,
+    [assign, _all_elements]
+  );
+  if(search(incorrect_scp_program, [assign, _arc], _scp_program)); else
+    generate(incorrect_scp_program, [assign, pos_const_perm, _arc], _scp_program)
+}
+
+/*scs
+  incorrect_scp_program_params 
+  -> ... (*
+    -> rrel_1: rrel_fixed: rrel_scp_const: _target_scp_program;;
+    -> rrel_2: rrel_fixed: rrel_scp_var: _scp_program;;
+  *);
+  -> ... (*
+    -> rrel_1: rrel_fixed: rrel_scp_const: _target_scp_construction;;
+    -> rrel_2: rrel_fixed: rrel_scp_var: _scp_construction;;
+  *);
+  -> ... (*
+    -> rrel_1: rrel_fixed: rrel_scp_const: _target_scp_error;;
+    -> rrel_2: rrel_fixed: rrel_scp_var: _scp_error;;
+  *);;
+scs*/

@@ -1,0 +1,96 @@
+//Error if one of these blocks is included
+/*scp_error_fixed_set_pattern_1 = [*
+  scp_program _-> _target_scp_program (*
+    _-> rrel_operators:: .._operators (*
+      _-> .._operator (*
+        _<- .._operator_type;;
+        _-> rrel_1:: rrel_fixed:: .._variable;;
+        _-> rrel_set_1:: .._set;;
+      *);;
+    *);;
+  *);;
+*];;
+scp_error_fixed_set_pattern_2 = [*
+  scp_program _-> _target_scp_program (*
+    _-> rrel_operators:: .._operators (*
+      _-> .._operator (*
+        _<- .._operator_type;;
+        _-> rrel_2:: rrel_fixed:: .._variable;;
+        _-> rrel_set_2:: .._set;;
+      *);;
+    *);;
+  *);;
+*];;
+scp_error_fixed_set_pattern_3 = [*
+  scp_program _-> _target_scp_program (*
+    _-> rrel_operators:: .._operators (*
+      _-> .._operator (*
+        _<- .._operator_type;;
+        _-> rrel_3:: rrel_fixed:: .._variable;;
+        _-> rrel_set_3:: .._set;;
+      *);;
+    *);;
+  *);;
+*];;
+scp_error_fixed_set_pattern_4 = [*
+  scp_program _-> _target_scp_program (*
+    _-> rrel_operators:: .._operators (*
+      _-> .._operator (*
+        _<- .._operator_type;;
+        _-> rrel_4:: rrel_fixed:: .._variable;;
+        _-> rrel_set_4:: .._set;;
+      *);;
+    *);;
+  *);;
+*];;
+scp_error_fixed_set_pattern_5 = [*
+  scp_program _-> _target_scp_program (*
+    _-> rrel_operators:: .._operators (*
+      _-> .._operator (*
+        _<- .._operator_type;;
+        _-> rrel_5:: rrel_fixed:: .._variable;;
+        _-> rrel_set_5:: .._set;;
+      *);;
+    *);;
+  *);;
+*];;*/
+scp_error_fixed_set_pattern_1 = [*
+  _target_scp_program _-> .._operators (*
+    _-> .._operator (*
+      _-> rrel_1:: rrel_fixed:: .._variable;;
+      _-> rrel_set_1:: .._set;;
+    *);;
+  *);;
+*];;
+scp_error_fixed_set_pattern_2 = [*
+  _target_scp_program _-> .._operators (*
+    _-> .._operator (*
+      _-> rrel_2:: rrel_fixed:: .._variable;;
+      _-> rrel_set_2:: .._set;;
+    *);;
+  *);;
+*];;
+scp_error_fixed_set_pattern_3 = [*
+  _target_scp_program _-> .._operators (*
+    _-> .._operator (*
+      _-> rrel_3:: rrel_fixed:: .._variable;;
+      _-> rrel_set_3:: .._set;;
+    *);;
+  *);;
+*];;
+scp_error_fixed_set_pattern_4 = [*
+  _target_scp_program _-> .._operators (*
+    _-> .._operator (*
+      _-> rrel_4:: rrel_fixed:: .._variable;;
+      _-> rrel_set_4:: .._set;;
+    *);;
+  *);;
+*];;
+scp_error_fixed_set_pattern_5 = [*
+  _target_scp_program _-> .._operators (*
+    _-> .._operator (*
+      _-> rrel_5:: rrel_fixed:: .._variable;;
+      _-> rrel_set_5:: .._set;;
+    *);;
+  *);;
+*];;

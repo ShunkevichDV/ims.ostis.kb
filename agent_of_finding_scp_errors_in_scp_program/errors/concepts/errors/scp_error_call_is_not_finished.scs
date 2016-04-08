@@ -1,0 +1,36 @@
+scp_error_call_is_not_finished
+<- scp_error;
+<- scp_syntax_error;
+<- scp_error_on_operator_level;
+=> nrel_scp_error_program: 
+  proc_of_finding_scp_error_call_is_not_finished;
+=> nrel_main_idtf:
+  [Процесс не закрыт после использования] (*
+    <- lang_ru;;
+  *);
+<- rrel_sc_key_element: ... (*
+  <- sc_explanation;;
+  <= nrel_sc_text_translation: ... (*
+    -> rrel_example: [После работы процесса, вызванного с помощью оператора call, необходимо его завершить с помощью оператора waitReturn или waitReturnSet в вызывающем процессе];;
+  *);;
+*);
+-> rrel_example: [*
+  scp_program -> ..proc_example (*
+    -> rrel_operators: ... (*
+      -> rrel_init: ..operator1 (*
+        <- call;;
+        -> rrel_1: rrel_fixed: rrel_scp_const: ..proc_another_example;;
+        -> rrel_2: rrel_fixed: rrel_scp_const: ...;;
+        -> rrel_3: rrel_assign: rrel_scp_var: .._process;;
+        => nrel_goto: ..operator_return;;
+      *);;
+      -> ..operator_return (*
+        <- return;;
+      *);;
+    *);;
+  *);;  
+*] (*
+  <= nrel_sc_text_translation: ... (*
+    -> rrel_example: [Функция proc_another_example, вызванная в операторе 1, срабатывает, но процесс, который управляет этой функцией, не завершается];;
+  *);;
+*);;

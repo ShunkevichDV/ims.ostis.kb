@@ -1,0 +1,19 @@
+//Error if the block is included
+/*scp_error_scp_const_assign_pattern = [*
+  scp_program _-> _target_scp_program (*
+    _-> rrel_operators:: .._operators (*
+      _-> .._operator (*
+        _<- .._operator_type;;
+        _-> rrel_assign:: rrel_scp_const:: .._variable;;
+      *);;
+    *);;
+  *);;
+*];;*/
+
+scp_error_scp_const_assign_pattern = [*
+  _target_scp_program _-> .._operators (*
+    _-> .._operator (*
+      _-> rrel_assign:: rrel_scp_const:: .._variable;;
+    *);;
+  *);;
+*];;

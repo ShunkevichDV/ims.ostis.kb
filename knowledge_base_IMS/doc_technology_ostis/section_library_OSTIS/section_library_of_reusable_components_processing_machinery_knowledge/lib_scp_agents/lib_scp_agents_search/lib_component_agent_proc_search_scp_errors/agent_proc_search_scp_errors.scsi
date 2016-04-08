@@ -1,0 +1,77 @@
+agent_proc_search_scp_errors
+=> nrel_main_idtf:
+	[агентная scp-программа поиска ошибок заданной scp-программы] 
+	(* <- lang_ru;; *);
+	[agent scp-program of finding errors in scp-program] 
+	(* <- lang_en;; *);
+
+	<- agent_scp_program;;
+
+scp_program -> agent_proc_search_scp_errors (*
+-> rrel_params: ... (*
+-> rrel_1: rrel_in: .._event;;
+-> rrel_2: rrel_in: .._input_arc;;
+*);;
+-> rrel_operators: ... (*
+-> rrel_init: ..operator39613(*
+<- searchElStr3;;
+-> rrel_1: rrel_assign: rrel_scp_var: .._tmp;;
+-> rrel_2: rrel_fixed: rrel_scp_var: .._input_arc;;
+-> rrel_3: rrel_assign: rrel_scp_var: .._quest;;
+=> nrel_then: ..operator24097;;
+=> nrel_else: ..operator37086;;
+*);;
+-> ..operator24097(*
+<- searchElStr3;;
+-> rrel_1: rrel_fixed: rrel_scp_const: question_search_errors;;
+-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: .._quest_arc;;
+-> rrel_3: rrel_fixed: rrel_scp_var: .._quest;;
+=> nrel_then: ..operator41664;;
+=> nrel_else: ..operator37086;;
+*);;
+-> ..operator41664(*
+<- genEl;;
+-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: .._answer;;
+=> nrel_goto: ..operator34917;;
+*);;
+-> ..operator34917 (*
+<- searchElStr3;;
+-> rrel_1: rrel_fixed: rrel_scp_var: .._quest;;
+-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: .._tmp_arc;;
+-> rrel_3: rrel_assign: rrel_scp_var: .._parameter;;
+=> nrel_goto: ..operator523;;
+*);;
+-> ..operator523 (*
+<- printEl;;
+-> rrel_1: rrel_scp_var: rrel_fixed: .._quest;;
+=> nrel_goto: ..operator5230;;
+*);;
+-> ..operator5230(*
+<- call;;
+//-> rrel_1: rrel_scp_const: rrel_fixed: proc_search_scp_errors;;
+-> rrel_1: rrel_scp_const: rrel_fixed: proc_search_canonical_errors;;
+-> rrel_2: ... (*
+-> rrel_1: rrel_fixed: rrel_scp_var: .._parameter;;
+*);;
+-> rrel_3: rrel_assign: rrel_scp_var: .._process;;
+=> nrel_goto: ..operator26156;;
+*);;
+-> ..operator26156(*
+<- waitReturn;;
+-> rrel_1: rrel_assign: rrel_scp_var: .._process;;
+=> nrel_goto: ..operator63328;;
+*);;
+-> ..operator63328(*
+<- genElStr5;;
+-> rrel_1: rrel_fixed: rrel_scp_var: .._quest;;
+-> rrel_2: rrel_assign: rrel_scp_var: .._tmp_arc;;
+-> rrel_3: rrel_fixed: rrel_scp_var: .._answer;;
+-> rrel_4: rrel_assign: rrel_scp_var: .._tmp_arc_2;;
+-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+=> nrel_goto: ..operator37086;;
+*);;
+-> ..operator37086(*
+<- return;;
+*);;
+*);;
+*);;

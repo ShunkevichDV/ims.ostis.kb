@@ -1,0 +1,33 @@
+scp_program -> proc_of_finding_scp_error_missing_init_operator (*
+    -> rrel_params: ... (*
+        -> rrel_1: rrel_in: _operator_set;;
+        -> rrel_2: rrel_out: _subconstruction;;
+    *);;
+    -> rrel_operators: ... (*
+        ->rrel_init: ..operator20595 (*
+            <- searchElStr5;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _operator_set;;
+            -> rrel_2: rrel_scp_var: rrel_assign: _arc1;;
+            -> rrel_3: rrel_scp_var: rrel_assign: _operator;;
+            -> rrel_4: rrel_scp_var: rrel_assign: _arc2;;
+            -> rrel_5: rrel_fixed: rrel_scp_const: rrel_init;;
+            => nrel_else: ..operator38794;;
+            => nrel_then: ..operator55428;;
+        *);;
+        ->..operator38794 (*
+            <- genEl;;
+            -> rrel_1: rrel_scp_var: rrel_assign: rrel_node: rrel_const: _subconstruction;;
+            => nrel_goto: ..operator56115;;
+        *);;
+        ->..operator56115 (*
+            <- genElStr3;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _subconstruction;;
+            -> rrel_2: rrel_scp_var: rrel_assign: rrel_pos_const_perm: _arc;;
+            -> rrel_3: rrel_fixed: rrel_scp_var: _operator_set;;
+            => nrel_goto: ..operator55428;;
+        *);;
+        ->..operator55428 (*
+            <- return;;
+        *);;
+    *);;
+*);;

@@ -1,0 +1,27 @@
+scp_program -> proc_of_finding_scp_errors_in_operand (*
+    -> rrel_params: ... (*
+        -> rrel_1: rrel_in: _operand_arc;;
+        -> rrel_2: rrel_in: _scp_program;;
+    *);;
+    -> rrel_operators: ... (*
+        ->rrel_init: ..operator58010 (*
+            <- call;;
+            -> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_scp_errors_on_level;;
+            -> rrel_2: ... (*
+                -> rrel_1: rrel_fixed: rrel_scp_var: _operand_arc;;
+                -> rrel_2: rrel_fixed: rrel_scp_var: _scp_program;;
+                -> rrel_3: rrel_fixed: rrel_scp_const: scp_error_on_operand_level;;
+            *);;
+            -> rrel_3: rrel_assign: rrel_scp_var: _argument12299;;
+            => nrel_goto: ..operator34659;;
+        *);;
+        ->..operator34659 (*
+            <- waitReturn;;
+            -> rrel_1: rrel_fixed: rrel_scp_var: _argument12299;;
+            => nrel_goto: ..operator49;;
+        *);;
+        ->..operator49 (*
+            <- return;;
+        *);;
+    *);;
+*);;

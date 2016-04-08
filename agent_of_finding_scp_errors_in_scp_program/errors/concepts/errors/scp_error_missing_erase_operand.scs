@@ -1,0 +1,34 @@
+scp_error_missing_erase_operand
+<- scp_error;
+<- scp_syntax_error;
+<- scp_error_on_operator_level;
+=> nrel_scp_error_program: 
+  proc_of_finding_scp_error_missing_erase_operand;
+=> nrel_main_idtf:
+  [Ни один операнд erase не удаляется] (*
+    <- lang_ru;;
+  *);
+<- rrel_sc_key_element: ... (*
+  <- sc_explanation;;
+  <= nrel_sc_text_translation: ... (*
+    -> rrel_example: [Один или несколько операндов оператора erase должны быть помечены атрибутом rrel_erase для того, чтобы их можно было удалить];;
+  *);;
+*);
+-> rrel_example: [*
+  scp_program -> ..proc_example (*
+    -> rrel_operators: ... (*
+      -> rrel_init: ..operator1 (*
+        <- eraseEl;;
+        -> rrel_1: rrel_fixed: rrel_scp_const: ...;;
+        => nrel_goto: ..operator_return;;
+      *);;
+      -> ..operator_return (*
+        <- return;;
+      *);;
+    *);;
+  *);;  
+*] (*
+  <= nrel_sc_text_translation: ... (*
+    -> rrel_example: [В операторе 1 нет ни одного операнда, который был бы помечен атрибутом erase];;
+  *);;
+*);;
