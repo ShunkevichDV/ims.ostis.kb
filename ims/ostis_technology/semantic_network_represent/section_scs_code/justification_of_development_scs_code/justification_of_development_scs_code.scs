@@ -1,0 +1,29 @@
+justification_of_development_scs_code
+=> nrel_main_idtf:
+	[Обоснование разработки. SСs-код]
+	(* <- lang_ru;; *);
+	[Justification of development. Scs-code]
+	(* <- lang_en;; *);;
+
+justification_of_development_scs_code = [*^"file://justification_of_development_scs_code.scsi"*];;
+
+justification_of_development_scs_code
+-> rrel_key_sc_element:
+
+scs_code;
+scs_sentence;
+scs_sentence_simple;
+scs_sentence_complex;;
+
+scs_sentence
+=> nrel_main_idtf: 
+	[sc.s-предложение](* <- lang_ru;; *);;
+
+scs_sentence_complex
+
+=> nrel_main_idtf: 
+	[сложное sc.s-предложение](* <- lang_ru;; *);;
+
+scs_sentence_simple
+=> nrel_main_idtf: 
+	[простое sc.s-предложение](* <- lang_ru;; *);;
