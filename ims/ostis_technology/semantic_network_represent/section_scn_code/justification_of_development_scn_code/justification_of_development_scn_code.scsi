@@ -1,5 +1,7 @@
 scn_code
 
+=> nrel_main_idtf:
+	[SСn-код] (* <- lang_ru;; *);
 => nrel_idtf:
 	[Язык SCn] (* <- lang_ru;; *);
 	[sc.n-текст] (* <- lang_ru;; *);
@@ -19,8 +21,12 @@ scn_code
 			*);;
 
 scn_sentence
+=> nrel_main_idtf: 
+	[sc.n-предложение](* <- lang_ru;; *);
 => nrel_idtf:
 	[предложение SCn-кода] (* <- lang_ru;; *);;
 
 scn_article
+=> nrel_main_idtf: 
+	[sc.n-статья](* <- lang_ru;; *);
 <= nrel_set_of_subsets: scn_sentence;;

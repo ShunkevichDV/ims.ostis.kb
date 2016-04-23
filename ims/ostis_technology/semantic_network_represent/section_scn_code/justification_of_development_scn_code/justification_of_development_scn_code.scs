@@ -13,16 +13,3 @@ justification_of_development_scn_code
 scn_code;
 scn_sentence;
 scn_article;;
-
-scn_sentence
-=> nrel_main_idtf: 
-	[sc.n-предложение](* <- lang_ru;; *);;
-
-scn_article
-=> nrel_main_idtf: 
-	[sc.n-статья](* <- lang_ru;; *);;
-
-scn_code
-=> nrel_main_idtf:
-	[SСn-код]
-	(* <- lang_ru;; *);;

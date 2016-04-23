@@ -20,6 +20,8 @@ scs_code
 
 
 scs_sentence
+=> nrel_main_idtf: 
+	[sc.s-предложение](* <- lang_ru;; *);
 => nrel_idtf: 
 	[Предложение SCs-кода](* <- lang_ru;; *);
 
@@ -30,9 +32,13 @@ scs_sentence_complex
 };;
 
 scs_sentence_simple
+=> nrel_main_idtf: 
+	[простое sc.s-предложение](* <- lang_ru;; *);
 => nrel_idtf:
 	[sc.s-предложение, не содержащее встроенных sc.s-предложений] (* <- lang_ru;; *);;
 
 scs_sentence_complex
+=> nrel_main_idtf: 
+	[сложное sc.s-предложение](* <- lang_ru;; *);
 => nrel_idtf:
 	[sc.s-предложение, содержащее встроенные sc.s-предложения] (* <- lang_ru;; *);;;;
