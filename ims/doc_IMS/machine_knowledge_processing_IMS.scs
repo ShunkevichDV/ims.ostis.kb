@@ -1,4 +1,4 @@
-machine_knowledge_processing_IMS
+machine_knowledge_processing_IMS <- sc_node_struct;
 => nrel_main_idtf:
 	[Машина обработки знаний IMS](* <- lang_ru;; *);
 	[Machine knowledge processing IMS](* <- lang_en;; *);;
