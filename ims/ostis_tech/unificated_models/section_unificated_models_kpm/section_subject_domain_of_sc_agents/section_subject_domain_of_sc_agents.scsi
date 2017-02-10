@@ -78,6 +78,28 @@ abstract_sc_agent
 	platform_independent_abstract_sc_agent
 };;
 
+platform_dependent_abstract_sc_agent=>nrel_inclusion:abstract_sc_agent_is_not_implemented_on_the_scp_language;;
+
+abstract_program_sc_agent
+<= nrel_subdiving:
+{	effector_abstract_sc_agent;
+	receptor_abstract_sc_agent;
+	abstract_sc_agent_implemented_on_the_scp_language
+};;
+
+abstract_sc_agent_is_not_implemented_on_the_scp_language
+<= nrel_subdiving:
+{	effector_abstract_sc_agent;
+	receptor_abstract_sc_agent;
+	abstract_program_sc_agent_of_interpretation_of_scp_program
+};;
+
+abstract_sc_agent_implemented_on_the_scp_language
+<= nrel_subdiving:
+{	abstract_program_sc_agent_implemented_on_the_scp_language;
+    abstract_sc_metaagent
+};;
+
 non_atomic_abstract_sc_agent
 <- sc_node_not_relation;
 => nrel_main_idtf:
