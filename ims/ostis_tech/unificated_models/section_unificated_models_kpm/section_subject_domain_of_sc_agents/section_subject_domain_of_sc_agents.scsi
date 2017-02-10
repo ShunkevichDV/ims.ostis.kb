@@ -364,7 +364,7 @@ abstract_sc_metaagent
 				*);;
 		*);;
 	*);;
-	
+
 nrel_abstract_sc_agent_decomposition
 <- sc_node_norole_relation;
 <- decomposition_relation;
@@ -401,6 +401,7 @@ sc_agent
 	[агент над sc-памятью]
 	(* <- lang_ru;; *);
 <= nrel_inclusion: subject;
+=> nrel_set_of_subsets : abstract_sc_agent;
 <- rrel_key_sc_element:
 	...
 	(*
