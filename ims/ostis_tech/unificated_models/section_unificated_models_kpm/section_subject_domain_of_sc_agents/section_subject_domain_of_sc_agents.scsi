@@ -553,6 +553,22 @@ sc_description_of_sc_agent_behavior
 		*);;
 	*);;
 
+
+process_in_sc_memory
+<= nrel_subdividing: 
+{
+	scp_process;
+	sc_memory_process_corresponding_platform_dependent_sc_agent
+};
+
+scp_process
+<= nrel_subdividing: 
+{
+	scp_metaprocess;
+	scp_process_that_is_not_a_scp_metaprocess
+};
+
+
 nrel_lock
 <- sc_node_norole_relation;
 => nrel_main_idtf:
