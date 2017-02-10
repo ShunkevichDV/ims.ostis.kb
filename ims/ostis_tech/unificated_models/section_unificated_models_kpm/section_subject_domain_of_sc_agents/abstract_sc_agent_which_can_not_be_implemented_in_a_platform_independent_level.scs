@@ -1,0 +1,6 @@
+abstract_sc_agent_which_can_not_be_implemented_in_a_platform_independent_level
+=> nrel_main_idtf:
+	[абстрактный sc-агент, который не может быть реализован на платформенно-независимом уровне]
+	(* <- lang_ru;; *);
+	[abstract sc-agent which can not be implemented in a platform independent level]
+	(* <- lang_en;; *);;

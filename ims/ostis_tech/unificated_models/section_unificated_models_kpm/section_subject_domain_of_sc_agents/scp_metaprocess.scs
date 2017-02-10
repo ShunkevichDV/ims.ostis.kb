@@ -1,0 +1,6 @@
+scp_metaprocess
+=> nrel_main_idtf:
+	[scp-метапроцесс]
+	(* <- lang_ru;; *);
+	[scp-metaprocess]
+	(* <- lang_en;; *);;

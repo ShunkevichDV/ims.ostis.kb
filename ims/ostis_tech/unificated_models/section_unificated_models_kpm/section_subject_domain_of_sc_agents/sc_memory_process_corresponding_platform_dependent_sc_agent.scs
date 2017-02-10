@@ -1,0 +1,6 @@
+sc_memory_process_corresponding_platform_dependent_sc_agent
+=> nrel_main_idtf:
+	[процесс в sc-памяти, соответствующий платформенно-зависимому sc-агенту]
+	(* <- lang_ru;; *);
+	[sc-memory process corresponding platform dependent sc-agent]
+	(* <- lang_en;; *);;

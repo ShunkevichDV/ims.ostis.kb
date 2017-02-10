@@ -1,0 +1,6 @@
+abstract_scp_machine_action
+=> nrel_main_idtf:
+	[действие абстракной scp-машины]
+	(* <- lang_ru;; *);
+	[abstract scp-machine action]
+	(* <- lang_en;; *);;

@@ -1,0 +1,6 @@
+scp_programm_interpretation_action
+=> nrel_main_idtf:
+	[действие интерпретации scp-программы]
+	(* <- lang_ru;; *);
+	[scp-programm interpretation action]
+	(* <- lang_en;; *);;

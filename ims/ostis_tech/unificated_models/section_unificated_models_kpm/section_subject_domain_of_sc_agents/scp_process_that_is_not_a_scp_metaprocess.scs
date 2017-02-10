@@ -1,0 +1,6 @@
+scp_process_that_is_not_a_scp_metaprocess
+=> nrel_main_idtf:
+	[scp-процесс не являющий scp-метапроцессом]
+	(* <- lang_ru;; *);
+	[scp-process that is not a scp-metaprocess]
+	(* <- lang_en;; *);;

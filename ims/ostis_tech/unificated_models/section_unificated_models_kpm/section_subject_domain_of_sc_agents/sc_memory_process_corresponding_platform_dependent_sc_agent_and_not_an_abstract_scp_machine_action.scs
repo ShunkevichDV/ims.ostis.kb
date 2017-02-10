@@ -1,0 +1,6 @@
+sc_memory_process_corresponding_platform_dependent_sc_agent_and_not_an_abstract_scp_machine_action
+=> nrel_main_idtf:
+	[процесс в sc-памяти, соответствующий платформенно зависимому sc-агенту и не являющийся действием абстрактной scp-машины]
+	(* <- lang_ru;; *);
+	[sc-memory process corresponding platform dependent sc-agent and not an abstract scp-machine action]
+	(* <- lang_en;; *);;

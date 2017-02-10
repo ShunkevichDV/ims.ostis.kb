@@ -1,0 +1,6 @@
+abstract_program_sc_agent_implemented_on_the_scp_language
+=> nrel_main_idtf:
+	[абстрактный программный sc-агент, реализуемый на Языке SCP]
+	(* <- lang_ru;; *);
+	[abstract program sc-agent implemented on the scp-language]
+	(* <- lang_en;; *);;
