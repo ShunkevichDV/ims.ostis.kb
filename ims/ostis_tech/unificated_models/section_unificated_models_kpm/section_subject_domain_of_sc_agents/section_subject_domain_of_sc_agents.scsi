@@ -259,6 +259,112 @@ receptor_abstract_sc_agent
 		*);;
 	*);;
 
+abstract_sc_agent_is_not_implemented_on_the_scp_language
+=> nrel_main_idtf:
+	[абстрактный sc-агент, не реализуемый на Языке SCP]
+	(* <- lang_ru;; *);
+	[abstract sc-agent is not implemented on the scp-language]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<= nrel_sc_text_translation:	
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/explanation_for_abstract_sc_agent_is_not_implemented_on_the_scp_language.html"
+				(* 
+					<- explanation;;
+					<- lang_ru;;
+				*);;
+		*);;
+	*);;
+
+abstract_sc_agent_implemented_on_the_scp_language
+=> nrel_main_idtf:
+	[абстрактный sc-агент, реализуемый на Языке SCP]
+	(* <- lang_ru;; *);
+	[abstract sc-agent implemented on the scp-language]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<= nrel_sc_text_translation:	
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/explanation_for_abstract_sc_agent_implemented_on_the_scp_language.html"
+				(* 
+					<- explanation;;
+					<- lang_ru;;
+				*);;
+		*);;
+	*);;
+
+abstract_sc_agent_of_interpretation_of_scp_program
+=> nrel_main_idtf:
+	[абстрактный sc-агент интерпретации scp-программ]
+	(* <- lang_ru;; *);
+	[abstract sc-agent of interpretation of scp program]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<= nrel_sc_text_translation:	
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/explanation_for_abstract_sc_agent_of_interpretation_of_scp_program.html"
+				(* 
+					<- explanation;;
+					<- lang_ru;;
+				*);;
+		*);;
+	*);;
+
+abstract_program_sc_agent
+=> nrel_main_idtf:
+	[абстрактный программный sc-агент]
+	(* <- lang_ru;; *);
+	[abstract program sc-agent]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<= nrel_sc_text_translation:	
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/explanation_for_abstract_program_sc_agent.html"
+				(* 
+					<- explanation;;
+					<- lang_ru;;
+				*);;
+		*);;
+	*);;
+
+
+abstract_sc_metaagent 
+=> nrel_main_idtf:
+	[абстрактный sc-метаагент]
+	(* <- lang_ru;; *);
+	[abstract sc-metaagent]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		<= nrel_sc_text_translation:	
+		...
+		(*
+			-> rrel_example:
+				"file://content_html/explanation_for_abstract_sc_metaagent.html"
+				(* 
+					<- explanation;;
+					<- lang_ru;;
+				*);;
+		*);;
+	*);;
+	
 nrel_abstract_sc_agent_decomposition
 <- sc_node_norole_relation;
 <- decomposition_relation;
