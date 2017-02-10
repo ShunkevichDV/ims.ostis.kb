@@ -60,6 +60,22 @@ abstract_sc_agent
 	inside_abstract_sc_agent;
 	effector_abstract_sc_agent;
 	receptor_abstract_sc_agent
+};
+<= nrel_subdividing: 
+{
+	abstract_sc_agent_is_not_implemented_on_the_scp_language;
+	abstract_sc_agent_implemented_on_the_scp_language
+};
+<= nrel_subdividing: 
+{
+	abstract_sc_agent_of_interpretation_of_scp_program;
+	abstract_program_sc_agent;
+	abstract_sc_metaagent 
+};
+<= nrel_subdividing: 
+{
+	platform_dependent_abstract_sc_agent;
+	platform_independent_abstract_sc_agent
 };;
 
 non_atomic_abstract_sc_agent
