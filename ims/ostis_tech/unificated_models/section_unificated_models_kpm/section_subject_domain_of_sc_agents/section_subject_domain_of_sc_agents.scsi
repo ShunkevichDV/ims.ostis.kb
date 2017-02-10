@@ -559,14 +559,23 @@ process_in_sc_memory
 {
 	scp_process;
 	sc_memory_process_corresponding_platform_dependent_sc_agent
-};
+};;
 
 scp_process
 <= nrel_subdividing: 
 {
 	scp_metaprocess;
 	scp_process_that_is_not_a_scp_metaprocess
-};
+};;
+
+sc_memory_process_corresponding_platform_dependent_sc_agent
+<= nrel_subdividing: 
+{
+    abstract_scp_machine_action;
+	sc_memory_process_corresponding_platform_dependent_sc_agent_and_not_an_abstract_scp_machine_action
+};;
+
+abstract_scp_machine_action => nrel_inclusion:scp_programm_interpretation_action;;
 
 
 nrel_lock
