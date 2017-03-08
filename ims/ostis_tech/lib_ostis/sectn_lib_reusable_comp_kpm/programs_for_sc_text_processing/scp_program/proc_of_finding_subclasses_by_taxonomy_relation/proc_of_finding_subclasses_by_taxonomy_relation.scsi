@@ -1,3 +1,8 @@
+proc_of_finding_subclasses_by_taxonomy_relation
+=> nrel_main_idtf:
+	[scp-программа поиска подклассов по отношениям таксономии] (* <- lang_ru;; *);
+	[scp-program of finding subclasses by taxonomy relation] (* <- lang_en;; *);;
+
 scp_program -> proc_of_finding_subclasses_by_taxonomy_relation
 	(*
 	-> rrel_params: .proc_of_finding_subclasses_by_taxonomy_relation_params 
@@ -123,7 +128,7 @@ scp_program -> proc_of_finding_subclasses_by_taxonomy_relation
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_subclasses_set;;
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _current_subclass_svyazka;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _ligament_of_current_subclass;;
 
 			=> nrel_then: .proc_of_finding_subclasses_by_taxonomy_relation_operator_3C;;
 			=> nrel_else: .proc_of_finding_subclasses_by_taxonomy_relation_operator_4A;;
@@ -142,7 +147,7 @@ scp_program -> proc_of_finding_subclasses_by_taxonomy_relation
 			(*
 			<- searchElStr5;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _current_subclass_svyazka;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _ligament_of_current_subclass;;
 			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _class;;
 			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
@@ -179,7 +184,7 @@ scp_program -> proc_of_finding_subclasses_by_taxonomy_relation
 			(*
 			<- searchSetStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _current_subclass_svyazka;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _ligament_of_current_subclass;;
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _current_subclass;;
 
@@ -197,7 +202,7 @@ scp_program -> proc_of_finding_subclasses_by_taxonomy_relation
 			-> rrel_3: rrel_assign: rrel_scp_var: _current_subclass;;
 
 			=> nrel_then: .proc_of_finding_subclasses_by_taxonomy_relation_operator_4B;;
-			=> nrel_else: .proc_of_finding_subclasses_by_taxonomy_relation_operator_return;;
+			=> nrel_else: .proc_of_finding_subclasses_by_taxonomy_relation_operator_erase_temp_set;;
 			*);;
 
 		-> .proc_of_finding_subclasses_by_taxonomy_relation_operator_4B 											
@@ -231,6 +236,35 @@ scp_program -> proc_of_finding_subclasses_by_taxonomy_relation
 			-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
 
 			=> nrel_goto: .proc_of_finding_subclasses_by_taxonomy_relation_operator_4A;;
+			*);;
+
+		-> .proc_of_finding_subclasses_by_taxonomy_relation_operator_erase_temp_set 											
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _subclasses_set;;
+
+			=> nrel_goto: .proc_of_finding_subclasses_by_taxonomy_relation_operator_erase_temp_set_2;;
+			*);;
+
+		-> .proc_of_finding_subclasses_by_taxonomy_relation_operator_erase_temp_set_2 
+			(*
+
+			<- ifVarAssign;;
+
+			-> rrel_1: rrel_scp_var: _temp_subclasses_set;;
+
+			=> nrel_then: .proc_of_finding_subclasses_by_taxonomy_relation_operator_erase_temp_set_3;;
+			=> nrel_else: .proc_of_finding_subclasses_by_taxonomy_relation_operator_return;;
+			*);;
+
+		-> .proc_of_finding_subclasses_by_taxonomy_relation_operator_erase_temp_set_3											
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _temp_subclasses_set;;
+
+			=> nrel_goto: .proc_of_finding_subclasses_by_taxonomy_relation_operator_return;;
 			*);;
 
 		-> .proc_of_finding_subclasses_by_taxonomy_relation_operator_return 
