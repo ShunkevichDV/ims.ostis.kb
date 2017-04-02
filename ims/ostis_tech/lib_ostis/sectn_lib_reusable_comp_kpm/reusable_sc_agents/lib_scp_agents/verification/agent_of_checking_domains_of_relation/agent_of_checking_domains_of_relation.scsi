@@ -1180,7 +1180,7 @@ scp_program -> agent_of_checking_domains_of_relation
 			(*
 			<- genElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_const: struct_with_partly_defined_relation;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: structure_with_partly_defined_relation;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _result_for_checking_domains_of_relation;;
 
@@ -1197,7 +1197,7 @@ scp_program -> agent_of_checking_domains_of_relation
 				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
 				-> rrel_2: rrel_fixed: rrel_scp_const: action_of_checking_domains_of_relation;;
 				-> rrel_3: rrel_fixed: rrel_scp_var: _result_for_checking_domains_of_relation;;
-				-> rrel_4: rrel_fixed: rrel_scp_const: struct_with_partly_defined_relation;;
+				-> rrel_4: rrel_fixed: rrel_scp_const: structure_with_partly_defined_relation;;
 				*);;
 			-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
 
