@@ -1,8 +1,9 @@
 agent_of_checking_domains_of_relation
 => nrel_main_idtf:
-	[агентная scp-программа проверки наличия доменов у отношения] (* <- lang_ru;; *);
-	[agent scp-program of checking domains of relation] (* <- lang_en;; *);
-	<- agent_scp_program;;
+	[агентная scp-программа проверки указания доменов у отношений в рамках заданной структуры] (* <- lang_ru;; *);
+	[agent scp-program of сhecking availability of domains in relations within the given structure] (* <- lang_en;; *);
+
+<- agent_scp_program;;
 
 scp_program -> agent_of_checking_domains_of_relation 
 	(*
