@@ -1,0 +1,26 @@
+lib_component_proc_of_removing_action_sign_from_current_processes
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа снятия знака действия с текущих процессов]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of removing action sign from current processes]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_removing_action_sign_from_current_processes;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/proc_of_removing_action_sign_from_current_processes.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_removing_action_sign_from_current_processes = [*^"file://proc_of_removing_action_sign_from_current_processes.scsi"*];;
