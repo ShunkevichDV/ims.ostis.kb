@@ -4,5 +4,4 @@ ui_na_tasks <- ui_user_command_class_noatom; ui_one_argument_command_class;
 <= nrel_ui_commands_decomposition:
 {
 	ui_menu_file_for_finding_solution;
-	ui_menu_file_for_checking_cycle_existence_of_ordering_relation
 };;
