@@ -1,3 +1,9 @@
+proc_of_finding_intersection_of_two_sets
+	=> nrel_main_idtf:
+	[scp-программа поиска пересечения двух множеств] (* <- lang_ru;; *);
+	=> nrel_main_idtf:
+	[scp-program of finding intersection of two sets] (* <- lang_en;; *);;
+
 scp_program -> proc_of_finding_intersection_of_two_sets
 (*
      -> rrel_params: .proc_of_finding_intersection_of_two_sets_params
