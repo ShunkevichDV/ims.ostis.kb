@@ -26,15 +26,6 @@ scp_program-> proc_of_finding_cycle
 	 		=> nrel_else: .proc_of_finding_cycle_operator_return;;
 	 		*);;
 
-	 	-> .proc_of_finding_cycle_operator1B1
-	 		(*
-	 		<- printEl;;
-
-	 		-> rrel_1: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: _current_node;;
-
-	 		=> nrel_goto: .proc_of_finding_cycle_operator1B;;
-	 		*);;
-
 	 	-> .proc_of_finding_cycle_operator1B
 	 		(*
 	 		<- searchElStr3;;
