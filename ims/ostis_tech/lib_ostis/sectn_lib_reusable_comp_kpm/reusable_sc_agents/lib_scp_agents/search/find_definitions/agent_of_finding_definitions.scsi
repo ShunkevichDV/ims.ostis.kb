@@ -110,16 +110,15 @@ scp_program -> agent_of_finding_definitions
 		 	-> rrel_1: rrel_assign: rrel_scp_var: _elem;;
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
-            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+            		-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
+			-> rrel_set_1: rrel_assign: rrel_scp_var: _all_key_sc_elems;;
 
-            -> rrel_set_1: rrel_assign: rrel_scp_var: _all_key_sc_elems;;
+			=> nrel_then: .agent_of_finding_definitions_operator3A_context_logic_2;;
+			=> nrel_else: .agent_of_finding_definitions_operator_return;;
+			*);;
 
-            => nrel_then: .agent_of_finding_definitions_operator3A_context_logic_2;;
-            => nrel_else: .agent_of_finding_definitions_operator_return;;
-            *);;
-
-        -> .agent_of_finding_definitions_operator3A_context_logic_2 
+        	-> .agent_of_finding_definitions_operator3A_context_logic_2 
 			(*
 			<- call;;
 		  	
@@ -152,14 +151,14 @@ scp_program -> agent_of_finding_definitions
 		 	-> rrel_1: rrel_assign: rrel_scp_var: _elem;;
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
-            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+            		-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
 
-            -> rrel_set_1: rrel_assign: rrel_scp_var: _set1;;
+            		-> rrel_set_1: rrel_assign: rrel_scp_var: _set1;;
 
-       		=> nrel_then: .agent_of_finding_definitions_operator3B;;
-       		=> nrel_else: .agent_of_finding_definitions_operator_return;;
-       		*);;
+	       		=> nrel_then: .agent_of_finding_definitions_operator3B;;
+	       		=> nrel_else: .agent_of_finding_definitions_operator_return;;
+	       		*);;
 
 		-> .agent_of_finding_definitions_operator3B 
 			(*
@@ -177,9 +176,9 @@ scp_program -> agent_of_finding_definitions
 			(*
 		 	<- eraseEl;;
 
-            -> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;;
+            		-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;;
 
-            => nrel_goto: .agent_of_finding_definitions_operator3D1;;
+            		=> nrel_goto: .agent_of_finding_definitions_operator3D1;;
 		 	*);;
 
 		-> .agent_of_finding_definitions_operator3D1 
@@ -214,8 +213,8 @@ scp_program -> agent_of_finding_definitions
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_fixed: rrel_scp_var: _inst;;
 
-            => nrel_goto: .agent_of_finding_definitions_operator3F;;
-            *);;
+            		=> nrel_goto: .agent_of_finding_definitions_operator3F;;
+            		*);;
 
 		-> .agent_of_finding_definitions_operator3F 
 			(*
@@ -224,15 +223,15 @@ scp_program -> agent_of_finding_definitions
 		 	-> rrel_1: rrel_fixed: rrel_scp_var: _inst;;
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
-            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+            		-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
 
-            -> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
-            -> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
+            		-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
+            		-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
 
-            => nrel_then: .agent_of_finding_definitions_operator3G1;;
-            => nrel_else: .agent_of_finding_definitions_operator_return;;
-            *);;
+           		=> nrel_then: .agent_of_finding_definitions_operator3G1;;
+            		=> nrel_else: .agent_of_finding_definitions_operator_return;;
+            		*);;
 
 		-> .agent_of_finding_definitions_operator3G1 
 			(*
@@ -242,11 +241,11 @@ scp_program -> agent_of_finding_definitions
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_fixed: rrel_scp_var: _inst;;
 
-            -> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
+            		-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
 
-            => nrel_then: .agent_of_finding_definitions_operator4A;;
-            => nrel_else: .agent_of_finding_definitions_operator3G2;;
-            *);;
+            		=> nrel_then: .agent_of_finding_definitions_operator4A;;
+            		=> nrel_else: .agent_of_finding_definitions_operator3G2;;
+            		*);;
 
 		-> .agent_of_finding_definitions_operator3G2 
 			(*
@@ -256,11 +255,11 @@ scp_program -> agent_of_finding_definitions
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_fixed: rrel_scp_var: _inst;;
 
-            -> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
+            		-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_definition;;
 
-           	=> nrel_then: .agent_of_finding_definitions_operator4A_is_context_exist;;
-            => nrel_else: .agent_of_finding_definitions_operator3B;;
-            *);;
+           		=> nrel_then: .agent_of_finding_definitions_operator4A_is_context_exist;;
+            		=> nrel_else: .agent_of_finding_definitions_operator3B;;
+            		*);;
 
         	-> .agent_of_finding_definitions_operator4A_is_context_exist
 			(*
@@ -379,8 +378,8 @@ scp_program -> agent_of_finding_definitions
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
 
-            => nrel_goto: .agent_of_finding_definitions_operator6B;;
-            *);;
+            		=> nrel_goto: .agent_of_finding_definitions_operator6B;;
+            		*);;
 
 		-> .agent_of_finding_definitions_operator6B 
 			(*
@@ -390,8 +389,8 @@ scp_program -> agent_of_finding_definitions
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
 
-            => nrel_goto: .agent_of_finding_definitions_operator6C;;
-            *);;
+            		=> nrel_goto: .agent_of_finding_definitions_operator6C;;
+            		*);;
 
 		-> .agent_of_finding_definitions_operator6C 
 			(*
@@ -401,8 +400,8 @@ scp_program -> agent_of_finding_definitions
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_fixed: rrel_scp_const: definition;;
 
-            => nrel_goto: .agent_of_finding_definitions_operator6D;;
-            *);;
+            		=> nrel_goto: .agent_of_finding_definitions_operator6D;;
+            		*);;
 
 		-> .agent_of_finding_definitions_operator6D 
 			(*
@@ -412,8 +411,8 @@ scp_program -> agent_of_finding_definitions
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_fixed: rrel_scp_const: explanation;;
 
-            => nrel_goto: .agent_of_finding_definitions_operator_gen_answer_finding_definition;;
-            *);;
+            		=> nrel_goto: .agent_of_finding_definitions_operator_gen_answer_finding_definition;;
+            		*);;
 
 		-> .agent_of_finding_definitions_operator_gen_answer_finding_definition 
 			(*
