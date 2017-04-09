@@ -252,6 +252,17 @@ scp_program -> agent_of_checking_domains_of_relation
 
 		-> .agent_of_checking_domains_of_relation_operator6B
 			(*
+			<- ifGr;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _number_of_domains;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [1];;
+
+			=> nrel_then: .agent_of_checking_domains_of_relation_operator2A;;
+			=> nrel_else: .agent_of_checking_domains_of_relation_operator6C;;
+			*);;
+
+		-> .agent_of_checking_domains_of_relation_operator6C
+			(*
 			<- searchElStr5;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _relation;;
@@ -260,11 +271,11 @@ scp_program -> agent_of_checking_domains_of_relation
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_first_domain;;
 
-			=> nrel_then: .agent_of_checking_domains_of_relation_operator6C;;
-			=> nrel_else: .agent_of_checking_domains_of_relation_operator6D;;
+			=> nrel_then: .agent_of_checking_domains_of_relation_operator6D;;
+			=> nrel_else: .agent_of_checking_domains_of_relation_operator6E;;
 			*);;
 
-		-> .agent_of_checking_domains_of_relation_operator6C
+		-> .agent_of_checking_domains_of_relation_operator6D
 			(*
 			<- contAdd;;
 
@@ -272,10 +283,10 @@ scp_program -> agent_of_checking_domains_of_relation
 			-> rrel_2: rrel_fixed: rrel_scp_var: _number_of_domains;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: [1];;
 
-			=> nrel_goto: .agent_of_checking_domains_of_relation_operator6D;;
+			=> nrel_goto: .agent_of_checking_domains_of_relation_operator6E;;
 			*);;
 
-		-> .agent_of_checking_domains_of_relation_operator6D
+		-> .agent_of_checking_domains_of_relation_operator6E
 			(*
 			<- searchElStr5;;
 
@@ -285,11 +296,11 @@ scp_program -> agent_of_checking_domains_of_relation
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_second_domain;;
 
-			=> nrel_then: .agent_of_checking_domains_of_relation_operator6E;;
-			=> nrel_else: .agent_of_checking_domains_of_relation_operator6F;;
+			=> nrel_then: .agent_of_checking_domains_of_relation_operator6F;;
+			=> nrel_else: .agent_of_checking_domains_of_relation_operator6G;;
 			*);;
 
-		-> .agent_of_checking_domains_of_relation_operator6E
+		-> .agent_of_checking_domains_of_relation_operator6F
 			(*
 			<- contAdd;;
 
@@ -297,10 +308,10 @@ scp_program -> agent_of_checking_domains_of_relation
 			-> rrel_2: rrel_fixed: rrel_scp_var: _number_of_domains;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: [1];;
 
-			=> nrel_goto: .agent_of_checking_domains_of_relation_operator6F;;
+			=> nrel_goto: .agent_of_checking_domains_of_relation_operator6G;;
 			*);;
 				
-		-> .agent_of_checking_domains_of_relation_operator6F
+		-> .agent_of_checking_domains_of_relation_operator6G
 			(*
 			<- ifGr;;
 
@@ -325,6 +336,17 @@ scp_program -> agent_of_checking_domains_of_relation
 
 		-> .agent_of_checking_domains_of_relation_operator7B
 			(*
+			<- ifGr;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _number_of_domains;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [2];;
+
+			=> nrel_then: .agent_of_checking_domains_of_relation_operator2A;;
+			=> nrel_else: .agent_of_checking_domains_of_relation_operator7C;;
+			*);;
+
+		-> .agent_of_checking_domains_of_relation_operator7C
+			(*
 			<- searchElStr5;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _relation;;
@@ -333,11 +355,11 @@ scp_program -> agent_of_checking_domains_of_relation
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_first_domain;;
 
-			=> nrel_then: .agent_of_checking_domains_of_relation_operator7C;;
-			=> nrel_else: .agent_of_checking_domains_of_relation_operator7D;;
+			=> nrel_then: .agent_of_checking_domains_of_relation_operator7D;;
+			=> nrel_else: .agent_of_checking_domains_of_relation_operator7E;;
 			*);;
 
-		-> .agent_of_checking_domains_of_relation_operator7C
+		-> .agent_of_checking_domains_of_relation_operator7D
 			(*
 			<- contAdd;;
 
@@ -345,10 +367,10 @@ scp_program -> agent_of_checking_domains_of_relation
 			-> rrel_2: rrel_fixed: rrel_scp_var: _number_of_domains;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: [1];;
 
-			=> nrel_goto: .agent_of_checking_domains_of_relation_operator7D;;
+			=> nrel_goto: .agent_of_checking_domains_of_relation_operator7E;;
 			*);;
 
-		-> .agent_of_checking_domains_of_relation_operator7D
+		-> .agent_of_checking_domains_of_relation_operator7E
 			(*
 			<- searchElStr5;;
 
@@ -358,11 +380,11 @@ scp_program -> agent_of_checking_domains_of_relation
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_second_domain;;
 
-			=> nrel_then: .agent_of_checking_domains_of_relation_operator7E;;
-			=> nrel_else: .agent_of_checking_domains_of_relation_operator7F;;
+			=> nrel_then: .agent_of_checking_domains_of_relation_operator7F;;
+			=> nrel_else: .agent_of_checking_domains_of_relation_operator7G;;
 			*);;
 
-		-> .agent_of_checking_domains_of_relation_operator7E
+		-> .agent_of_checking_domains_of_relation_operator7F
 			(*
 			<- contAdd;;
 
@@ -370,10 +392,10 @@ scp_program -> agent_of_checking_domains_of_relation
 			-> rrel_2: rrel_fixed: rrel_scp_var: _number_of_domains;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: [1];;
 
-			=> nrel_goto: .agent_of_checking_domains_of_relation_operator7F;;
+			=> nrel_goto: .agent_of_checking_domains_of_relation_operator7G;;
 			*);;
 				
-		-> .agent_of_checking_domains_of_relation_operator7F
+		-> .agent_of_checking_domains_of_relation_operator7G
 			(*
 			<- searchElStr5;;
 
@@ -383,11 +405,11 @@ scp_program -> agent_of_checking_domains_of_relation
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_third_domain;;
 
-			=> nrel_then: .agent_of_checking_domains_of_relation_operator7G;;
-			=> nrel_else: .agent_of_checking_domains_of_relation_operator7H;;
+			=> nrel_then: .agent_of_checking_domains_of_relation_operator7H;;
+			=> nrel_else: .agent_of_checking_domains_of_relation_operator7I;;
 			*);;
 
-		-> .agent_of_checking_domains_of_relation_operator7G
+		-> .agent_of_checking_domains_of_relation_operator7H
 			(*
 			<- contAdd;;
 
@@ -395,10 +417,10 @@ scp_program -> agent_of_checking_domains_of_relation
 			-> rrel_2: rrel_fixed: rrel_scp_var: _number_of_domains;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: [1];;
 
-			=> nrel_goto: .agent_of_checking_domains_of_relation_operator7H;;
+			=> nrel_goto: .agent_of_checking_domains_of_relation_operator7I;;
 			*);;
 			
-		-> .agent_of_checking_domains_of_relation_operator7H
+		-> .agent_of_checking_domains_of_relation_operator7I
 			(*
 			<- ifGr;;
 
