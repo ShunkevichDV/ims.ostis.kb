@@ -1,0 +1,152 @@
+scp_program -> proc_of_generating_set_of_domains (*
+	-> rrel_params: ..proc_search_domain_params (*
+		-> rrel_1: rrel_in: _setOfDomains;;
+		-> rrel_2: rrel_in: _someRelation;;
+		-> rrel_3: rrel_in: _whichDomain;;
+		-> rrel_4: rrel_in: _roleRelation;;
+		*);;
+
+	-> rrel_operators: ..proc_search_domain_operators (*
+		-> rrel_init: .proc_of_generating_set_of_domains_operatorA1 (*
+			<- searchElStr5;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _someRelation;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _commonArc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _ClassOrCombination;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arcInRelation;;
+			-> rrel_5: rrel_fixed: rrel_scp_var: _whichDomain;;
+			
+			=> nrel_then: .proc_of_generating_set_of_domainsA2;;
+			=> nrel_else: .proc_of_generating_set_of_domainsB1;;
+			*);;
+
+		-> .proc_of_generating_set_of_domainsA2
+			(*
+			<- searchElStr5;;
+			
+			-> rrel_1: rrel_assign: rrel_scp_var: _allDomains;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _ClassOrCombination;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arcInRelation;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_combination;;
+			
+			=> nrel_then: .proc_of_generating_set_of_domainsA3;;
+			=> nrel_else: .proc_of_generating_set_of_domainsA4;; 
+			*);;
+		
+		-> .proc_of_generating_set_of_domainsA3
+			(*
+			<- searchSetStr3;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _allDomains;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _someClass;;
+			
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _setOfDomains;;
+			
+			=> nrel_goto: .proc_of_generating_set_of_domainsC1;;
+			*);;
+
+		-> .proc_of_generating_set_of_domainsA4
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _setOfDomains;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _ClassOrCombination;;
+
+			=> nrel_goto: .proc_of_generating_set_of_domainsC1;;	
+			*);;
+
+		-> .proc_of_generating_set_of_domainsB1
+			(*
+			<- searchElStr5;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _someRelation;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _commonArc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: rrel_role_relation: _roleRelation;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arcInRelation;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_relation_attribute;;
+			
+			=> nrel_then: .proc_of_generating_set_of_domainsB2;;
+			=> nrel_else: .proc_of_generating_set_of_domains_return;;
+			*);;
+		
+		-> .proc_of_generating_set_of_domainsB2
+			(*
+			<- searchSetStr5;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _commonArc;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _secondCommonArc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _someClass;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arcInRelation;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_domain;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _setOfDomains;;
+			
+			=> nrel_goto: .proc_of_generating_set_of_domainsC1;;
+			*);;
+
+		-> .proc_of_generating_set_of_domainsC1
+			(*
+			<- searchSetStr3;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _setOfDomains;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _allElements;;
+			
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _set;;
+			
+			=> nrel_goto: .proc_of_generating_set_of_domainsC2;;
+			*);;
+
+		-> .proc_of_generating_set_of_domainsC2
+			(*	
+			<- searchElStr3;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _someElement;;
+			
+			=> nrel_then: .proc_of_generating_set_of_domainsC3;;
+			=> nrel_else: .proc_of_generating_set_of_domains_return;;
+			*);;
+
+		-> .proc_of_generating_set_of_domainsC3
+			(*
+			<- eraseEl;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc;;
+			
+			=> nrel_goto: .proc_of_generating_set_of_domainsC4;;
+			*);;
+
+		-> .proc_of_generating_set_of_domainsC4
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_subclasses_by_taxonomy_relation;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: ...
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _someElement;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _setOfDomains;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr;;
+
+			=> nrel_goto: .proc_of_generating_set_of_domainsC5;;
+			*);;
+
+		-> .proc_of_generating_set_of_domainsC5
+			(*
+			<- waitReturn;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr;;
+
+			=> nrel_goto: .proc_of_generating_set_of_domainsC2;; //C2
+			*);;
+
+		-> .proc_of_generating_set_of_domains_return (*
+			<- return;;
+			*);;
+		*);;
+	*);;
