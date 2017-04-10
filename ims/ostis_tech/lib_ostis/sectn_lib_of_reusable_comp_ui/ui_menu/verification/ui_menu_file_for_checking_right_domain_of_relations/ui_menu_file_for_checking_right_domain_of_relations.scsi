@@ -1,9 +1,9 @@
 ui_menu_file_for_checking_right_domain_of_relations <- ui_user_command_class_atom; ui_user_command_class_view_kb; ui_one_argument_command_class;;
 
 ui_menu_file_for_checking_right_domain_of_relations => nrel_main_idtf: 
-	[Проверить элементы, участвующие в отношении, на соответствие доменам для указанного отношения] 
+	[Проверить элементы, участвующие в отношении, на соответствие доменам этого отношения в рамках заданной структуры] 
 	(* <- lang_ru;; *);
-	[Сheck elements involved in relation to the compliance with the domains for the specified relation] 
+	[Check the elements involved in relation to the compliance with the domains for the specified relation within the specified structure] 
 	(* <- lang_en;; *);;
 
 ui_menu_file_for_checking_right_domain_of_relations => ui_nrel_command_template:
@@ -16,9 +16,9 @@ ui_menu_file_for_checking_right_domain_of_relations => ui_nrel_command_template:
 	*];;
 
 ui_menu_file_for_checking_right_domain_of_relations => ui_nrel_command_lang_template: 
-	[Проверить элементы, участвующие в отношении, на соответствие доменам для указанного отношения: $ui_arg_1] 
+	[Проверить элементы, участвующие в отношении, на соответствие доменам этого отношения в рамках заданной структуры: $ui_arg_1] 
 	(* <- lang_ru;; *);
-	[Сheck elements involved in relation to the compliance with the domains for the specified relation: $ui_arg_1] 
+	[Check the elements involved in relation to the compliance with the domains for the specified relation within the specified structure: $ui_arg_1] 
 	(* <- lang_en;; *);;
 
 

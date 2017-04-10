@@ -1,8 +1,8 @@
 lib_component_agent_of_checking_right_domain_of_relations
 => nrel_main_idtf:
-	[Компонент библиотеки. sc-агент проверки элементов, участвующих в отношении, на соответствие доменам для указанного отношения]
+	[Компонент библиотеки. абстрактный sc-агент проверки элементов, участвующих в отношении, на соответствие доменам этого отношения в рамках заданной структуры]
 	(* <- lang_ru;; *);
-	[Library component. sc-agent of checking elements involved in relation to the compliance with the domains for the specified relation]
+	[Library component. abstract sc-agent of checks the elements involved in relation to the compliance with the domains for the specified relation within the specified structure]
 	(* <- lang_en;; *);
 
 <- library_of_platform_independent_reusable_components; 

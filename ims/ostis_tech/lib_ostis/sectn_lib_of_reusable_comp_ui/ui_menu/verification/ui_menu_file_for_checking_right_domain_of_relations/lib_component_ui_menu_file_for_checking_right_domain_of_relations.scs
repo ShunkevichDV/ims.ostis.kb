@@ -1,8 +1,8 @@
 lib_component_ui_menu_file_for_checking_right_domain_of_relations
 => nrel_main_idtf:
-	[Компонент библиотеки. Команда пользовательского интерфейса проверки элементов, участвующих в отношении, на соответствие доменам для указанного отношения]
+	[Компонент библиотеки. Команда пользовательского интерфейса проверки элементов, участвующих в отношении, на соответствие доменам этого отношения в рамках заданной структуры]
 	(* <- lang_ru;; *);
-	[Library component. User interface command of checking elements involved in relation to the compliance with the domains for the specified relation]
+	[Library component. User interface command of checking the elements involved in relation to the compliance with the domains for the specified relation within the specified structure]
 	(* <- lang_en;; *);
 
 <- library_of_platform_independent_reusable_components;
