@@ -44,7 +44,7 @@ scp_program -> proc_of_generating_set_of_domains (*
 			
 			-> rrel_set_3: rrel_fixed: rrel_scp_var: _setOfDomains;;
 			
-			=> nrel_goto: .proc_of_generating_set_of_domainsC01;;
+			=> nrel_goto: .proc_of_generating_set_of_domainsC1;;
 			*);;
 
 		-> .proc_of_generating_set_of_domainsA4
