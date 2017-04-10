@@ -2,7 +2,7 @@ lib_component_agent_of_check_for_crossing_from_one_subdividing_elements
 => nrel_main_idtf:
 	[Компонент библиотеки. sc-агент проверки наличия непустого пересечения у элементов одного разбиения в рамках заданной структуры]
 	(* <- lang_ru;; *);
-	[Library component. sc-agent of check for crossing from one subdividing elements within a given structure]
+	[Library component. sc-agent of check for crossing from one subdividing elements within the given structure]
 	(* <- lang_en;; *);
 
 <- platform_independent_reusable_component_OSTIS; 
@@ -29,8 +29,8 @@ lib_component_agent_of_check_for_crossing_from_one_subdividing_elements
 sc_node_not_relation -> action_of_check_for_crossing_from_one_subdividing_elements;;
 
 action_of_check_for_crossing_from_one_subdividing_elements => nrel_main_idtf:
-	[действие. проверить наличие непустого пересечения у элементов одного разбиения]
+	[действие. проверить наличие непустого пересечения у элементов одного разбиения в рамках заданной структуры]
 		(*<- lang_ru;;*);;
 action_of_check_for_crossing_from_one_subdividing_elements => nrel_main_idtf:
-	[action. check for crossing from one partition elements]
+	[action. check for crossing from one partition elements within the given structure]
 		(* <- lang_en;; *);;
