@@ -26,7 +26,8 @@ sc_agent_of_finding_constants
 	<- platform_independent_abstract_sc_agent;;
 	<= nrel_sc_agent_program: 
 		{
-		agent_of_finding_constants
+		agent_of_finding_constants;
+		proc_of_finding_intersection_of_two_sets
 		};;
 	-> sc_agent_of_finding_constants_scp    
 		(* <- active_sc_agent;; *);; 
