@@ -1,0 +1,36 @@
+lib_component_agent_of_checking_right_domain_of_relations
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент проверки элементов, участвующих в отношении, на соответствие доменам для указанного отношения]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of checking elements involved in relation to the compliance with the domains for the specified relation]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_checking_right_domain_of_relations; 
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_checking_right_domain_of_relations;
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_of_checking_right_domain_of_relations.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_to_checking_right_domain_of_relations <- sc_node_not_relation;;
+
+action_to_checking_right_domain_of_relations => nrel_main_idtf: 
+	[действие. проверить элементы, участвующие в отношении, на соответствие доменам для указанного отношения] 
+	(* <- lang_ru;; *);
+	[action. check elements involved in relation to the compliance with the domains for the specified relation] 
+	(* <- lang_en;; *);;
