@@ -1,6 +1,6 @@
 agent_of_finding_all_unreviewed_proposals_of_author
 => nrel_main_idtf:
-	[агентная scp-программа поиска всех нерассмотренных предложений разработчика] (* <- lang_ru;; *);
+	[агентная scp-программа поиска всех нерасмотренных предложений разработчика] (* <- lang_ru;; *);
 	[agent scp-program of finding all unreviewed proposals of author] (* <- lang_en;; *);
 	<- agent_scp_program;;
 
@@ -45,11 +45,57 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _param;;
 
-		  	=> nrel_then: .agent_of_finding_all_unreviewed_check_on_user;;
+		  	=> nrel_then: .agent_of_finding_approved_proposals_by2A_find_context;;
 		  	=> nrel_else: .agent_of_finding_all_unreviewed_proposals_of_author_return;;
 			*);;
 
-		-> .agent_of_finding_all_unreviewed_check_on_user
+		-> .agent_of_finding_approved_proposals_by2A_find_context
+			(*
+		 	<- searchElStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _context;;
+            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_context_of_action;;
+
+			=> nrel_then: .agent_of_finding_approved_proposals_by2A_set_context_existence_to_true;;
+			=> nrel_else: .agent_of_finding_approved_proposals_by2A_set_context_existence_to_false;;
+			*);;	
+
+        -> .agent_of_finding_approved_proposals_by2A_set_context_existence_to_true
+			(*
+			<- contAssign;;			
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_goto: .agent_of_finding_approved_check_on_user_check_context;;
+			*);; 
+
+		  -> .agent_of_finding_approved_proposals_by2A_set_context_existence_to_false
+			(*
+			<- contAssign;;			
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [false];;
+
+			=> nrel_goto: .agent_of_finding_approved_check_on_user;;
+			*);;
+
+		-> .agent_of_finding_approved_check_on_user_check_context 
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+
+			=> nrel_then: .agent_of_finding_approved_check_on_user;;
+			=> nrel_else: .agent_of_finding_approved_proposals_by_user_call_proc_of_adding_validating_message_wrong_second_param;;
+			*);;
+
+		-> .agent_of_finding_approved_check_on_user
 			(*
 		  	<- searchElStr3;;
 
@@ -58,7 +104,7 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 		  	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
 			
 		  	=> nrel_then: .agent_of_finding_all_unreviewed_proposals_of_author_set_necessary;;
-			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_of_author_call_unreviewed_proc_of_adding_validating_message_wrong_second_param;;
+			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_of_author_call_proc_of_adding_validating_message_wrong_second_param;;
 			*);;
 
 		-> .agent_of_finding_all_unreviewed_proposals_of_author_set_necessary
@@ -69,7 +115,7 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 			
 			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author1D;;
 			*);;
-		
+
 		-> .agent_of_finding_all_unreviewed_proposals_of_author1D
 			(*
 			<- searchSetStr5;;
@@ -99,7 +145,7 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 			(*
 			<- genEl;;
 		  	
-			-> rrel_1: rrel_assign: rrel_const: rrel_scp_var: rrel_node: _answer_for_finding_all_unreviewed_proposals_by_author;;
+			-> rrel_1: rrel_assign: rrel_const: rrel_scp_var: rrel_node: _answer_for_finding_all_unreviewed_proposals_of_author;;
 			
 			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author1G;;
 			*);;  
@@ -122,10 +168,59 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc_remove;;
 
-			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author3G;;
+			=> nrel_goto: .agent_of_finding_approved_proposals_by_user1F_is_context_exist1;;
+			*);;
+
+		-> .agent_of_finding_approved_proposals_by_user1F_is_context_exist1
+			(*
+			<- stringIfEq;;			
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_then: .agent_of_finding_approved_proposals_by_user_context_logic_1;;
+			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_of_author3G;;
+			*);;
+
+		-> .agent_of_finding_approved_proposals_by_user_context_logic_1 
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _structure;;
+
+			=> nrel_then: .agent_of_finding_approved_proposals_by_user_context_logic_2;;
+			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_of_author1G;;
+			*);;
+
+		-> .agent_of_finding_approved_proposals_by_user_context_logic_2
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+
+			=> nrel_then: .agent_of_finding_all_unreviewed_proposals_of_author3G;;
+			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_of_author1G;;
+			*);;
+
+		-> .agent_of_finding_all_unreviewed_proposals_of_author3G
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_struct: _structure;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+			=> nrel_then: .agent_of_finding_all_unreviewed_proposals_of_author4G;;
+			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_of_author1G;;
 			*);;
 		
-		-> .agent_of_finding_all_unreviewed_proposals_of_author3G
+		-> .agent_of_finding_all_unreviewed_proposals_of_author4G
 			(*
 			<- searchElStr5;;
 
@@ -135,11 +230,46 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_proposal;;
 
-			=> nrel_then: .agent_of_finding_all_unreviewed_proposals_of_author4G;;
+			=> nrel_then: .agent_of_finding_all_unreviewed_proposals_of_author_check_action;;
 			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_of_author1G;;
 			*);;
 
-		-> .agent_of_finding_all_unreviewed_proposals_of_author4G
+		-> .agent_of_finding_all_unreviewed_proposals_of_author_check_action
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_of_finding_all_unreviewed_proposals_of_author;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action_node;;
+
+			=> nrel_then: .agent_of_finding_approved_proposals_by_user1F_is_context_exist2;;
+			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_of_author1G;;
+			*);;
+
+		-> .agent_of_finding_approved_proposals_by_user1F_is_context_exist2
+			(*
+			<- stringIfEq;;			
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_then: .agent_of_finding_approved_proposals_by_user_context_logic_3;;
+			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_of_author5G_true;;
+			*);;
+
+		-> .agent_of_finding_approved_proposals_by_user_context_logic_3 
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action_node;;
+
+			=> nrel_then: .agent_of_finding_all_unreviewed_proposals_of_author5G_true;;
+			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_of_author1G;;
+			*);;
+
+		-> .agent_of_finding_all_unreviewed_proposals_of_author5G_true
 			(*
 			<- searchElStr5;;
 
@@ -150,10 +280,10 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_approved;;
 
 			=> nrel_then: .agent_of_finding_all_unreviewed_proposals_of_author1G;;
-			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_of_author5G;;
+			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_of_author_check_on_rejected;;
 			*);;
 
-		-> .agent_of_finding_all_unreviewed_proposals_of_author5G
+		-> .agent_of_finding_all_unreviewed_proposals_of_author_check_on_rejected
 			(*
 			<- searchElStr5;;
 
@@ -189,7 +319,7 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 			-> rrel_3: rrel_assign: rrel_scp_var: _some_sign_class;;
 
 			=> nrel_then: .agent_of_finding_all_unreviewed_proposals_of_author_find_set_some_sign_class_3;;
-			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_of_author9G;;
+			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_of_author6G;;
 			*);;
 
 		-> .agent_of_finding_all_unreviewed_proposals_of_author_find_set_some_sign_class_3
@@ -203,13 +333,16 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 
 		-> .agent_of_finding_all_unreviewed_proposals_of_author_find_set_some_sign_class_4
 			(*
-			<- searchElStr5;;
+			<- searchSetStr5;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_const: section_developers_actions_knowledge_base_cooperation_hierarchy;;
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _some_sign_class;;
 			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
 
 			=> nrel_then: .agent_of_finding_all_unreviewed_proposals_of_author_find_set_some_sign_class_5;;
 			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_of_author_find_set_some_sign_class_2;;
@@ -219,11 +352,11 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 			(*	
 			<- genElStr3;;
 
-	    		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_by_author;;
+	    		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
    	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _some_sign_class;;
 
-			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author_find_set_some_sign_class_6;;
+			=>nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author_find_set_some_sign_class_6;;
 			*);;
 
 		-> .agent_of_finding_all_unreviewed_proposals_of_author_find_set_some_sign_class_6
@@ -234,23 +367,23 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
    	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _action_node;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_by_author;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
 
-			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author7G;;
+			=>nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author6G;;
 			*);;
 
-		-> .agent_of_finding_all_unreviewed_proposals_of_author7G
+		-> .agent_of_finding_all_unreviewed_proposals_of_author6G
 			(*	
 			<- genElStr3;;
 
-	    		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_by_author;;
+	    		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
    	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _action_node;;
 
-			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author8G;;
+			=>nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author7G;;
 			*);;
 
-		-> .agent_of_finding_all_unreviewed_proposals_of_author8G
+		-> .agent_of_finding_all_unreviewed_proposals_of_author7G
 			(*
 			<- searchSetStr5;;
 
@@ -260,24 +393,38 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_proposal;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_by_author;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_by_author;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
 
-			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author9G;;
+			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author_add_actionnn;;
 			*);;
 
-		-> .agent_of_finding_all_unreviewed_proposals_of_author9G
+		-> .agent_of_finding_all_unreviewed_proposals_of_author_add_actionnn
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_of_finding_all_unreviewed_proposals_of_author;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action_node;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
+
+			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author8G;;
+			*);;
+
+		-> .agent_of_finding_all_unreviewed_proposals_of_author8G
 			(*	
 			<- genElStr3;;
 
-	    		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_by_author;;
+	    		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
    	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _structure;;
 
-			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author10G;;
+			=>nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author9G;;
 			*);;
 
-		-> .agent_of_finding_all_unreviewed_proposals_of_author10G
+
+		-> .agent_of_finding_all_unreviewed_proposals_of_author9G
 			(*	
 			<- searchSetStr3;;
 
@@ -285,13 +432,13 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
    	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _elem_of_struct;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_by_author;;
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_by_author;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
 
-			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author11G;;
+			=>nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author10G;;
 			*);;
 
-		-> .agent_of_finding_all_unreviewed_proposals_of_author11G
+		-> .agent_of_finding_all_unreviewed_proposals_of_author10G
 			(*
 			<- searchSetStr5;;
 
@@ -301,13 +448,35 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_by_author;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_by_author;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
 
-			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author_add_in_is_const_nodes_necessary;;
+			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author_add_user_in_set3;;
 			*);;
 
-		-> .agent_of_finding_all_unreviewed_proposals_of_author_add_in_is_const_nodes_necessary
+		-> .agent_of_finding_all_unreviewed_proposals_of_author_add_user_in_set3
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: ui_user;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc_add;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+
+			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author_add_user_in_set4;;
+			*);;
+
+		-> .agent_of_finding_all_unreviewed_proposals_of_author_add_user_in_set4
+			(*	
+			<- genElStr3;;
+
+	    		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
+   	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _arc_add;;
+
+			=>nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author_add_in_is_const_nodes_necessary;;
+			*);;
+
+		-> .agent_of_finding_all_unreviewed_proposals_of_author_add_in_is_const_nodes_necessary  
 			(*
 			<- genElStr3;;
 
@@ -334,33 +503,55 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 			(*	
 			<- genElStr3;;
 
-	    		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_by_author;;
+	    		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
    	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_proposal;;
 
-			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author_add_nrel_authors;;
+			=>nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author_add_nrel_authors;;
 			*);;
 
 		-> .agent_of_finding_all_unreviewed_proposals_of_author_add_nrel_authors
 			(*	
 			<- genElStr3;;
 
-	    		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_by_author;;
+	    		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
    	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_authors;;
 
-			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author_add_param;;
+			=>nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author_add_param;;
 			*);;
 
 		-> .agent_of_finding_all_unreviewed_proposals_of_author_add_param
 			(*	
 			<- genElStr3;;
 
-	    		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_by_author;;
+	    		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
    	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
 
-			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author11A;;
+			=>nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author_add_User_in_answer;;
+			*);;
+
+		-> .agent_of_finding_all_unreviewed_proposals_of_author_add_User_in_answer
+			(*	
+			<- genElStr3;;
+
+	    		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
+   	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: ui_user;;
+
+			=>nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author_add_action_node_in_answer;;
+			*);;
+
+		-> .agent_of_finding_all_unreviewed_proposals_of_author_add_action_node_in_answer
+			(*	
+			<- genElStr3;;
+
+	    		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
+   	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: action_of_finding_all_unreviewed_proposals_of_author;;
+
+			=>nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author11A;;
 			*);;
 		
 		-> .agent_of_finding_all_unreviewed_proposals_of_author11A
@@ -369,7 +560,7 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 			
 			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
 			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_by_author;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals_of_author;;
 			-> rrel_4: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
 
@@ -380,7 +571,7 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 			(*
 			<- eraseEl;;
 
-			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_some_sign_class;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _is_const_nodes_necessary;;
 			
 			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author_erase_set_2;;
 			*);;
@@ -389,9 +580,9 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 			(*
 			<- eraseEl;;
 
-			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _is_const_nodes_necessary;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_some_sign_class;;
 			
-			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author_return;;
+			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author_erase_set_3;;
 			*);;
 
 		-> .agent_of_finding_all_unreviewed_proposals_of_author_erase_set_3
@@ -403,12 +594,12 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_of_author_return;;
 			*);;	
 
-		-> .agent_of_finding_all_unreviewed_proposals_of_author_call_unreviewed_proc_of_adding_validating_message_wrong_second_param
+		-> .agent_of_finding_all_unreviewed_proposals_of_author_call_proc_of_adding_validating_message_wrong_second_param
 			(*
 		  	<- call;;
 
 		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_all_unreviewed_proposals_of_author_call_unreviewed_proc_of_adding_validating_message_wrong_second_param_params 
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_all_unreviewed_proposals_of_author_call_proc_of_adding_validating_message_wrong_second_param_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
 				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter! It must be user sign(element of ui_user)];;
@@ -434,3 +625,4 @@ scp_program -> agent_of_finding_all_unreviewed_proposals_of_author
 
 		*);;
 	*);;
+
