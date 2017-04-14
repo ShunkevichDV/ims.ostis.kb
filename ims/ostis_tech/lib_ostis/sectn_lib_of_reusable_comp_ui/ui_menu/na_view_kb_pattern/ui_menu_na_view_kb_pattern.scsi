@@ -4,6 +4,5 @@ ui_menu_na_view_kb_pattern => nrel_main_idtf: [Команды запросов �
 ui_menu_na_view_kb_pattern => nrel_main_idtf: [Commands to request by patterns] (* <- lang_en;; *);;
 ui_menu_na_view_kb_pattern <= nrel_ui_commands_decomposition:
 {
-	ui_menu_file_for_finding_pattern;
-	ui_menu_file_for_finding_pattern_with_context
+	ui_menu_file_for_finding_pattern
 };;

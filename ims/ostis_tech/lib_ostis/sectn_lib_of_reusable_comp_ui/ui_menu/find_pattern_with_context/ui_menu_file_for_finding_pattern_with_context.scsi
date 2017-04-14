@@ -2,7 +2,7 @@ ui_menu_file_for_finding_pattern_with_context <- ui_user_command_class_atom; ui_
 
 ui_menu_file_for_finding_pattern_with_context 
 => nrel_main_idtf: 
-	[Какие структуры удовлетворяют указываемому образцу с заданным контекстом?] 
+	[Поиск структур, котороые удовлетворяют указываемому образцу с заданным контекстом?] 
 	(* <- lang_ru;; *);
 => nrel_idtf: 
 	[Запрос всех конструкций, удовлетворяющих заданному образцу с заданным контекстом] 
