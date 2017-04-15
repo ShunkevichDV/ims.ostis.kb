@@ -1,0 +1,25 @@
+lib_component_ui_menu_file_for_checking_right_domain_of_relations
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса проверки элементов, участвующих в отношении, на соответствие доменам для указанного отношения]
+	(* <- lang_ru;; *);
+	[Library component. User interface command of checking elements involved in relation to the compliance with the domains for the specified relation]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
+<- library_of_reusable_components_of_knowledge_bases;
+
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/UI_checking_right_domain_of_relations.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+lib_component_ui_menu_file_for_checking_right_domain_of_relations = [*^"file://ui_menu_file_for_checking_right_domain_of_relations.scsi"*];;
