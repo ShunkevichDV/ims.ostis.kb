@@ -1,0 +1,37 @@
+ui_menu_file_for_finding_relation_with_context <- ui_user_command_class_atom; ui_user_command_class_view_kb; ui_two_argument_command_class;;
+
+ui_menu_file_for_finding_relation_with_context 
+=> nrel_main_idtf: 
+	[Какие отношения заданы на указываемом понятии с заданным контекстом?]
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Запрос отношений, заданных на понятии с заданным контекстом] 
+	(* <- lang_ru;; *);;
+
+ui_menu_file_for_finding_relation_with_context 
+=> nrel_main_idtf: 
+	[Which relations are defined for given concept with the given context?] 
+	(* <- lang_en;; *);
+=> nrel_idtf: 
+	[Request of relations, defined for given concept with the given context] 
+	(* <- lang_en;; *);;
+
+ui_menu_file_for_finding_relation_with_context => ui_nrel_command_template:
+	[*
+		question_finding_relation _-> ._question_finding_relation_instance
+			(*
+			_-> ui_arg_1;;
+			_=> nrel_context_of_action:: ui_arg_2;;
+			*);;
+		._question_finding_relation_instance _<- question;;
+	*];;
+
+ui_menu_file_for_finding_relation_with_context => ui_nrel_command_lang_template: 
+	[Какие отношения заданы на понятии $ui_arg_1 с заданным контекстом ($ui_arg_2)] 
+	(* <- lang_ru;; *);;
+
+ui_menu_file_for_finding_relation_with_context => ui_nrel_command_lang_template: 
+	[Which relations are defined for concept of $ui_arg_1 with the given context($ui_arg_2)] 
+	(* <- lang_en;; *);;
+
+
