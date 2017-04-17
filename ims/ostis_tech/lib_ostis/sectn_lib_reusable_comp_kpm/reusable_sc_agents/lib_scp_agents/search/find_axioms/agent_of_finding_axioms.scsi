@@ -46,9 +46,23 @@ scp_program -> agent_of_finding_axioms
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
 		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem;;	
 
-                 	=> nrel_then: .agent_of_finding_axioms_operator1D;;
-                 	=> nrel_else: .agent_of_finding_axioms_operator_return;;
-                 	*);;  
+            => nrel_then: .agent_of_finding_axioms_operator_find_context;;
+            => nrel_else: .agent_of_finding_axioms_operator_return;;
+            *);;  
+
+		-> .agent_of_finding_axioms_operator_find_context
+			(*
+		 	<- searchElStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _context;;
+            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_context_of_action;;
+
+			=> nrel_then: .agent_of_finding_axioms_operator1D_with_context;;
+			=> nrel_else: .agent_of_finding_axioms_operator1D;;
+			*);;	
 
 		-> .agent_of_finding_axioms_operator1D 
 			(*
@@ -56,7 +70,7 @@ scp_program -> agent_of_finding_axioms
 		 	-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer_finding_axiom;;
 		 
 		 	=> nrel_goto: .agent_of_finding_axioms_operator2A;;
-                 	*);;
+            *);;
 
 		-> .agent_of_finding_axioms_operator2A 
 			(*
@@ -64,14 +78,14 @@ scp_program -> agent_of_finding_axioms
 		 	-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_assign: rrel_scp_var: _el2;;
-                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_axiom;;
 	         
-                 	-> rrel_set_3: rrel_assign: rrel_scp_var: _all_statements;;
+            -> rrel_set_3: rrel_assign: rrel_scp_var: _all_statements;;
 
-                	=> nrel_then: .agent_of_finding_axioms_operator2B;;
+            => nrel_then: .agent_of_finding_axioms_operator2B;;
 		 	=> nrel_else: .agent_of_finding_axioms_operator_return;;
-                	*);;
+            *);;
 
 		-> .agent_of_finding_axioms_operator2B 
 			(*
@@ -79,16 +93,16 @@ scp_program -> agent_of_finding_axioms
 		 	-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
-                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_axiom;;
 
-	         	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_axiom;;
-                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_finding_axiom;;
-                 	-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_finding_axiom;;
+	        -> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_axiom;;
+            -> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_finding_axiom;;
+            -> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_finding_axiom;;
 
-                 	=> nrel_then: .agent_of_finding_axioms_operator2C;;
+           	=> nrel_then: .agent_of_finding_axioms_operator2C;;
 		 	=> nrel_else: .agent_of_finding_axioms_operator_return;;
-                 	*);;
+            *);;
 
 		-> .agent_of_finding_axioms_operator2C 
 			(*
@@ -98,7 +112,7 @@ scp_program -> agent_of_finding_axioms
 		 	-> rrel_3: rrel_assign: rrel_scp_var: _nessecary_vertex;;
 
 		 	=> nrel_then: .agent_of_finding_axioms_operator2D;;
-                 	=> nrel_else: .agent_of_finding_axioms_operator3A;;
+            => nrel_else: .agent_of_finding_axioms_operator3A;;
 		 	*);; 
 
 		-> .agent_of_finding_axioms_operator2D 
@@ -106,7 +120,7 @@ scp_program -> agent_of_finding_axioms
 		 	<- eraseEl;;
 		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;;
 
-                 	=> nrel_goto: .agent_of_finding_axioms_operator2E;;
+            => nrel_goto: .agent_of_finding_axioms_operator2E;;
 		 	*);;
 
 		-> .agent_of_finding_axioms_operator2E
@@ -115,18 +129,18 @@ scp_program -> agent_of_finding_axioms
 		 	-> rrel_1: rrel_fixed: rrel_scp_var: _nessecary_vertex;;
 		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_assign: rrel_scp_var: _smth;;
-                 	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
 
-                 	=> nrel_then: .agent_of_finding_axioms_operator2F;;
+            => nrel_then: .agent_of_finding_axioms_operator2F;;
 			=> nrel_else: .agent_of_finding_axioms_operator2C;;
-                 	*);;
+            *);;
 
 		-> .agent_of_finding_axioms_operator2F 
 			(*
 			<- call;;
 		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_identifier;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_finding_axioms_operator2F_params 
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_axioms_operator2F_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _nessecary_vertex;;
 				-> rrel_2: rrel_fixed: rrel_scp_var: _answer_finding_axiom;;
@@ -151,10 +165,10 @@ scp_program -> agent_of_finding_axioms
 		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
 
-	         	-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_axiom;;
+	        -> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_axiom;;
 
-                 	=> nrel_goto: .agent_of_finding_axioms_operator3B;;
-                 	*);;		
+            => nrel_goto: .agent_of_finding_axioms_operator3B;;
+            *);;		
 
 		-> .agent_of_finding_axioms_operator3B 
 			(*
@@ -191,7 +205,7 @@ scp_program -> agent_of_finding_axioms
 		 	<- eraseEl;;
 		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _all_statements;;
 
-                	=> nrel_goto: .agent_of_finding_axioms_gen_answer_finding_axiom;;
+            => nrel_goto: .agent_of_finding_axioms_gen_answer_finding_axiom;;
 		 	*);;
 
 		-> .agent_of_finding_axioms_gen_answer_finding_axiom 
@@ -206,10 +220,259 @@ scp_program -> agent_of_finding_axioms
 		  	=> nrel_goto: .agent_of_finding_axioms_operator_return;;
 			*);;
 					
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+		-> .agent_of_finding_axioms_operator1D_with_context 
+			(*
+			<- genEl;;
+		 	-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer_finding_axiom;;
+		 
+		 	=> nrel_goto: .agent_of_finding_axioms_operator2A_check_elem_context;;
+            *);;
+
+         -> .agent_of_finding_axioms_operator2A_check_elem_context 
+			(*
+			<- searchElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
+
+		 	=> nrel_then: .agent_of_finding_axioms_operator2A_with_context;;
+            => nrel_else: .agent_of_finding_axioms_operator_return;;
+		 	*);;
+
+		-> .agent_of_finding_axioms_operator2A_with_context 
+			(*
+		 	<- searchSetStr5;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
+            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_axiom;;
+	         
+            -> rrel_set_3: rrel_assign: rrel_scp_var: _all_statements;;
+
+            => nrel_then: .agent_of_finding_axioms_operator2A_check_context_cycle;;
+		 	=> nrel_else: .agent_of_finding_axioms_operator_return;;
+            *);;
+
+		-> .agent_of_finding_axioms_operator2A_check_context_cycle 
+			(*
+		 	<- searchSetStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _all_statements;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: _elem2;;
+	         
+            -> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_element_for_check;;
+
+            => nrel_goto: .agent_of_finding_axioms_check_context_cycle_operator_1A;;
+            *);;
+
+        -> .agent_of_finding_axioms_check_context_cycle_operator_1A
+			(*
+			<- searchElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_element_for_check;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
+
+		 	=> nrel_then: .agent_of_finding_axioms_check_context_cycle_operator_erase_1A;;
+            => nrel_else: .agent_of_finding_axioms_erase_set_of_element_for_check_A;;
+		 	*);;
+
+		-> .agent_of_finding_axioms_check_context_cycle_operator_erase_1A
+			(*
+		 	<- eraseEl;;
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;;
+
+            => nrel_goto: .agent_of_finding_axioms_check_context_cycle_operator_2A;;
+		 	*);;
+
+         -> .agent_of_finding_axioms_check_context_cycle_operator_2A
+			(*
+			<- searchElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _elem2;;
+
+		 	=> nrel_then: .agent_of_finding_axioms_check_context_cycle_operator_1A;;
+            => nrel_else: .agent_of_finding_axioms_check_context_cycle_operator_3A;;
+		 	*);;
+
+        -> .agent_of_finding_axioms_check_context_cycle_operator_3A
+			(*
+			<- searchElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _all_statements;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _elem2;;
+
+		 	=> nrel_goto: .agent_of_finding_axioms_check_context_cycle_operator_erase_2A;;
+		 	*);;
+
+		-> .agent_of_finding_axioms_check_context_cycle_operator_erase_2A
+			(*
+		 	<- eraseEl;;
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;;
+
+            => nrel_goto: .agent_of_finding_axioms_check_context_cycle_operator_1A;;
+		 	*);;
+
+		-> .agent_of_finding_axioms_erase_set_of_element_for_check_A
+			(*
+		 	<- eraseEl;;
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_element_for_check;;
+
+            => nrel_goto: .agent_of_finding_axioms_operator2B_with_context;;
+		 	*);;
+
+		-> .agent_of_finding_axioms_operator2B_with_context 
+			(*
+		 	<- searchSetStr5;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
+            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_axiom;;
+
+	        -> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_finding_axiom;;
+            -> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_finding_axiom;;
+            -> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_finding_axiom;;
+
+           	=> nrel_then: .agent_of_finding_axioms_operator2B_with_context_1;;
+		 	=> nrel_else: .agent_of_finding_axioms_operator_return;;
+            *);;
+
+		-> .agent_of_finding_axioms_operator2B_with_context_1 
+			(*
+		 	<- searchSetStr5;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
+            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_axiom;;
+
+            -> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_element_for_check;;
+
+           	=> nrel_goto: .agent_of_finding_axioms_check_context_cycle_operator_1B;;
+            *);;
+
+  		-> .agent_of_finding_axioms_check_context_cycle_operator_1B
+			(*
+			<- searchElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_element_for_check;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
+
+		 	=> nrel_then: .agent_of_finding_axioms_check_context_cycle_operator_erase_1B;;
+            => nrel_else: .agent_of_finding_axioms_erase_set_of_element_for_check_B;;
+		 	*);;
+
+		-> .agent_of_finding_axioms_check_context_cycle_operator_erase_1B
+			(*
+		 	<- eraseEl;;
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;;
+
+            => nrel_goto: .agent_of_finding_axioms_check_context_cycle_operator_2B;;
+		 	*);;
+
+         -> .agent_of_finding_axioms_check_context_cycle_operator_2B
+			(*
+			<- searchElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _elem2;;
+
+		 	=> nrel_then: .agent_of_finding_axioms_check_context_cycle_operator_1B;;
+            => nrel_else: .agent_of_finding_axioms_check_context_cycle_operator_3B;;
+		 	*);;
+
+        -> .agent_of_finding_axioms_check_context_cycle_operator_3B
+			(*
+			<- searchElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_finding_axiom;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _elem2;;
+
+		 	=> nrel_goto: .agent_of_finding_axioms_check_context_cycle_operator_erase_2B;;
+		 	*);;
+
+		-> .agent_of_finding_axioms_check_context_cycle_operator_erase_2B
+			(*
+		 	<- eraseEl;;
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;;
+
+            => nrel_goto: .agent_of_finding_axioms_check_context_cycle_operator_1B;;
+		 	*);;
+
+		-> .agent_of_finding_axioms_erase_set_of_element_for_check_B
+			(*
+		 	<- eraseEl;;
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_element_for_check;;
+
+            => nrel_goto: .agent_of_finding_axioms_operator2C_with_context;;
+		 	*);;
+
+		-> .agent_of_finding_axioms_operator2C_with_context 
+			(*
+			<- searchElStr3;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _all_statements;;
+		 	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _nessecary_vertex;;
+
+		 	=> nrel_then: .agent_of_finding_axioms_operator2D_with_context;;
+            => nrel_else: .agent_of_finding_axioms_operator3A;;
+		 	*);; 
+
+		-> .agent_of_finding_axioms_operator2D_with_context 
+			(*
+		 	<- eraseEl;;
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;;
+
+            => nrel_goto: .agent_of_finding_axioms_operator2E_with_context;;
+		 	*);;
+
+		-> .agent_of_finding_axioms_operator2E_with_context
+			(*
+		 	<- searchElStr5;;
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _nessecary_vertex;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _smth;;
+            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
+
+            => nrel_then: .agent_of_finding_axioms_operator2F_with_context;;
+			=> nrel_else: .agent_of_finding_axioms_operator2C_with_context;;
+            *);;
+
+		-> .agent_of_finding_axioms_operator2F_with_context 
+			(*
+			<- call;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_identifier_with_context;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_axioms_operator2F_with_context_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _nessecary_vertex;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _answer_finding_axiom;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _context;;
+
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_finding_axioms_operator2G_with_context;;
+			*);;
+
+		-> .agent_of_finding_axioms_operator2G_with_context 
+			(*
+			<- waitReturn;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_finding_axioms_operator2C_with_context;;
+			*);;				
+
 		-> .agent_of_finding_axioms_operator_return 
 			(*
 			<- return;;
 			*);;
 		*);;
 	*);;
-
