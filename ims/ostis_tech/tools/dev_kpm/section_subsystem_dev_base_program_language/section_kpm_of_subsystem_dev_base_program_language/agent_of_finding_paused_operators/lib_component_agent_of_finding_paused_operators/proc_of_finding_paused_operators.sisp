@@ -1,0 +1,24 @@
+function proc_of_finding_paused_operators() {
+  return _answer;
+  generate([assign, constant, node, _answer]);
+  generate(_answer, [assign, pos_const_perm, _arc], scp_paused_operator);
+  /*search(
+    scp_paused_operator, 
+    [assign, pos_const_perm, _arc], 
+    [assign, _paused_operator],
+    [], _answer, _answer
+  );*/
+  sys_search(
+    pattern_of_finding_paused_operators,
+    [], [],
+    _answer
+  );
+}
+
+/*scs
+  pattern_of_finding_paused_operators = [*
+    scp_paused_operator _-> _operator_in_pattern;;
+    scp_operator_atomic_type _-> _operator_type;;
+    _operator_type _-> _operator_in_pattern;;
+  *];;
+scs*/

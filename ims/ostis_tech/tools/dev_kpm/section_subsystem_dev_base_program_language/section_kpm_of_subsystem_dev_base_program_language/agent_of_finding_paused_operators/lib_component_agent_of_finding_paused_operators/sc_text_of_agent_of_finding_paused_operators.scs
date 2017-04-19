@@ -1,0 +1,6 @@
+sc_text_of_agent_of_finding_paused_operators
+-> rrel_key_sc_element:
+	agent_of_finding_paused_operators;
+<- scp_program_sc_text;;
+
+sc_text_of_agent_of_finding_paused_operators = [*^"file://agent_of_finding_paused_operators.scsi"*];;
