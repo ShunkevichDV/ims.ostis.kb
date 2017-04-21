@@ -1,6 +1,7 @@
 agent_of_checking_domains_of_relation
 => nrel_main_idtf:
 	[агентная scp-программа проверки указания доменов у отношений в рамках заданной структуры] (* <- lang_ru;; *);
+=> nrel_main_idtf:
 	[agent scp-program of сhecking availability of domains in relations within the given structure] (* <- lang_en;; *);
 
 <- agent_scp_program;;
@@ -372,7 +373,7 @@ scp_program -> agent_of_checking_domains_of_relation
 			-> rrel_3: rrel_assign: rrel_scp_var: _relation_attribute;;
 
 			=> nrel_then: .agent_of_checking_domains_of_relation_operator7B;;
-			=> nrel_else: .agent_of_checking_domains_of_relation_operator7E;;
+			=> nrel_else: .agent_of_checking_domains_of_relation_operator7H;;
 			*);;
 
 		-> .agent_of_checking_domains_of_relation_operator7B
@@ -406,10 +407,30 @@ scp_program -> agent_of_checking_domains_of_relation
 			-> rrel_2: rrel_fixed: rrel_scp_var: _number_of_domains;;
 			-> rrel_3: rrel_fixed: rrel_scp_const: [1];;
 
-			=> nrel_goto: .agent_of_checking_domains_of_relation_operator7A;;
+			=> nrel_goto: .agent_of_checking_domains_of_relation_operator7E;;
 			*);;
 
 		-> .agent_of_checking_domains_of_relation_operator7E
+			(*
+			<- ifGr;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _number_of_domains;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _expected_number_of_domains;;
+
+			=> nrel_then: .agent_of_checking_domains_of_relation_operator7F;;
+			=> nrel_else: .agent_of_checking_domains_of_relation_operator7A;;
+			*);;
+
+		-> .agent_of_checking_domains_of_relation_operator7F
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _relation_attributes_set;;
+
+			=> nrel_goto: .agent_of_checking_domains_of_relation_operator_wrong_relation;;
+			*);;
+
+		-> .agent_of_checking_domains_of_relation_operator7H
 			(*
 			<- eraseEl;;
 
