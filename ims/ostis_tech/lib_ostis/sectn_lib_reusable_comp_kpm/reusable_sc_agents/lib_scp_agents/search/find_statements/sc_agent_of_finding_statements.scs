@@ -29,7 +29,9 @@ sc_agent_of_finding_statements
 		{
 		agent_of_finding_statements;
 		proc_of_finding_translation;
-		proc_of_finding_identifier	
+		proc_of_finding_identifier;
+		proc_of_finding_identifier_with_context;
+		proc_of_finding_translation_with_context	
 		};;
 	-> sc_agent_of_finding_statements_scp    
 		(* <- active_sc_agent;; *);;
