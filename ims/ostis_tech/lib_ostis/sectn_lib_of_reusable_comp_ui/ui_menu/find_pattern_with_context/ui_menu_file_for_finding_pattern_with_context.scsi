@@ -2,7 +2,7 @@ ui_menu_file_for_finding_pattern_with_context <- ui_user_command_class_atom; ui_
 
 ui_menu_file_for_finding_pattern_with_context 
 => nrel_main_idtf: 
-	[Поиск структур, котороые удовлетворяют указываемому образцу с заданным контекстом?] 
+	[Найти структуры, котороые удовлетворяют указываемому образцу с заданным контекстом] 
 	(* <- lang_ru;; *);
 => nrel_idtf: 
 	[Запрос всех конструкций, удовлетворяющих заданному образцу с заданным контекстом] 
@@ -10,7 +10,7 @@ ui_menu_file_for_finding_pattern_with_context
 
 ui_menu_file_for_finding_pattern_with_context 
 => nrel_main_idtf: 
-	[Which constructions meet the given pattern with the given context?] 
+	[Find constructions meet the given pattern with the given context] 
 	(* <- lang_en;; *);
 => nrel_idtf: 
 	[Request of all constructions which meet the given pattern with the given context] 
@@ -27,9 +27,9 @@ ui_menu_file_for_finding_pattern_with_context => ui_nrel_command_template:
 	*];;
 
 ui_menu_file_for_finding_pattern_with_context => ui_nrel_command_lang_template: 
-	[Какие структуры удовлетворяют образцу ($ui_arg_1) с заданным контекстом ($ui_arg_2)] 
+	[Найти структуры удовлетворяющие образцу ($ui_arg_1) с заданным контекстом ($ui_arg_2)] 
 	(* <- lang_ru;; *);;
 
 ui_menu_file_for_finding_pattern_with_context => ui_nrel_command_lang_template: 
-	[Which constructions meet the pattern ($ui_arg_1) with the given context($ui_arg_2)] 
+	[Find constructions meet the pattern ($ui_arg_1) with the given context($ui_arg_2)] 
 	(* <- lang_en;; *);;
