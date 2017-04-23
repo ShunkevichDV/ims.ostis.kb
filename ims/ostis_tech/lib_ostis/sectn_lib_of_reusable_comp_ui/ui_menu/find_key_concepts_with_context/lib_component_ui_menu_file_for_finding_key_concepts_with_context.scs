@@ -17,7 +17,7 @@ lib_component_ui_menu_file_for_finding_key_concepts_with_context
 		...
 		(*
 		-> rrel_example:
-			"file://htmls/Ui_Key_Concepts.html"
+			"file://htmls/Ui_Key_Concepts_with_context.html"
 				(* <- lang_ru;; *);;
 		*);;
 	*);
