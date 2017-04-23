@@ -17,7 +17,7 @@ lib_component_ui_menu_file_for_finding_constants_with_context
 		...
 		(*
 		-> rrel_example:
-			"file://htmls/Ui_Constants.html"
+			"file://htmls/Ui_Constants_with_context.html"
 				(* <- lang_ru;; *);;
 		*);;
 	*);
