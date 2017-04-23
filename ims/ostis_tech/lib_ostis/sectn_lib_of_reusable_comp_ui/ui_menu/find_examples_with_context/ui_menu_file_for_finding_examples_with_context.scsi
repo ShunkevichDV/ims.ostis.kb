@@ -2,7 +2,7 @@ ui_menu_file_for_finding_examples_with_context <- ui_user_command_class_atom; ui
 
 ui_menu_file_for_finding_examples_with_context 
 => nrel_main_idtf: 
-    [Какие примеры соответствуют указываемому понятию с заданным контекстом?] 
+    [Найти примеры, соответствующие указываемому понятию с заданным контекстом?] 
     (* <- lang_ru;; *);
 => nrel_idtf: 
     [Запрос примеров для заданного понятия с заданным контекстом] 
@@ -10,7 +10,7 @@ ui_menu_file_for_finding_examples_with_context
 
 ui_menu_file_for_finding_examples_with_context 
 => nrel_main_idtf: 
-    [Which examples correspond to given concept with the given context?] 
+    [Find examples correspond to given concept with the given context?] 
     (* <- lang_en;; *);
 => nrel_main_idtf: 
     [Request of examples for the given concept with the given context] 
@@ -27,11 +27,11 @@ ui_menu_file_for_finding_examples_with_context => ui_nrel_command_template:
     *];;
 
 ui_menu_file_for_finding_examples_with_context => ui_nrel_command_lang_template: 
-    [Какие примеры соответствуют понятию $ui_arg_1 с заданным контекстом ($ui_arg_2)] 
+    [Найти примеры, соответствующие указываемому понятию $ui_arg_1 с заданным контекстом ($ui_arg_2)] 
     (* <- lang_ru;; *);;
 
 ui_menu_file_for_finding_examples_with_context => ui_nrel_command_lang_template: 
-    [Which examples correspond to concept of $ui_arg_1 with the given context($ui_arg_2)] 
+    [Find examples correspond to given concept of $ui_arg_1 with the given context($ui_arg_2)] 
     (* <- lang_en;; *);;
 
 
