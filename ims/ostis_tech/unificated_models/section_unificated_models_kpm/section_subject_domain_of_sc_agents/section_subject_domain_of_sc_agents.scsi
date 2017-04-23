@@ -507,7 +507,6 @@ sc_description_of_sc_agent_behavior
 		(* <- lang_ru;; *);
 		[sc-description of sc-agent behavior]
 		(* <- lang_en;; *);
-	<= nrel_inclusion: semantic_neighborhood;
 	<- rrel_key_sc_element:
 		...
 		(*  <- explanation;;
