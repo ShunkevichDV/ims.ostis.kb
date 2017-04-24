@@ -147,6 +147,101 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 
 			=> nrel_goto: .agent_of_finding_rejected_proposals_by_user_add_action_finding_arc_node;;
 			*);;
+			
+		-> .agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_1
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _some_sign_class;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action_node;;
+
+			-> rrel_set_1: rrel_assign: rrel_scp_var: _set_of_some_sign_class;;
+
+			=> nrel_goto: .agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_2;;
+			*);;
+
+		-> .agent_of_finding_rejected_proposals_by_user_check_some_sign
+			(*
+			<- stringIfEq;;			
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var:  _is_context_exist;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
+
+			=> nrel_then: .agent_of_finding_rejected_proposals_by_user_context_logic_0;;
+			=> nrel_else: .agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_2;;
+			*);;
+
+		-> .agent_of_finding_rejected_proposals_by_user_context_logic_0 
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _some_sign_class;;
+
+			=> nrel_then: .agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_2;;
+			=> nrel_else: .agent_of_finding_rejected_proposals_by_user1G;;
+			*);; 
+
+		-> .agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_2
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_some_sign_class;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_remove_2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _some_sign_class;;
+
+			=> nrel_then: .agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_3;;
+			=> nrel_else: .agent_of_finding_rejected_proposals_by_user_add_action_finding_arc_node;;
+			*);;
+
+		-> .agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_3
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc_remove_2;;
+
+			=> nrel_goto: .agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_4;;
+			*);;
+
+		-> .agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_4
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: section_developers_actions_knowledge_base_cooperation_hierarchy;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _some_sign_class;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
+
+			=> nrel_then: .agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_5;;
+			=> nrel_else: .agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_2;;
+			*);;
+
+		-> .agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_5
+			(*	
+			<- genElStr3;;
+
+	    		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_approved_proposals_by_author;;
+   	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _some_sign_class;;
+
+			=>nrel_goto: .agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_6;;
+			*);;
+
+		-> .agent_of_finding_rejected_proposals_by_user_find_set_some_sign_class_6
+			(*	
+			<- searchSetStr3;;
+
+	    		-> rrel_1: rrel_fixed: rrel_scp_var: _some_sign_class;;
+   	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action_node;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_for_finding_approved_proposals_by_author;;
+
+			=>nrel_goto: .agent_of_finding_rejected_proposals_by_user_add_action_finding_arc_node;;
+			*);;
 
 		-> .agent_of_finding_rejected_proposals_by_user_add_action_finding_arc_node
 			(*
@@ -224,7 +319,7 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
 
 			=> nrel_then: .agent_of_finding_rejected_proposals_by_user_context_logic_2;;
-			=> nrel_else: .agent_of_finding_rejected_proposals_by_user8G;;
+			=> nrel_else: .agent_of_finding_rejected_proposals_by_user9G;;
 			*);;
 
 		-> .agent_of_finding_rejected_proposals_by_user_context_logic_2 
@@ -235,21 +330,8 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _structure;;
 
-			=> nrel_then: .agent_of_finding_rejected_proposals_by_user8G;;
+			=> nrel_then: .agent_of_finding_rejected_proposals_by_user9G;;
 			=> nrel_else: .agent_of_finding_rejected_proposals_by_user1G;;
-			*);;
-
-		-> .agent_of_finding_rejected_proposals_by_user8G
-			(*
-			<- searchElStr5;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _action_node;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: rrel_const: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _structure;;
-			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_proposal;;
-
-			=> nrel_goto: .agent_of_finding_rejected_proposals_by_user9G;;
 			*);;
 
 		-> .agent_of_finding_rejected_proposals_by_user9G
@@ -280,19 +362,7 @@ scp_program -> agent_of_finding_rejected_proposals_by_user
 			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer_for_finding_rejected_proposals_by_user;;
 			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_for_finding_rejected_proposals_by_user;;
 
-			=> nrel_goto: .agent_of_finding_rejected_proposals_by_user_add_in_is_const_nodes_necessary_check;;
-			*);;
-
-		-> .agent_of_finding_rejected_proposals_by_user_add_in_is_const_nodes_necessary_check
-			(*
-			<- searchElStr3;;
-
-	    		-> rrel_1: rrel_fixed: rrel_scp_var: _structure;;
-   	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _author;;
-			
-			=> nrel_then: .agent_of_finding_rejected_proposals_by_user_add_in_is_const_nodes_necessary;;
-			=> nrel_else: .agent_of_finding_rejected_proposals_by_user1G;;
+			=> nrel_goto: .agent_of_finding_rejected_proposals_by_user_add_in_is_const_nodes_necessary;;
 			*);;
 
 		-> .agent_of_finding_rejected_proposals_by_user_add_in_is_const_nodes_necessary
