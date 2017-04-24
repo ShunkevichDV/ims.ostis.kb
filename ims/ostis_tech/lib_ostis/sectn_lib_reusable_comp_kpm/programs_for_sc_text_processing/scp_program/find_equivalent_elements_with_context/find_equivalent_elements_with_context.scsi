@@ -92,7 +92,6 @@ scp_program -> proc_equivalent_elements_with_context
             => nrel_goto: .proc_equivalent_elements_with_context_operator1H;;
             *);; 
 
-
         -> .proc_equivalent_elements_with_context_operator1H 
             (*
             <- genElStr3;;
