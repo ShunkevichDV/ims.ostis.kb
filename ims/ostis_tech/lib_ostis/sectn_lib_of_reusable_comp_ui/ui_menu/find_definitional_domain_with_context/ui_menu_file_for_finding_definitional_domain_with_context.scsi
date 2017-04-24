@@ -2,7 +2,7 @@ ui_menu_file_for_finding_definitional_domain_with_context <- ui_user_command_cla
 
 ui_menu_file_for_finding_definitional_domain_with_context 
 => nrel_main_idtf: 
-	[Какова область определения указываемого отношения с заданным контекстом?] 
+	[Показать область определения указываемого отношения с заданным контекстом] 
 	(* <- lang_ru;; *);
 => nrel_idtf: 
 	[Запрос области определения отношения с заданным контекстом] 
@@ -27,7 +27,7 @@ ui_menu_file_for_finding_definitional_domain_with_context => ui_nrel_command_tem
 	*];;
 
 ui_menu_file_for_finding_definitional_domain_with_context => ui_nrel_command_lang_template: 
-	[Какова область определения отношения $ui_arg_1 с заданным контекстом ($ui_arg_2)] 
+	[Показать область определения отношения $ui_arg_1 с заданным контекстом ($ui_arg_2)] 
 	(* <- lang_ru;; *);;
 
 ui_menu_file_for_finding_definitional_domain_with_context => ui_nrel_command_lang_template: 
