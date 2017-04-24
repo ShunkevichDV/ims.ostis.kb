@@ -2,7 +2,7 @@ ui_menu_file_for_finding_key_concepts <- ui_user_command_class_atom; ui_user_com
 
 ui_menu_file_for_finding_key_concepts 
 => nrel_main_idtf: 
-	[Какие элементы являются ключевыми для указываемой предметной области?] 
+	[Найти элементы, которые являются ключевыми для указываемой предметной области] 
 	(* <- lang_ru;; *);
 => nrel_idtf: 
 	[Запрос ключевых sc-элементов для заданной предметной области] 
@@ -10,7 +10,7 @@ ui_menu_file_for_finding_key_concepts
 
 ui_menu_file_for_finding_key_concepts 
 => nrel_main_idtf: 
-	[Which elements are key elements for given subject domain?] 
+	[Find key elements for given subject domain] 
 	(* <- lang_en;; *);
 => nrel_idtf: 
 	[Request of key sc-elements for given subject domain] 
