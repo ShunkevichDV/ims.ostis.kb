@@ -2,7 +2,7 @@ ui_menu_file_for_finding_key_concepts_with_context <- ui_user_command_class_atom
 
 ui_menu_file_for_finding_key_concepts_with_context 
 => nrel_main_idtf: 
-	[Определить элементы, которые являются ключевыми для указываемой предметной области с заданным контекстом] 
+	[Найти элементы, которые являются ключевыми для указываемой предметной области с заданным контекстом] 
 	(* <- lang_ru;; *);
 => nrel_idtf: 
 	[Запрос ключевых sc-элементов для заданной предметной области с заданным контекстом] 
@@ -10,7 +10,7 @@ ui_menu_file_for_finding_key_concepts_with_context
 
 ui_menu_file_for_finding_key_concepts_with_context 
 => nrel_main_idtf: 
-	[Which elements are key elements for given subject domain with the given context?] 
+	[Find key elements for given subject domain with the given context?] 
 	(* <- lang_en;; *);
 => nrel_idtf: 
 	[Request of key sc-elements for given subject domain with the given context] 
@@ -27,11 +27,11 @@ ui_menu_file_for_finding_key_concepts_with_context => ui_nrel_command_template:
 	*];;
 
 ui_menu_file_for_finding_key_concepts_with_context => ui_nrel_command_lang_template: 
-	[Определить элементы, которые являются ключевыми в $ui_arg_1 с заданным контекстом($ui_arg_2)] 
+	[Найти элементы, которые являются ключевыми в $ui_arg_1 с заданным контекстом($ui_arg_2)] 
 		(* <- lang_ru;; *);;
 
 ui_menu_file_for_finding_key_concepts_with_context => ui_nrel_command_lang_template: 
-	[Which elements are key elements for $ui_arg_1 with the given context($ui_arg_2)] 
+	[Find key elements for $ui_arg_1 with the given context($ui_arg_2)] 
 		(* <- lang_en;; *);;
 
 
