@@ -37,7 +37,6 @@ scp_program -> agent_of_finding_approved_proposals_by_user
 			=> nrel_else: .agent_of_finding_approved_proposals_by_user_return;;
 			*);;
 
-
 		-> .agent_of_finding_approved_proposals_by_user1C
 			(*
 		  	<- searchElStr3;;
@@ -57,7 +56,7 @@ scp_program -> agent_of_finding_approved_proposals_by_user
 		 	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
 		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
 		 	-> rrel_3: rrel_assign: rrel_scp_var: _context;;
-            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+            		-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_context_of_action;;
 
 			=> nrel_then: .agent_of_finding_approved_proposals_by_user_2A_set_context_existence_to_true;;
@@ -333,7 +332,6 @@ scp_program -> agent_of_finding_approved_proposals_by_user
 			=> nrel_else: .agent_of_finding_approved_proposals_by_user1G;;
 			*);;
 
-
 		-> .agent_of_finding_approved_proposals_by_user_add_structure 
 			(*
 			<- genElStr3;;
@@ -344,7 +342,6 @@ scp_program -> agent_of_finding_approved_proposals_by_user
 
 			=>nrel_goto: .agent_of_finding_approved_proposals_by_user9G;;
 			*);;
-
 
 		-> .agent_of_finding_approved_proposals_by_user9G
 			(*	
@@ -498,11 +495,9 @@ scp_program -> agent_of_finding_approved_proposals_by_user
 		  	=> nrel_goto: .agent_of_finding_approved_proposals_by_user_return;;
 			*);;	
 
-
 		-> .agent_of_finding_approved_proposals_by_user_return
 			(*
 			<- return;;
 			*);;
-
 		*);;
 	*);;
