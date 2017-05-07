@@ -1,6 +1,6 @@
 lib_component_proc_of_counting_nodes_in_structure
 => nrel_main_idtf:
-	[Компонент библиотеки. scp-программа подсчета количества узлов в структуре]
+	[Компонент библиотеки. scp-программа подсчёта количества узлов в структуре]
 	(* <- lang_ru;; *);
 => nrel_main_idtf:
 	[Library component. scp-program of counting number of nodes in structure]

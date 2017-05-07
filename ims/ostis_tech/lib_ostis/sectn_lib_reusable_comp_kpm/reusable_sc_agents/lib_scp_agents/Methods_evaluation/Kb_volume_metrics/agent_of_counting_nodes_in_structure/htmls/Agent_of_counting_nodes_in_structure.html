@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+	<p>
+		Задачей <b><sc_element sys_idtf="agent_of_counting_nodes_in_structure">агента подсчёта количества узлов в струтуре</sc_element></b> является вычисление количества узлов в заданной структуре. Данный агент инициируется при условии появления в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf="action_to_count_nodes_in_structure">запросу посчитать количество узлов структуры</sc_element></b>. Количество аргументов запроса может изменяться от 1 до 3 в зависимости от решаемой задачи. Первым и обязательным входным аргументом является структура, для которой необходимо подсчитать количество узлов. Вторым и необязательным аргументом является sc-ccылка, содержащая строку на <b><sc_element sys_idtf="lang_en">английском языке</sc_element></b> "Search for nodes in substructures too". Если данный аргумент указан, то поиск узлов будет осуществляться не только для структуры, но и для её подструктур. Третим и необязательным параметром является контекст, в рамках которого неоходимо осуществлять поиск.
+	<p/>
+	<ul>В ходе выполнения агента явно указывается связь со следующими scp-программами:
+		<li>
+			<b><sc_element sys_idtf="proc_of_counting_nodes_in_structure">
+				scp-программа подсчёта количества узлов в структуре;
+			</sc_element></b>
+		</li>
+		<li>
+			<b><sc_element sys_idtf="proc_of_generation_of_metrics_answer">
+				scp-программа генерации ответа для агентов оценки качества;
+			</sc_element></b>
+		</li>
+		<li>
+			<b><sc_element sys_idtf="proc_of_adding_validating_message">
+				scp-программа добавления сообщения об ошибке.
+			</sc_element></b>
+		</li>
+	</ul>
+</body>
+</html>

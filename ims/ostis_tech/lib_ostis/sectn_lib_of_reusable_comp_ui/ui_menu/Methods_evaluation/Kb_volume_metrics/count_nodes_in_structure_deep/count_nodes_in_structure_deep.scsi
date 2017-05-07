@@ -5,7 +5,7 @@ ui_menu_file_for_counting_nodes_in_structure_deep
 	[Посчитать количество узлов в структуре и её подструктурах] 
 	(* <- lang_ru;; *);
 => nrel_main_idtf:
-	[Count number of nodes in structure it's substructures] 
+	[Count number of nodes in structure and it's substructures] 
 	(* <- lang_en;; *);;
 
 ui_menu_file_for_counting_nodes_in_structure_deep
@@ -14,7 +14,7 @@ ui_menu_file_for_counting_nodes_in_structure_deep
 		action_to_count_nodes_in_structure _-> ._action_to_count_nodes_in_structure_instance
 			(*
 			_-> rrel_1:: ui_arg_1;;
-			_-> rrel_2:: ...;;		
+			_-> rrel_2:: [Search for nodes in substructures too];;		
 			*);;
 		._action_to_count_nodes_in_structure_instance _<- question;;
 	*];;
