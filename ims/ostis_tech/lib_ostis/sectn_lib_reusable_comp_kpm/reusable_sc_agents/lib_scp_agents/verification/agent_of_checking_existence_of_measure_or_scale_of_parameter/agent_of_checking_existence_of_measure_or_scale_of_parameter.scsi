@@ -45,33 +45,9 @@ scp_program -> agent_of_checking_existence_of_measure_or_scale_of_parameter
 			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
 			-> rrel_3: rrel_assign: rrel_scp_var: rrel_struct: _param;;
 
-		  	=> nrel_then: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2A;;
+		  	=> nrel_then: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2C;;
 		  	=> nrel_else: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator_call_proc_of_adding_validating_message;;
 			*);;	
-
-		-> .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2A
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_const: non_atomic_section;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
-
-			=> nrel_then: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2C;;
-			=> nrel_else: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2B;;
-			*);;
-
-		-> .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2B
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_const: atomic_section;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
-
-			=> nrel_then: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2C;;
-			=> nrel_else: .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator8B;;
-			*);;
 
 		-> .agent_of_checking_existence_of_measure_or_scale_of_parameter_operator2C
 			(*
