@@ -77,7 +77,7 @@ scp_program -> proc_of_counting_nodes_in_structure_with_context
 			(*
 			<- call;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_cardinality_counting_without_taking_into_account_multiple_occurrences;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_cardinality_counting_without_multiple_occurrences;;
 			-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_counting_nodes_in_structure_with_context_operator5A_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_nodes;;
