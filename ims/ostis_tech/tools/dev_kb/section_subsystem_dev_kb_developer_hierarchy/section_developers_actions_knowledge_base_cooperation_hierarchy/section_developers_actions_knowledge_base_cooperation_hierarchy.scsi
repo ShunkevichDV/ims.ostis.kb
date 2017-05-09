@@ -7,6 +7,9 @@ subject_domain_developers_actions_knowledge_base_cooperation_hierarchy
 	(* <- lang_en;; *);
 
 <- subject_domain;
+<- sc_node_struct;
+<- structure;
+
 -> rrel_maximum_studied_object_class:
 	action_of_developer_unified_semantic_models_of_knowledge_bases;
 -> rrel_not_maximum_studied_object_class:
@@ -203,10 +206,13 @@ action_of_kb_editing
 	(* <- lang_ru;; *);
 	[action of knowledge base editing]
 	(* <- lang_en;; *);
+=> nrel_idtf:
+	[действие редактирования базы знаний ostis-системы]
+	(* <- lang_ru;; *);
 => nrel_inclusion:
 	action_to_replace_structure_according_to_rule;
 	question_merge_two_elements;
-	action_to_delete_structure_elements_that_dont_have_connected_sc_elements_outside;//?
+	action_to_delete_structure_elements_that_dont_have_connected_sc_elements_outside;
 	action_to_delete_selected_sc_element;
 	action_to_reverse_sc_arc_direction;
 	action_to_change_main_identifier;

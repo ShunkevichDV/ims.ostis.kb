@@ -11,7 +11,8 @@ subjdomain_parameters_and_values
 	(* <- lang_ru;; *);
 
 <- subject_domain;
-
+<- sc_node_struct;
+<- structure;
 -> rrel_maximum_studied_object_class:
 	parameter;
 -> rrel_not_maximum_studied_object_class:
@@ -41,11 +42,7 @@ subjdomain_parameters_and_values
 	nrel_pow_of_quantities;
 	nrel_large_quantitie;
 	nrel_equal_of_quantities;
-	nrel_greater_or_equal_quantitie;
-
--> rrel_studied_object_class:
-	...;;
-
+	nrel_greater_or_equal_quantitie;;
 
 parameter
 <- sc_node_not_relation;
