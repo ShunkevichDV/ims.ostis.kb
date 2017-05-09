@@ -1,0 +1,27 @@
+lib_component_proc_of_counting_nodes_in_structure_with_context
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа подсчёта количества узлов в структуре с заданным контекстом]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Library component. scp-program of counting number of nodes in structure within the context]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_counting_nodes_in_structure_with_context;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Proc_Count_Nodes_In_Structure_Context.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_counting_nodes_in_structure_with_context = [*^"file://count_nodes_in_structure_with_context.scsi"*];;
