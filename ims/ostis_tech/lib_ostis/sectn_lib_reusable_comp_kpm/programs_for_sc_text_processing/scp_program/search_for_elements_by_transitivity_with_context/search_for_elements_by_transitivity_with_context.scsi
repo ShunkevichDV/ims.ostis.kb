@@ -1,0 +1,148 @@
+proc_of_searching_for_elements_by_transitivity_with_context
+=> nrel_main_idtf:
+	[scp-программа поиска элементов структуры по транзитивности в рамках заданного контеста] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[scp-program of searching for structures elements by transitivity within the context] (* <-lang_en;; *);;
+
+scp_program -> proc_of_searching_for_elements_by_transitivity_with_context 
+	(*	
+	-> rrel_params: .proc_of_searching_for_elements_by_transitivity_with_context_params 
+		(*
+		-> rrel_1: rrel_in: _structure;;
+		-> rrel_2: rrel_in: _found_elements;;
+		-> rrel_3: rrel_in: _context;;
+		*);;
+
+	-> rrel_operators: .proc_of_searching_for_elements_by_transitivity_with_context_operator_set 
+		(*
+		-> rrel_init: .proc_of_searching_for_elements_by_transitivity_with_context_operator1
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _structure;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _element;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _temp_set_of_elements;;
+
+			=> nrel_then: .proc_of_searching_for_elements_by_transitivity_with_context_operator2A;;
+			=> nrel_else: .proc_of_searching_for_elements_by_transitivity_with_context_operator_return;;
+			*);;
+
+		-> .proc_of_searching_for_elements_by_transitivity_with_context_operator2A
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set_of_elements;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _element;;
+
+			=> nrel_then: .proc_of_searching_for_elements_by_transitivity_with_context_operator2B;;
+			=> nrel_else: .proc_of_searching_for_elements_by_transitivity_with_context_operator3;;
+			*);;
+
+		-> .proc_of_searching_for_elements_by_transitivity_with_context_operator2B
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+
+			=> nrel_goto: .proc_of_searching_for_elements_by_transitivity_with_context_operator2C;;
+			*);;
+
+		-> .proc_of_searching_for_elements_by_transitivity_with_context_operator2C
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _context;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+
+			=> nrel_then: .proc_of_searching_for_elements_by_transitivity_with_context_operator2D;;
+			=> nrel_else: .proc_of_searching_for_elements_by_transitivity_with_context_operator2A;;
+			*);;
+
+		-> .proc_of_searching_for_elements_by_transitivity_with_context_operator2D
+			(*
+			<- ifType;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_struct: _element;;
+
+			=> nrel_then: .proc_of_searching_for_elements_by_transitivity_with_context_operator2E;;
+			=> nrel_else: .proc_of_searching_for_elements_by_transitivity_with_context_operator2K;;
+			*);;
+
+		-> .proc_of_searching_for_elements_by_transitivity_with_context_operator2E
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _found_elements;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+
+			=> nrel_then: .proc_of_searching_for_elements_by_transitivity_with_context_operator2A;;
+			=> nrel_else: .proc_of_searching_for_elements_by_transitivity_with_context_operator2G;;
+			*);;
+
+		-> .proc_of_searching_for_elements_by_transitivity_with_context_operator2G
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _found_elements;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+
+			=> nrel_goto: .proc_of_searching_for_elements_by_transitivity_with_context_operator2H;; 
+			*);;
+
+		-> .proc_of_searching_for_elements_by_transitivity_with_context_operator2H
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_searching_for_elements_by_transitivity_with_context;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_searching_for_elements_by_transitivity_with_context_operator2H_params
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _element;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _found_elements;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _context;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .proc_of_searching_for_elements_by_transitivity_with_context_operator2I;;
+			*);;
+
+		-> .proc_of_searching_for_elements_by_transitivity_with_context_operator2I
+			(*
+			<- waitReturn;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .proc_of_searching_for_elements_by_transitivity_with_context_operator2A;;
+			*);;
+
+		-> .proc_of_searching_for_elements_by_transitivity_with_context_operator2K
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _found_elements;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+
+			=> nrel_goto: .proc_of_searching_for_elements_by_transitivity_with_context_operator2A;; 
+			*);;
+
+		-> .proc_of_searching_for_elements_by_transitivity_with_context_operator3
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _temp_set_of_elements;;
+
+			=> nrel_goto: .proc_of_searching_for_elements_by_transitivity_with_context_operator_return;;
+			*);;
+
+		-> .proc_of_searching_for_elements_by_transitivity_with_context_operator_return
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
