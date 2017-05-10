@@ -14,6 +14,7 @@ lib_ui_menu_na_kb_editing
 		lib_component_ui_menu_file_for_changing_system_identifier;
 		lib_component_ui_menu_file_for_removing_sc_element;
 		lib_component_ui_menu_file_for_removing_elements_of_the_struct;
+		lib_component_ui_menu_file_for_rule_changing;
 		lib_component_ui_menu_file_for_change_arc_direction
 	};;
 
