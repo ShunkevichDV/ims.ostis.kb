@@ -1,0 +1,1196 @@
+scp_program -> proc_of_rule_changing 
+	(*	
+	-> rrel_params: .proc_of_rule_changing_params 
+		(*
+		-> rrel_1: rrel_in: _statement;;
+		-> rrel_2: rrel_in: _kb_part;;
+		*);;
+
+	-> rrel_operators: .proc_of_rule_changing_operator_set 
+		(*
+		-> rrel_init:.proc_of_rule_changing_operator1A 
+                 	(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: nrel_implication;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _statement;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator1B1;;
+		  	=> nrel_else: .proc_of_rule_changing_operator_return;;
+			*);; 
+
+		-> .proc_of_rule_changing_operator1B1
+			(*
+		  	<- searchElStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _statement;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _part1;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+                  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_if;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator1C1;;
+		  	=> nrel_else: .proc_of_rule_changing_operator_return;;
+			*);;
+
+		-> .proc_of_rule_changing_operator1B2
+                 	(*
+		  	<- searchElStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _statement;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _part2;;
+                  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_then;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator1C4;;
+		  	=> nrel_else: .proc_of_rule_changing_operator_return;; 
+			*);;
+
+		-> .proc_of_rule_changing_operator1C1 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: atomic_logical_formula;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _part1;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator1C3;;
+		  	=> nrel_else: .proc_of_rule_changing_operator1C2;;
+			*);;
+
+		-> .proc_of_rule_changing_operator1C2 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: logical_formula_and_uniqueness;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _part1;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator1C3;;
+		  	=> nrel_else: .proc_of_rule_changing_operator_return;;
+			*);;
+
+	
+		-> .proc_of_rule_changing_operator1C3 
+			(*
+		 	<- ifVarAssign;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _part2;;
+
+		 	=> nrel_then: .proc_of_rule_changing_operator1D;;
+		 	=> nrel_else: .proc_of_rule_changing_operator1B2;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator1C4
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: atomic_logical_formula;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _part2;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator1C3;;
+		  	=> nrel_else: .proc_of_rule_changing_operator1C5;;
+			*);;
+
+		-> .proc_of_rule_changing_operator1C5
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: logical_formula_and_uniqueness;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _part2;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator1C3;;
+		  	=> nrel_else: .proc_of_rule_changing_operator_return;;
+			*);;
+
+		-> .proc_of_rule_changing_operator1D 
+                 	(*
+			<- sys_search;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _part1;;
+		 	-> rrel_2: rrel_assign: rrel_scp_var: _tree;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: ...;; 
+
+                 	=> nrel_then: .proc_of_rule_changing_operator2A1;;
+                 	=> nrel_else: .proc_of_rule_changing_operator_return;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator2A1 
+                	(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_selecting_tree;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_rule_changing_operator2A1_params 
+		  		(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _tree;;
+                                -> rrel_2: rrel_fixed: rrel_scp_var: _kb_part;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator2A2;;
+			*);;
+
+		-> .proc_of_rule_changing_operator2A2 
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator2B;;
+			*);;
+
+		-> .proc_of_rule_changing_operator2B 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _tree_elem;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator3A;;
+		  	=> nrel_else: .proc_of_rule_changing_operator4D3_erase3;;
+			*);;
+
+		-> .proc_of_rule_changing_operator3A
+                 	(*
+		 	<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _connection_vars;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator3B1;;
+		 	*);; 
+                
+		-> .proc_of_rule_changing_operator3B1 
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _part1;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _elem1;;
+
+		  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set1;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator3B2;;
+		  	=> nrel_else: .proc_of_rule_changing_operator_return;;
+			*);; 
+
+		-> .proc_of_rule_changing_operator3B2 
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _part2;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
+
+		  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set2;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator3B3;;
+		  	=> nrel_else: .proc_of_rule_changing_operator_return;;
+			*);; 
+
+		-> .proc_of_rule_changing_operator3B3
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set1;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _general;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator3B4;;
+		  	=> nrel_else: .proc_of_rule_changing_operator3B8;;
+			*);;                  
+
+		-> .proc_of_rule_changing_operator3B4 
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc1;;
+
+		   	=> nrel_goto: .proc_of_rule_changing_operator3B5;;
+			*);; 
+
+		-> .proc_of_rule_changing_operator3B5 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set2;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _general;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator3B6;;
+		  	=> nrel_else: .proc_of_rule_changing_operator3B3;;
+			*);; 
+
+		-> .proc_of_rule_changing_operator3B6
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc2;;
+
+		   	=> nrel_goto: .proc_of_rule_changing_operator3B7;;
+			*);; 
+
+		-> .proc_of_rule_changing_operator3B7 
+			(*
+                  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _connection_vars;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _general;;
+             
+                   	=> nrel_goto: .proc_of_rule_changing_operator3B3;;
+                  	*);;
+
+		-> .proc_of_rule_changing_operator3B8
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set1;;
+
+		   	=> nrel_goto: .proc_of_rule_changing_operator3B9;;
+			*);;
+
+		-> .proc_of_rule_changing_operator3B9 
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set2;;
+
+		   	=> nrel_goto: .proc_of_rule_changing_operator3C;;
+			*);; 
+
+		-> .proc_of_rule_changing_operator3C 
+			(*
+		  	<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _connection_vars;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _connection_var;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _temp_connection_vars;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator3D;;
+		  	=> nrel_else: .proc_of_rule_changing_operator3C_erase;;
+			*);;
+
+		-> .proc_of_rule_changing_operator3D
+			(*
+		 	<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _set_of_pairs;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator4A;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator4A 
+			(*
+		  	<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_connection_vars;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _concrete_connection_var;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator4B;;
+		  	=> nrel_else: .proc_of_rule_changing_operator4A_erase;;
+			*);;
+
+		-> .proc_of_rule_changing_operator4A_erase
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _temp_connection_vars;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator6A1;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator4B
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator4C1;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator4C1
+			(*
+		 	<- ifType;;
+
+		 	-> rrel_1: rrel_fixed: rrel_not_relation: rrel_scp_var: _concrete_connection_var;;
+
+		 	=> nrel_then: .proc_of_rule_changing_operator4A;;
+			=> nrel_else: .proc_of_rule_changing_operator4C2;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator4C2
+			(*
+		 	<- ifType;;
+
+		 	-> rrel_1: rrel_fixed: rrel_norole_relation: rrel_scp_var: _concrete_connection_var;;
+
+		 	=> nrel_then: .proc_of_rule_changing_operator4A;;
+			=> nrel_else: .proc_of_rule_changing_operator4C3;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator4C3
+			(*
+		 	<- ifType;;
+
+		 	-> rrel_1: rrel_fixed: rrel_role_relation: rrel_scp_var: _concrete_connection_var;;
+
+		 	=> nrel_then: .proc_of_rule_changing_operator4A;;
+			=> nrel_else: .proc_of_rule_changing_operator4D1;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator4D1
+			(*
+		 	<- ifVarAssign;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _tree_part;;
+
+		 	=> nrel_then: .proc_of_rule_changing_operator4D2;;
+		 	=> nrel_else: .proc_of_rule_changing_operator4D3;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator4D2
+			(*
+		 	<- ifVarAssign;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _tree_leaf;;
+
+		 	=> nrel_then: .proc_of_rule_changing_operator4E1;;
+		 	=> nrel_else: .proc_of_rule_changing_operator4E2;;
+		 	*);; 
+                 	
+		-> .proc_of_rule_changing_operator4D3 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _tree_part;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator4D4;;
+		  	=> nrel_else: .proc_of_rule_changing_operator4D3_erase1;;
+			*);;
+
+		-> .proc_of_rule_changing_operator4D3_erase1
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _temp_connection_vars;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator4D3_erase2;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator4D3_erase2
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _connection_vars;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator4D3_erase3;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator4D3_erase3
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _tree;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator_return;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator4D4 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree_part;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _tree_leaf;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator4E1;;
+		  	=> nrel_else: .proc_of_rule_changing_operator4E2;;
+			*);;
+
+		-> .proc_of_rule_changing_operator4E1 
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree_part;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _leaf;;
+
+                  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_sys_search_binaries;; 
+
+		  	=> nrel_then: .proc_of_rule_changing_operator5A;;
+		  	=> nrel_else: .proc_of_rule_changing_operator_return;;
+			*);;
+
+		-> .proc_of_rule_changing_operator4E2 
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _leaf;;
+
+                  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_sys_search_binaries;; 
+
+		  	=> nrel_then: .proc_of_rule_changing_operator5A;;
+		  	=> nrel_else: .proc_of_rule_changing_operator_return;;
+			*);;
+
+		-> .proc_of_rule_changing_operator5A
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_sys_search_binaries;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _binary_arc;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator5B;;
+		  	=> nrel_else: .proc_of_rule_changing_operator5A_erase;;
+			*);;
+
+		-> .proc_of_rule_changing_operator5A_erase
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_sys_search_binaries;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator4A;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator5B
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator5C;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator5C 
+                 	(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_assign: rrel_scp_var: _start_node;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_var: _binary_arc;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _finish_node;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator5D;;
+		  	=> nrel_else: .proc_of_rule_changing_operator5A;;
+			*);;
+
+		-> .proc_of_rule_changing_operator5D
+			(*
+		 	<- ifCoin;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _start_node;;
+                 	-> rrel_2: rrel_fixed: rrel_scp_var: _concrete_connection_var;;
+
+		 	=> nrel_then: .proc_of_rule_changing_operator5E1;;
+		 	=> nrel_else: .proc_of_rule_changing_operator5A;;
+		 	*);; 
+
+		-> .proc_of_rule_changing_operator5E1 
+                	(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_generation_pair;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_rule_changing_operator5E1_params 
+		  		(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _start_node;; 
+                		-> rrel_2: rrel_fixed: rrel_scp_var: _finish_node;; 
+                		-> rrel_3: rrel_fixed: rrel_scp_var: _set_of_pairs;; 	
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator5E2;;
+			*);;
+
+		-> .proc_of_rule_changing_operator5E2 
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator5E3;;
+			*);;   
+
+		-> .proc_of_rule_changing_operator5E3
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_sys_search_binaries;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator4A;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator6A1
+			(*
+		 	<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _temp_kb_part;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator6A2;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator6A2
+			(*
+		 	<- ifVarAssign;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _tree_leaf;;
+
+		 	=> nrel_then: .proc_of_rule_changing_operator6B1;;
+		 	=> nrel_else: .proc_of_rule_changing_operator6B2;;
+		 	*);; 
+
+		-> .proc_of_rule_changing_operator6B1 
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree_part;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _leaf;;
+
+                  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_sys_search_binaries2;; 
+
+		  	=> nrel_then: .proc_of_rule_changing_operator6C;;
+		  	=> nrel_else: .proc_of_rule_changing_operator_return;;
+			*);;
+
+		-> .proc_of_rule_changing_operator6B2 
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _leaf;;
+
+                  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_sys_search_binaries2;; 
+
+		  	=> nrel_then: .proc_of_rule_changing_operator6C;;
+		  	=> nrel_else: .proc_of_rule_changing_operator_return;;
+			*);;
+
+		-> .proc_of_rule_changing_operator6C
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_sys_search_binaries2;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _binary_arc2;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator6D;;
+		  	=> nrel_else: .proc_of_rule_changing_operator6C_erase;;
+			*);;
+
+		-> .proc_of_rule_changing_operator6C_erase
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_sys_search_binaries2;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator6G1;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator6D
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator6E;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator6E
+                 	(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_assign: rrel_scp_var: _start_node;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_var: _binary_arc2;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _finish_node;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator6F;;
+		  	=> nrel_else: .proc_of_rule_changing_operator6C;;
+			*);;
+
+		-> .proc_of_rule_changing_operator6E
+                 	(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_assign: rrel_scp_var: _start_node;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_var: _binary_arc2;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _finish_node;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator6F;;
+		  	=> nrel_else: .proc_of_rule_changing_operator6C;;
+			*);;
+
+		-> .proc_of_rule_changing_operator6F
+                 	(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _temp_kb_part;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _finish_node;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator6C;;
+			*);;
+
+		-> .proc_of_rule_changing_operator6G1
+			(*
+		 	<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _set_of_sections;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator6G2;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator6G2 
+                	(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_section;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_rule_changing_operator6G2_params 
+		  		(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_sections;; 
+                		-> rrel_2: rrel_fixed: rrel_scp_var: _temp_kb_part;; 
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr3;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator6G3;;
+			*);;
+
+		-> .proc_of_rule_changing_operator6G3 
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr3;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator6G4;;
+			*);;   
+
+		-> .proc_of_rule_changing_operator6G4 
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _temp_kb_part;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator7A;;
+			*);;
+
+		-> .proc_of_rule_changing_operator7A
+			(*
+		 	<- ifVarAssign;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _tree_leaf;;
+
+		 	=> nrel_then: .proc_of_rule_changing_operator7B1;;
+		 	=> nrel_else: .proc_of_rule_changing_operator7B2;;
+		 	*);; 
+
+		-> .proc_of_rule_changing_operator7B1 
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree_part;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _leaf;;
+
+                  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_sys_search_binaries3;; 
+
+		  	=> nrel_then: .proc_of_rule_changing_operator7C;;
+		  	=> nrel_else: .proc_of_rule_changing_operator_return;;
+			*);;
+
+		-> .proc_of_rule_changing_operator7B2 
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _leaf;;
+
+                  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_sys_search_binaries3;; 
+
+		  	=> nrel_then: .proc_of_rule_changing_operator7C;;
+		  	=> nrel_else: .proc_of_rule_changing_operator_return;;
+			*);;
+
+		-> .proc_of_rule_changing_operator7C
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_sys_search_binaries3;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _binary_arc2;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator7D;;
+		  	=> nrel_else: .proc_of_rule_changing_operator7C_erase1;;
+			*);;
+
+		-> .proc_of_rule_changing_operator7C_erase1
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_sys_search_binaries3;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator7C_erase2;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator7C_erase2
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _connection_vars;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator8A;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator7D
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator7E;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator7E
+                 	(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_assign: rrel_scp_var: _start_node;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_var: _binary_arc2;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _finish_node;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator7F;;
+		  	=> nrel_else: .proc_of_rule_changing_operator7C;;
+			*);;
+
+		-> .proc_of_rule_changing_operator7F
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _binary_arc2;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator7G;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator7G
+                 	(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _connection_vars;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _start_node;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator7C;;
+		  	=> nrel_else: .proc_of_rule_changing_operator7H;;
+			*);;
+
+		-> .proc_of_rule_changing_operator7H
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _finish_node;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator7C;;
+		 	*);; 
+
+		-> .proc_of_rule_changing_operator8A
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_sections;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _section_elem;;
+
+                 	-> rrel_set_3: rrel_assign: rrel_scp_var: _temp_set_of_sections;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator8B;;
+			*);;
+
+		-> .proc_of_rule_changing_operator8B
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set_of_sections;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _section_elem1;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator8C;;
+		  	=> nrel_else: .proc_of_rule_changing_operator8B_erase;;
+			*);;
+
+		-> .proc_of_rule_changing_operator8B_erase
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _temp_set_of_sections;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator9A;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator8C
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator8D;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator8D
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _section_elem1;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _kb_elem;;
+
+                 	-> rrel_set_3: rrel_assign: rrel_scp_var: _delete_set2;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator8E;;
+			=> nrel_else: .proc_of_rule_changing_operator8B;;
+			*);;
+
+		-> .proc_of_rule_changing_operator8E
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _delete_set2;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _maybe_delete_elem;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator8F;;
+		  	=> nrel_else: .proc_of_rule_changing_operator8E_erase;;
+			*);;
+
+		-> .proc_of_rule_changing_operator8E_erase
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _delete_set2;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator8B;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator8F
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;;
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator8G;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator8G 
+                 	(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _part1;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _maybe_delete_elem;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator8H;;
+		  	=> nrel_else: .proc_of_rule_changing_operator8E;;
+			*);;
+
+		-> .proc_of_rule_changing_operator8H
+                 	(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _section_elem1;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _delete_arc;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _maybe_delete_elem;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator8I;;
+			=> nrel_else: .proc_of_rule_changing_operator8E;;
+			*);;
+
+		-> .proc_of_rule_changing_operator8I 
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _delete_arc;;  
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator8E;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator9A 
+                 	(*
+			<- sys_gen;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _part2;;
+		 	-> rrel_2: rrel_assign: rrel_scp_var: _tree2;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _set_of_pairs;;
+			-> rrel_4: rrel_assign: rrel_scp_var: _temp_gen_set;;
+
+                 	=> nrel_goto: .proc_of_rule_changing_operator9B1;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator9B1 
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _part2;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_const: rrel_norole_relation: _elem1;;
+
+                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _temp_gen_set;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator9B2;;
+			*);;
+
+		-> .proc_of_rule_changing_operator9B2 
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _part2;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_const: rrel_role_relation: _elem2;;
+
+                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _temp_gen_set;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator9B3;;
+			*);;  
+
+		-> .proc_of_rule_changing_operator9B3 
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _part2;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_const: rrel_not_relation: _elem3;;
+
+                 	-> rrel_set_3: rrel_fixed: rrel_scp_var: _temp_gen_set;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator9C1;;
+			*);;   
+
+		-> .proc_of_rule_changing_operator9C1 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_sections;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _some_section;;
+
+                  	=> nrel_then: .proc_of_rule_changing_operator9C2;;
+		  	=> nrel_else: .proc_of_rule_changing_operator9C1_erase;;
+			*);;
+
+		-> .proc_of_rule_changing_operator9C1_erase 
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set_of_sections;;  
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator10A;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator9C2 
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc1;;  
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator9C3;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator9C3 
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _temp_gen_set ;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _gen_elem;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _some_section;;
+
+                  	=> nrel_goto: .proc_of_rule_changing_operator9C1;;
+			*);;
+
+		-> .proc_of_rule_changing_operator10A 
+                 	(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_pairs;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _clear_elem;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator10B;;
+			=> nrel_else: .proc_of_rule_changing_operator10A_erase;;
+			*);; 
+
+		-> .proc_of_rule_changing_operator10A_erase
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set_of_pairs;;  
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator11A;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator10B
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc1;;  
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator10C;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator10C
+                 	(*
+		  	<- eraseElStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _clear_elem;;
+		  	-> rrel_2: rrel_assign: rrel_erase: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _start;;
+			-> rrel_4: rrel_assign: rrel_erase: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_fixed;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator10D;;
+			*);;
+
+		-> .proc_of_rule_changing_operator10D
+                 	(*
+		  	<- eraseElStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _clear_elem;;
+		  	-> rrel_2: rrel_assign: rrel_erase: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _finish;;
+			-> rrel_4: rrel_assign: rrel_erase: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_fixed;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator10E;;
+			*);;
+
+		-> .proc_of_rule_changing_operator10E
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _clear_elem;;  
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator10A;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator11A 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _tree_part;;
+
+                  	=> nrel_then: .proc_of_rule_changing_operator11B;;
+		  	=> nrel_else: .proc_of_rule_changing_operator11A_erase;;
+			*);;
+
+		-> .proc_of_rule_changing_operator11A_erase 
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _tree;;  
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator12A;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator11B 
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator11C;;
+			*);;
+
+		-> .proc_of_rule_changing_operator11C 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree_part;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _tree_elem;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator11D;;
+			=> nrel_else: .proc_of_rule_changing_operator11E;;
+			*);; 
+
+		-> .proc_of_rule_changing_operator11D 
+			(*
+		  	<- eraseSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree_part;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_erase: rrel_scp_var: _smth;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator11E;;
+			*);;
+
+		-> .proc_of_rule_changing_operator11E
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _tree_part;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator11A;;
+			*);; 
+
+		-> .proc_of_rule_changing_operator12A
+            		(*
+            		<- ifVarAssign;;
+
+            		-> rrel_1: rrel_fixed: rrel_scp_var: _tree2;;
+
+            		=> nrel_then: .proc_of_rule_changing_operator12B;;
+			=> nrel_else: .proc_of_rule_changing_operator_return;;
+            		*);;
+
+		-> .proc_of_rule_changing_operator12B
+                 	(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree2;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _connect;;
+
+		  	=> nrel_then: .proc_of_rule_changing_operator12C;;
+			=> nrel_else: .proc_of_rule_changing_operator12D;;
+			*);; 
+
+		-> .proc_of_rule_changing_operator12C 
+                 	(*
+		  	<- eraseSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree2;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_erase: rrel_scp_var: _connection;;
+
+		  	=> nrel_goto: .proc_of_rule_changing_operator12D;;
+			*);; 
+
+		-> .proc_of_rule_changing_operator12D
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _tree2;;  
+
+		 	=> nrel_goto: .proc_of_rule_changing_operator1D;;
+		 	*);;
+
+		-> .proc_of_rule_changing_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

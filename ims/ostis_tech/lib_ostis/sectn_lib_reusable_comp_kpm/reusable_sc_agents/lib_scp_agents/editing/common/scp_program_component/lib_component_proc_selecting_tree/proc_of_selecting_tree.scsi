@@ -1,0 +1,216 @@
+scp_program -> proc_selecting_tree 
+	(*	
+	-> rrel_params: .proc_selecting_tree_params 
+		(*
+		-> rrel_1: rrel_in: _tree;;
+		-> rrel_2: rrel_in: _kb_part;;
+		*);;
+
+	-> rrel_operators: .proc_selecting_tree_operator_set 
+		(*
+		-> rrel_init: .proc_selecting_tree_operator1A1
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _tree_part;;
+
+		  	=> nrel_then: .proc_selecting_tree_operator1A2;;
+		  	=> nrel_else: .proc_selecting_tree_operator_return;;
+			*);;
+
+		-> .proc_selecting_tree_operator1A2
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree_part;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _tree_leaf;;
+
+		  	=> nrel_then: .proc_selecting_tree_operator1A3;;
+		  	=> nrel_else: .proc_selecting_tree_operator1B2;;
+			*);;
+
+		-> .proc_selecting_tree_operator1A3
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _tree_part2;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _temp_tree_parts;;
+
+		  	=> nrel_then: .proc_selecting_tree_operator1A4;;
+		  	=> nrel_else: .proc_selecting_tree_operator_return;;
+			*);;
+
+		-> .proc_selecting_tree_operator1A4
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _temp_tree_parts;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _tree_part3;;
+
+		  	=> nrel_then: .proc_selecting_tree_operator1A5;;
+		  	=> nrel_else: .proc_selecting_tree_operator1A4_erase;;
+			*);;
+
+		-> .proc_selecting_tree_operator1A4_erase
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _temp_tree_parts;;
+
+		 	=> nrel_goto: .proc_selecting_tree_operator_return;;
+		 	*);;
+
+		-> .proc_selecting_tree_operator1A5
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;;
+
+		 	=> nrel_goto: .proc_selecting_tree_operator1B1;;
+		 	*);;
+
+		-> .proc_selecting_tree_operator1B1 
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree_part3;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _leaf;;
+
+                  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_sys_search_binaries;; 
+
+		  	=> nrel_then: .proc_selecting_tree_operator1C;;
+		  	=> nrel_else: .proc_selecting_tree_operator_return;;
+			*);;
+
+		-> .proc_selecting_tree_operator1B2
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _leaf;;
+
+                  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_sys_search_binaries;; 
+
+		  	=> nrel_then: .proc_selecting_tree_operator1C;;
+		  	=> nrel_else: .proc_selecting_tree_operator_return;;
+			*);;
+
+		-> .proc_selecting_tree_operator1C
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_sys_search_binaries;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _binary_arc;;
+
+		  	=> nrel_then: .proc_selecting_tree_operator1D;;
+		  	=> nrel_else: .proc_selecting_tree_operator1C_erase;;
+			*);;
+
+		-> .proc_selecting_tree_operator1C_erase
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_sys_search_binaries;;
+
+		 	=> nrel_goto: .proc_selecting_tree_operator1A4;; 
+		 	*);;
+
+		-> .proc_selecting_tree_operator1D
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;;
+
+		 	=> nrel_goto: .proc_selecting_tree_operator1E;;
+		 	*);;
+
+		-> .proc_selecting_tree_operator1E 
+                 	(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_assign: rrel_scp_var: _start_node;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_var: _binary_arc;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _finish_node;;
+
+		  	=> nrel_then: .proc_selecting_tree_operator1F;;
+		  	=> nrel_else: .proc_selecting_tree_operator4A;;
+			*);;
+
+		-> .proc_selecting_tree_operator1F
+			(*
+		 	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _kb_part;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _finish_node;;
+
+		 	=> nrel_then: .proc_selecting_tree_operator1C;;
+		 	=> nrel_else: .proc_selecting_tree_operator1G;;
+		 	*);; 
+
+		-> .proc_selecting_tree_operator1G
+                 	(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_sys_search_binaries;;
+
+		  	=> nrel_goto: .proc_selecting_tree_operator1H;;
+			*);;
+
+		-> .proc_selecting_tree_operator1H
+			(*
+		 	<- ifVarAssign;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _temp_tree_parts;;
+
+		 	=> nrel_then: .proc_selecting_tree_operator1I1;;
+		 	=> nrel_else: .proc_selecting_tree_operator1I3;;
+		 	*);;
+
+		-> .proc_selecting_tree_operator1I1
+                 	(*
+		  	<- eraseSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree_part3;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_erase: rrel_scp_var: _leaf;;
+
+		  	=> nrel_goto: .proc_selecting_tree_operator1I2;;
+			*);;
+
+		-> .proc_selecting_tree_operator1I2
+                 	(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _tree_part3;;
+
+		  	=> nrel_goto: .proc_selecting_tree_operator1A4;;
+			*);;
+
+		-> .proc_selecting_tree_operator1I3
+                 	(*
+		  	<- eraseSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _tree;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_erase: rrel_scp_var: _part;;
+
+		  	=> nrel_goto: .proc_selecting_tree_operator_return;;
+			*);;
+
+		-> .proc_selecting_tree_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

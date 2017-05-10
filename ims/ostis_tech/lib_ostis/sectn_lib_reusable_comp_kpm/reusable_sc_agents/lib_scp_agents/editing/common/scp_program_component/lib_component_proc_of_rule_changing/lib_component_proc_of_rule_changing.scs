@@ -1,0 +1,27 @@
+lib_component_proc_of_rule_changing
+=> nrel_main_idtf:
+	[Компонент библиотеки. Scp-программа замены по правилу]
+	(* <- lang_ru;; *);
+	[Library component. Scp-program of rule changing]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_rule_changing;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Proc_Of_Rule_Changing.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_rule_changing = [*^"file://proc_of_rule_changing.scsi"*];;
+

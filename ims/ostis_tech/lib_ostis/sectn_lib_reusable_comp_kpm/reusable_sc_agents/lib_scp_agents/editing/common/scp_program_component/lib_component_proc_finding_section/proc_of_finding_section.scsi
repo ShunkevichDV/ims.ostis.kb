@@ -1,0 +1,555 @@
+scp_program -> proc_of_finding_section 
+	(*	
+	-> rrel_params: .proc_of_finding_section_params 
+		(*
+		-> rrel_1: rrel_in: _set_of_sections;;
+		-> rrel_2: rrel_in: _kb_part;;
+		*);;
+
+	-> rrel_operators: .proc_of_finding_section_operator_set 
+		(*
+		-> rrel_init: .proc_of_finding_section_operator1A 
+                 	(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _kb_part;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _kb_elem;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _kb_part2;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1B1;;
+		  	=> nrel_else: .proc_of_finding_section_operator_return;;
+			*);;
+
+		-> .proc_of_finding_section_operator1B1 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _kb_part2;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _kb_elem1;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1B2;;
+		  	=> nrel_else: .proc_of_finding_section_operator_return;;
+			*);;
+
+		-> .proc_of_finding_section_operator1B2 
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc1;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1B3;;
+			*);;
+
+		-> .proc_of_finding_section_operator1B3
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_assign: rrel_scp_var: rrel_struct: _struct1;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _kb_elem1;;
+
+			-> rrel_set_1: rrel_assign: rrel_scp_var: _struct_set1;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1C1;;
+		  	=> nrel_else: .proc_of_finding_section_operator_return;;  
+			*);;
+
+		-> .proc_of_finding_section_operator1C1
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _kb_part2;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _kb_elem2;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1C2;;
+		  	=> nrel_else: .proc_of_finding_section_operator1G1;;  
+			*);;
+
+		-> .proc_of_finding_section_operator1C2
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc2;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1C3;;
+			*);;
+
+		-> .proc_of_finding_section_operator1C3
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_assign: rrel_scp_var: rrel_struct: _struct2;; 
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _kb_elem2;;
+
+			-> rrel_set_1: rrel_assign: rrel_scp_var: _struct_set2;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1D1;;
+		  	=> nrel_else: .proc_of_finding_section_operator_return;;  
+			*);;
+
+		-> .proc_of_finding_section_operator1D1
+			(*
+		 	<- ifVarAssign;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _overall_structs2;;
+
+		 	=> nrel_then: .proc_of_finding_section_operator1E1;;
+		 	=> nrel_else: .proc_of_finding_section_operator1D2;;
+		 	*);;
+
+		-> .proc_of_finding_section_operator1D2
+			(*
+		 	<- ifVarAssign;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _overall_structs;;
+
+		 	=> nrel_then: .proc_of_finding_section_operator1F1;;
+		 	=> nrel_else: .proc_of_finding_section_operator1D3;;
+		 	*);;
+
+		-> .proc_of_finding_section_operator1D3
+                 	(*
+		 	<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _overall_structs;;
+
+		 	=> nrel_goto: .proc_of_finding_section_operator1D41;;
+		 	*);;
+
+		-> .proc_of_finding_section_operator1D41 
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _struct_set1;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _elem1;;
+
+		  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set1;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1D42;;
+		  	=> nrel_else: .proc_of_finding_section_operator_return;;
+			*);; 
+
+		-> .proc_of_finding_section_operator1D42
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _struct_set2;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
+
+		  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set2;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1D43;;
+		  	=> nrel_else: .proc_of_finding_section_operator_return;;
+			*);; 
+
+		-> .proc_of_finding_section_operator1D43
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set1;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _general;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1D44;;
+		  	=> nrel_else: .proc_of_finding_section_operator1D48;;
+			*);;                  
+
+		-> .proc_of_finding_section_operator1D44 
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc1;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1D45;;
+			*);; 
+
+		-> .proc_of_finding_section_operator1D45 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set2;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _general;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1D46;;
+		  	=> nrel_else: .proc_of_finding_section_operator1D43;;
+			*);; 
+
+		-> .proc_of_finding_section_operator1D46
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc2;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1D47;;
+			*);; 
+
+		-> .proc_of_finding_section_operator1D47 
+			(*
+                  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _overall_structs;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _general;;
+             
+                   	=> nrel_goto: .proc_of_finding_section_operator1D43;;
+                  	*);;
+
+		-> .proc_of_finding_section_operator1D48
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set1;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1D49;;
+			*);;
+
+		-> .proc_of_finding_section_operator1D49 
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set2;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1D6;;
+			*);;
+
+		-> .proc_of_finding_section_operator1D6
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _struct_set1;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1D7;;
+			*);;
+
+		-> .proc_of_finding_section_operator1D7
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _struct_set2;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1C1;;
+			*);;
+
+		-> .proc_of_finding_section_operator1E1
+                 	(*
+		 	<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _overall_structs;;
+
+		 	=> nrel_goto: .proc_of_finding_section_operator1E21;;
+		 	*);;
+
+		-> .proc_of_finding_section_operator1E21 
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _overall_structs2;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _elem1;;
+
+		  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set1;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1E22;;
+		  	=> nrel_else: .proc_of_finding_section_operator_return;;
+			*);; 
+
+		-> .proc_of_finding_section_operator1E22
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _struct_set2;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
+
+		  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set2;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1E23;;
+		  	=> nrel_else: .proc_of_finding_section_operator_return;;
+			*);; 
+
+		-> .proc_of_finding_section_operator1E23
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set1;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _general;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1E24;;
+		  	=> nrel_else: .proc_of_finding_section_operator1E28;;
+			*);;                  
+
+		-> .proc_of_finding_section_operator1E24 
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc1;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1E25;;
+			*);; 
+
+		-> .proc_of_finding_section_operator1E25 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set2;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _general;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1E26;;
+		  	=> nrel_else: .proc_of_finding_section_operator1E23;;
+			*);; 
+
+		-> .proc_of_finding_section_operator1E26
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc2;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1E27;;
+			*);; 
+
+		-> .proc_of_finding_section_operator1E27 
+			(*
+                  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _overall_structs;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _general;;
+             
+                   	=> nrel_goto: .proc_of_finding_section_operator1E23;;
+                  	*);;
+
+		-> .proc_of_finding_section_operator1E28
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set1;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1E29;;
+			*);;
+
+		-> .proc_of_finding_section_operator1E29 
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set2;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1E4;;
+			*);; 
+
+		-> .proc_of_finding_section_operator1E4
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _overall_structs2;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1D7;;
+			*);;
+
+		-> .proc_of_finding_section_operator1F1
+                 	(*
+		 	<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _overall_structs2;;
+
+		 	=> nrel_goto: .proc_of_finding_section_operator1F21;;
+		 	*);;
+
+		-> .proc_of_finding_section_operator1F21 
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _overall_structs;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _elem1;;
+
+		  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set1;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1F22;;
+		  	=> nrel_else: .proc_of_finding_section_operator_return;;
+			*);; 
+
+		-> .proc_of_finding_section_operator1F22
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _struct_set2;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
+
+		  	-> rrel_set_3: rrel_assign: rrel_scp_var: _set2;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1F23;;
+		  	=> nrel_else: .proc_of_finding_section_operator_return;;
+			*);; 
+
+		-> .proc_of_finding_section_operator1F23
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set1;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _general;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1F24;;
+		  	=> nrel_else: .proc_of_finding_section_operator1F28;;
+			*);;                  
+
+		-> .proc_of_finding_section_operator1F24 
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc1;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1F25;;
+			*);; 
+
+		-> .proc_of_finding_section_operator1F25 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set2;;
+		  	-> rrel_2: rrel_assign: rrel_scp_var: _arc2;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _general;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1F26;;
+		  	=> nrel_else: .proc_of_finding_section_operator1F23;;
+			*);; 
+
+		-> .proc_of_finding_section_operator1F26
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc2;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1F27;;
+			*);; 
+
+		-> .proc_of_finding_section_operator1F27 
+			(*
+                  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _overall_structs2;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _general;;
+             
+                   	=> nrel_goto: .proc_of_finding_section_operator1F23;;
+                  	*);;
+
+		-> .proc_of_finding_section_operator1F28
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set1;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1F29;;
+			*);;
+
+		-> .proc_of_finding_section_operator1F29 
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set2;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1F4;;
+			*);; 
+
+		-> .proc_of_finding_section_operator1F4
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _overall_structs;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1D7;;
+			*);;
+		
+		-> .proc_of_finding_section_operator1G1
+			(*
+		 	<- ifVarAssign;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _overall_structs;;
+
+		 	=> nrel_then: .proc_of_finding_section_operator1G2;;
+		 	=> nrel_else: .proc_of_finding_section_operator1G4;;
+		 	*);;
+
+		-> .proc_of_finding_section_operator1G2
+                 	(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _overall_structs;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _overall_elem;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _set_of_sections;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1G3;;
+		  	=> nrel_else: .proc_of_finding_section_operator_return;;
+			*);;
+
+		-> .proc_of_finding_section_operator1G3
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _overall_structs;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1G7;;
+			*);;
+
+		-> .proc_of_finding_section_operator1G4
+			(*
+		 	<- ifVarAssign;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _overall_structs2;;
+
+		 	=> nrel_then: .proc_of_finding_section_operator1G5;;
+		 	=> nrel_else: .proc_of_finding_section_operator1G7;;
+		 	*);;
+
+		-> .proc_of_finding_section_operator1G5
+                 	(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _overall_structs2;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _overall_elem2;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _set_of_sections;;
+
+		  	=> nrel_then: .proc_of_finding_section_operator1G6;;
+		  	=> nrel_else: .proc_of_finding_section_operator_return;;
+			*);;
+
+		-> .proc_of_finding_section_operator1G6
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _overall_structs2;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator1G7;;
+			*);;
+
+		-> .proc_of_finding_section_operator1G7
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _kb_part2;;
+
+		   	=> nrel_goto: .proc_of_finding_section_operator_return;;
+			*);;
+
+		-> .proc_of_finding_section_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

@@ -1,0 +1,25 @@
+lib_component_ui_menu_file_for_rule_changing
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса для замены по правилу]
+	(* <- lang_ru;; *);
+	[Library component. User interface command for rule changing]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
+<- library_of_reusable_components_of_knowledge_bases;
+
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Ui_Rule_Changing.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_ui_menu_file_for_rule_changing = [*^"file://ui_menu_file_for_rule_changing.scsi"*];; 
