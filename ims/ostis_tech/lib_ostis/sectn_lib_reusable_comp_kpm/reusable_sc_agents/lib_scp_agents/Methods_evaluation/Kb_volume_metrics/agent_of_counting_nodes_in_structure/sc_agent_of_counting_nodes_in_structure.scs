@@ -27,8 +27,6 @@ sc_agent_of_counting_nodes_in_structure
 		{
 		agent_of_counting_nodes_in_structure;
 		proc_of_adding_validating_message;
-		proc_of_counting_nodes_in_structure;
-		proc_of_counting_nodes_in_structure_with_context;
 		proc_of_generation_of_metrics_answer
 		};;
 
