@@ -3,10 +3,10 @@ ui_two_argument_command_class;;
 
 ui_menu_file_for_counting_nodes_in_structure_with_context
 => nrel_main_idtf: 
-	[Посчитать количество узлов в структуре с заданным контекстом] 
+	[Посчитать количество sc-узлов в структуре с заданным контекстом] 
 	(* <- lang_ru;; *);
 => nrel_main_idtf:
-	[Count number of nodes in structure within the context] 
+	[Count number of sc-nodes in structure within the context] 
 	(* <- lang_en;; *);;
 
 ui_menu_file_for_counting_nodes_in_structure_with_context
@@ -22,8 +22,8 @@ ui_menu_file_for_counting_nodes_in_structure_with_context
 
 ui_menu_file_for_counting_nodes_in_structure_with_context
 => ui_nrel_command_lang_template: 
-	[Посчитать количество узлов в структуре $ui_arg_1 с заданным контекстом ($ui_arg_2)] 
+	[Посчитать количество sc-узлов в структуре $ui_arg_1 с заданным контекстом ($ui_arg_2)] 
 	(* <- lang_ru;; *);
 => ui_nrel_command_lang_template:
-	[Count number of nodes in structure $ui_arg_1 with the given context ($ui_arg_2)] 
+	[Count number of sc-nodes in structure $ui_arg_1 with the given context ($ui_arg_2)] 
 	(* <- lang_en;; *);;

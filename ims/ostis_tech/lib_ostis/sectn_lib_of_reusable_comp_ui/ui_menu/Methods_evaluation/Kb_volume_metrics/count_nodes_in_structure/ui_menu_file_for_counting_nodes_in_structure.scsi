@@ -2,10 +2,10 @@ ui_menu_file_for_counting_nodes_in_structure <- ui_user_command_class_atom; ui_u
 
 ui_menu_file_for_counting_nodes_in_structure
 => nrel_main_idtf: 
-	[Посчитать количество узлов в структуре] 
+	[Посчитать количество sc-узлов в структуре] 
 	(* <- lang_ru;; *);
 => nrel_main_idtf:
-	[Count number of nodes in structure] 
+	[Count number of sc-nodes in structure] 
 	(* <- lang_en;; *);;
 
 ui_menu_file_for_counting_nodes_in_structure
@@ -20,8 +20,8 @@ ui_menu_file_for_counting_nodes_in_structure
 
 ui_menu_file_for_counting_nodes_in_structure
 => ui_nrel_command_lang_template: 
-	[Посчитать количество узлов в структуре: $ui_arg_1] 
+	[Посчитать количество sc-узлов в структуре: $ui_arg_1] 
 	(* <- lang_ru;; *);
 => ui_nrel_command_lang_template:
-	[Count number of nodes in structure: $ui_arg_1] 
+	[Count number of sc-nodes in structure: $ui_arg_1] 
 	(* <- lang_en;; *);;

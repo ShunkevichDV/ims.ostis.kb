@@ -1,9 +1,9 @@
 lib_component_ui_menu_file_for_counting_nodes_in_structure
 => nrel_main_idtf:
-	[Компонент библиотеки. Команда пользовательского интерфейса подсчета количества узлов в структуре]
+	[Компонент библиотеки. Команда пользовательского интерфейса подсчета количества sc-узлов в структуре]
 	(* <- lang_ru;; *);
 => nrel_main_idtf:
-	[Library component. User interface command of counting number of nodes in structure]
+	[Library component. User interface command of counting number of sc-nodes in structure]
 	(* <- lang_en;; *);
 
 <- library_of_platform_independent_reusable_components;
@@ -23,4 +23,4 @@ lib_component_ui_menu_file_for_counting_nodes_in_structure
 		*);;
 	*);;
 	
-lib_component_ui_menu_file_for_counting_nodes_in_structure = [*^"file://count_nodes_in_structure.scsi"*];;
+lib_component_ui_menu_file_for_counting_nodes_in_structure = [*^"file://ui_menu_file_for_counting_nodes_in_structure.scsi"*];;
