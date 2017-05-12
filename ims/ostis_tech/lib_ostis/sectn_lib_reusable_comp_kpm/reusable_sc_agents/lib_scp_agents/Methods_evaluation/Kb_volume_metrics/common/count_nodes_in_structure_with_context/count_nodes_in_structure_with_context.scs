@@ -1,9 +1,9 @@
 lib_component_proc_of_counting_nodes_in_structure_with_context
 => nrel_main_idtf:
-	[Компонент библиотеки. scp-программа подсчёта количества узлов в структуре с заданным контекстом]
+	[Компонент библиотеки. scp-программа подсчёта количества sс-узлов в структуре с заданным контекстом]
 	(* <- lang_ru;; *);
 => nrel_main_idtf:
-	[Library component. scp-program of counting number of nodes in structure within the context]
+	[Library component. scp-program of counting number of sc-nodes in structure within the context]
 	(* <- lang_en;; *);
 
 <- library_of_platform_independent_reusable_components;

@@ -1,8 +1,8 @@
 proc_of_counting_nodes_in_structure_with_context
 => nrel_main_idtf:
-	[scp-программа подсчёта количества узлов в структуре c заданным контекстом] (* <- lang_ru;; *);
+	[scp-программа подсчёта количества sc-узлов в структуре c заданным контекстом] (* <- lang_ru;; *);
 => nrel_main_idtf:
-	[scp-program of counting number of nodes in structure within the context] (* <- lang_en;; *);;
+	[scp-program of counting number of sc-nodes in structure within the context] (* <- lang_en;; *);;
 
 scp_program -> proc_of_counting_nodes_in_structure_with_context
 	(*
@@ -27,23 +27,28 @@ scp_program -> proc_of_counting_nodes_in_structure_with_context
 
 		-> .proc_of_counting_nodes_in_structure_with_context_operator2
 			(*
-			<- genEl;;
+			<- searchSetStr3;;
 
-			-> rrel_1: rrel_assign: rrel_scp_var: rrel_const: rrel_node: _set_of_elements;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _struct;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: _node;;
 
-			=> nrel_goto: .proc_of_counting_nodes_in_structure_with_context_operator3A;;
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_nodes;;
+
+			=> nrel_then: .proc_of_counting_nodes_in_structure_with_context_operator3A;;
+			=> nrel_else: .proc_of_counting_nodes_in_structure_with_context_operator_return;;
 			*);;
 
 		-> .proc_of_counting_nodes_in_structure_with_context_operator3A
 			(*
 			<- call;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_searching_for_elements_by_transitivity_with_context;;
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_cardinality_counting_without_multiple_occurrences_with_context;;
 			-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_counting_nodes_in_structure_with_context_operator3A_params 
 				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _struct;;
-				-> rrel_2: rrel_fixed: rrel_scp_var: _set_of_elements;;
-				-> rrel_3: rrel_fixed: rrel_scp_var: _context;;
+				-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_nodes;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _context;;
+				-> rrel_3: rrel_assign: rrel_scp_var: _number_of_nodes;;
 				*);;
 			-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
 
@@ -61,56 +66,9 @@ scp_program -> proc_of_counting_nodes_in_structure_with_context
 
 		-> .proc_of_counting_nodes_in_structure_with_context_operator4
 			(*
-			<- searchSetStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_elements;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: _node;;
-
-			-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_nodes;;
-
-			=> nrel_then: .proc_of_counting_nodes_in_structure_with_context_operator5A;;
-			=> nrel_else: .proc_of_counting_nodes_in_structure_with_context_operator6B;;
-			*);;
-
-		-> .proc_of_counting_nodes_in_structure_with_context_operator5A
-			(*
-			<- call;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_cardinality_counting_without_multiple_occurrences;;
-			-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_counting_nodes_in_structure_with_context_operator5A_params 
-				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_nodes;;
-				-> rrel_2: rrel_assign: rrel_scp_var: _number_of_nodes;;
-				*);;
-			-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
-
-			=> nrel_goto: .proc_of_counting_nodes_in_structure_with_context_operator5B;;
-			*);;
-
-		-> .proc_of_counting_nodes_in_structure_with_context_operator5B
-			(*
-			<- waitReturn;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
-
-			=> nrel_goto: .proc_of_counting_nodes_in_structure_with_context_operator6A;;
-			*);;
-
-		-> .proc_of_counting_nodes_in_structure_with_context_operator6A
-			(*
 			<- eraseEl;;
 
 			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_nodes;;
-
-			=> nrel_goto: .proc_of_counting_nodes_in_structure_with_context_operator6B;;
-			*);;
-
-		-> .proc_of_counting_nodes_in_structure_with_context_operator6B
-			(*
-			<- eraseEl;;
-
-			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_elements;;
 
 			=> nrel_goto: .proc_of_counting_nodes_in_structure_with_context_operator_return;;
 			*);;
