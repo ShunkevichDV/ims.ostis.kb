@@ -1,8 +1,8 @@
 sc_agent_of_counting_nodes_in_structure
 => nrel_main_idtf:
-	[sc-агент подсчета количества узлов в структуре] (* <- lang_ru;; *);
+	[sc-агент подсчета количества sc-узлов в структуре] (* <- lang_ru;; *);
 => nrel_main_idtf:
-	[sc-agent of counting number of nodes in structure] (* <- lang_en;; *);
+	[sc-agent of counting number of sc-nodes in structure] (* <- lang_en;; *);
 
 <- abstract_sc_agent;
 
