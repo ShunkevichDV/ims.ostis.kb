@@ -6,8 +6,7 @@ lib_component_proc_of_cardinality_counting_without_multiple_occurrences
 	[Library component. scp-program of set's cardinality counting without taking into account multiple occurrences]
 	(* <- lang_en;; *);
 
-<- platform_independent_reusable_component_OSTIS;
-<- reusable_scp_program;
+<- library_of_platform_independent_reusable_components;
 
 -> rrel_key_sc_element: 
 	proc_of_cardinality_counting_without_multiple_occurrences;
