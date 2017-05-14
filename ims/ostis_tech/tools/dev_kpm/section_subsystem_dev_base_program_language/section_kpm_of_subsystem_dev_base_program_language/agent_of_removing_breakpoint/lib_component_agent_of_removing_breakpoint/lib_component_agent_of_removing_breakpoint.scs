@@ -26,3 +26,10 @@ lib_component_agent_of_removing_breakpoint
 				(* <- lang_ru;; *);; 
 		*);;
 	*);;
+
+question_removing_breakpoint
+=> nrel_main_idtf:
+	[действие. удалить все точки останова из scp-программы]
+	(* <- lang_ru;; *);
+	[action. to remove breakpoint]
+	(* <- lang_en;; *);;
