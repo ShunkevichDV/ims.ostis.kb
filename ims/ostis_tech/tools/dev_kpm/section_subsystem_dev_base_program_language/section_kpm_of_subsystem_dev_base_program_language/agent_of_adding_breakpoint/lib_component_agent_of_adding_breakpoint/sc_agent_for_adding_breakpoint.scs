@@ -1,6 +1,6 @@
 sc_agent_for_adding_breakpoint
 => nrel_main_idtf:
-	[sc-агент поиска] (* <- lang_ru;; *);
+	[sc-агент добавления] (* <- lang_ru;; *);
 	[sc-agent] (* <- lang_en;; *);
 
 <- abstract_sc_agent;

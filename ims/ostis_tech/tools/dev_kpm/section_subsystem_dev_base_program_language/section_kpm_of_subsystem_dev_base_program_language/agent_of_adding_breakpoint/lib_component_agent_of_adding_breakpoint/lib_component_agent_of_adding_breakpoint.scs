@@ -1,18 +1,18 @@
 lib_component_agent_of_adding_breakpoint
 => nrel_main_idtf:
-	[Компонент библиотеки. sc-агент]
+	[Компонент библиотеки. sc-агент добавления точки останова]
 	(* <- lang_ru;; *);
-	[Library component. sc-agent]
+	[Library component. sc-agent of adding breakpoint]
 	(* <- lang_en;; *);
 
 <- library_of_platform_independent_reusable_components; 
 <- library_of_atomic_reusable_components; 
 
 => nrel_attendant_component: 
-	lib_component_ui_menu_file_for_adding_breakpoint; 
+	lib_component_ui_menu_adding_breakpoint; 
 
 -> rrel_key_sc_element: 
-	.platform_independent_realization_of_sc_agent_of_adding_breakpoint;;
+	.platform_independent_realization_of_sc_agent_of_adding_breakpoint;
 
 <- rrel_key_sc_element: 
 	...
@@ -26,3 +26,10 @@ lib_component_agent_of_adding_breakpoint
 				(* <- lang_ru;; *);; 
 		*);;
 	*);;
+
+question_adding_breakpoint
+=> nrel_main_idtf:
+	[действие. добавить точку останова]
+	(* <- lang_ru;; *);
+	[action. to add breakpoint]
+	(* <- lang_en;; *);;

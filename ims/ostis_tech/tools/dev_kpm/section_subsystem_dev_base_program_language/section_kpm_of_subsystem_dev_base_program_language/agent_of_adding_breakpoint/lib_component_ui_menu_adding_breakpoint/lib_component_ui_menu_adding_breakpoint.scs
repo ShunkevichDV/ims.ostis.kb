@@ -1,12 +1,12 @@
 lib_component_ui_menu_adding_breakpoint
 => nrel_main_idtf:
-	[Компонент библиотеки. Команда пользовательского интерфейса]
+	[Компонент библиотеки. Команда пользовательского интерфейса добавления точки останова]
 	(* <- lang_ru;; *);
-	[Library component. User interface command]
+	[Library component. User interface command of adding breakpoint]
 	(* <- lang_en;; *);
 
 <- library_of_platform_independent_reusable_components;
-<- library_of_atomic_reusable_components;;
+<- library_of_atomic_reusable_components;
 
 <- rrel_key_sc_element:
 	... 
@@ -21,4 +21,4 @@ lib_component_ui_menu_adding_breakpoint
 		*);;
 	*);;
 
-lib_component_ui_menu_view_translation = [*^"file://ui_menu_adding_breakpoint.scsi"*];;
+lib_component_ui_menu_adding_breakpoint = [*^"file://ui_menu_adding_breakpoint.scsi"*];;
