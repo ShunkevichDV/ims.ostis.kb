@@ -26,3 +26,11 @@ lib_component_agent_of_finding_operators_of_scp_program
 				(* <- lang_ru;; *);; 
 		*);;
 	*);;
+
+question_finding_operators_of_scp_program
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. найти все scp-операторы в рамках scp-программы]
+	(* <- lang_ru;; *);
+	[action. to find operators of scp-program]
+	(* <- lang_en;; *);;

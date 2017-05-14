@@ -21,4 +21,4 @@ lib_component_ui_menu_finding_operators_of_scp_program
 		*);;
 	*);;
 
-lib_component_ui_menu_view_translation = [*^"file://ui_menu_finding_operators_of_scp_program.scsi"*];;
+lib_component_ui_menu_finding_operators_of_scp_program= [*^"file://ui_menu_finding_operators_of_scp_program.scsi"*];;
