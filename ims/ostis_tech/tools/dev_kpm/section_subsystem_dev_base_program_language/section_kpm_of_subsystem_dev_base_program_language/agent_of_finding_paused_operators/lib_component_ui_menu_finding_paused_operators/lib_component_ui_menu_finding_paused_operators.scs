@@ -21,4 +21,4 @@ lib_component_ui_menu_finding_paused_operators
 		*);;
 	*);;
 
-lib_component_ui_menu_view_translation = [*^"file://ui_menu_finding_paused_operators.scsi"*];;
+lib_component_ui_menu_finding_paused_operators = [*^"file://ui_menu_finding_paused_operators.scsi"*];;

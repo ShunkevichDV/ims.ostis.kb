@@ -9,7 +9,7 @@ lib_component_agent_of_finding_paused_operators
 <- library_of_atomic_reusable_components; 
 
 => nrel_attendant_component: 
-	lib_component_ui_menu_file_for_finding_paused_operators; 
+	lib_component_ui_menu_finding_paused_operators; 
 
 -> rrel_key_sc_element: 
 	.platform_independent_realization_of_sc_agent_of_removing_breakpoint;
@@ -26,3 +26,11 @@ lib_component_agent_of_finding_paused_operators
 				(* <- lang_ru;; *);; 
 		*);;
 	*);;
+
+question_finding_paused_operators
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. найти все все точки останова в рамках scp-процесса]
+	(* <- lang_ru;; *);
+	[action. to find paused operators]
+	(* <- lang_en;; *);;
