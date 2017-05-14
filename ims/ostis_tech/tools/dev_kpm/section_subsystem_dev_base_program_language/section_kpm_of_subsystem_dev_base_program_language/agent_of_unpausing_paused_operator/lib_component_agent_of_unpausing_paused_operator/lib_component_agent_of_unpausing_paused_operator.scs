@@ -1,18 +1,18 @@
 lib_component_agent_of_unpausing_paused_operator
 => nrel_main_idtf:
-	[Компонент библиотеки. sc-агент]
+	[Компонент библиотеки. sc-агент продолжения выполнения оператора]
 	(* <- lang_ru;; *);
-	[Library component. sc-agent]
+	[Library component. sc-agent of unpausing paused operator]
 	(* <- lang_en;; *);
 
 <- library_of_platform_independent_reusable_components; 
 <- library_of_atomic_reusable_components; 
 
 => nrel_attendant_component: 
-	lib_component_ui_menu_file_for_unpausing_paused_operator; 
+	lib_component_ui_menu_unpausing_paused_operator; 
 
 -> rrel_key_sc_element: 
-	.platform_independent_realization_of_sc_agent_of_unpausing_paused_operator;;
+	.platform_independent_realization_of_sc_agent_of_unpausing_paused_operator;
 
 <- rrel_key_sc_element: 
 	...
@@ -26,3 +26,10 @@ lib_component_agent_of_unpausing_paused_operator
 				(* <- lang_ru;; *);; 
 		*);;
 	*);;
+
+question_unpausing_paused_operator
+=> nrel_main_idtf:
+	[действие. продолжить выполнение оператора]
+	(* <- lang_ru;; *);
+	[action. to of unpause paused operator]
+	(* <- lang_en;; *);;

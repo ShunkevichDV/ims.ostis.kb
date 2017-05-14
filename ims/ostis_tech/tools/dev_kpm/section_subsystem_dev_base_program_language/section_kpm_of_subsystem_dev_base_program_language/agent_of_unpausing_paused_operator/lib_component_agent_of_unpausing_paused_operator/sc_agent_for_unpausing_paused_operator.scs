@@ -1,6 +1,6 @@
 sc_agent_for_unpausing_paused_operator
 => nrel_main_idtf:
-	[sc-агент поиска] (* <- lang_ru;; *);
+	[sc-агент продолжения выполнения оператора] (* <- lang_ru;; *);
 	[sc-agent] (* <- lang_en;; *);
 
 <- abstract_sc_agent;

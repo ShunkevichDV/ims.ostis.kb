@@ -1,8 +1,8 @@
 agent_of_unpausing_paused_operator
 => nrel_main_idtf:
-	[агентная scp-программа] 
+	[агентная scp-программа пордолжения выполнения оператора] 
 	(* <- lang_ru;; *);
-	[agent scp-program] 
+	[agent scp-program of unpausing paused operator 
 	(* <- lang_en;; *);
 
 	<- agent_scp_program;;
