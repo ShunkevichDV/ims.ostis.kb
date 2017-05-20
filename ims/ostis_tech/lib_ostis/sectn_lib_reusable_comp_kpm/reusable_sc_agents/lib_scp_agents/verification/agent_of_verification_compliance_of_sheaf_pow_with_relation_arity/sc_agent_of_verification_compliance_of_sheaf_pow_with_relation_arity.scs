@@ -1,7 +1,7 @@
 sc_agent_of_verification_compliance_of_sheaf_pow_with_relation_arity
 => nrel_main_idtf:
-	[агентная scp-программа проверки на соответствие мощности связок арности отношения] (* <- lang_ru;; *);
-	[agent scp-program of checking sheafs on relation arity mapping] (* <- lang_en;; *);
+	[агентная scp-программа проверки соответствия мощности связок отношения его арности в рамках заданной структуры] (* <- lang_ru;; *);
+	[agent scp-program compliance power cords to the ratio of its arity in the framework of the given structure] (* <- lang_en;; *);
 
 <- abstract_sc_agent;
 

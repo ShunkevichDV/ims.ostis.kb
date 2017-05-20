@@ -1,9 +1,9 @@
 ui_menu_file_for_verification_compliance_of_sheaf_pow_with_relation_arity <- ui_user_command_class_atom; ui_user_command_class_view_kb; ui_one_argument_command_class;;
 
 ui_menu_file_for_verification_compliance_of_sheaf_pow_with_relation_arity => nrel_main_idtf: 
-	[Проверить на соответствие мощности связок арности отношения] 
+	[Проверить соответствие мощности связок отношения его арности] 
 	(* <- lang_ru;; *);
-	[Сheck sheafs on relation arity mapping] 
+	[Сheck compliance power cords to the ratio of its arity in the framework of the given structure]
 	(* <- lang_en;; *);;
 
 ui_menu_file_for_verification_compliance_of_sheaf_pow_with_relation_arity => ui_nrel_command_template:
@@ -16,9 +16,9 @@ ui_menu_file_for_verification_compliance_of_sheaf_pow_with_relation_arity => ui_
 	*];;
 
 ui_menu_file_for_verification_compliance_of_sheaf_pow_with_relation_arity => ui_nrel_command_lang_template: 
-	[Проверить элементы структуры на соответствие мощности связок арности отношения: $ui_arg_1] 
+	[Проверить соответствие мощности связок отношения его арности: $ui_arg_1] 
 	(* <- lang_ru;; *);
-	[Check elemets of the struct on relation arity mapping: $ui_arg_1] 
+	[Check compliance power cords to the ratio of its arity in the framework of the given structure: $ui_arg_1] 
 	(* <- lang_en;; *);;
 
 
