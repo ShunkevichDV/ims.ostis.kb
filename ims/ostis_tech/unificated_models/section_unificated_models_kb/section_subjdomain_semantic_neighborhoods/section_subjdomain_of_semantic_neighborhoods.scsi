@@ -237,6 +237,13 @@ specialized_semantic_neighborhood
 	logic_semantic_neighborhood;
 	description_of_a_typical_instance;
 	decomposition_description;
+	statement;
+	parametric_model;
+	task;
+	sc_description_of_sc_agent_behavior;
+	ui_descr_initiate_order;
+	ui_descr_oper_semantic_control;
+	ui_descr_oper_semantic_commands;
 <- rrel_key_sc_element:
 	...
 	(*
