@@ -331,6 +331,16 @@ nrel_scp_program_var
 						"file://html/explanation_for_nrel_scp_program_var_en.html"
 						(*<- lang_en;;*);;
 				*);;
+		*);
+
+		=> nrel_first_domain: scp_program;
+		=> nrel_second_domain: set;
+		=> nrel_definitional_domain: ...
+		(*
+			<= nrel_combination: ...
+				(*
+					-> scp_program;set;;
+				*);;
 		*);;
 
 nrel_scp_program_const
@@ -357,6 +367,16 @@ nrel_scp_program_const
 					-> rrel_example:
 						"file://html/explanation_for_nrel_scp_program_const_en.html"
 						(*<- lang_en;;*);;
+				*);;
+		*);
+
+		=> nrel_first_domain: scp_program;
+		=> nrel_second_domain: set;
+		=> nrel_definitional_domain: ...
+		(*
+			<= nrel_combination: ...
+				(*
+					-> scp_program;set;;
 				*);;
 		*);;
 
@@ -385,6 +405,16 @@ nrel_scp_program_copied_const
 						"file://html/explanation_for_nrel_scp_program_copied_const_en.html"
 						(*<- lang_en;;*);;
 				*);;
+		*);
+
+		=> nrel_first_domain: scp_program;
+		=> nrel_second_domain: set;
+		=> nrel_definitional_domain: ...
+		(*
+			<= nrel_combination: ...
+				(*
+					-> scp_program;set;;
+				*);;
 		*);;
 
 nrel_template_of_scp_process_creation
@@ -411,6 +441,16 @@ nrel_template_of_scp_process_creation
 					-> rrel_example:
 						"file://html/explanation_for_nrel_template_of_scp_process_creation_en.html"
 						(*<- lang_en;;*);;
+				*);;
+		*);
+
+		=> nrel_first_domain: scp_program;
+		=> nrel_second_domain: set;
+		=> nrel_definitional_domain: ...
+		(*
+			<= nrel_combination: ...
+				(*
+					-> scp_program;set;;
 				*);;
 		*);;
 

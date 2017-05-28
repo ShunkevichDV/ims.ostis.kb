@@ -555,7 +555,17 @@ rrel_action_with_very_high_priority
 	[действие с очень высоким приоритетом']
 	(* <- lang_ru;; *);
 	[action with very high priority']
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: set;
+=> nrel_second_domain: question;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> set;question;;
+			*);;
+	*);;
 	
 rrel_action_with_high_priority
 <- sc_node_role_relation;
@@ -563,7 +573,17 @@ rrel_action_with_high_priority
 	[действие с высоким приоритетом']
 	(* <- lang_ru;; *);
 	[action with high priority']
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: set;
+=> nrel_second_domain: question;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> set;question;;
+			*);;
+	*);;
 	
 rrel_action_with_medium_priority
 <- sc_node_role_relation;
@@ -571,7 +591,17 @@ rrel_action_with_medium_priority
 	[действие со средним приоритетом']
 	(* <- lang_ru;; *);
 	[action with medium priority']
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: set;
+=> nrel_second_domain: question;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> set;question;;
+			*);;
+	*);;
 	
 rrel_action_with_low_priority
 <- sc_node_role_relation;
@@ -579,7 +609,17 @@ rrel_action_with_low_priority
 	[действие с низким приоритетом']
 	(* <- lang_ru;; *);
 	[action with low priority']
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: set;
+=> nrel_second_domain: question;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> set;question;;
+			*);;
+	*);;
 	
 rrel_action_with_very_low_priority
 <- sc_node_role_relation;	
@@ -587,7 +627,17 @@ rrel_action_with_very_low_priority
 	[действие с очень низким приоритетом']
 	(* <- lang_ru;; *);
 	[action with very low priority']
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: set;
+=> nrel_second_domain: question;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> set;question;;
+			*);;
+	*);;
 	
 
 subject
@@ -746,6 +796,16 @@ nrel_decomposition_of_action
 => nrel_idtf:
 	[сведение действия ко множеству более простых взаимосвязанных действий*]
 	(* <- lang_ru;; *);		
+
+=> nrel_first_domain: question;
+=> nrel_second_domain: set;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> question;set;;
+			*);;
+	*);
 	
 <- rrel_key_sc_element:
 	...
@@ -775,6 +835,10 @@ nrel_private_action
 	[частное действие*]
 	(* <- lang_ru;; *);	
 
+=> nrel_first_domain: question;
+=> nrel_second_domain: question;
+=> nrel_definitional_domain: question;
+
 <- binary_relation;
 <- taxonomy_relation;
 	
@@ -803,7 +867,11 @@ nrel_abstract_sub_action
 	(* <- lang_en;; *);
 => nrel_idtf:
 	[класс действий, частных для каждого из действий, принадлежащих некоторому классу*]
-	(* <- lang_ru;; *);;
+	(* <- lang_ru;; *);
+
+=> nrel_first_domain: question;
+=> nrel_second_domain: question;
+=> nrel_definitional_domain: question;;
 
 nrel_goto
 <- sc_node_norole_relation;
@@ -822,6 +890,10 @@ nrel_goto
 	(* <- lang_ru;; *);	
 	[goto*]
 	(* <- lang_en;; *);	
+
+=> nrel_first_domain: question;
+=> nrel_second_domain: question;
+=> nrel_definitional_domain: question;
 
 <- order_relation;
 
@@ -849,6 +921,16 @@ nrel_conjunction_of_previous_actions
 	(* <- lang_ru;; *);
 	[conjunction of previous actions*]
 	(* <- lang_en;; *);
+
+=> nrel_first_domain: set;
+=> nrel_second_domain: question;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> set;question;;
+			*);;
+	*);
 
 => nrel_idtf:
 	[действие, заключающееся только в ожидании установлении факта завершения всех предшествующих действий]
@@ -886,6 +968,16 @@ nrel_condition_control
 	
 <= nrel_inclusion:
 	question;
+
+=> nrel_first_domain: observation;
+=> nrel_second_domain: question_finished_successfully; question_finished_unsuccessfully;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> observation;question_finished_successfully;question_finished_unsuccessfully;;
+			*);;
+	*);
 	
 <- rrel_key_sc_element:
 	...
@@ -925,7 +1017,11 @@ nrel_then
 				"file://content_html/explanation_for_nrel_then.html"
 			(* <- lang_ru;;	*);;
 		*);;
-	*);;
+	*);
+
+=> nrel_first_domain: question;
+=> nrel_second_domain: question;
+=> nrel_definitional_domain: question;;
 	
 nrel_else
 <- sc_node_norole_relation;
@@ -952,7 +1048,11 @@ nrel_else
 				"file://content_html/explanation_for_nrel_else.html"
 			(* <- lang_ru;;	*);;
 		*);;
-	*);;
+	*);
+
+=> nrel_first_domain: question;
+=> nrel_second_domain: question;
+=> nrel_definitional_domain: question;;
 
 nrel_error
 <- sc_node_norole_relation;
@@ -989,6 +1089,16 @@ nrel_result
 => nrel_idtf:
 	[цель*]
 	(* <- lang_ru;; *);
+
+=> nrel_first_domain: question;
+=> nrel_second_domain: structure;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> question;structure;;
+			*);;
+	*);
 	
 <- rrel_key_sc_element:
 	...
@@ -1443,6 +1553,16 @@ nrel_performer
 	(* <- lang_ru;; *);
 	[performer*]
 	(* <- lang_en;; *);
+
+=> nrel_first_domain: question;
+=> nrel_second_domain: subject;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> question;subject;;
+			*);;
+	*);
 	
 <- rrel_key_sc_element:
 	...
@@ -1467,6 +1587,16 @@ nrel_executing_actions_class
 => nrel_idtf:
 	[класс действий, выполняемых классом субъектов*]
 	(* <- lang_ru;; *);
+
+=> nrel_first_domain: subject;
+=> nrel_second_domain: question;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> subject;question;;
+			*);;
+	*);
 	
 <- rrel_key_sc_element:
 	...
@@ -1488,6 +1618,16 @@ nrel_customer
 	(* <- lang_ru;; *);
 	[customer*]
 	(* <- lang_en;; *);
+
+=> nrel_first_domain: question;
+=> nrel_second_domain: subject;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> question;subject;;
+			*);;
+	*);
 	
 <- rrel_key_sc_element:
 	...
@@ -1509,6 +1649,16 @@ nrel_initiator
 	(* <- lang_ru;; *);
 	[initiator*]
 	(* <- lang_en;; *);
+
+=> nrel_first_domain: question_initiated;
+=> nrel_second_domain: subject;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> question_initiated;subject;;
+			*);;
+	*);
 	
 <- rrel_key_sc_element:
 	...
@@ -1530,6 +1680,16 @@ nrel_object
 	(* <- lang_ru;; *);
 	[object*]
 	(* <- lang_en;; *);
+
+=> nrel_first_domain: question;
+=> nrel_second_domain: sc_element;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> question;sc_element;;
+			*);;
+	*);
 	
 <- rrel_key_sc_element:
 	...
@@ -1564,6 +1724,16 @@ nrel_context_of_action
 	[связь между формулировкой задачи, т.е. описанием того, что требуется, и контекстом этой задачи, т.е. описанием имеющихся ресурсов, описанием того, что дано*]
 	(* <- lang_ru;; *);
 	
+=> nrel_first_domain: question;
+=> nrel_second_domain: structure;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> question;structure;;
+			*);;
+	*);
+
 <- rrel_key_sc_element:
 	...
 	(*
@@ -1601,7 +1771,17 @@ rrel_argument_of_action
 => nrel_inclusion:
 	rrel_first_action_argument;
 	rrel_second_section_argument;
-	rrel_third_section_argument;;
+	rrel_third_section_argument;
+
+=> nrel_first_domain: question;
+=> nrel_second_domain: sc_element;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> question;sc_element;;
+			*);;
+	*);;
 
 rrel_first_action_argument
 <- sc_node_role_relation;
@@ -1609,7 +1789,17 @@ rrel_first_action_argument
 	[первый аргумент действия']
 	(* <- lang_ru;; *);
 	[first action argument']
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: question;
+=> nrel_second_domain: sc_element;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> question;sc_element;;
+			*);;
+	*);;
 	
 rrel_second_section_argument
 <- sc_node_role_relation;
@@ -1617,7 +1807,17 @@ rrel_second_section_argument
 	[второй аргумент действия']
 	(* <- lang_ru;; *);
 	[second action argument']
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: question;
+=> nrel_second_domain: sc_element;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> question;sc_element;;
+			*);;
+	*);;
 	
 rrel_third_section_argument
 <- sc_node_role_relation;
@@ -1625,7 +1825,17 @@ rrel_third_section_argument
 	[третий аргумент действия']
 	(* <- lang_ru;; *);
 	[third action argument']
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: question;
+=> nrel_second_domain: sc_element;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> question;sc_element;;
+			*);;
+	*);;
 	
 nrel_class_of_arguments
 <- sc_node_norole_relation;
@@ -1644,6 +1854,16 @@ nrel_class_of_arguments
 => nrel_inclusion:
 	nrel_first_argument_class;
 	nrel_second_argument_class;
+
+=> nrel_first_domain: command_class;
+=> nrel_second_domain: sc_element;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> command_class;sc_element;;
+			*);;
+	*);
 	
 <- rrel_key_sc_element:
 	...
@@ -1664,7 +1884,17 @@ nrel_first_argument_class
 	[класс первых аргументов*]
 	(* <- lang_ru;; *);
 	[first arguments class*]
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: command_class;
+=> nrel_second_domain: sc_element;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> command_class;sc_element;;
+			*);;
+	*);;
 	
 nrel_second_argument_class
 <- sc_node_norole_relation;
@@ -1672,4 +1902,14 @@ nrel_second_argument_class
 	[класс вторых аргументов*]
 	(* <- lang_ru;; *);
 	[second arguments class*]
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: command_class;
+=> nrel_second_domain: sc_element;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> command_class;sc_element;;
+			*);;
+	*);;
