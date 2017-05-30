@@ -1,0 +1,22 @@
+sc_node_not_relation -> scp_breakpoint_executing_mode;;
+
+scp_breakpoint_executing_mode => nrel_main_idtf:
+	[режим отладки с точками останова]		(* <- lang_ru;; *);
+	[debugging mode with breakpoints] 		(* <- lang_en;; *);;
+
+scp_breakpoint_executing_mode <- rrel_key_sc_element: 
+        ...
+	(*
+	<- sc_definition;; 
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[ режим отладки с точками останова - scp-программа с точками останова, 
+			выполняемая в режиме отладки ]
+				(* <- lang_ru;; *);
+			[ debugging mode - scp-program with breakpoints executing 
+			in debugging mode]
+				(* <- lang_en;; *);;
+		*);;
+	*);;
