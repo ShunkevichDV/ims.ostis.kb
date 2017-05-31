@@ -5,8 +5,7 @@ subject_domain_numbers_and_numeric_structures
 	[Subject domain of numbers and numeric structures]
 	(* <- lang_en;; *);
 <- subject_domain;
-<- sc_node_struct;
-<- structure;
+
 -> rrel_maximum_studied_object_class:
 	number;
 	numeric_structure;
@@ -172,6 +171,11 @@ real_number
 	[множество вещественных чисел]
 	(* <- lang_ru;; *);
 <= nrel_strict_inclusion: complex_number;
+<= nrel_combination:
+{
+	rational_number;
+	irrational_number
+};
 <= nrel_subdividing:
 {
 	positive_number;
@@ -270,6 +274,15 @@ nrel_opposite_numbers
 	(* <- lang_ru;; *);
 	[positive number*]
 	(* <- lang_en;; *);
+	=> nrel_definitional_domain:...
+	(*
+		<= nrel_combination: ...
+		(*
+			-> negative_number; positive_number;;
+		*);;
+	*);
+=>nrel_first_domain: negative_number;
+=>nrel_second_domain: positive_number;
 <- rrel_key_sc_element:
 	...
 		(*
@@ -297,6 +310,15 @@ nrel_modulus
 => nrel_idtf:
 	[absolute value*]
 	(* <- lang_en;; *);
+	=> nrel_definitional_domain:...
+	(*
+		<= nrel_combination: ...
+		(*
+			-> number; positive_number;;
+		*);;
+	*);
+	=>nrel_first_domain: number;
+	=>nrel_second_domain: positive_number;
 <- rrel_key_sc_element:
 	...
 		(*
@@ -367,6 +389,15 @@ nrel_sum_of_numbers
 => nrel_idtf:
 	[сложение*]
 	(* <- lang_ru;; *);
+=> nrel_definitional_domain:...
+	(*
+		<= nrel_combination: ...
+		(*
+			-> set; number;;
+		*);;
+	*);
+	=>nrel_first_domain: set;
+	=>nrel_second_domain: number;
 <- arithmetic_operation;
 <- quasybinary_relation;
 <- rrel_key_sc_element:
@@ -404,6 +435,15 @@ nrel_multiplication_of_numbers
 => nrel_idtf:
 	[умножение*]
 	(* <- lang_ru;; *);
+	=> nrel_definitional_domain:...
+	(*
+		<= nrel_combination: ...
+		(*
+			-> set; number;;
+		*);;
+	*);
+=>nrel_first_domain: set;
+=>nrel_second_domain: number;
 <- arithmetic_operation;
 <- quasybinary_relation;
 <- rrel_key_sc_element:
@@ -438,6 +478,18 @@ nrel_pow_numbers
 	(* <- lang_ru;; *);
 	[exponentiation of the numbers*]
 	(* <- lang_en;; *);
+	=>nrel_first_domain: ..A(*
+	-> number; number;;
+*);
+=>nrel_second_domain: number;
+	=> nrel_definitional_domain:...
+	(*
+		<= nrel_combination: ...
+		(*
+			-> ..A; number;;
+		*);;
+	*);
+
 <- arithmetic_operation;
 <- binary_relation;
 <- rrel_key_sc_element:
@@ -472,6 +524,9 @@ nrel_be_more
 	(* <- lang_ru;; *);
 	[more*]
 	(* <- lang_en;; *);
+	=> nrel_definitional_domain: number;
+=>nrel_first_domain: number;
+=>nrel_second_domain: number;
 <- arithmetic_operation;
 <- binary_relation;
 <- strict_order_relation;
@@ -510,6 +565,9 @@ nrel_equal_numbers
 => nrel_idtf:
 	[равенство чисел*]
 	(* <- lang_ru;; *);
+	=> nrel_definitional_domain: number;
+=>nrel_first_domain: number;
+=>nrel_second_domain: number;
 <- arithmetic_operation;
 <- binary_relation;
 <- symmetric_relation;
@@ -548,6 +606,9 @@ nrel_more_or_equal
 	(* <- lang_ru;; *);
 	[more or equal*]
 	(* <- lang_en;; *);
+	=> nrel_definitional_domain: number;
+=>nrel_first_domain: number;
+=>nrel_second_domain: number;
 <- arithmetic_operation;
 <- binary_relation;
 <- non_strict_order_relation;
