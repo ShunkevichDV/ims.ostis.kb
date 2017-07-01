@@ -124,7 +124,7 @@ scp_program -> agent_of_finding_approved_proposals_by_user
 			-> rrel_set_1: rrel_fixed: rrel_scp_var: _set_of_object_approved;;
 
 			=> nrel_then: .agent_of_finding_approved_proposals_by_user1G;;
-			=> nrel_else: .agent_of_finding_approved_proposals_by_user_erase_set_1;;
+			=> nrel_else: .agent_of_finding_approved_proposals_by_user_call_proc_of_adding_validating_message_wrong_second_param;;
 			*);;
 
 		-> .agent_of_finding_approved_proposals_by_user1G
@@ -495,7 +495,7 @@ scp_program -> agent_of_finding_approved_proposals_by_user
 
 		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
 
-		  	=> nrel_goto: .agent_of_finding_approved_proposals_by_user_return;;
+		  	=> nrel_goto: .agent_of_finding_approved_proposals_by_user_erase_set_1;;
 			*);;	
 
 

@@ -22,6 +22,6 @@ ui_menu_file_for_finding_approved_proposals_by_user_with_context => ui_nrel_comm
 	[Найти все утвержденные предложения конкретным пользователем: $ui_arg_1 с заданным контекстом $ui_arg_2] 
 	(* <- lang_ru;; *);;
 ui_menu_file_for_finding_approved_proposals_by_user_with_context => ui_nrel_command_lang_template: 
-	[Finding approved proposals by user: $ui_arg_1 with the given context $ui_arg_2] 
+	[Find approved proposals by user: $ui_arg_1 with the given context $ui_arg_2] 
 	(* <- lang_eng;; *);;
 
