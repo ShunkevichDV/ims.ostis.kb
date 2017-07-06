@@ -13,3 +13,7 @@ ui_menu_depth_metrics_for_eekb <- ui_user_command_class_noatom;
 	ui_menu_file_for_calculation_normalized_dispersion_of_ontology_depths
 };;
 
+ui_menu_depth_metrics_for_eekb <= nrel_command_access: ...
+		(*
+			-> nrel_registered_user;;
+		*);;

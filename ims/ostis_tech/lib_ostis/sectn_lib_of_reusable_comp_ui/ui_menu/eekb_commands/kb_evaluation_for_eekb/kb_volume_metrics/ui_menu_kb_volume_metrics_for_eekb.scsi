@@ -11,3 +11,7 @@ ui_menu_kb_volume_metrics_for_eekb <- ui_user_command_class_noatom;
 	ui_menu_file_for_counting_logical_formulas_quantity
 };;
 
+ui_menu_kb_volume_metrics_for_eekb <= nrel_command_access: ...
+		(*
+			-> nrel_registered_user;;
+		*);;

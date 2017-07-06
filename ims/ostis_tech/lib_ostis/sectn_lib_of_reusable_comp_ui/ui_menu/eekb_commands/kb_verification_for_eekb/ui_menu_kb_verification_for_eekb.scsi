@@ -17,3 +17,9 @@ ui_menu_kb_verification_for_eekb <- ui_user_command_class_noatom;
 	ui_menu_file_for_checking_key_sc_elements_of_the_semantic_neighborhoods_in_the_given_structure;
 	ui_menu_file_for_agent_of_checking_subject_domain_accessory_for_classes_in_given_structure
 };;
+
+
+ui_menu_kb_verification_for_eekb <= nrel_command_access: ...
+		(*
+			-> nrel_registered_user;;
+		*);;

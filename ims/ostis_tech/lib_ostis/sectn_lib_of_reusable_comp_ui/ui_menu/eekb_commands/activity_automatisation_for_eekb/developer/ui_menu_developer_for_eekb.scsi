@@ -10,3 +10,8 @@ ui_menu_developer_for_eekb <- ui_user_command_class_noatom;
 	ui_menu_file_for_adding_new_draft;
 	ui_menu_file_for_finding_drafts_developed_by_specific_developer
 };;
+
+ui_menu_developer_for_eekb <= nrel_command_access: ...
+		(*
+			-> nrel_registered_user;;
+		*);;

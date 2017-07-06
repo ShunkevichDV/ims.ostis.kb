@@ -2,7 +2,7 @@ lib_ui_menu_navigation_by_initiated_signs_for_eekb
 => nrel_main_idtf:
 	[Компонент библиотеки. Поиск инициированных действий]
 	(* <- lang_ru;; *);
-	[Library component. Initiated signs search]t
+	[Library component. Initiated signs search]
 	(* <- lang_en;; *);
 
 <- library_of_platform_independent_reusable_components;

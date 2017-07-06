@@ -6,3 +6,8 @@ ui_menu_manager_for_eekb <- ui_user_command_class_noatom;
 	ui_menu_file_for_manager_approval_proposals_for_editing_kb;
 	ui_menu_file_for_manager_rejection_proposals_for_editing_kb
 };;
+
+ui_menu_manager_for_eekb <= nrel_command_access: ...
+		(*
+			-> nrel_manager;;
+		*);;

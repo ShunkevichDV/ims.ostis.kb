@@ -13,3 +13,7 @@ ui_menu_admin_for_eekb <- ui_user_command_class_noatom;
 	ui_menu_file_for_verify_the_desired_structure
 };;
 
+ui_menu_admin_for_eekb <= nrel_command_access: ...
+		(*
+			-> nrel_administrator;;
+		*);;

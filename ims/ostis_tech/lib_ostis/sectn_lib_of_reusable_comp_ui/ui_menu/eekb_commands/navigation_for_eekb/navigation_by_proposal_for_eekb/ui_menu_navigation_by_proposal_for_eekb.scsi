@@ -10,3 +10,8 @@ ui_menu_navigation_by_proposal_for_eekb <- ui_user_command_class_noatom;
 	ui_menu_file_for_finding_rejected_proposals_by_user;
 	ui_menu_file_for_finding_rejected_proposals_of_author
 };;
+
+ui_menu_navigation_by_proposal_for_eekb <= nrel_command_access: ...
+		(*
+			-> nrel_registered_user;;
+		*);;

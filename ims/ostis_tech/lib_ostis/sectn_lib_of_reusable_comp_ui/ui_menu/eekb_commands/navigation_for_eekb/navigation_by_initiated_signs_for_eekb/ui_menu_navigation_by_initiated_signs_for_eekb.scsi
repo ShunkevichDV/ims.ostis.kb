@@ -7,3 +7,8 @@ ui_menu_navigation_by_initiated_signs_for_eekb <- ui_user_command_class_noatom;
 	ui_menu_for_agent_of_finding_initiated_signs_of_actions_for_specific_class_of_actions;
 	ui_menu_for_finding_initiated_action_for_a_specific_performer
 };;
+
+ui_menu_navigation_by_initiated_signs_for_eekb <= nrel_command_access: ...
+		(*
+			-> nrel_registered_user;;
+		*);;
