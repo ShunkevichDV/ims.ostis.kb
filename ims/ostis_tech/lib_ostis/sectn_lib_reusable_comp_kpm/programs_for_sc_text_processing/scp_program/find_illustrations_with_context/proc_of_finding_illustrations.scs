@@ -1,0 +1,26 @@
+lib_component_proc_of_finding_illustrations_with_context
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа поиска иллюстраций]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of illustrations search]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_finding_illustrations_with_context;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Proc_Of_Finding_Illustrations_with_context.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_finding_illustrations_with_context = [*^"file://proc_of_finding_illustrations_with_context.scsi"*];;
