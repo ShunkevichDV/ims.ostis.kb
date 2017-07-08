@@ -28,8 +28,11 @@ sc_agent_of_finding_connections => nrel_main_idtf:
 		{
 		agent_of_finding_connections;
 		proc_of_finding_connections;
+		proc_of_finding_connections_with_context;
 		proc_finding_arcs_between_concepts;
-		proc_equivalent_elements
+		proc_finding_arcs_between_concepts_with_context;
+		proc_equivalent_elements;
+		proc_equivalent_elements_with_context
 		};;
 	-> sc_agent_of_finding_connections_scp
 		(* <- active_sc_agent;; *);;
