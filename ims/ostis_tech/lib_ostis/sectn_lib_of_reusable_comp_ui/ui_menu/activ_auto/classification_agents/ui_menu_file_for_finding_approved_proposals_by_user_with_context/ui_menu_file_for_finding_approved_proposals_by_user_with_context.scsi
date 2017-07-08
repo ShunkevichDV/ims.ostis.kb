@@ -5,7 +5,7 @@ ui_menu_file_for_finding_approved_proposals_by_user_with_context => nrel_main_id
 	(* <- lang_ru;; *);;
 
 ui_menu_file_for_finding_approved_proposals_by_user_with_context => nrel_main_idtf: 
-	[Finding approved proposals by user with the given context] 
+	[Find approved proposals by user with the given context] 
 	(* <- lang_en;; *);;
 
 ui_menu_file_for_finding_approved_proposals_by_user_with_context => ui_nrel_command_template:
