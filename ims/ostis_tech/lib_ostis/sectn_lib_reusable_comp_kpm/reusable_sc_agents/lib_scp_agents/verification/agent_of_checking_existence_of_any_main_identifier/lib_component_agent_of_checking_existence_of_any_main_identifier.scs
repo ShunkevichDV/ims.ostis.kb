@@ -1,6 +1,6 @@
 lib_component_agent_of_checking_existence_of_any_main_identifier
 => nrel_main_idtf:
-	[Компонент библиотеки. sc-агент проверки наличия sc-элементов, имеющих системный идентификатор, но не имеющих ни одного основного в рамках заданной структуры]
+	[Компонент библиотеки. sc-агент проверки наличия sc-элементов, имеющих системный идентификатор, но не имеющих ни одного основного  в рамках заданной структуры]
 	(* <- lang_ru;; *);
 	[Library component. sc-agent of checking existence of any main identifiers for sc-elements within the given structure]
 	(* <- lang_en;; *);

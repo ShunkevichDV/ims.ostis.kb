@@ -1,8 +1,8 @@
 lib_component_ui_menu_file_for_checking_existence_of_any_main_identifier
 => nrel_main_idtf:
-	[Компонент библиотеки. Команда пользовательского интерфейса для проверки наличия sc-элементов, имеющих системный идентификатор, но не имеющих ни одного основного в рамках заданной структуры]
+	[Компонент библиотеки. Команда пользовательского интерфейса для проверки наличия sc-элементов, имеющих системный идентификатор, но не имеющих ни одного основного]
 	(* <- lang_ru;; *);
-	[Library component. User interface command for checking existence of any main identifiers for sc-elements within the given structure]
+	[Library component. User interface command for checking existence of any main identifiers for sc-elements]
 	(* <- lang_en;; *);
 
 <- library_of_platform_independent_reusable_components;
