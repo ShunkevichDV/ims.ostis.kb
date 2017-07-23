@@ -29,7 +29,8 @@ sc_agent_of_finding_theorems
 		{
 		agent_of_finding_theorems;
 		proc_finding_identifier;
-		proc_of_finding_identifier_with_context
+		proc_of_finding_identifier_with_context;
+		proc_of_finding_intersection_of_two_sets
 		};;
 	-> sc_agent_of_finding_theorems_scp   
 		(* <- active_sc_agent;; *);;
