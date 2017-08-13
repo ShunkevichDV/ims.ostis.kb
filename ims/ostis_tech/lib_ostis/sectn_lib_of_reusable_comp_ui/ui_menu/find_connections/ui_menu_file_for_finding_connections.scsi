@@ -2,7 +2,7 @@ ui_menu_file_for_finding_connections <- ui_user_command_class_atom; ui_user_comm
 
 ui_menu_file_for_finding_connections 
 => nrel_main_idtf: 
-	[Как связаны непосредственно между собой две указываемых сушности?]  
+	[Найти связь между двумя сушностями]  
 	(* <- lang_ru;; *);
 => nrel_idtf: 
 	[Запрос поиска непосредственных связей между объектами]
@@ -10,7 +10,7 @@ ui_menu_file_for_finding_connections
 
 ui_menu_file_for_finding_connections
  => nrel_main_idtf: 
-	[How do two given entities linked directly to each other?] 
+	[Find linked directly to each other] 
 	(* <- lang_en;; *);
  => nrel_idtf: 
 	[Request of finding immediate connections between two objects] 
