@@ -2,7 +2,7 @@ ui_menu_file_for_finding_axioms <- ui_user_command_class_atom; ui_user_command_c
 
 ui_menu_file_for_finding_axioms 
 => nrel_main_idtf: 
-	[Какие аксиомы присутствуют в указываемой логической онтологии?] 
+	[Найти аксиомы, которые присутствуют в указываемой логической онтологии] 
 	(* <- lang_ru;; *);
 => nrel_idtf: 
 	[Запрос аксиом для заданной логической онтологии]
@@ -10,7 +10,7 @@ ui_menu_file_for_finding_axioms
 
 ui_menu_file_for_finding_axioms
 => nrel_main_idtf: 
-	[Which axioms are there in given logical ontology?]
+	[Find axioms are there in given logical ontology]
 	(* <- lang_en;; *);
 => nrel_idtf: 
 	[Request of axioms for given sc-ontology?]

@@ -1,0 +1,36 @@
+ui_menu_file_for_finding_axioms_with_context <- ui_user_command_class_atom; ui_user_command_class_view_kb; ui_two_argument_command_class;;
+
+ui_menu_file_for_finding_axioms_with_context 
+=> nrel_main_idtf: 
+	[Найти аксиомы, которые присутствуют в указываемой логической онтологии с заданным контекстом] 
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Запрос аксиом для заданной логической онтологии с заданным контекстом]
+	(* <- lang_ru;; *);;
+
+ui_menu_file_for_finding_axioms_with_context
+=> nrel_main_idtf: 
+	[Find axioms are there in given logical ontology with the given context]
+	(* <- lang_en;; *);
+=> nrel_idtf: 
+	[Request of axioms for given sc-ontology with the given context]
+	(* <- lang_en;; *);;
+
+ui_menu_file_for_finding_axioms_with_context => ui_nrel_command_template:
+	[*
+		question_finding_axioms _-> ._question_finding_axioms_instance
+			(*
+			_-> ui_arg_1;;
+			_=> nrel_context_of_action:: ui_arg_2;;
+			*);;
+		._question_finding_axioms_instance _<- question;;
+	*];;
+
+ui_menu_file_for_finding_axioms_with_context => ui_nrel_command_lang_template: 
+	[Найти аксиомы, которые присутствуют в ($ui_arg_1) с заданным контекстом ($ui_arg_2)] 
+	(* <- lang_ru;; *);;
+
+ui_menu_file_for_finding_axioms_with_context => ui_nrel_command_lang_template: 
+	[Find axioms are there in ($ui_arg_1) with the given context($ui_arg_2)] 
+	(* <- lang_en;; *);;
+
