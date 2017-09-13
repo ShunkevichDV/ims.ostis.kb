@@ -164,7 +164,7 @@ scp_program -> agent_of_finding_rejected_proposals_of_author
 			-> rrel_1: rrel_assign: rrel_scp_var: _action_node;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: rrel_const: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _structure;;
-			-> rrel_4: rrel_assign: rrel_scp_var: rre;_pos_const_perm: rrel_const: _arc2;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_proposal;;
 
 			-> rrel_set_1: rrel_fixed: rrel_scp_var: _set_of_actions;;
@@ -182,7 +182,7 @@ scp_program -> agent_of_finding_rejected_proposals_of_author
 			-> rrel_3: rrel_assign: rrel_scp_var: _action_node;;
 
 			=> nrel_then: .agent_of_finding_rejected_proposals_of_author4G_2;;
-			=> nrel_else: .agent_of_finding_rejected_proposals_of_author8G;;
+			=> nrel_else: .agent_of_finding_rejected_proposals_of_author1E;;
 			*);;
 
 		-> .agent_of_finding_rejected_proposals_of_author4G_2
@@ -308,7 +308,19 @@ scp_program -> agent_of_finding_rejected_proposals_of_author
 			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_for_finding_rejected_proposals_by_author;;
 			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_for_finding_rejected_proposals_by_author;;
 
-			=> nrel_goto: .agent_of_finding_rejected_proposals_of_author4G_1;;
+			=> nrel_goto: .agent_of_finding_rejected_proposals_of_author7G_1;;
+			*);;
+
+		-> .agent_of_finding_rejected_proposals_of_author7G_1
+			(*	
+			<- searchElStr3;;
+
+	    		-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_rejected_proposals_by_author;;
+   	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _structure;;
+
+			=>nrel_then: .agent_of_finding_rejected_proposals_of_author4G_1;;
+			=>nrel_else: .agent_of_finding_rejected_proposals_of_author8G;;
 			*);;
 
 		-> .agent_of_finding_rejected_proposals_of_author8G
@@ -360,7 +372,7 @@ scp_program -> agent_of_finding_rejected_proposals_of_author
    	    		-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
 			
-			=> nrel_goto: .agent_of_finding_rejected_proposals_of_author1E;;
+			=> nrel_goto: .agent_of_finding_rejected_proposals_of_author4G_1;;
 			*);;  
 
 		-> .agent_of_finding_rejected_proposals_of_author_check_is_const_nodes_necessary
