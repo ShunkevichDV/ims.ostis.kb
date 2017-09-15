@@ -11,7 +11,8 @@ subjdomain_parameters_and_values
 	(* <- lang_ru;; *);
 
 <- subject_domain;
-
+<- sc_node_struct;
+<- structure;
 -> rrel_maximum_studied_object_class:
 	parameter;
 -> rrel_not_maximum_studied_object_class:
@@ -41,11 +42,7 @@ subjdomain_parameters_and_values
 	nrel_pow_of_quantities;
 	nrel_large_quantitie;
 	nrel_equal_of_quantities;
-	nrel_greater_or_equal_quantitie;
-
--> rrel_studied_object_class:
-	...;;
-
+	nrel_greater_or_equal_quantitie;;
 
 parameter
 <- sc_node_not_relation;
@@ -116,6 +113,21 @@ nrel_param_definitional_domain
 	(* <- lang_ru;; *);
 	[parameter definitional domain*]
 	(* <- lang_en;; *);
+
+=> nrel_first_domain:
+ 		parameter;
+ => nrel_second_domain:
+ 		set;
+ 
+ => nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				set;
+ 				parameter
+ 			};;
+ 		*);
 
 => nrel_idtf:
 	[множество всех тех и только тех сущностей, которые являются компонентами значений заданного параметра*]
@@ -426,6 +438,21 @@ rrel_standard
 	[образец']
 	(* <- lang_ru;; *);
 
+=> nrel_first_domain:
+ 		parameter;
+ => nrel_second_domain:
+ 		value;
+ 
+ => nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				value;
+ 				parameter
+ 			};;
+ 		*);
+
 <- role_relation;
 
 <- rrel_key_sc_element:
@@ -462,6 +489,20 @@ nrel_measurement
 	[бинарное ориентированное отношение, связывающее различные величины с результатами их измерения в различных единицах измерения и по различным шкалам*]
 	(* <- lang_ru;; *);
 
+=> nrel_first_domain:
+ 		parameter;
+ => nrel_second_domain:
+ 		value;
+ 
+ => nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				value;
+ 				parameter
+ 			};;
+ 		*);
 <- rrel_key_sc_element:
 	...
 	(*
@@ -488,6 +529,21 @@ nrel_accuracy
 	(* <- lang_ru;; *);
 	[степень точности неточного значения параметра*]
 	(* <- lang_ru;; *);
+
+=> nrel_first_domain:
+ 		inaccurate_value;
+ => nrel_second_domain:
+ 		exact_value;
+ 
+ => nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				inaccurate_value;
+ 				exact_value
+ 			};;
+ 		*);
 
 <- binary_relation;
 
@@ -544,6 +600,21 @@ nrel_measure
 	(* <- lang_ru;; *);
 	[measure*]
 	(* <- lang_en;; *);
+
+=> nrel_first_domain:
+ 		measurement_of_fixed_measure;
+ => nrel_second_domain:
+ 		exact_value;
+ 
+ => nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				measurement_of_fixed_measure;
+ 				exact_value
+ 			};;
+ 		*);
 
 <- binary_relation;
 
@@ -654,6 +725,21 @@ nrel_zero_mark
 	[начало отсчета*]
 	(* <- lang_ru;; *);
 
+=> nrel_first_domain:
+ 		scale;
+ => nrel_second_domain:
+ 		exact_value;
+ 
+ => nrel_definitional_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				scale;
+ 				exact_value
+ 			};;
+ 		*);
+
 <- binary_relation;
 
 <- rrel_key_sc_element:
@@ -746,17 +832,6 @@ arithmetic_operation_on_the_values_for_values
 	*);;
 arithmetic_operation_on_the_values_for_values<= nrel_set_of_subsets: arithmetical_expression_values;;
 
-nrel_sum_of_quantities
-<- sc_node_norole_relation;
-=> nrel_main_idtf:
-	[сумма величин*]
-	(* <- lang_ru;; *);
-	[sum of quantities]
-	(* <- lang_en;; *);
-=> nrel_idtf:
-	[сложение величин*]	
-	(* <- lang_ru;; *);;
-
 arithmetic_operation_on_the_values
 => nrel_main_idtf:
 	[арифметическая операция на величинах]
@@ -765,9 +840,26 @@ arithmetic_operation_on_the_values
 	(* <- lang_en;; *);;
 
 nrel_sum_of_quantities
-<- sc_node_norole_relation; 
+<- sc_node_norole_relation;
+=> nrel_main_idtf:
+	[сумма величин*]
+	(* <- lang_ru;; *);
+	[sum of quantities*]
+	(* <- lang_en;; *);
+=> nrel_idtf:
+	[сложение величин*]	
+	(* <- lang_ru;; *);
 <- arithmetic_operation_on_the_values;
 <- quasybinary_relation;
+
+=> nrel_first_domain:
+ 		value;
+ => nrel_second_domain:
+ 		value;
+ 
+ => nrel_definitional_domain:
+ 		value;
+
 <- rrel_key_sc_element:
 	...
 	(*
@@ -786,11 +878,33 @@ nrel_composition_of_quantities
 => nrel_main_idtf:
 	[произведение величин*]
 	(* <- lang_ru;; *);
-	[scomposition of quantities]
+	[composition of quantities*]
 	(* <- lang_en;; *);
 => nrel_idtf:
 	[умножение величин*]	
 	(* <- lang_ru;; *);
+
+=> nrel_first_domain:
+ 		...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				value;
+ 				number
+ 			};;
+ 		*);
+ => nrel_second_domain:
+ 		value;
+ 
+ => nrel_definitional_domain:...
+ 		(*
+ 			<= nrel_combination:
+ 			{
+ 				value;
+ 				number
+ 			};;
+ 		*);
+ 		
 <- arithmetic_operation_on_the_values;
 <- quasybinary_relation;
 <- rrel_key_sc_element:
@@ -835,8 +949,27 @@ nrel_pow_of_quantities
 => nrel_main_idtf:
 	[возведение величин в степень*]
 	(* <- lang_ru;; *);
-	[pow of quantities]
+	[pow of quantities*]
 	(* <- lang_en;; *);
+=> nrel_first_domain: 
+	...
+	(*
+		<= nrel_inclusion: oriented_set;;
+		<= nrel_inclusion: pair_set;;
+
+	*);
+=> nrel_second_domain:
+ 		value;
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination:
+		{
+			value;
+			number
+		};;
+
+	*);
 <- arithmetic_operation_on_the_values;
 <- ternary_relation;
 <- rrel_key_sc_element:
@@ -880,12 +1013,18 @@ nrel_large_quantitie
 => nrel_main_idtf:
 	[большая величина*]
 	(* <- lang_ru;; *);
-	[large quantitie]
+	[large quantitie*]
 	(* <- lang_en;; *);
 <- arithmetic_operation_on_the_values;
 <- binary_relation;
 <- sc_node_norole_relation;
 <- strict_order_relation;
+=> nrel_first_domain:
+ 		value;
+=> nrel_second_domain:
+ 		value;
+=> nrel_definitional_domain:
+ 		value;
 <- rrel_key_sc_element:
 	...
 	(*
@@ -903,12 +1042,18 @@ nrel_equal_of_quantities
 => nrel_main_idtf:
 	[равенство величин*]
 	(* <- lang_ru;; *);
-	[equal of quantities]
+	[equal of quantities*]
 	(* <- lang_en;; *);
 <- binary_relation;
 <- arithmetic_operation_on_the_values;
 <- sc_node_norole_relation;
 <- equivalence_relation;
+=> nrel_first_domain:
+ 		value;
+=> nrel_second_domain:
+ 		value;
+=> nrel_definitional_domain:
+ 		value;
 <- rrel_key_sc_element:
 	...
 	(*
@@ -926,12 +1071,18 @@ nrel_greater_or_equal_quantitie
 => nrel_main_idtf:
 	[большая или равная величина*]
 	(* <- lang_ru;; *);
-	[greater or equal quantitie]
+	[greater or equal quantitie*]
 	(* <- lang_en;; *);
 <- sc_node_norole_relation;
 <- arithmetic_operation_on_the_values;
 <- binary_relation;
 <- non_strict_order_relation;
+=> nrel_first_domain:
+ 		value;
+=> nrel_second_domain:
+ 		value;
+=> nrel_definitional_domain:
+ 		value;
 <- rrel_key_sc_element:
 	...
 	(*
