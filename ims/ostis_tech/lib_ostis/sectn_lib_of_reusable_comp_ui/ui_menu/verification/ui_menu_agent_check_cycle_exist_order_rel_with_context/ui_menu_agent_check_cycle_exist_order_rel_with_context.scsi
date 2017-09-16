@@ -1,4 +1,4 @@
-ui_menu_file_for_checking_cycle_existence_of_ordering_relation_with_context <- ui_user_command_class_atom; ui_user_command_class_view_kb; ui_two_argument_command_class;;
+ui_menu_file_for_checking_cycle_existence_of_ordering_relation_with_context <- ui_user_command_class_atom; ui_user_command_class_view_kb; ui_two_argument_command_class; ui_user_command_with_context;;
 
 ui_menu_file_for_checking_cycle_existence_of_ordering_relation_with_context => nrel_main_idtf: 
 	[Проверить наличие циклов для заданного отношения порядка с заданным контекстом] 

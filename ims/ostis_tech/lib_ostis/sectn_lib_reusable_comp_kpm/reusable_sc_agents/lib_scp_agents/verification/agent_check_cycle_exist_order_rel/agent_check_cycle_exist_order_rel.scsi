@@ -73,17 +73,17 @@ scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
 			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator2A_to_false;;
 			*);;	
 
-        -> .agent_of_checking_cycle_existence_of_ordering_relation_operator2A_to_true
+        	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2A_to_true
 			(*
 			<- contAssign;;			
 			
 			-> rrel_1: rrel_assign: rrel_scp_var:  _is_context_exist;;
 			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
 
-			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator2A;;
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator_validate_context;;
 			*);; 
 
-		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2A
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator_validate_context
 			(*
 			<- ifType;;
 
@@ -101,9 +101,9 @@ scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
 			-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 2nd parameter! It must be a structure.];;
 
 			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message;;
-			*);;
+			*);;	
 
-		 -> .agent_of_checking_cycle_existence_of_ordering_relation_operator2A_to_false
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2A_to_false
 			(*
 			<- contAssign;;			
 			
@@ -760,7 +760,6 @@ scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
 	 		=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator7B;;
 	 		*);;
 
-
 	 	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator7B
 			(*
 			<- call;;
@@ -868,7 +867,7 @@ scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
 		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-				-> rrel_2: rrel_fixed: rrel_scp_const: _validation_message;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _validation_message;;
 				*);;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr7;;
 
