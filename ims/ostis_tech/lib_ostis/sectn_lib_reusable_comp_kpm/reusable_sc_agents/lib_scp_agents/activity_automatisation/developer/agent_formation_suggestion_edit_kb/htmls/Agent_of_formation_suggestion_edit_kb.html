@@ -1,7 +1,45 @@
-﻿<html>
+﻿ 	<html>
 	<body>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<p> Задачей <b><sc_element sys_idtf = "agent_formation_suggestion_edit_kb">агента формирования предложения по редактированию базы знаний</sc_element></b> является формирование <b><sc_element sys_idtf = "nrel_proposal">предложения*</sc_element></b>, содержащего  <b><sc_element sys_idtf  = "structure">структуру</sc_element></b>, которая описывает прелагаемое изменение в базе знаний. Данный агент инициируется при условии появления в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf = "action_to_form_a_proposal_for_editing_the_knowledge_base">действию формирования предложения по редактированию базы знаний</sc_element></b>.Единственным аргументом запроса является знак <sc_element sys_idtf = "structure"><b>структуры</b></sc_element>, описывающей предлагаемое изменение в базе знаний (чаще всего – дополнение к имеющейся базе). Предполагается, что в случае <b><sc_element sys_idtf = "nrel_approved">утверждения*</sc_element></b> данного <b><sc_element sys_idtf = "nrel_proposal">предложения*</sc_element></b>, данная структура будет интегрирована в соответствующий раздел базы знаний, и, при необходимости, будут инициированы <sc_element sys_idtf  = "action_in_sc_memory"><i>действия</i></sc_element>, знаки которых входят в ее состав.
+		<p> Задачей <b><sc_element sys_idtf = "agent_formation_suggestion_edit_kb"><b><sc_element sys_idtf = "agent_formation_suggestion_edit_kb">агента</sc_element></b> формирования предложения по редактированию базы знаний</sc_element></b> является формирование <b><sc_element sys_idtf = "nrel_proposal">предложения*</sc_element></b>, являющегося <b><sc_element sys_idtf  = "structure">структурой</sc_element></b>, описывающей предлагаемое изменение в базе знаний. Данный агент инициируется при условии появления в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf = "action_to_form_a_proposal_for_editing_the_knowledge_base">действию.сформировать предложения по редактированию базы знаний</sc_element></b>.
+		Аргументом действия является знак <sc_element sys_idtf = "structure"><b>структуры</b></sc_element>, описывающей предлагаемое изменение в базе знаний. 
+
+		Также в качестве второго аргумента может быть добавлен знак раздела (<sc_element sys_idtf = "atomic_section"><b>атомарного</b></sc_element>, либо <sc_element sys_idtf = "non_atomic_section"><b>неатомарного</b></sc_element>), в который будет интерграровано предложение в случае его утверждения <sc_element sys_idtf = "structure"><b>администратором</b></sc_element> базы знаний.
+
+
+		Возможные результаты работы <b><sc_element sys_idtf = "agent_formation_suggestion_edit_kb">агента</sc_element></b>:
+  			  	<ul>
+  					<li>
+  						Если первый аргумент не является знаком структуры, то выводим сообщение об ошибке(Wrong first parameter! It must be a structure(rrel_struct)).
+  					</li>
+  					<li>
+  						В случае если присутствует второй аргумент и не является ни <sc_element sys_idtf = "atomic_section"><b>атомарным разделом</b></sc_element>, ни <sc_element sys_idtf = "non_atomic_section"><b>неатомарным разделом</b></sc_element> базы знаний, то выводим сообщение об ошибке(Wrong second parameter! It must be a section)
+  					</li>
+  					<li>
+  						Если <b><sc_element sys_idtf = "ui_user">пользователь</sc_element></b>, инициировавший действие не является <sc_element sys_idtf = "nrel_developer"><b>разработчиком</b></sc_element>, то выводим сообщение(Access denied. User must be a developer).
+  					</li>
+  					<li>
+  						В случае успешного выполнения <b><sc_element sys_idtf = "agent_formation_suggestion_edit_kb"><b><sc_element sys_idtf = "agent_formation_suggestion_edit_kb">агента</sc_element></b></sc_element></b> формируется конструкция, представленная на рисунке. Инициируется знак <b><sc_element sys_idtf = "action_to_consider_proposal_for_editing_knowledge_base">действия. рассмотреть предложение по редактированию базы знаний</sc_element></b> и данный знак действия добавляется в <b><sc_element sys_idtf = "current_processes_of_computer_system">текущие процессы развития компьютерной системы</sc_element></b>. Генерируется связка отношения предложение*, связывающую знак <b><sc_element sys_idtf = "action_to_consider_proposal_for_editing_knowledge_base">действия. рассмотреть предложение по редактированию базы знаний</sc_element></b> и первый аргумент действия, инициировавшего агент(структура становится предложением). <b><sc_element sys_idtf = "nrel_authors">автором</sc_element></b> предложения становится <b><sc_element sys_idtf = "ui_user">пользователь</sc_element></b>, инициировавший выполнение <b><sc_element sys_idtf = "agent_formation_suggestion_edit_kb">агента</sc_element></b>.
+  					</li>
+  					<li>
+  						Если предложение связано с некоторым знаком действия отношением <b><sc_element sys_idtf = "nrel_result">цель*</sc_element></b>(на данный момент нет проверки на принадлежность узла к классу действия, присутствует только проверка на наличие отношения цель*, откуда и берем узел, который считаем за действие <b><sc_element sys_idtf = "nrel_developer">разработчика</sc_element></b> базы знаний), то генерируется связка отношения <b><sc_element sys_idtf = "nrel_sequence_of_actions">последовательность действий*</sc_element></b>, связывающая действие <b><sc_element sys_idtf = "nrel_developer">разработчика</sc_element></b> базы знаний и знак <b><sc_element sys_idtf = "action_to_consider_proposal_for_editing_knowledge_base">действия. рассмотреть предложение по редактированию базы знаний</sc_element></b>. Действие <b><sc_element sys_idtf = "nrel_developer">разработчика</sc_element></b> базы знаний становится <b><sc_element sys_idtf = "last_entity">прошлой сущностью</sc_element></b>(изначально действие <b><sc_element sys_idtf = "nrel_developer">разработчика</sc_element></b> базы знаний является <b><sc_element sys_idtf = "question_initiated">инициированным действием</sc_element></b>, и, чтобы сделать его <b><sc_element sys_idtf = "last_entity">прошлой сущностью</sc_element></b>, необходимо удалить принадлежность классу <b><sc_element sys_idtf = "question_initiated">инициированный знаков действия</sc_element></b>). Действие <b><sc_element sys_idtf = "nrel_developer">разработчика</sc_element></b> базы знаний добавляется в историю развития компьютерной <b><sc_element sys_idtf = "history_of_the_development_of_computer_system">история развития компьютерной системы</sc_element></b>
+
+  					</li>
+  					<li>
+  						Если второй аргумент присутсвует, то генерируется связка отношения <b><sc_element sys_idtf = "nrel_object">объект*</sc_element></b>, связывающая знак <b><sc_element sys_idtf = "action_to_consider_proposal_for_editing_knowledge_base">действия. рассмотреть предложение по редактированию базы знаний</sc_element></b> и второй аргумент(раздел).
+  					</li>
+  				</ul>
+
+  		В данном <b><sc_element sys_idtf = "agent_formation_suggestion_edit_kb">агенте</sc_element></b> используется следующие <b><sc_element sys_idtf = "scp_program">scp-программы</sc_element></b>: 
+  			  	<ol>
+  					<li>
+  					proc_of_adding_action_sign_to_current_processes//TODO
+  					</li>
+  				</ol>
+
+		
+		
 		</p>
+		<img src="" alt="Результат успешного выполнения <b><sc_element sys_idtf = "agent_formation_suggestion_edit_kb">агента</sc_element></b>">
 	</body>
 </html>
