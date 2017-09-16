@@ -46,7 +46,17 @@ scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
 			-> rrel_3: rrel_assign: rrel_struct: rrel_scp_var: _structure_order_relation_param;;
 
 			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator2A_find_context;;
-			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message;;
+			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator_invalid_first_param_msg;;
+			*);;	
+
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator_invalid_first_param_msg
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _validation_message;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 1st parameter! It must be a structure.];;
+
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message;;
 			*);;	
 
 		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2A_find_context
@@ -63,7 +73,7 @@ scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
 			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator2A_to_false;;
 			*);;	
 
-        	-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2A_to_true
+        -> .agent_of_checking_cycle_existence_of_ordering_relation_operator2A_to_true
 			(*
 			<- contAssign;;			
 			
@@ -73,7 +83,27 @@ scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
 			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator2A;;
 			*);; 
 
-		  -> .agent_of_checking_cycle_existence_of_ordering_relation_operator2A_to_false
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator2A
+			(*
+			<- ifType;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_struct: _context;;
+
+			=> nrel_then: .agent_of_checking_cycle_existence_of_ordering_relation_operator2A;;
+			=> nrel_else: .agent_of_checking_cycle_existence_of_ordering_relation_operator_invalid_second_param_msg;;
+			*);;	
+
+		-> .agent_of_checking_cycle_existence_of_ordering_relation_operator_invalid_second_param_msg
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _validation_message;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 2nd parameter! It must be a structure.];;
+
+			=> nrel_goto: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message;;
+			*);;
+
+		 -> .agent_of_checking_cycle_existence_of_ordering_relation_operator2A_to_false
 			(*
 			<- contAssign;;			
 			
@@ -838,7 +868,7 @@ scp_program -> agent_of_checking_cycle_existence_of_ordering_relation
 		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_checking_cycle_existence_of_ordering_relation_operator_call_proc_of_adding_validating_message_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong a parameter! It must be structure];;
+				-> rrel_2: rrel_fixed: rrel_scp_const: _validation_message;;
 				*);;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr7;;
 
