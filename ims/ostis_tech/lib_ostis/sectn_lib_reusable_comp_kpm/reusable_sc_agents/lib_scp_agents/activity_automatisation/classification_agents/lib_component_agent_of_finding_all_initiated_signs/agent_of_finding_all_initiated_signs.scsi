@@ -79,18 +79,9 @@ scp_program -> agent_of_finding_all_initiated_signs
 
 			-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_signs_of_action;;
 
-		  	=> nrel_then: .agent_of_finding_all_initiated_signs_operator1D_gen_set_of_init_action_1;;
+		  	=> nrel_then: .agent_of_finding_all_initiated_signs_operator1D_gen_set_of_init_action;;
 		  	=> nrel_else: .agent_of_finding_all_initiated_signs_call_proc_of_adding_general_action_comment;;
 			*);;
-
-		-> .agent_of_finding_all_initiated_signs_operator1D_gen_set_of_init_action_1
-                 	(*
-		 	<- printEl;;
-
-		 	-> rrel_1: rrel_fixed: rrel_node: rrel_scp_var: _set_of_signs_of_action;;
-
-		 	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator1D_gen_set_of_init_action;;
-		 	*);;
 		
 		-> .agent_of_finding_all_initiated_signs_operator1D_gen_set_of_init_action
                  	(*
@@ -106,6 +97,16 @@ scp_program -> agent_of_finding_all_initiated_signs
 		 	<- genEl;;
 
 		 	-> rrel_1: rrel_assign: rrel_node: rrel_scp_var: _init_actions_set_for_proposal;;
+
+		 	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator1D_gen_set_of_number_of_actions;;
+		 	*);;
+
+		-> .agent_of_finding_all_initiated_signs_operator1D_gen_set_of_number_of_actions
+                 	(*
+		 	<- contAssign;;
+
+		 	-> rrel_1: rrel_assign: rrel_scp_var: _number_of_actions;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
 
 		 	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator1D_gen_flag_set;;
 		 	*);;
@@ -127,18 +128,9 @@ scp_program -> agent_of_finding_all_initiated_signs
 		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _some_sign;;
 
-		  	=> nrel_then: .agent_of_finding_all_initiated_signs_operator2B_1;;
+		  	=> nrel_then: .agent_of_finding_all_initiated_signs_operator2B;;
 		  	=> nrel_else: .agent_of_finding_all_initiated_signs_operator2A_erase;;
 			*);;
-
-		-> .agent_of_finding_all_initiated_signs_operator2B_1
-                 	(*
-		 	<- printEl;;
-
-		 	-> rrel_1: rrel_fixed: rrel_scp_var: _some_sign;;
-
-		 	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator2B;;
-		 	*);; 
 
 		-> .agent_of_finding_all_initiated_signs_operator2A_erase 
                  	(*
@@ -238,6 +230,17 @@ scp_program -> agent_of_finding_all_initiated_signs
 		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_finding_all_initiated_signs;;
 		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
 		  	-> rrel_3: rrel_fixed: rrel_scp_var: _some_sign;;
+
+		  	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator_add_action_to_set_number_of_actions;;
+			*);;
+
+		-> .agent_of_finding_all_initiated_signs_operator_add_action_to_set_number_of_actions
+			(*
+		  	<- contAdd;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _number_of_actions;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_var: _number_of_actions;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: [1];;
 
 		  	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator2D_add_to_init_actions_set;;
 			*);;
@@ -520,7 +523,18 @@ scp_program -> agent_of_finding_all_initiated_signs
 
 		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _init_actions_set_for_proposal;;
 
-		 	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator3B;;
+		 	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator_is_answer_empty;;
+		 	*);;
+
+		-> .agent_of_finding_all_initiated_signs_operator_is_answer_empty
+                 	(*
+		 	<- ifEq;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _number_of_actions;;
+		 	-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
+
+		 	=> nrel_then: .agent_of_finding_all_initiated_signs_operator_erase_number_of_actions;;
+		 	=> nrel_else: .agent_of_finding_all_initiated_signs_operator3B;;
 		 	*);;
 
 		-> .agent_of_finding_all_initiated_signs_operator3B
@@ -557,6 +571,15 @@ scp_program -> agent_of_finding_all_initiated_signs
 
 		  	=> nrel_goto: .agent_of_finding_all_initiated_signs_operator_return;;
 			*);;
+
+		-> .agent_of_finding_all_initiated_signs_operator_erase_number_of_actions 
+                 	(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _number_of_actions;;
+
+		 	=> nrel_goto: .agent_of_finding_all_initiated_signs_call_proc_of_adding_general_action_comment;;
+		 	*);;
 
 		-> .agent_of_finding_all_initiated_signs_call_proc_of_adding_general_action_comment
 			(*
