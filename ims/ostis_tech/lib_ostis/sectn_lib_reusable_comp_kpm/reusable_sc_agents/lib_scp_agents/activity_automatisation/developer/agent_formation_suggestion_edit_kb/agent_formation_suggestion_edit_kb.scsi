@@ -246,7 +246,30 @@ scp_program -> agent_formation_suggestion_edit_kb
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_const: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_sequence_of_actions;;
 
-			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_is_two_arg_command;;
+			=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_add_to_history_of_development;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_add_to_history_of_development
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_action_sign_to_history_of_the_development;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_formation_suggestion_edit_kb_operator_add_to_history_of_development_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _action;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_add_to_history_of_development_return;;
+			*);;
+
+		-> .agent_formation_suggestion_edit_kb_operator_add_to_history_of_development_return
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_formation_suggestion_edit_kb_operator_is_two_arg_command;;
 			*);;
 
 		-> .agent_formation_suggestion_edit_kb_operator_is_two_arg_command
