@@ -59,8 +59,18 @@ scp_program -> agent_of_finding_approved_proposals_by_user
 		  	-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
 
 		  	=> nrel_then: .agent_of_finding_approved_proposals_by_user_2A_find_context;;
-		  	=> nrel_else: .agent_of_finding_approved_proposals_by_user_call_proc_of_adding_validating_message_wrong_second_param;;
+		  	=> nrel_else: .agent_of_finding_approved_proposals_by_user_invalid_first_param_msg;;
 			*);;
+
+		-> .agent_of_finding_approved_proposals_by_user_invalid_first_param_msg
+			(*
+			<- contAssign;;			
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _validation_message;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter! It must be user sign(element of ui_user)];;
+
+			=> nrel_goto: .agent_of_finding_approved_proposals_by_user_call_proc_of_adding_validating_message_wrong_second_param;;
+			*);; 
 
 		-> .agent_of_finding_approved_proposals_by_user_2A_find_context
 			(*
@@ -86,7 +96,27 @@ scp_program -> agent_of_finding_approved_proposals_by_user
 			=> nrel_goto: .agent_of_finding_approved_proposals_by_user_set_necessary;;
 			*);; 
 
-		  -> .agent_of_finding_approved_proposals_by_user_2A_set_context_existence_to_false
+		-> .agent_of_finding_approved_proposals_by_user_validate_context
+			(*
+			<- ifType;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_struct: _context;;
+
+			=> nrel_then: .agent_of_finding_approved_proposals_by_user_set_necessary;;
+			=> nrel_else: .agent_of_finding_approved_proposals_by_user_invalid_second_param_msg;;
+			*);; 
+
+		-> .agent_of_finding_approved_proposals_by_user_invalid_second_param_msg
+			(*
+			<- contAssign;;			
+			
+			-> rrel_1: rrel_assign: rrel_scp_var:  _validation_message;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 2nd parameter! It must be a structure.];;
+
+			=> nrel_goto: .agent_of_finding_approved_proposals_by_user_call_proc_of_adding_validating_message_wrong_second_param;;
+			*);; 
+
+		-> .agent_of_finding_approved_proposals_by_user_2A_set_context_existence_to_false
 			(*
 			<- contAssign;;			
 			
@@ -557,7 +587,7 @@ scp_program -> agent_of_finding_approved_proposals_by_user
 		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_approved_proposals_by_user_call_proc_of_adding_validating_message_wrong_second_param_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter! It must be user sign(element of ui_user)];;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _validation_message;;
 				*);;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
 
