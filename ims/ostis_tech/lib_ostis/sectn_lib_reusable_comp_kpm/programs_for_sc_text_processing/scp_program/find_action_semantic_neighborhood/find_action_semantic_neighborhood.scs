@@ -19,7 +19,7 @@ lib_component_proc_of_finding_action_semantic_neighborhood
 		...
 		(*
 		-> rrel_example:
-			"file://htmls/Find_Action_Semantic_Neighborhood.html" 
+			"file://htmls/Proc_Find_Action_Semantic_Neighborhood.html" 
 				(* <- lang_ru;; *);;
 		*);;
 	*);;
