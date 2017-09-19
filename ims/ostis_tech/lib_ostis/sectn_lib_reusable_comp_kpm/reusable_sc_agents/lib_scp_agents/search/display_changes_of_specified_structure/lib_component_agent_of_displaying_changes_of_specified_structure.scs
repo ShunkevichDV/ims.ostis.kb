@@ -1,0 +1,38 @@
+lib_component_agent_of_displaying_changes_of_specified_structure
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент вывода изменений заданной sc-структуры]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Library component. sc-agent of displaying changes of specified structure]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_displaying_changes_of_specified_structure; 
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_displaying_changes_of_specified_structure; 
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_of_displaying_changes_of_specified_structure.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_to_display_changes_of_specified_structure
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. вывести изменения заданной sc-структуры]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[action. display changes of specified structure]
+	(* <- lang_en;; *);; 
