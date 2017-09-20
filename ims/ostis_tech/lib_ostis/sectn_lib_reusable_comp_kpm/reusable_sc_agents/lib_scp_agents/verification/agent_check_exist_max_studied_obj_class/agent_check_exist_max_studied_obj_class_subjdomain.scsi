@@ -182,7 +182,7 @@ scp_program -> agent_of_checking_existence_of_max_studied_object_class_of_subjec
 
 		-> .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2A
 			(*
-			<- searchElStr5;;
+			<- searchSetStr5;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
@@ -190,22 +190,58 @@ scp_program -> agent_of_checking_existence_of_max_studied_object_class_of_subjec
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_maximum_studied_object_class;;
 
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _set_for_max_element;;
+
 			=> nrel_then: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2B;;
-			=> nrel_else: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2D;;
+			=> nrel_else: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2G;;
 			*);;
 
 		-> .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2B
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_for_max_element;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _max_class;;
+
+			=> nrel_then: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2C;;
+			=> nrel_else: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1F;;
+			*);;
+
+		-> .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2C
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_erase: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+
+			=> nrel_goto: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2D;;
+			*);;
+
+		-> .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2D
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _elem;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _max_class;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_maximum_studied_object_class;;
+
+			=> nrel_goto: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2E;;
+			*);;
+
+		-> .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2E
 			(*
 			<- stringIfEq;;			
 			
 			-> rrel_1: rrel_fixed: rrel_scp_var:  _is_context_exist;;
 			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
 
-			=> nrel_then: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2B_true;;
-			=> nrel_else: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1F;;
+			=> nrel_then: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2E_true;;
+			=> nrel_else: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2B;;
 			*);;
 
-		-> .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2B_true
+		-> .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2E_true
 			(*
 			<- searchElStr3;;
 
@@ -213,11 +249,11 @@ scp_program -> agent_of_checking_existence_of_max_studied_object_class_of_subjec
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _max_class;;
 
-			=> nrel_then: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2C;;
-			=> nrel_else: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2D;;
+			=> nrel_then: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2F;;
+			=> nrel_else: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2H;;
 			*);;
 
-		-> .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2C
+		-> .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2F
 			(*
 			<- searchElStr3;;
 
@@ -226,10 +262,22 @@ scp_program -> agent_of_checking_existence_of_max_studied_object_class_of_subjec
 			-> rrel_3: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: _arc;;
 
 			=> nrel_then: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1F;;
-			=> nrel_else: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2D;;
+			=> nrel_else: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2H;;
 			*);;
 
-		-> .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2D
+		-> .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2H
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_for_max_element;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _max_class;;
+
+			=> nrel_then: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2C;;
+			=> nrel_else: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2G;;
+			*);;
+
+		-> .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2G
 			(*
 			<- genElStr5;;
 
