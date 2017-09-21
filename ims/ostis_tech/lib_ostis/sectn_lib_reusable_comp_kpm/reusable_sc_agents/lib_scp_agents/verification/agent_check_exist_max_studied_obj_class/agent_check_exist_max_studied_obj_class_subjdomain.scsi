@@ -238,7 +238,7 @@ scp_program -> agent_of_checking_existence_of_max_studied_object_class_of_subjec
 			-> rrel_2: rrel_fixed: rrel_scp_const: [true];;
 
 			=> nrel_then: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2E_true;;
-			=> nrel_else: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2B;;
+			=> nrel_else: .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator1F;;
 			*);;
 
 		-> .agent_of_checking_existence_of_max_studied_object_class_of_subject_domain_operator2E_true
