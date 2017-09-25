@@ -1,0 +1,6 @@
+sc_text_of_agent_of_adding_comment_to_elem
+-> rrel_key_sc_element:
+	agent_of_adding_comment_to_elem;
+<- scp_program_sc_text;;
+
+sc_text_of_agent_of_adding_comment_to_elem = [*^"file://agent_of_adding_comment_to_elem.scsi"*];;
