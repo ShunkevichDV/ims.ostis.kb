@@ -1,7 +1,7 @@
 sc_agent_of_adding_comment_to_elem
 => nrel_main_idtf:	
-	[sc-агент формирования предложения исполнителя проектного задания] (* <- lang_ru;; *);
-	[sc-agent of formation proposal executor of project task] (* <- lang_en;; *);
+	[sc-агент добавления комментария sc-элемента] (* <- lang_ru;; *);
+	[sc-agent of adding comment to sc-element] (* <- lang_en;; *);
 	
 <- abstract_sc_agent;
 
@@ -15,7 +15,7 @@ sc_agent_of_adding_comment_to_elem
 	{
 	question_initiated;
 	question;
-	action_to_consider_offered_artist_of_project_task
+	action_to_add_comment_to_sc_elem
 	};
 	
 => nrel_inclusion: 
@@ -33,7 +33,7 @@ sc_agent_of_adding_comment_to_elem
 
 ..sc_agent_of_adding_comment_to_elem_condition
 = [*
-	action_to_consider_offered_artist_of_project_task _-> .._question;;
+	action_to_add_comment_to_sc_elem _-> .._question;;
 	question_initiated _-> .._question;;
 	question _-> .._question;;
 	.._question _-> rrel_1:: .._parameter1;;
@@ -42,7 +42,7 @@ sc_agent_of_adding_comment_to_elem
 
 ..sc_agent_of_adding_comment_to_elem_result
 = [*
-	action_to_consider_offered_artist_of_project_task _-> .._question;;
+	action_to_add_comment_to_sc_elem _-> .._question;;
 	question_finished _-> .._question;;
 	question _-> .._question;;
 	.._question _-> rrel_1:: .._parameter1;;
