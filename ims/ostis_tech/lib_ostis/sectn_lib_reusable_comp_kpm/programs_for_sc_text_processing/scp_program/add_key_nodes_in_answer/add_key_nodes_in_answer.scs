@@ -1,0 +1,27 @@
+lib_component_proc_of_adding_key_nodes_in_answer
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа добавления ключевых узлов в ответ scp-прграммы]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Library component. scp-program of adding key nodes in answer of scp-program]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_adding_key_nodes_in_answer;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Proc_Add_Key_Nodes_In_Answer.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_adding_key_nodes_in_answer = [*^"file://add_key_nodes_in_answer.scsi"*];;
