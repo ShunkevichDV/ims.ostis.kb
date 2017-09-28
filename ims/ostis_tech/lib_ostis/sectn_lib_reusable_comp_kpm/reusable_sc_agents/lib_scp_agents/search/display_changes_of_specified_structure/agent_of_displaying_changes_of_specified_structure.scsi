@@ -1,0 +1,277 @@
+agent_of_displaying_changes_of_specified_structure
+=> nrel_main_idtf:
+	[агентная scp-программа вывода изменений заданной sc-структуры]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[agent scp-program of displaying changes of specified structure]
+	(* <- lang_en;; *);
+<- agent_scp_program;;
+
+scp_program -> agent_of_displaying_changes_of_specified_structure
+	(*
+	-> rrel_params: .agent_of_displaying_changes_of_specified_structure_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_displaying_changes_of_specified_structure_operator_set 
+		(*
+		-> rrel_init: .agent_of_displaying_changes_of_specified_structure_operator1A
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator1B;;
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator1B
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_display_changes_of_specified_structure;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_displaying_changes_of_specified_structure_operator1C;;
+			=> nrel_else: .agent_of_displaying_changes_of_specified_structure_operator_return;;
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator1C
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _param;;
+
+			=> nrel_then: .agent_of_displaying_changes_of_specified_structure_operator1D;;
+			=> nrel_else: .agent_of_displaying_changes_of_specified_structure_operator_return;;
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator1D
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _examples;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_examples;;
+
+			=> nrel_then: .agent_of_displaying_changes_of_specified_structure_operator_gen_answer;;
+			=> nrel_else: .agent_of_displaying_changes_of_specified_structure_operator_return;;
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator_gen_answer
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: rrel_const: _answer_of_displaying_changes_of_specified_structure;; 
+
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator_gen_set_of_actions;;  
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator_gen_set_of_actions
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: rrel_const: _set_of_actions;; 
+
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator2A;;  
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator2A
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_examples;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _example;;
+
+			=> nrel_then: .agent_of_displaying_changes_of_specified_structure_operator2B;;
+			=> nrel_else: .agent_of_displaying_changes_of_specified_structure_operator2G;;
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator2B
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: rrel_pos_const_perm: _arc1;; 
+
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator2C;;  
+			*);;
+		
+		-> .agent_of_displaying_changes_of_specified_structure_operator2C
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_displaying_changes_of_specified_structure;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _example;;
+
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator2D;;  
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator2D
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _example;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_displaying_changes_of_specified_structure;;
+
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator2E1;;
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator2E1
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _example;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _action;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_displaying_changes_of_specified_structure;;
+
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator2E2;;   
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator2E2
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _example;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _action;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _set_of_actions;;
+
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator2F;;   
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator2F
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _example;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _last_action;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_role_relation: rrel_last_executed_action;;
+
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_of_displaying_changes_of_specified_structure;;
+
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator_call_proc_of_finding_action_semantic_neighborhood;;
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator_call_proc_of_finding_action_semantic_neighborhood
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_action_semantic_neighborhood;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_displaying_changes_of_specified_structure_operator_call_proc_of_finding_action_semantic_neighborhood_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_actions;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _answer_of_displaying_changes_of_specified_structure;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator_waitreturn_proc_of_finding_action_semantic_neighborhood;;
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator_waitreturn_proc_of_finding_action_semantic_neighborhood
+			(*
+			<- waitReturn;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator2A;;
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator2G
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_displaying_changes_of_specified_structure;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: rrel_role_relation: rrel_last_executed_action;;
+
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator2H;;
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator2H
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_displaying_changes_of_specified_structure;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator2I;;
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator2I
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _set_of_examples;;
+
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator2J;;
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator2J
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _set_of_actions;;
+
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator_make_answer;;
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator_make_answer
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_const: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _answer_of_displaying_changes_of_specified_structure;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;; 
+			
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator_successfully_finished_question;;
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator_successfully_finished_question
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_successfully;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator_return;; 
+			*);;
+
+		-> .agent_of_displaying_changes_of_specified_structure_operator_unsuccessfully_finished_question
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_unsuccessfully;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_displaying_changes_of_specified_structure_operator_return;; 
+			*);;
+		
+		-> .agent_of_displaying_changes_of_specified_structure_operator_return
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

@@ -1,0 +1,193 @@
+agent_for_equality_nodes
+=> nrel_main_idtf:
+	[агентная scp-программа отождествления двух sc-элементов] (* <- lang_ru;; *);
+	[agent scp-program of identificate two sc-elements] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_for_equality_nodes 
+	(*
+	-> rrel_params: .agent_for_equality_nodes_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_for_equality_nodes_operator_set
+		(*
+		-> rrel_init: .agent_for_equality_nodes_operator_A1
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+	
+			=> nrel_goto: .agent_for_equality_nodes_operator_A2;;
+			*);;
+		
+		->.agent_for_equality_nodes_operator_A2
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_equality_two_nodes;;
+			-> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_for_equality_nodes_operator_A3_get_source_param;;
+			=> nrel_else: .agent_for_equality_nodes_return;;
+			*);;
+	
+		->.agent_for_equality_nodes_operator_A3_get_source_param
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _source_param;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_1;;
+
+			=> nrel_then: .agent_for_equality_nodes_operator_A3_get_target_param;;
+			=> nrel_else: .agent_for_equality_nodes_return;;
+			*);;
+
+		->.agent_for_equality_nodes_operator_A3_get_target_param
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _target_param;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_2;;
+
+			=> nrel_then: .agent_for_equality_nodes_operator_find_source_element_loop_enter;;
+			=> nrel_else: .agent_for_equality_nodes_return;;
+			*);;
+
+
+		->.agent_for_equality_nodes_operator_find_source_element_loop_enter
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _source_param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc_to_remove;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _source_element;;		
+	
+			=> nrel_then: .agent_for_equality_nodes_operator1E1_erase_arc_source_element_arc;;
+			=> nrel_else: .agent_for_equality_nodes_operator_find_target_element_loop_enter;;
+			*);;
+
+		-> .agent_for_equality_nodes_operator1E1_erase_arc_source_element_arc
+                 	(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc_to_remove;;
+
+		 	=> nrel_goto: .agent_for_equality_nodes_operator_find_source_element_loop_enter;;
+		 	*);;
+
+
+		->.agent_for_equality_nodes_operator_find_target_element_loop_enter
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _target_param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc_to_remove;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _target_element;;		
+	
+			=> nrel_then: .agent_for_equality_nodes_operator1E1_erase_arc_target_element_arc;;
+			=> nrel_else: .agent_for_equality_nodes_operator1E1_erase_target_param_node;;
+			*);;
+
+		-> .agent_for_equality_nodes_operator1E1_erase_arc_target_element_arc
+                 	(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc_to_remove;;
+
+		 	=> nrel_goto: .agent_for_equality_nodes_operator_B2_add_target_element_to_source_param;;
+		 	*);;
+
+
+		->.agent_for_equality_nodes_operator_B2_add_target_element_to_source_param
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _source_param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _target_element;;
+
+			=> nrel_goto: .agent_for_equality_nodes_operator_find_target_element_loop_enter;;
+			*);;
+
+	
+		-> .agent_for_equality_nodes_operator1E1_erase_target_param_node
+                 	(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _target_param;;
+
+		 	=> nrel_goto: .agent_for_equality_nodes_operator1E1_gen_answer;;
+		 	*);;
+
+/******************************************************************************UI*************************************************************************/
+		
+		
+		-> .agent_for_equality_nodes_operator1E1_gen_answer
+                 	(*
+		 	<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer1;;
+
+		 	=> nrel_goto: .agent_for_equality_nodes_operator_scn_add_new_act_to_answer;;
+		 	*);;
+
+		-> .agent_for_equality_nodes_operator_scn_add_new_act_to_answer
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer1;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _source_param;;
+
+		  	=> nrel_goto: .agent_for_equality_nodes_operator_A2_add_source_param_content_to_answer;;
+			*);;
+
+		->.agent_for_equality_nodes_operator_A2_add_source_param_content_to_answer
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _source_param;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _temp_node;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer1;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer1;;
+
+			=> nrel_goto: .agent_for_equality_nodes_operator_gen_full_answer;;
+			*);;
+	
+
+		-> .agent_for_equality_nodes_operator_gen_full_answer
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _answer1;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+
+			=> nrel_goto: .agent_for_equality_nodes_return;; 
+			*);;
+
+
+		-> .agent_for_equality_nodes_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
+
+
