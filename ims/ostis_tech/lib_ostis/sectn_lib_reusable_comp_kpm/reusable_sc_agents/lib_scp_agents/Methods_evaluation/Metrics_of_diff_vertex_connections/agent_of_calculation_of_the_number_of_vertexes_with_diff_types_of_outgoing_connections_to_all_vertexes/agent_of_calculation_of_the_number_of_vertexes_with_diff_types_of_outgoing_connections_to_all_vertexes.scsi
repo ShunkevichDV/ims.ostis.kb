@@ -439,10 +439,6 @@ scp_program -> agent_of_calculation_of_the_number_of_vertexes_with_diff_types_of
 			=> nrel_goto: .agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator_return;; 
 			*);;
 
-
-/**************************************************************************Wrong Parametrs************************************************************/
-
-
 		-> .agent_calculation_of_the_number_of_vertexes_with_diff_types_of_outgoing_connections_to_all_vertexes_operator_return
 			(*
 			<- return;;
