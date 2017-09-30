@@ -1,0 +1,6 @@
+sc_text_of_agent_of_checking_right_domain_of_relations
+-> rrel_key_sc_element:
+	agent_of_checking_right_domain_of_relations;
+<- scp_program_sc_text;;
+
+sc_text_of_agent_of_checking_right_domain_of_relations = [*^"file://agent_of_checking_right_domain_of_relations.scsi"*];;
