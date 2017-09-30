@@ -1,0 +1,36 @@
+lib_component_agent_of_rule_changing
+=> nrel_main_idtf:
+	[Компонент библиотеки. Sc-агент замены по правилу]
+	(* <- lang_ru;; *);
+	[Library component. Sc-agent of rule changing]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_for_rule_changing;
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_rule_changing;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_Of_Rule_Changing.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_to_make_rule_changing
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. заменить по правилу]
+ 	(* <- lang_ru;; *);
+ 	[action. change according to the rule]
+ 	(* <- lang_en;; *);; 
