@@ -1,0 +1,299 @@
+scp_program -> proc_of_adding_proposal_to_answer
+	(*
+  	-> rrel_params: .proc_of_adding_proposal_to_answer_params 
+		(*
+		-> rrel_1: rrel_in: _action;;
+		-> rrel_2: rrel_in: _answer;;
+    	*);;
+
+	-> rrel_operators: .proc_of_adding_proposal_to_answer_operator_set
+    	(*
+    	-> rrel_init: .proc_of_adding_proposal_to_answer_operator_A1
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: rrel_const: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _proposal;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_proposal;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+			=> nrel_goto: .proc_of_adding_proposal_to_answer_operator_A2;;
+			*);;  
+
+		-> .proc_of_adding_proposal_to_answer_operator_A2
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_proposal;;
+
+			=> nrel_then: .proc_of_adding_proposal_to_answer_operator_A4;;
+			=> nrel_else: .proc_of_adding_proposal_to_answer_operator_A3;;
+			*);;
+
+		-> .proc_of_adding_proposal_to_answer_operator_A3
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_proposal;;
+
+			=> nrel_goto: .proc_of_adding_proposal_to_answer_operator_A4;;
+			*);;	
+
+		-> .proc_of_adding_proposal_to_answer_operator_A4
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action;;
+
+			=> nrel_goto: .proc_of_adding_proposal_to_answer_operator_A5;;
+			*);;		
+
+		-> .proc_of_adding_proposal_to_answer_operator_A5
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _proposal;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_proposal;;
+
+			=> nrel_goto: .proc_of_adding_proposal_to_answer_operator_A6_add_proposal_content_to_answer;;
+			*);;  	
+
+		-> .proc_of_adding_proposal_to_answer_operator_A6_add_proposal_content_to_answer
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _proposal;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _proposal_content;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+
+			=> nrel_goto: .proc_of_adding_proposal_to_answer_operator_A7;;
+			*);; 	
+
+		-> .proc_of_adding_proposal_to_answer_operator_A7
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _proposal;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _author;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+			=> nrel_then: .proc_of_adding_proposal_to_answer_operator_A8;;
+			=> nrel_else: .proc_of_adding_proposal_to_answer_operator_B1;;
+			*);;	
+
+		-> .proc_of_adding_proposal_to_answer_operator_A8
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+			=> nrel_then: .proc_of_adding_proposal_to_answer_operator_B1;;
+			=> nrel_else: .proc_of_adding_proposal_to_answer_operator_A9;;
+			*);;
+
+		-> .proc_of_adding_proposal_to_answer_operator_A9
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_authors;;
+
+			=> nrel_goto: .proc_of_adding_proposal_to_answer_operator_B1;;
+			*);;		
+
+	-> .proc_of_adding_proposal_to_answer_operator_B1
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _some_sign_class;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action;;
+
+			-> rrel_set_1: rrel_assign: rrel_scp_var: _set_of_some_sign_class;;
+
+			=> nrel_then: .proc_of_adding_proposal_to_answer_operator_B2_loop_enter;;
+			=> nrel_else: .proc_of_adding_proposal_to_answer_operator_C1;;
+			*);;
+
+		-> .proc_of_adding_proposal_to_answer_operator_B2_loop_enter
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_some_sign_class;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc_remove;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _some_sign_class;;
+
+			=> nrel_then: .proc_of_adding_proposal_to_answer_operator_B3;;
+			=> nrel_else: .proc_of_adding_proposal_to_answer_operator_B7_erase_temp_set;;
+			*);;
+
+		-> .proc_of_adding_proposal_to_answer_operator_B3
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc_remove;;
+
+			=> nrel_goto: .proc_of_adding_proposal_to_answer_operator_B4;;
+			*);;
+
+		-> .proc_of_adding_proposal_to_answer_operator_B4
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: section_developers_actions_knowledge_base_cooperation_hierarchy;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _some_sign_class;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_key_sc_element;;
+
+			=> nrel_then: .proc_of_adding_proposal_to_answer_operator_B5;;
+			=> nrel_else: .proc_of_adding_proposal_to_answer_operator_B2_loop_enter;;
+			*);;
+
+		-> .proc_of_adding_proposal_to_answer_operator_B5
+			(*	
+			<- genElStr3;;
+
+	    	-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+   	    	-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _some_sign_class;;
+
+			=> nrel_goto: .proc_of_adding_proposal_to_answer_operator_B6;;
+			*);;
+
+		-> .proc_of_adding_proposal_to_answer_operator_B6
+			(*	
+			<- searchSetStr3;;
+
+	    	-> rrel_1: rrel_fixed: rrel_scp_var: _some_sign_class;;
+   	    	-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _action;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+
+			=> nrel_goto: .proc_of_adding_proposal_to_answer_operator_B7_erase_temp_set;;
+			*);;
+
+		-> .proc_of_adding_proposal_to_answer_operator_B7_erase_temp_set
+			(*
+		  	<- eraseEl;;
+
+		  	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_some_sign_class;;
+
+		  	=> nrel_goto: .proc_of_adding_proposal_to_answer_operator_C1;;
+			*);;	
+
+		-> .proc_of_adding_proposal_to_answer_operator_C1
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _user;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_approved;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+			=> nrel_then: .proc_of_adding_proposal_to_answer_operator_C2;;
+			=> nrel_else: .proc_of_adding_proposal_to_answer_operator_C4;;
+			*);;	
+			
+		-> .proc_of_adding_proposal_to_answer_operator_C2
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_approved;;
+
+			=> nrel_then: .proc_of_adding_proposal_to_answer_operator_C4;;
+			=> nrel_else: .proc_of_adding_proposal_to_answer_operator_C3;;
+			*);;
+
+		-> .proc_of_adding_proposal_to_answer_operator_C3
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_approved;;
+
+			=> nrel_goto: .proc_of_adding_proposal_to_answer_operator_C4;;
+			*);;
+
+		-> .proc_of_adding_proposal_to_answer_operator_C4
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _action;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _user;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_rejected;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+			=> nrel_then: .proc_of_adding_proposal_to_answer_operator_C5;;
+			=> nrel_else: .proc_of_adding_proposal_to_answer_operator_return;;
+			*);;	
+			
+		-> .proc_of_adding_proposal_to_answer_operator_C5
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_rejected;;
+
+			=> nrel_then: .proc_of_adding_proposal_to_answer_operator_return;;
+			=> nrel_else: .proc_of_adding_proposal_to_answer_operator_C6;;
+			*);;
+
+		-> .proc_of_adding_proposal_to_answer_operator_C6
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_rejected;;
+
+			=> nrel_goto: .proc_of_adding_proposal_to_answer_operator_return;;
+			*);;
+
+		-> .proc_of_adding_proposal_to_answer_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
