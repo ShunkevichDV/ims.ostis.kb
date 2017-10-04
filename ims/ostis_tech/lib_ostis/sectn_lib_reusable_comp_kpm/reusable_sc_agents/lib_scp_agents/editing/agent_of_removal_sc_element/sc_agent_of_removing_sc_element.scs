@@ -1,7 +1,10 @@
 sc_agent_of_removing_sc_element
 => nrel_main_idtf:
-	[sc-агент удаления sc-элемента] (* <- lang_ru;; *);
-	[sc-agent of removing sc-element] (* <- lang_en;; *);
+	[sc-агент удаления sc-элемента]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[sc-agent of removing sc-element]
+	(* <- lang_en;; *);
 	
 <- abstract_sc_agent;
 

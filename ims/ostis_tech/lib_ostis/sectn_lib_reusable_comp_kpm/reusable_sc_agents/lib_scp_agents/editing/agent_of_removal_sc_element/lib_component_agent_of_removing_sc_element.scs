@@ -2,6 +2,7 @@ lib_component_agent_of_removing_sc_element
 => nrel_main_idtf:
 	[Компонент библиотеки. sc-агент удаления sc-элемента]
 	(* <- lang_ru;; *);
+=> nrel_main_idtf:
 	[Library component. sc-agent of removing sc-element]
 	(* <- lang_en;; *);
 
@@ -26,5 +27,3 @@ lib_component_agent_of_removing_sc_element
 				(* <- lang_ru;; *);; 
 		*);;
 	*);;
-
-
