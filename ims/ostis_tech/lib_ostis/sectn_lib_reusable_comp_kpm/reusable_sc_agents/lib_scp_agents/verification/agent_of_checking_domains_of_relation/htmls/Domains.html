@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+	<p>
+		Задачей <b><sc_element sys_idtf="agent_of_checking_domains_of_relation">агента проверки указания доменов у отношений в рамках заданной структуры</sc_element></b> является поиск в рамках поданной на вход <b><sc_element sys_idtf="structure">структуры</sc_element></b> <b><sc_element sys_idtf="relation">отношений</sc_element></b>, для которых указаны не все <b><sc_element sys_idtf="nrel_domain">домены</sc_element></b>. Данный агент инициируется при условии появления в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf="action_of_checking_domains_of_relation">запросу проверки указаия доменов у отношения в рамках заданной структуры</sc_element></b>. Единственным аргументом является <b><sc_element sys_idtf="structure">структура</sc_element></b>, в рамках которой анализируются <b><sc_element sys_idtf="relation">отношения</sc_element></b> на предмет наличия у них всех <b><sc_element sys_idtf="nrel_domain">доменов</sc_element></b>. В данном агенте предусмотрена проверка <b><sc_element sys_idtf="unary_relation">унарных отношений</sc_element></b>, <b><sc_element sys_idtf="binary_relation">бинарных отношений</sc_element></b> и <b><sc_element sys_idtf="ternary_relation">тернарных отношений</sc_element></b>. Проверка <b><sc_element sys_idtf="relation">отношений</sc_element></b> состоит в том, что у каждого <b><sc_element sys_idtf="relation">отношения</sc_element></b> количество указанных доменов должно быть равно арности данного <b><sc_element sys_idtf="relation">отношения</sc_element></b>.
+		 Возможные результаты работы агента: 
+ 		<ul>
+ 			<li>Если на вход агенту в качестве первого параметра пришла не структура, то генерируется сообщение об ошибке (Wrong first parameter! It must be a structure(rrel_struct).).
+ 			</li>
+ 			<li>Если в результате работы агента были найдены некорректные <b><sc_element sys_idtf="relation">отношения</sc_element></b>, то они заносятся в <b><sc_element sys_idtf="structure_with_partly_defined_relation"> структуру. не указаны домены отношения </b></sc_element>. 
+ 			</li>
+ 			<li>Если в результате работы агента некорректные <b><sc_element sys_idtf="relation">отношения</sc_element></b> не найдены, то генерируется сообщение об отсутствии данного рода ошибок в рамках поданной на вход <b><sc_element sys_idtf="structure">структуры</sc_element></b> (Problematic knowledge base fragments are not found.).
+ 			</li>
+ 		</ul> 
+
+	</p>
+</body>
+</html>
