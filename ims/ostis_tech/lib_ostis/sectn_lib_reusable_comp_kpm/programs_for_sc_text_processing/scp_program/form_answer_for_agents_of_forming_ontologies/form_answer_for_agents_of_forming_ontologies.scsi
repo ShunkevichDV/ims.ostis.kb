@@ -137,7 +137,7 @@ scp_program -> proc_of_forming_answer_for_agents_of_forming_ontologies
 
 		-> .proc_of_forming_answer_for_agents_of_forming_ontologies_operator2C
 			(*
-			<- searchElStr3;;
+			<- searchElStr5;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _key_node;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
