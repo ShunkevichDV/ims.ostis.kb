@@ -125,7 +125,7 @@ scp_program -> agent_of_calculation_number_of_all_types_of_input_connections_of_
 			*);;
 
 		-> .agent_of_calculation_number_of_all_types_of_input_connections_operator1C1
-    			(*
+    		(*
 			<- searchElStr5;;
 
 			-> rrel_1: rrel_assign: rrel_scp_var: _subject_domain;;
@@ -134,9 +134,9 @@ scp_program -> agent_of_calculation_number_of_all_types_of_input_connections_of_
 			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_ontology;;
 
-        		=> nrel_then: .agent_of_calculation_number_of_all_types_of_input_connections_operator_gen_set_with_all_vertexes;;
+        	=> nrel_then: .agent_of_calculation_number_of_all_types_of_input_connections_operator_gen_set_with_all_vertexes;;
 			=> nrel_else: .agent_of_calculation_number_of_all_types_of_input_connections_operator7B;;
-        		*);;
+        	*);;
 
 		-> .agent_of_calculation_number_of_all_types_of_input_connections_operator_gen_set_with_all_vertexes
 			(*
@@ -148,7 +148,7 @@ scp_program -> agent_of_calculation_number_of_all_types_of_input_connections_of_
 			*);;	
 
     		-> .agent_of_calculation_number_of_all_types_of_input_connections_operator1C2
-    			(*
+    		(*
 			<- searchSetStr5;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _subject_domain;;
@@ -159,11 +159,11 @@ scp_program -> agent_of_calculation_number_of_all_types_of_input_connections_of_
 
 			-> rrel_set_3: rrel_fixed: rrel_scp_var: _all_vertexes_of_ontology;;
 
-        		=> nrel_goto: .agent_of_calculation_number_of_all_types_of_input_connections_operator1C3;;
-        		*);;
+        	=> nrel_goto: .agent_of_calculation_number_of_all_types_of_input_connections_operator1C3;;
+        	*);;
 
 		-> .agent_of_calculation_number_of_all_types_of_input_connections_operator1C3
-    			(*
+    		(*
 			<- searchSetStr5;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _subject_domain;;
@@ -174,11 +174,11 @@ scp_program -> agent_of_calculation_number_of_all_types_of_input_connections_of_
 
 			-> rrel_set_3: rrel_fixed: rrel_scp_var: _all_vertexes_of_ontology;;
 
-        		=> nrel_goto: .agent_of_calculation_number_of_all_types_of_input_connections_operator1C4;;
-        		*);;
+        	=> nrel_goto: .agent_of_calculation_number_of_all_types_of_input_connections_operator1C4;;
+        	*);;
 
         	-> .agent_of_calculation_number_of_all_types_of_input_connections_operator1C4
-    			(*
+    		(*
 			<- searchSetStr5;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _subject_domain;;
@@ -189,8 +189,8 @@ scp_program -> agent_of_calculation_number_of_all_types_of_input_connections_of_
 
 			-> rrel_set_3: rrel_fixed: rrel_scp_var: _all_vertexes_of_ontology;;
 
-        		=> nrel_goto: .agent_of_calculation_number_of_all_types_of_input_connections_operator_gen_set_of_links;;
-        		*);;
+        	=> nrel_goto: .agent_of_calculation_number_of_all_types_of_input_connections_operator_gen_set_of_links;;
+        	*);;
 
 		-> .agent_of_calculation_number_of_all_types_of_input_connections_operator_gen_set_of_links
 			(*
@@ -206,10 +206,10 @@ scp_program -> agent_of_calculation_number_of_all_types_of_input_connections_of_
 		  	<- call;;
 
 		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_calculation_number_of_all_types_of_input_connections;;
-		  	-> rrel_2: rrel_fixed: rrel_scp_const: agent_of_calculation_number_of_all_types_of_input_connections_operator_call_average_numb_of_types_params 
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_calculation_number_of_all_types_of_input_connections_operator_call_average_numb_of_types_params 
 				(*
-				-> rrel_1: rrel_fixed: rrel_scp_var: _all_vertexes_of_ontology;;
-				-> rrel_2: rrel_fixed: rrel_scp_var: _ontology;;
+				-> rrel_1: rrel_fixed: rrel_scp_var: _ontology;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _all_vertexes_of_ontology;;
 				-> rrel_3: rrel_fixed: rrel_scp_var: _set_of_links;;
 				*);;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
@@ -332,9 +332,6 @@ scp_program -> agent_of_calculation_number_of_all_types_of_input_connections_of_
 
 			=> nrel_goto: .agent_of_calculation_number_of_all_types_of_input_connections_of_vertex_operator_return;; 
 			*);;
-
-
-/**************************************************************************Wrong Parametrs************************************************************/
 
 		-> .agent_of_calculation_number_of_all_types_of_input_connections_operator_call_proc_of_adding_validating_message 
 			(*
