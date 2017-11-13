@@ -1,0 +1,89 @@
+proc_of_removing_previosly_formed_ontology
+=> nrel_main_idtf:
+	[scp-программа удаления ранее сформированной онтологии] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[scp-program of removing previously formed ontology] (* <-lang_en;; *);;
+
+scp_program -> proc_of_removing_previosly_formed_ontology 
+	(*	
+	-> rrel_params: .proc_of_removing_previosly_formed_ontology_params 
+		(*
+		-> rrel_1: rrel_in: _subject_domain;;
+		-> rrel_2: rrel_in: _type_of_ontology;;
+		*);;
+
+	-> rrel_operators: .proc_of_removing_previosly_formed_ontology_operator_set 
+		(*
+		-> rrel_init: .proc_of_removing_previosly_formed_ontology_operator1
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _subject_domain;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_node: _ontology;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_ontology;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: rrel_node: _set_of_ontologies;;
+
+			=> nrel_then: .proc_of_removing_previosly_formed_ontology_operator2A;;
+			=> nrel_else: .proc_of_removing_previosly_formed_ontology_operator_return;;
+			*);;
+
+		-> .proc_of_removing_previosly_formed_ontology_operator2A
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_ontologies;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _ontology;;
+
+			=> nrel_then: .proc_of_removing_previosly_formed_ontology_operator2B;;
+			=> nrel_else: .proc_of_removing_previosly_formed_ontology_operator3;;
+			*);;
+
+		-> .proc_of_removing_previosly_formed_ontology_operator2B
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: rrel_pos_const_perm: _arc1;;
+
+			=> nrel_goto: .proc_of_removing_previosly_formed_ontology_operator2C;;
+			*);;
+
+		-> .proc_of_removing_previosly_formed_ontology_operator2C
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: _type_of_ontology;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _ontology;;
+
+			=> nrel_then: .proc_of_removing_previosly_formed_ontology_operator2D;;
+			=> nrel_else: .proc_of_removing_previosly_formed_ontology_operator2A;;
+			*);;
+
+		-> .proc_of_removing_previosly_formed_ontology_operator2D
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _ontology;;
+
+			=> nrel_goto: .proc_of_removing_previosly_formed_ontology_operator3;;
+			*);;
+
+		-> .proc_of_removing_previosly_formed_ontology_operator3
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: rrel_node: _set_of_ontologies;;
+
+			=> nrel_goto: .proc_of_removing_previosly_formed_ontology_operator_return;;
+			*);;
+
+		-> .proc_of_removing_previosly_formed_ontology_operator_return
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
