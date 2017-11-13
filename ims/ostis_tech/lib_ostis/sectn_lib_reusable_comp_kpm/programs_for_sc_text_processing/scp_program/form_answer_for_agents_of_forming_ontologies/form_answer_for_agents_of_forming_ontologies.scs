@@ -1,0 +1,27 @@
+lib_component_proc_of_forming_answer_for_agents_of_forming_ontologies
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа формирования ответа для агентов формирования онтологий]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Library component. scp-program of forming answer for agents of forming ontologies]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_forming_answer_for_agents_of_forming_ontologies;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Proc_Form_Answer_For_Agents_Of_Forming_Ontologies.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_forming_answer_for_agents_of_forming_ontologies = [*^"file://form_answer_for_agents_of_forming_ontologies.scsi"*];;

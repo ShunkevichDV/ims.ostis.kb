@@ -1,0 +1,27 @@
+lib_component_proc_of_removing_previosly_formed_ontology_with_context
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа удаления ранее сформированной онтологии с заданным контекстом]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Library component. scp-program of removing previously formed ontology with the given context]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_removing_previosly_formed_ontology_with_context;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Proc_Remove_Previously_Formed_Ontology_With_Context.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_removing_previosly_formed_ontology_with_context = [*^"file://remove_previously_formed_ontology_with_context.scsi"*];;

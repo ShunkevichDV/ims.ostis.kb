@@ -26,7 +26,10 @@ sc_agent_of_forming_logical_ontology_for_the_given_domain
 		{
 		agent_of_forming_logical_ontology_for_the_given_domain;
 		proc_of_finding_translation;
-		proc_of_finding_identifier
+		proc_of_forming_answer_for_agents_of_forming_ontologies;
+		proc_of_finding_identifier_extended;
+		proc_of_removing_previosly_formed_ontology;
+		proc_of_adding_validating_message
 		};;
 	-> sc_agent_of_forming_logical_ontology_for_the_given_domain_scp   
 		(* <- active_sc_agent;; *);;
