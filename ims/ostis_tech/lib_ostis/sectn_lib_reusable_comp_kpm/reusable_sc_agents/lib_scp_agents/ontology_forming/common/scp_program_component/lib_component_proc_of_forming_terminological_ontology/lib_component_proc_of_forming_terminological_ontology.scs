@@ -2,6 +2,7 @@ lib_component_proc_of_forming_terminological_ontology
 => nrel_main_idtf:
 	[Компонент библиотеки. Scp-программа формирования терминологической онтологии для заданной предметной области]
 	(* <- lang_ru;; *);
+=> nrel_main_idtf:
 	[Library component. Scp-program of forming terminological ontology of given subject domain]
 	(* <- lang_en;; *);
 
