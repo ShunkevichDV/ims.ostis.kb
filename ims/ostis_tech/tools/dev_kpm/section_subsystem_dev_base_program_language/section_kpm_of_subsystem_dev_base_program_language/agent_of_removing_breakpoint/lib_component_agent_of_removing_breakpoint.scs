@@ -28,8 +28,9 @@ lib_component_agent_of_removing_breakpoint
 	*);;
 
 question_removing_breakpoint
+<-sc_node_not_relation;
 => nrel_main_idtf:
-	[действие. удалить все точки останова из scp-программы]
+	[действие. удалить точку останова из scp-программы]
 	(* <- lang_ru;; *);
 	[action. to remove breakpoint]
 	(* <- lang_en;; *);;
