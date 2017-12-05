@@ -1,0 +1,11 @@
+function proc_of_finding_all_transitions_for_operator(_operator, _answer, _nrel) {
+  if(search(
+    _operator, 
+    [assign, _arc1],
+    [assign, _next_operator],
+    [assign, _arc2],
+    _nrel,
+    [], _answer, _answer, _answer, []
+  ))
+    generate(_answer, [assign, pos_const_perm, _arc], _nrel);
+}

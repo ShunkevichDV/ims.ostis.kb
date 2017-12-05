@@ -1,0 +1,35 @@
+function proc_of_finding_operators_of_scp_program(_scp_program) {
+  return _answer;
+  generate([assign, node, constant, _answer]);
+  generate(_answer, [assign, pos_const_perm, _arc], scp_program);
+  generate(_answer, [assign, pos_const_perm, _arc], _scp_program);
+  search(scp_program, [assign, _arc], _scp_program, [], _answer, []);
+  generate(_answer, [assign, pos_const_perm, _arc], rrel_operators);
+  search(
+    _scp_program, 
+    [assign, _arc1], 
+    [assign, _operators_set], 
+    [assign, _arc2], 
+    rrel_operators,
+    [], _answer, _answer, _answer, []
+  );
+  if(sys_search(
+    pattern_of_finding_operators,
+    [assign, _results],
+    pattern_of_finding_operators_parameters,
+    _answer
+  ))
+    while(search(_results, [assign, pos_const_perm, _arc], [assign, _result])) {
+      search(
+        [scp_constant, _operator_in_pattern], 
+        [assign, _arc1], 
+        [assign, _operator], 
+        [assign, _arc2], 
+        _result
+      );
+      proc_of_finding_all_transitions_for_operator(_operator, _answer, nrel_goto);
+      proc_of_finding_all_transitions_for_operator(_operator, _answer, nrel_then);
+      proc_of_finding_all_transitions_for_operator(_operator, _answer, nrel_else);
+      erase([erase, _arc]);
+    }
+}

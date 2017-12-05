@@ -1,0 +1,25 @@
+ui_menu_finding_operators_of_scp_program <- ui_user_command_class_atom;;
+
+ui_menu_finding_operators_of_scp_program => nrel_main_idtf: [Найти все операторы scp-программы] (* <- lang_ru;; *);;
+
+ui_menu_finding_operators_of_scp_program => nrel_main_idtf: [Find all operators of scp-program] (* <- lang_en;; *);;
+
+ui_menu_finding_operators_of_scp_program => ui_nrel_command_template:
+	[*
+		question_finding_operators_of_scp_program _-> ._question_instance
+			(*
+                        //Place your arguments here.
+			//_-> rrel_1:: ui_arg_1;;
+                         _-> rrel_1:: ui_arg_1;; 
+
+			*);;
+		._question_instance _<- question;;
+	*];;
+
+ui_menu_finding_operators_of_scp_program => ui_nrel_command_lang_template: 
+	[Поиск операторов $ui_arg_1] 
+	(* <- lang_ru;; *);;
+
+ui_menu_finding_operators_of_scp_program => ui_nrel_command_lang_template: 
+	[Find operators of $ui_arg_1] 
+	(* <- lang_en;; *);;
