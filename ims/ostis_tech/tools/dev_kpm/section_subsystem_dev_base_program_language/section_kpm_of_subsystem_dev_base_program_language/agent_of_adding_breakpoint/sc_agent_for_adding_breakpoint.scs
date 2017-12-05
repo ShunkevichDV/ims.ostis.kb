@@ -1,7 +1,7 @@
 sc_agent_for_adding_breakpoint
 => nrel_main_idtf:
-	[sc-агент добавления] (* <- lang_ru;; *);
-	[sc-agent] (* <- lang_en;; *);
+	[sc-агент добавления точки останова] (* <- lang_ru;; *);
+	[sc-agent of adding breackpoint] (* <- lang_en;; *);
 
 <- abstract_sc_agent;
 

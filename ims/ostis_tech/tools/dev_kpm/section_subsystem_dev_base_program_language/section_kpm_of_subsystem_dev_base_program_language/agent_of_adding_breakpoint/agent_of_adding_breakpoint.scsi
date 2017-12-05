@@ -2,7 +2,7 @@ agent_of_adding_breakpoint
 => nrel_main_idtf:
 	[агентная scp-программа добавления точки останова] 
 	(* <- lang_ru;; *);
-	[agent scp-program f adding breakpoint] 
+	[agent scp-program of adding breakpoint] 
 	(* <- lang_en;; *);
 
 	<- agent_scp_program;;
