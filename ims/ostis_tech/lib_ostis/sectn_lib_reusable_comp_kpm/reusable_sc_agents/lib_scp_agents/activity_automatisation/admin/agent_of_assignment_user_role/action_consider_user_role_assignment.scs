@@ -1,0 +1,7 @@
+action_consider_user_role_assignment
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. рассмотреть назначение роли пользователю]
+ 	(* <- lang_ru;; *);
+ 	[action. consider user role assignment]
+ 	(* <- lang_en;; *);;
