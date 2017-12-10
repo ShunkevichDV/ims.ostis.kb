@@ -1,0 +1,25 @@
+﻿<html>
+	<body>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+		<p> Задачей <b><sc_element sys_idtf = "agent_of_assignment_user_role"> агента назначения роли пользователю</sc_element></b> является создание и <b><sc_element sys_idtf = "nrel_approved">утверждение*</sc_element></b> <b><sc_element sys_idtf = "nrel_administrator">администратором*</sc_element></b> <b><sc_element sys_idtf="nrel_proposal">предложения*</sc_element></b> по назначению роли <b><sc_element sys_idtf = "ui_user">пользователю</sc_element></b>.
+		Данный агент инициируется при условии появления в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf = "action_assign_user_role">действию. назначить роль пользователю</sc_element></b>. 
+		Первым аргументом запроса является знак <b><sc_element sys_idtf = "ui_user">пользователя</sc_element></b>, которому будет назначена роль. Вторым аргументом запроса является конкретная роль(<b><sc_element sys_idtf = "nrel_administrator">администратор*</sc_element></b>, <b><sc_element sys_idtf = "nrel_manager">менеджер*</sc_element></b>, <b><sc_element sys_idtf = "nrel_expert">эксперт*</sc_element></b>), которая будет назначена <b><sc_element sys_idtf = "ui_user">пользователю</sc_element></b>. В случае задания третьего аргумента, данным аргументом дожлен являться знак проекта в рамках которого <b><sc_element sys_idtf = "ui_user">пользователю</sc_element></b> будет назначена роль.
+		</p>
+		<p>
+			Возможные результаты работы агента:
+			<ul>
+				<li>Если <b><sc_element sys_idtf = "ui_user">пользователь</sc_element></b>, инициировавший выполнение агента, не является <b><sc_element sys_idtf="nrel_administrator">администратором*</sc_element></b>, то генерируется сообщение об ошибке ("Access denied. User must be a administrator.)."</li>
+
+				<li>Если первый аргумент знака <b><sc_element sys_idtf="action_assign_user_role">действия. назначить роль пользователю</sc_element></b> не является знаком <b><sc_element sys_idtf = "ui_user">пользователя</sc_element></b>, то генерируется сообщение об ошибке (Wrong second first argument. It must be a user.).</li>
+
+				<li>В случае успешного выполнения агента будет сгенерирован знак <b><sc_element sys_idtf="action_consider_user_role_assignment">действия. рассмотреть назначение роли пользователя</sc_element></b>, для которого <b><sc_element sys_idtf = "ui_user">пользователь</sc_element></b>, инициировавший действие станет автором. Будет сгенерирована связка отношения предложения, связывающая структуру, в рамках которой будет создана связка отношения, которое было передано как второй аргумент, связывающая <b><sc_element sys_idtf = "ui_user">пользователь</sc_element></b> и проект, и сгенерированный знак <b><sc_element sys_idtf="action_consider_user_role_assignment">действия. рассмотреть назначение роли пользователя</sc_element></b>. <b><sc_element sys_idtf="action_consider_user_role_assignment">Действие. рассмотреть назначение роли пользователя</sc_element></b> добавляется в <b><sc_element sys_idtf="history_of_the_development_of_computer_system">историю развития компьютерной системы</sc_element></b>. Структура добавляется в <b><sc_element sys_idtf="substantive_part_of_the_knowledge_base">предметную часть базы знаний </sc_element></b>.</li>
+
+				<li>Если третьим аргументом был подан знак проекта, будет сгенерирована связка отношения роли (<b><sc_element sys_idtf = "nrel_administrator"> администратор*</sc_element></b>, <b><sc_element sys_idtf = "nrel_manager">менеджер*</sc_element></b>, <b><sc_element sys_idtf = "nrel_expert">эксперт*</sc_element></b>), которая бюдет связывать знак пользователя и знак данного проекта.</li>
+
+				<li>Если третьим аргументом не был подан знак проекта, будет сгенерирована связка отношения соотвествующей роли (<b><sc_element sys_idtf = "nrel_administrator">администратор*</sc_element></b>, <b><sc_element sys_idtf = "nrel_manager">менеджер*</sc_element></b>, <b><sc_element sys_idtf = "nrel_expert">эксперт*</sc_element></b>), которая бюдет связывать знак пользователя и знак проекта администратора, инициировавшего агент.</li>
+			</ul>
+		</p>
+
+		<img src="result.png" alt="Результат успешной работы агента назначения роли пользователю">
+	</body>
+</html>
