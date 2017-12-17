@@ -1,0 +1,25 @@
+section_subjdomain_ligaments_relations
+=>nrel_exercise: 
+ section_subjdomain_ligaments_relations_exercise_4;; 
+
+section_subjdomain_ligaments_relations_exercise_4
+<- exercise;
+
+=> nrel_main_idtf:
+ [Раздел. Предметная область связей и отношений. Упражнение 4]
+ (* <- lang_ru;; *);
+ [Section. Subject domain of sheaves and relations. Exercise 4]
+ (* <- lang_en;; *);
+
+<- rrel_key_sc_element: ...
+ (*
+  <- explanation;;
+  <= nrel_sc_text_translation:
+  ...
+  (*
+  -> rrel_example:
+    "file://def_section_subjdomain_ligaments_relations_exercise_4.html"
+   (* <- lang_ru;; *);;
+  *);;
+ *);;
+
