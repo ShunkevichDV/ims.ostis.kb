@@ -263,8 +263,6 @@ scp_program -> agent_of_finding_drafts_developed_by_specific_developer
 			=> nrel_goto: .agent_of_finding_drafts_developed_by_specific_developer_operator_return;; 
 			*);;
 
-/**************************************************************************Wrong Parametrs************************************************************/
-
 		-> .agent_of_finding_drafts_developed_by_specific_developer_operator_call_proc_of_adding_validating_message 
 			(*
 		  	<- call;;
@@ -273,7 +271,7 @@ scp_program -> agent_of_finding_drafts_developed_by_specific_developer
 		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_searching_drafts_developed_by_specific_developer_operator_call_proc_of_adding_validating_message_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong first parameter!It must be user!];;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong parameter! It must be user sign(element of ui_user)];;
 				*);;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
 
@@ -304,11 +302,11 @@ scp_program -> agent_of_finding_drafts_developed_by_specific_developer
 			(*
 		  	<- call;;
 
-		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_general_action_comment;;
 		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_drafts_developed_by_specific_developer_operator_call_proc_of_adding_validating_message_1_params 
 				(*
 				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-				-> rrel_2: rrel_fixed: rrel_scp_const: [There is no drafts developed by this user.];;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [The search hasn't given any results];;
 				*);;
 		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
 

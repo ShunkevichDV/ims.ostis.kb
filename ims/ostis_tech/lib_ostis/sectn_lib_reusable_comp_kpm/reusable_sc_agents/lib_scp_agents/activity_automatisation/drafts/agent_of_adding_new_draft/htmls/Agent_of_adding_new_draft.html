@@ -1,11 +1,14 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-</head>
-<body>
-	<p>
-		Задачей <b><sc_element sys_idtf="agent_of_adding_new_draft"> агента добавления нового черновика</sc_element></b> является добавление нового <b><sc_element sys_idtf="draft">черновика</sc_element></b>. Данный агент инициируется при условии появления в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf = "action_to_add_new_draft">запросу добавления нового черновика</sc_element></b>. Единственным аргументом запроса является знак <b><sc_element sys_idtf="ui_user">разработчика</sc_element></b>.
-	</p>
-</body>
+	<body>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<p> Задачей <b><sc_element sys_idtf="agent_of_adding_new_draft">агента добавления нового черновика</sc_element></b> является добавление нового <b><sc_element sys_idtf="draft">черновика</sc_element></b>. Данный агент инициируется при условии появления в памяти вопросной конструкции, соответствующей <b><sc_element sys_idtf = "action_to_add_new_draft">действию. добавить новый черновик</sc_element></b>. На вход данному агенту подается <b><sc_element sys_idtf = "ui_user">пользователь</sc_element></b>. Возможные результаты работы агента: 
+		<ul>
+			<li>Если на вход агенту пришел не знак <b><sc_element sys_idtf = "ui_user">пользователя</sc_element></b>, то генерируется сообщение об ошибке (Wrong parameter! It must be user sign(element of ui_user)).
+			</li>
+			<li>В случае успешного выполнения агента формируется конструкция, являющаяся новым <b><sc_element sys_idtf="draft">черновиком</sc_element></b> для данного <b><sc_element sys_idtf = "ui_user">пользователя</sc_element></b>. Пример результата работы агента представлен на рисунке.
+			</li>
+		</ul> 
+		</p>
+		<img src="result.png" alt="Команда добавления нового черновика"/>
+	</body>
 </html>
