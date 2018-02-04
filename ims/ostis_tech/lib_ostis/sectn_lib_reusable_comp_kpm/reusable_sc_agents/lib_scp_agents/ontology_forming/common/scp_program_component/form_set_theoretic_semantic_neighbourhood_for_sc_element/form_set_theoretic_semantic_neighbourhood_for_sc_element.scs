@@ -1,9 +1,10 @@
 lib_component_proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element
 => nrel_main_idtf:
 	[Компонент библиотеки. scp-программа формирования теоретико-множественной семантической окрестности sc-элемента]
-		(* <- lang_ru;; *);
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
 	[Library component. scp-program of forming set theoretic semantic neighbourhood for sc-element]
-		(* <- lang_en;; *);
+	(* <- lang_en;; *);
 
 <- library_of_platform_independent_reusable_components;
 
@@ -23,4 +24,4 @@ lib_component_proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_elemen
 		*);;
 	*);;
 
-lib_component_proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element = [*^"file://proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element.scsi"*];;
+lib_component_proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element = [*^"file://form_set_theoretic_semantic_neighbourhood_for_sc_element.scsi"*];;
