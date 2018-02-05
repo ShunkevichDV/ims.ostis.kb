@@ -1,7 +1,7 @@
 action_consider_user_role_assignment
 <- sc_node_not_relation;
 => nrel_main_idtf:
-	[действие. рассмотреть назначение роли пользователю]
+	[действие. рассмотреть предложение по назначению роли пользователю]
  	(* <- lang_ru;; *);
- 	[action. consider user role assignment]
+ 	[action. consider proposal of user role assignment]
  	(* <- lang_en;; *);;
