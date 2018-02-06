@@ -21,7 +21,7 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			(*
 			<- genEl;;
 
-			-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: _temp_set;;
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: _temp_semantic_neighbourhood;;
 
 			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_declare_vars2;;
 			*);;
@@ -31,6 +31,15 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			<- genEl;;
 
 			-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: _handled_relations;;
+
+			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_declare_vars3;;
+			*);;
+
+		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_declare_vars3
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: _temp_set;;
 
 			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator1A;;
 			*);;
@@ -94,11 +103,11 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _rel;;
 
-			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator3B;;
+			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator3B_1;;
 			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator4A;;
 			*);;
 
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator3B
+		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator3B_1
 			(*
 			<- searchSetStr5;;
 
@@ -108,14 +117,46 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_var: _rel;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_set;;
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _temp_set;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator3C;;
+			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator3B_2;;
 			*);;
 
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator3C
+		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator3B_2
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _sc_element;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_var: _rel;;
+
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _temp_set;;
+
+			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator3C_1;;
+			*);;
+
+		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator3C_1
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _elem;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _sc_element;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_var: _rel;;
+
+			-> rrel_set_1: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
+
+			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator3C_2;;
+			*);;
+
+		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator3C_2
 			(*
 			<- searchSetStr5;;
 
@@ -126,10 +167,8 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			-> rrel_5: rrel_fixed: rrel_scp_var: _rel;;
 
 			-> rrel_set_1: rrel_fixed: rrel_scp_var: _temp_set;;
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_set;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _temp_set;;
 
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator8A;;
+			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5A_test2;;
 			*);;
 
 		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator4A
@@ -141,7 +180,7 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			-> rrel_3: rrel_fixed: rrel_scp_var: _rel;;
 
 			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator4B;;
-			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5A;;
+			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator7A;;
 			*);;
 
 		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator4B
@@ -179,9 +218,9 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_var: _rel;;
 
-			-> rrel_set_1: rrel_fixed: rrel_scp_var: _temp_set;;
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_set;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_set_1: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 
 			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator4E_1;;
 			*);;
@@ -215,8 +254,8 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_set;;
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 
 			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator4E_1;;
 			*);;
@@ -230,241 +269,88 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator8A;;
 			*);;
 
+		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5A_test2
+			(*
+			<- printEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set;;
+
+			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5A;;
+			*);;
+
 		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5A
 			(*
 			<- searchElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_const: ternary_relation;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _rel;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
 
 			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5B;;
-			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator7A;;
+			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator8A;;
 			*);;
 
 		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5B
 			(*
-			<- searchSetStr5;;
+			<- eraseEl;;
 
-			-> rrel_1: rrel_assign: rrel_scp_var: rrel_common: _binary_arc;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _sc_element;;
-			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_var: _rel;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 
-			-> rrel_set_1: rrel_fixed: rrel_scp_var: _temp_set;;
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_set;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _temp_set;;
-
-			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5C;;
-			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6A;;
+			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5C;;
 			*);;
 
 		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5C
 			(*
-			<- searchSetStr5;;
+			<- ifType;;
 
-			-> rrel_1: rrel_assign: rrel_scp_var: _binary_arc;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _sc_element;;
-			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_var: _rel;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_node: _elem;;
 
-			-> rrel_set_1: rrel_assign: rrel_scp_var: _binary_arcs;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5D_1;;
+			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5A;;
+			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5D;;
 			*);;
 
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5D_1
+		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5D
+			(*
+			<- ifType;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_link: _elem;;
+
+			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5A;;
+			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5E_1;;
+			*);;
+
+		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5E_1
 			(*
 			<- searchElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _binary_arcs;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _binary_arc;;
-
-			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5D_2;;
-			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5E;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5D_2
-			(*
-			<- eraseEl;;
-
-			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5D_3;; 
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5D_3
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_assign: rrel_scp_var: _elem;;
-			-> rrel_2: rrel_fixed: rrel_scp_var: rrel_common: _binary_arc;;
+			-> rrel_1: rrel_assign: rrel_scp_var: _elem1;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _elem;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _elem2;;
 
-			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5D_4;;
-			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5D_1;;
+			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5E_2;;
+			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5A;;
 			*);;
 
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5D_4
+		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5E_2
 			(*
 			<- genElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _elem1;;
 
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5D_5;;
+			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5E_3;;
 			*);;
 
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5D_5
+		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5E_3
 			(*
 			<- genElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _elem2;;
 
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5D_1;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5E
-			(*
-			<- eraseEl;;
-
-			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _binary_arcs;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator8A;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6A
-			(*
-			<- genEl;;
-
-			-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: _binary_arcs;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6B;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6B
-			(*
-			<- searchSetStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _sc_element;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
-
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _binary_arcs;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6C;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6C
-			(*
-			<- searchSetStr3;;
-
-			-> rrel_1: rrel_assign: rrel_scp_var: _elem;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _sc_element;;
-
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _binary_arcs;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6D_1;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6D_1
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _binary_arcs;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: rrel_common: _binary_arc;;
-
-			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6D_2;;
-			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6E;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6D_2
-			(*
-			<- eraseEl;;
-
-			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6D_3;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6D_3
-			(*
-			<- searchSetStr5;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _binary_arc;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
-			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_var: _rel;;
-
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_set;;
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _temp_set;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _temp_set;;
-
-			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6D_4;;
-			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6D_1;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6D_4
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _sc_element;;
-			-> rrel_2: rrel_fixed: rrel_scp_var: rrel_common: _binary_arc;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
-
-			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6D_6;;
-			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6D_5;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6D_5
-			(*
-			<- searchElStr3;;
-
-			-> rrel_1: rrel_assign: rrel_scp_var: _elem;;
-			-> rrel_2: rrel_fixed: rrel_scp_var: rrel_common: _binary_arc;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _sc_element;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6D_6;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6D_6
-			(*
-			<- genElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6D_7;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6D_7
-			(*
-			<- genElStr3;;
-
-			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
-			-> rrel_3: rrel_fixed: rrel_scp_var: _binary_arc;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6D_1;;
-			*);;
-
-		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator6E
-			(*
-			<- eraseEl;;
-
-			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: rrel_node: _binary_arcs;;
-
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator8A;;
+			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator5A;;
 			*);;
 
 		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator7A
@@ -489,9 +375,9 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_var: _rel;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_set;;
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _temp_set;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 
 			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator7C;;
 			*);;
@@ -506,9 +392,9 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_var: _rel;;
 
-			-> rrel_set_1: rrel_fixed: rrel_scp_var: _temp_set;;
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_set;;
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_set_1: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 
 			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator8A;;
 			*);;
@@ -521,7 +407,7 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_5: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 
 			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator8B;;
 			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator2A;;
@@ -531,7 +417,7 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			(*
 			<- genElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _rel;;
 
@@ -555,7 +441,7 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _sc_element;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 
 			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator9C;;
 			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator9D;;
@@ -582,7 +468,7 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
 
-			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 
 			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator9E;;
 			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator9H_1;;
@@ -626,7 +512,7 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			(*
 			<- searchElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
 
@@ -638,7 +524,7 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			(*
 			<- genElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
 
@@ -655,7 +541,7 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_assign: rrel_scp_var: rrel_role_relation: _attr;;
 
-			-> rrel_set_4: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 
 			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator9F_6;;
 			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator9F_1;;
@@ -710,7 +596,7 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			(*
 			<- searchElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
 
@@ -722,7 +608,7 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			(*
 			<- genElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
 
@@ -753,7 +639,7 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			(*
 			<- searchElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
 
@@ -834,7 +720,7 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			(*
 			<- searchSetStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
 
@@ -860,7 +746,7 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			(*
 			<- eraseEl;;
 
-			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _temp_set;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _temp_semantic_neighbourhood;;
 
 			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_erase2;;
 			*);;
@@ -870,6 +756,15 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			<- eraseEl;;
 
 			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _handled_relations;;
+
+			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_erase3;;
+			*);;
+
+		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_erase3
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _temp_set;;
 
 			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_return;;
 			*);;
