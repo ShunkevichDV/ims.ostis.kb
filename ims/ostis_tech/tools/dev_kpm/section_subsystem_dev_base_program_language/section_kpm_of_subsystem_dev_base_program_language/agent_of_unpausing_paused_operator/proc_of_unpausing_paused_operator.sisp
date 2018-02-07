@@ -1,0 +1,7 @@
+function proc_of_unpausing_paused_operator(_operator) {
+  return _answer;
+  generate(scp_unpaused_operator, [assign, pos_const_perm, _arc], _operator);
+  if (search(scp_paused_operator, [assign, pos_const_perm, _arc], _operator))
+    erase([erase, _arc]);
+  proc_of_finding_paused_operators([assign, _answer]);
+}
