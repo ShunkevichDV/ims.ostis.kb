@@ -44,6 +44,17 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator1A;;
 			*);;
 
+		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator0
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _handled_relations;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_intersection;;
+
+			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator2A;;
+			*);;
+
 		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator1A
 			(*
 			<- searchSetStr5;;
@@ -70,6 +81,15 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_explored_relation;;
 
 			-> rrel_set_3: rrel_fixed: rrel_scp_var: _handled_relations;;
+
+			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator2A;;
+			*);;
+
+		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator2A_test
+			(*
+			<- printEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _handled_relations;;
 
 			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator2A;;
 			*);;
@@ -183,6 +203,15 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator7A;;
 			*);;
 
+		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator4B_test
+			(*
+			<- printEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: [!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1 Qausy];;
+
+			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator4B;;
+			*);;
+
 		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator4B
 			(*
 			<- genEl;;
@@ -206,6 +235,15 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 
 			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator4D;;
 			=> nrel_else: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator4E_1;;
+			*);;
+
+		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator4D_test
+			(*
+			<- printEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: [!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1 Ya nashol];;
+
+			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator4D;;
 			*);;
 
 		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator4D
@@ -528,7 +566,7 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _elem;;
 
-			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator9F_5;;
+			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator9F_1;;
 			*);;
 
 		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_operator9F_5
@@ -721,12 +759,12 @@ scp_program -> proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_eleme
 			<- searchSetStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_semantic_neighbourhood;;
-			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc1;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
 
 			-> rrel_set_3: rrel_fixed: rrel_scp_var: _set_theoretic_semantic_neighbourhood;;
 
-			=> nrel_then: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_form_answer4;;
+			=> nrel_goto: .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_form_answer4;;
 			*);;
 
 		-> .proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element_form_answer4
