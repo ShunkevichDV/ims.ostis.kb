@@ -1,0 +1,22 @@
+ui_menu_agent_of_forming_a_non_atomic_component_from_atomic_components <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
+
+ui_menu_agent_of_forming_a_non_atomic_component_from_atomic_components => nrel_main_idtf: 
+	[Сформировать неатомарный компонент из атомарных]
+	(* <- lang_ru;; *);
+	[Form a non-atomic component from atomic components] 
+	(* <- lang_en;; *);;
+
+ui_menu_agent_of_forming_a_non_atomic_component_from_atomic_components => ui_nrel_command_template:
+	[*
+		action_form_a_non_atomic_component_from_atomic_components _-> ._action_form_a_non_atomic_component_from_atomic_components_instance
+			(*
+			_-> rrel_1:: ui_arg_1;;			
+			*);;
+		._action_form_a_non_atomic_component_from_atomic_components_instance _<- question;;
+	*];;
+
+ui_menu_agent_of_forming_a_non_atomic_component_from_atomic_components => ui_nrel_command_lang_template: 
+	[Сформировать неатомарный компонент: $ui_arg_1 из атомарных] 
+	(* <- lang_ru;; *);
+	[Form a non-atomic component: $ui_arg_1 from atomic components] 
+	(* <- lang_en;; *);;

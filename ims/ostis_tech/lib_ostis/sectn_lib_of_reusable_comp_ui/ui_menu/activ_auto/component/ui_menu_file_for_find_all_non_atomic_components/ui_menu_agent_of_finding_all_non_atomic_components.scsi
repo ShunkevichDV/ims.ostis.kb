@@ -1,0 +1,22 @@
+ui_menu_agent_of_finding_all_non_atomic_components <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
+
+ui_menu_agent_of_finding_all_non_atomic_components => nrel_main_idtf: 
+	[Найти все неатомарные компоненты] 
+	(* <- lang_ru;; *);
+	[Find all non-atomic components] 
+	(* <- lang_en;; *);;
+
+ui_menu_agent_of_finding_all_non_atomic_components => ui_nrel_command_template:
+	[*
+		action_find_all_non_atomic_components _-> ._action_find_all_non_atomic_components_instance
+			(*
+			_-> rrel_1:: ui_arg_1;;
+			*);;
+		._action_find_all_non_atomic_components_instance _<- question;;
+	*];;
+
+ui_menu_agent_of_finding_all_non_atomic_components => ui_nrel_command_lang_template: 
+	[Найти все неатомарные компоненты: $ui_arg_1] 
+	(* <- lang_ru;; *);
+	[Find all non-atomic components: $ui_arg_1] 
+	(* <- lang_en;; *);;
