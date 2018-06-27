@@ -1,0 +1,19 @@
+lib_ui_menu_navigation_by_components_for_eekb
+=> nrel_main_idtf:
+	[Компонент библиотеки. Поиск компонентов]
+	(* <- lang_ru;; *);
+	[Library component. Component search]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_non_atomic_reusable_components;
+
+<= nrel_library_component_decomposition:
+	{	
+		lib_component_ui_menu_agent_of_finding_all_non_atomic_components;
+		lib_component_ui_menu_agent_of_finding_component_dependencies;
+		lib_component_ui_menu_agent_of_finding_components_within_which_the_concepts_are_described	
+	};;
+
+
+lib_ui_menu_navigation_by_components_for_eekb = [*^"file://ui_menu_navigation_by_components_for_eekb.scsi"*];;
