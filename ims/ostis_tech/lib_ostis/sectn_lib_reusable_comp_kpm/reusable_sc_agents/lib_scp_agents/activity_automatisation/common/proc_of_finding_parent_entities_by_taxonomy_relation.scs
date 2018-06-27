@@ -1,0 +1,422 @@
+proc_of_finding_parent_entities_by_taxonomy_relation
+=> nrel_main_idtf:
+	[scp-программа поиска родительских сущностей по отношениям таксономии] (* <- lang_ru;; *);
+	[scp-program of finding parent entities by taxonomy relation] (* <- lang_en;; *);;
+
+scp_program -> proc_of_finding_parent_entities_by_taxonomy_relation
+	(*
+	-> rrel_params: .proc_of_finding_parent_entities_by_taxonomy_relation_params 
+		(*
+		-> rrel_1: rrel_in: _class;;
+		-> rrel_2: rrel_in: _answer_proc_of_finding_parent_entities_by_taxonomy_relation;;
+		*);;
+
+	-> rrel_operators: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_set
+			(*
+		-> rrel_init: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1A											
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: _parents_set;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1B;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1B										
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _parent;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _class;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_assign: rrel_scp_var: rrel_norole_relation: _relation;;
+
+			-> rrel_set_1: rrel_assign: rrel_scp_var: _temp_parents_set;;
+
+			=> nrel_then: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_2B;;
+			=> nrel_else: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1C;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_2B 											
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_parents_set;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _current_parent;;
+
+			=> nrel_then: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_3B;;
+			=> nrel_else: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1C;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_3B										
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_4B;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_4B										
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _current_parent;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _class;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_assign: rrel_scp_var: _relation;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_5B;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_5B									
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: taxonomy_relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_then: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_6B;;
+			=> nrel_else: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_2B;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_6B										
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_parent_entities_by_taxonomy_relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _current_parent;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_7B;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_7B										
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _parents_set;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _current_parent;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_8B;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_8B									
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: _answer_proc_of_finding_parent_entities_by_taxonomy_relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_then: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_10B;;
+			=> nrel_else: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_9B;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_9B										
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_parent_entities_by_taxonomy_relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_10B;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_10B										
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _current_parent;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _class;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_var: _relation;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_parent_entities_by_taxonomy_relation;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_parent_entities_by_taxonomy_relation;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_2B;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1C										
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _ligament;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _class;;
+
+			-> rrel_set_1: rrel_assign: rrel_scp_var: _temp_ligament_set;;
+
+			=> nrel_then: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1D;;
+			=> nrel_else: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1G;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1D										
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_ligament_set;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _ligament;;
+
+			=> nrel_then: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_2D;;
+			=> nrel_else: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1G;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_2D											
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_3D;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_3D 											
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _ligament;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _parent;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_assign: rrel_scp_var: rrel_norole_relation: _relation;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _parents;;
+
+			=> nrel_then: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1E;;
+			=> nrel_else: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1D;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1E									
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _parents;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _parent;;
+
+			=> nrel_then: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_2E;;
+			=> nrel_else: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1D;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_2E										
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1F;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1F											
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _ligament;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _parent;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_assign: rrel_scp_var: rrel_norole_relation: _relation;;
+
+			=> nrel_then: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_2F;;
+			=> nrel_else: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1E;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_2F											
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: taxonomy_relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_then: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_3F;;
+			=> nrel_else: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1E;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_3F											
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: quasybinary_relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_then: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_4F;;
+			=> nrel_else: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1E;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_4F											
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _parents_set;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _parent;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_5F;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_5F										
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _ligament;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _class;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_parent_entities_by_taxonomy_relation;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_6F;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_6F											
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_parent_entities_by_taxonomy_relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _ligament;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_7F;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_7F											
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_parent_entities_by_taxonomy_relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _parent;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_8F;;
+			*);;			
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_8F											
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_parent_entities_by_taxonomy_relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_then: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_10F;;
+			=> nrel_else: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_9F;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_9F											
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_parent_entities_by_taxonomy_relation;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc3;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _relation;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_10F;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_10F											
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _ligament;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _parent;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_var: _relation;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_parent_entities_by_taxonomy_relation;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_parent_entities_by_taxonomy_relation;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1D;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1G									
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _parents_set;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _parent;;
+
+			=> nrel_then: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_2G;;
+			=> nrel_else: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_3H;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_2G										
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1H;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1H
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_parent_entities_by_taxonomy_relation;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_4C_params
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _parent;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _answer_proc_of_finding_parent_entities_by_taxonomy_relation;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_2H;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_2H
+			(*
+			<- waitReturn;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_1G;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_3H										
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _parents_set;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_4H;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_4H
+			(*
+
+			<- ifVarAssign;;
+
+			-> rrel_1: rrel_scp_var: _temp_parents_set;;
+
+			=> nrel_then: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_5H;;
+			=> nrel_else: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_return;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_5H											
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _temp_parents_set;;
+
+			=> nrel_goto: .proc_of_finding_parent_entities_by_taxonomy_relation_operator_return;;
+			*);;
+
+		-> .proc_of_finding_parent_entities_by_taxonomy_relation_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

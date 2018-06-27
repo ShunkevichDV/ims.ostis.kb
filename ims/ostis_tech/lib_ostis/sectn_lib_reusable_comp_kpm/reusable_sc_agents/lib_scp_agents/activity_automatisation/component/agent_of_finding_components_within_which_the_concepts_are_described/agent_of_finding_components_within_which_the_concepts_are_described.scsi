@@ -1,0 +1,241 @@
+agent_of_assignment_user_role
+-> nrel_main_idtf:
+	[агентная scp-программа назначения роли пользователю] (* <- lang_ru;; *);
+	[agent scp-program of assignment user role] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_assignment_user_role 
+	(*
+	-> rrel_params: .agent_of_assignment_user_role_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_finding_components_within_which_the_concepts_are_described_set
+		(*
+		-> rrel_init: .agent_of_finding_components_within_which_the_concepts_are_describedA1
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_finding_components_within_which_the_concepts_are_describedA2;;
+			=> nrel_else: .agent_of_finding_components_within_which_the_concepts_are_described_return;;
+			*);;
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_describedA2
+        		(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_find_components_within_which_the_concepts_are_described;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_finding_components_within_which_the_concepts_are_describedA3;;
+			=> nrel_else: .agent_of_finding_components_within_which_the_concepts_are_described_return;;
+			*);;
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_describedA3
+        		(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _concept;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_1;;
+
+			=> nrel_then: .agent_of_finding_components_within_which_the_concepts_are_describedA4;;
+			=> nrel_else: .agent_of_finding_components_within_which_the_concepts_are_described_return;;
+			*);;
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_describedA4
+        	(*
+		 	<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: _answer_of_agent_of_finding_components_within_which_the_concepts_are_described;;
+
+		 	=> nrel_goto: .agent_of_finding_components_within_which_the_concepts_are_describedA5;;
+		 	*);;
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_describedA5
+        	(*
+		 	<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_agent_of_finding_components_within_which_the_concepts_are_described;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _concept;;
+
+		 	=> nrel_goto: .agent_of_finding_components_within_which_the_concepts_are_describedB1;;
+		 	*);;
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_describedB1
+        		(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _component;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _concept;;
+
+			-> rrel_set_1: rrel_assign: rrel_scp_var: _components;;
+
+			=> nrel_then: .agent_of_finding_components_within_which_the_concepts_are_describedB2;;
+			=> nrel_else: .agent_of_finding_components_within_which_the_concepts_are_describedE1;;
+			*);;
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_describedB2
+        		(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _components;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _component;;
+	
+			=> nrel_then: .agent_of_finding_components_within_which_the_concepts_are_describedB3;;
+			=> nrel_else: .agent_of_finding_components_within_which_the_concepts_are_describedE1;;
+			*);;
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_describedB3
+        		(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+		 	=> nrel_goto: .agent_of_finding_components_within_which_the_concepts_are_describedC1;;
+		 	*);;
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_describedC1
+        		(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _library;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _component;;
+
+			-> rrel_set_1: rrel_assign: rrel_scp_var: _libraries;;
+
+			=> nrel_then: .agent_of_finding_components_within_which_the_concepts_are_describedC2;;
+			=> nrel_else: .agent_of_finding_components_within_which_the_concepts_are_describedB2;;
+			*);;
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_describedC2
+        		(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _libraries;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _library;;
+	
+			=> nrel_then: .agent_of_finding_components_within_which_the_concepts_are_describedC3;;
+			=> nrel_else: .agent_of_finding_components_within_which_the_concepts_are_describedB2;;
+			*);;
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_describedC3
+        		(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+		 	=> nrel_goto: .agent_of_finding_components_within_which_the_concepts_are_describedC4;;
+		 	*);;
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_describedC4
+        	(*
+		 	<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: _path;;
+
+		 	=> nrel_goto: .agent_of_finding_components_within_which_the_concepts_are_describedC5;;
+		 	*);;
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_describedC5
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_parent_entities_by_taxonomy_relation;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_components_within_which_the_concepts_are_describedC1_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _library;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _path;;								
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr;;
+
+		  	=> nrel_goto: .agent_of_finding_components_within_which_the_concepts_are_describedC6;;
+			*);;
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_describedC6
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr;;
+
+		  	=> nrel_goto: .agent_of_finding_components_within_which_the_concepts_are_describedD1;;
+			*);;
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_describedD1
+        		(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _path;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: library_of_reusable_component_OSTIS;;
+	
+			=> nrel_then: .agent_of_finding_components_within_which_the_concepts_are_describedD2;;
+			=> nrel_else: .agent_of_finding_components_within_which_the_concepts_are_describedC2;;
+			*);;
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_describedD2
+		 	(*
+			<- genElStr3;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_agent_of_finding_components_within_which_the_concepts_are_described;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _component;;
+		  	
+		  	=> nrel_goto: .agent_of_finding_components_within_which_the_concepts_are_describedD3;;	
+		  	*);;
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_describedD3
+        		(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _component;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _concept;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_agent_of_finding_components_within_which_the_concepts_are_described;;
+
+			=> nrel_goto: .agent_of_finding_components_within_which_the_concepts_are_describedC2;;
+			*);;
+
+
+
+
+
+
+
+
+
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_describedE1
+		 	(*
+			<- genElStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: rrel_const: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _answer_of_agent_of_finding_components_within_which_the_concepts_are_described;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: rrel_const: _arc1;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+		  	
+		  	=> nrel_goto: .agent_of_finding_components_within_which_the_concepts_are_described_return;;	
+		  	*);;
+
+		-> .agent_of_finding_components_within_which_the_concepts_are_described_return
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
