@@ -390,7 +390,11 @@ nrel_affecting_entity
 	[воздействующая сущность*]
 	(* <- lang_ru;; *);
 	[affecting entity*]
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: sc_element;
+=> nrel_second_domain: sc_element;
+=> nrel_definitional_domain: sc_element;;
 	
 
 nrel_object_of_impact
@@ -401,7 +405,17 @@ nrel_object_of_impact
 	[объект воздействия*]
 	(* <- lang_ru;; *);
 	[object of impact*]
-	(* <- lang_en;; *);;	
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: question;
+=> nrel_second_domain: sc_element;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> question;sc_element;;
+			*);;
+	*);;	
 
 
 nrel_initial_situation
@@ -433,6 +447,16 @@ nrel_initial_situation
 			"file://nl_files/nrel_initial_situation.html"
 			(* <- lang_ru;; *);;
 		*);;
+	*);
+
+=> nrel_first_domain: process;
+=> nrel_second_domain: situation;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> process;situation;;
+			*);;
 	*);;
 	
 
@@ -462,6 +486,16 @@ nrel_typical_situation
 			"file://nl_files/nrel_typical_situation.html"
 			(* <- lang_ru;; *);;
 		*);;
+	*);
+
+=> nrel_first_domain: process;
+=> nrel_second_domain: situation;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> process;situation;;
+			*);;
 	*);;
 
 	
@@ -494,6 +528,16 @@ nrel_final_situation
 			"file://nl_files/nrel_final_situation.html"
 			(* <- lang_ru;; *);;
 		*);;
+	*);
+
+=> nrel_first_domain: process;
+=> nrel_second_domain: situation;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> process;situation;;
+			*);;
 	*);;
 	
 	
@@ -532,6 +576,16 @@ nrel_event
 		-> rrel_example:
 			"file://nl_files/event.png";;
 		*);;
+	*);
+
+=> nrel_first_domain: process;
+=> nrel_second_domain: pair_set;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> process;pair_set;;
+			*);;
 	*);;
 	
 	
@@ -630,12 +684,18 @@ situational_set
 
 rrel_last_added_sc_element
 <- sc_node_role_relation;
+
 => nrel_main_idtf:
 	[последний добавленный sc-элемент']
 	(* <- lang_ru;; *);
 	[last added sc-element']
 	(* <- lang_en;; *);
-<- role_relation;;
+
+<- role_relation;
+
+=> nrel_first_domain: sc_element;
+=> nrel_second_domain: sc_element;
+=> nrel_definitional_domain: sc_element;;
 
 non_situational_set
 <- sc_node_not_relation;
@@ -746,7 +806,11 @@ nrel_temporal_inclusion
 			"file://nl_files/nrel_temporal_inclusion.html"
 			(* <- lang_ru;; *);;
 		*);;
-	*);;
+	*);
+
+=> nrel_first_domain: temporary_entity;
+=> nrel_second_domain: temporary_entity;
+=> nrel_definitional_domain: temporary_entity;;
 	
 nrel_temporal_part
 
@@ -768,6 +832,10 @@ nrel_temporal_part
 	nrel_first_stage;
 	nrel_final_stage;
 	nrel_intermediate_stage;
+
+=> nrel_first_domain: temporary_entity;
+=> nrel_second_domain: temporary_entity;
+=> nrel_definitional_domain: temporary_entity;
 
 <- rrel_key_sc_element:
 	...
@@ -814,7 +882,11 @@ nrel_first_stage
 	[начальный этап*]
 	(* <- lang_ru;; *);
 	[first stage*]
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: temporary_entity;
+=> nrel_second_domain: temporary_entity;
+=> nrel_definitional_domain: temporary_entity;;
 	
 nrel_final_stage
 
@@ -824,7 +896,11 @@ nrel_final_stage
 	[конечный этап*]
 	(* <- lang_ru;; *);
 	[final stage*]
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: temporary_entity;
+=> nrel_second_domain: temporary_entity;
+=> nrel_definitional_domain: temporary_entity;;
 	
 
 nrel_intermediate_stage
@@ -835,7 +911,11 @@ nrel_intermediate_stage
 	[промежуточный этап*]
 	(* <- lang_ru;; *);
 	[intermediate_stage*]
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: temporary_entity;
+=> nrel_second_domain: temporary_entity;
+=> nrel_definitional_domain: temporary_entity;;
 
 	
 nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments
@@ -851,6 +931,10 @@ nrel_temporal_inclusion_without_coincidence_of_the_initial_and_final_moments
 => nrel_idtf:
 	[строгое темпоральное включение*]
 	(* <- lang_ru;; *);
+
+=> nrel_first_domain: temporary_entity;
+=> nrel_second_domain: temporary_entity;
+=> nrel_definitional_domain: temporary_entity;
 
 <- rrel_key_sc_element:
 	...
@@ -887,6 +971,10 @@ nrel_temporal_inclusion_with_coincidence_of_the_initial_moments
 	[temporal inclusion with coincidence of the initial moments*]
 	(* <- lang_en;; *);
 
+=> nrel_first_domain: temporary_entity;
+=> nrel_second_domain: temporary_entity;
+=> nrel_definitional_domain: temporary_entity;
+
 <- rrel_key_sc_element:
 	...
 	(*
@@ -920,6 +1008,10 @@ nrel_temporal_inclusion_with_coincidence_of_the_final_moments
 	(* <- lang_ru;; *);
 	[temporal inclusion with coincidence of the final moments*]
 	(* <- lang_en;; *);
+
+=> nrel_first_domain: temporary_entity;
+=> nrel_second_domain: temporary_entity;
+=> nrel_definitional_domain: temporary_entity;
 
 <- rrel_key_sc_element:
 	...
@@ -956,6 +1048,10 @@ nrel_temporal_concurrence
 	[temporal concurrence*]
 	(* <- lang_en;; *);
 
+=> nrel_first_domain: temporary_entity;
+=> nrel_second_domain: temporary_entity;
+=> nrel_definitional_domain: temporary_entity;
+
 => nrel_idtf:
 	[совпадение начала и завершения*]
 	(* <- lang_ru;; *);;
@@ -970,6 +1066,10 @@ nrel_temporal_union
 	(* <- lang_ru;; *);
 	[temporal union*]
 	(* <- lang_en;; *);
+
+=> nrel_first_domain: temporary_entity;
+=> nrel_second_domain: temporary_entity;
+=> nrel_definitional_domain: temporary_entity;
 
 <- rrel_key_sc_element:
 	...
@@ -1028,6 +1128,16 @@ nrel_temporal_decomposition
 		-> rrel_example:
 			"file://nl_files/nrel_temporal_decomposition_second.png";;
 		*);;
+	*);
+
+=> nrel_first_domain: set;
+=> nrel_second_domain: temporary_entity;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> set;temporary_entity;;
+			*);;
 	*);;
 
 	
@@ -1069,7 +1179,11 @@ nrel_temporal_adjacency
 		-> rrel_example:
 			"file://nl_files/nrel_temporal_adjacency_second.png";;
 		*);;
-	*);;
+	*);
+
+=> nrel_first_domain: temporary_entity;
+=> nrel_second_domain: temporary_entity;
+=> nrel_definitional_domain: temporary_entity;;
 
 	
 nrel_temporal_sequence_with_gap
@@ -1104,7 +1218,11 @@ nrel_temporal_sequence_with_gap
 		-> rrel_example:
 			"file://nl_files/nrel_temporal_sequence_with_gap_second.png";;
 		*);;
-	*);;
+	*);
+
+=> nrel_first_domain: temporary_entity;
+=> nrel_second_domain: temporary_entity;
+=> nrel_definitional_domain: temporary_entity;;
 
 
 nrel_temporal_sequence_with_intersection
@@ -1139,7 +1257,11 @@ nrel_temporal_sequence_with_intersection
 		-> rrel_example:
 			"file://nl_files/nrel_temporal_sequence_with_intersection_second.png";;
 		*);;
-	*);;
+	*);
+
+=> nrel_first_domain: temporary_entity;
+=> nrel_second_domain: temporary_entity;
+=> nrel_definitional_domain: temporary_entity;;
 	
 
 begin
@@ -1382,7 +1504,17 @@ rrel_number_of_millennium
 	[номер тысячелетия']
 	(* <- lang_ru;; *);
 	[number of millennium']
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: millennium;
+=> nrel_second_domain: number;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> number;millennium;;
+			*);;
+	*);;
 
 	
 rrel_number_of_century
@@ -1393,7 +1525,17 @@ rrel_number_of_century
 	[номер века']
 	(* <- lang_ru;; *);
 	[number of century']
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: century;
+=> nrel_second_domain: number;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> number;century;;
+			*);;
+	*);;
 	
 rrel_number_of_year
 
@@ -1403,7 +1545,17 @@ rrel_number_of_year
 	[номер года']
 	(* <- lang_ru;; *);
 	[number of year']
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: year;
+=> nrel_second_domain: number;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> number;year;;
+			*);;
+	*);;
 	
 rrel_number_of_month_in_year
 
@@ -1413,7 +1565,17 @@ rrel_number_of_month_in_year
 	[номер месяца в году']
 	(* <- lang_ru;; *);
 	[number of month in year']
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: month;
+=> nrel_second_domain: number;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> number;month;;
+			*);;
+	*);;
 
 rrel_number_of_day_in_month
 
@@ -1433,7 +1595,17 @@ rrel_number_of_hour_in_day
 	[номер часа в дне']
 	(* <- lang_ru;; *);
 	[number of hour in day']
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: hour;
+=> nrel_second_domain: number;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> number;hour;;
+			*);;
+	*);;
 	
 rrel_number_of_minute_in_hour
 
@@ -1443,7 +1615,17 @@ rrel_number_of_minute_in_hour
 	[номер минуты в часе']
 	(* <- lang_ru;; *);
 	[number of minute in hour']
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: minute;
+=> nrel_second_domain: number;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> number;minute;;
+			*);;
+	*);;
 	
 rrel_number_of_second_in_minute
 
@@ -1453,4 +1635,14 @@ rrel_number_of_second_in_minute
 	[номер секунды в минуте']
 	(* <- lang_ru;; *);
 	[number of second in minute']
-	(* <- lang_en;; *);;
+	(* <- lang_en;; *);
+
+=> nrel_first_domain: second;
+=> nrel_second_domain: number;
+=> nrel_definitional_domain: ...
+	(*
+		<= nrel_combination: ...
+			(*
+				-> number;second;;
+			*);;
+	*);;

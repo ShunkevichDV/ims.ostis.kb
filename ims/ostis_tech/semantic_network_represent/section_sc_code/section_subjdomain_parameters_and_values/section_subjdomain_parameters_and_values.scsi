@@ -577,9 +577,6 @@ parametric_model
 	[описание сущности как точки в некотором параметрическом (признаковом) пространстве]
 	(* <- lang_ru;; *);
 
-<= nrel_inclusion:
-	semantic_neighborhood;
-
 <- rrel_key_sc_element:
 	...
 	(*
