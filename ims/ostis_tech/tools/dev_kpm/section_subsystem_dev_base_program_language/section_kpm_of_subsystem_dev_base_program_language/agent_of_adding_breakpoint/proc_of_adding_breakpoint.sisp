@@ -1,0 +1,9 @@
+function proc_of_adding_breakpoint(_operator, _scp_program) {
+  return _answer;
+  if(search(_scp_program, [assign, _arc1], [assign, _breakpoints], [assign, _arc2], nrel_breakpoints)); else
+    generate(_scp_program, [assign, common, constant, _arc1], [assign, node, constant, _breakpoints], [assign, pos_const_perm, _arc2], nrel_breakpoints);
+  generate(_breakpoints, [assign, pos_const_perm, _arc], _operator);
+  generate(breakpoint, [assign, pos_const_perm, _arc], _operator);
+  proc_of_removing_context(_scp_program);
+  proc_of_generate_answer_construction_for_breakpoint(_scp_program, [assign, _answer]);
+}
