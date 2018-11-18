@@ -1,0 +1,36 @@
+lib_component_agent_of_removing_breakpoint
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент удаления точки останова из scp-программы]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of removing breakpoint]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components; 
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_removing_breakpoint; 
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_removing_breakpoint;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Removing_breakpoint.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+question_removing_breakpoint
+<-sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. удалить точку останова из scp-программы]
+	(* <- lang_ru;; *);
+	[action. to remove breakpoint]
+	(* <- lang_en;; *);;

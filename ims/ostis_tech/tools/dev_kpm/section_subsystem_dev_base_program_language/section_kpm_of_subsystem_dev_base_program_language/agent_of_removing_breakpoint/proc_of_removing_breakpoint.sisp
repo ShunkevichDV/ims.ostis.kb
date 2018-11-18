@@ -1,0 +1,10 @@
+function proc_of_removing_breakpoint(_operator, _scp_program) {
+  return _answer;
+  if(search(_scp_program, [assign, _arc1], [assign, _breakpoints], [assign, _arc2], nrel_breakpoints)) {
+    if(search(_breakpoints, [assign, pos_const_perm, _arc], _operator)) {
+      erase([erase, _arc]);
+    }
+  }
+  proc_of_removing_context(_scp_program);
+  proc_of_generate_answer_construction_for_breakpoint(_scp_program, [assign, _answer]);
+}
