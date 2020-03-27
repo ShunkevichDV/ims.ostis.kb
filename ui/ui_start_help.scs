@@ -1,4 +1,1 @@
 ui_start_help <- lang_ru;;
-ui_start_help = "file://ui_start_help/text.html";;
-
-ui_help_question_movie = "file://ui_start_help/help-question-movie.gif";;

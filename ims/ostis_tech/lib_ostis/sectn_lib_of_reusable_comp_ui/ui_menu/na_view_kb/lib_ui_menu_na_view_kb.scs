@@ -10,10 +10,6 @@ lib_ui_menu_na_view_kb
 
 <= nrel_library_component_decomposition:
 	{		
-	lib_ui_menu_na_view_kb_base;
-	lib_ui_menu_na_view_kb_structure;
-	lib_ui_menu_na_view_kb_semantic_square;
-	lib_ui_menu_na_view_kb_identifiers
+	lib_ui_menu_na_view_kb_semantic_square
 	};;
 
-lib_ui_menu_na_view_kb = [*^"file://ui_menu_na_view_kb.scsi"*];;
