@@ -1,0 +1,4 @@
+ui_scneditor_cansel_changes_question
+
+=> nrel_main_idtf: [У вас есть изменения в статье, которые будут утеряны. Вы действительно желаете продолжить?] (* <- lang_ru;; *);
+=> nrel_main_idtf: [All unsaved changes will be lost. Are you sure you want to continue?] (* <- lang_en;; *);;
