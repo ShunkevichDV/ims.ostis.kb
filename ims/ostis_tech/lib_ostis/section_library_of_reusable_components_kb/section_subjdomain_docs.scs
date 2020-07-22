@@ -7,6 +7,16 @@ section_subjdomain_docs
 	(* <- lang_en;; *);
 <- not_enough_formed_structure;;
 
-section_subjdomain_docs = [*^"file://section_subjdomain_docs.scsi"*];;
+section_subjdomain_docs = [*
+                            subjdomain_docs
+                            <- sc_node_struct;
+                            <- structure;
+                            <- subject_domain;
+                            => nrel_main_idtf:
+                            	[Предметная область документов]
+                            	(* <- lang_ru;; *);
+                            	[Subject domain of documents]
+                            	(* <- lang_en;; *);;
 
+*];;
 rrel_key_sc_element -> (section_subjdomain_docs -> subjdomain_docs);;
