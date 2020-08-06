@@ -7,6 +7,14 @@ section_kpm_agent_library_of_solution_planning_for_formulated_tasks
 	(* <- lang_en;; *);
 <- not_enough_formed_structure;;
 
-section_kpm_agent_library_of_solution_planning_for_formulated_tasks = [*^"file://section_kpm_agent_library_of_solution_planning_for_formulated_tasks.scsi"*];;
+section_kpm_agent_library_of_solution_planning_for_formulated_tasks = [*
+                                                                        kpm_agent_library_of_solution_planning_for_formulated_tasks
+                                                                        
+                                                                        => nrel_main_idtf:
+                                                                        	[Библиотека sc-агентов планирования решения явно сформулированных задач]
+                                                                        	(* <- lang_ru;; *);
+                                                                        	[Library of solution planning sc-agents for obviously formulated solution]
+                                                                        	(* <- lang_en;; *);;
 
+*];;
 rrel_key_sc_element -> (section_kpm_agent_library_of_solution_planning_for_formulated_tasks -> kpm_agent_library_of_solution_planning_for_formulated_tasks);;

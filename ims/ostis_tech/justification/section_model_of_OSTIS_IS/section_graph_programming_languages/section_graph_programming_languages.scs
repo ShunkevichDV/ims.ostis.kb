@@ -8,6 +8,26 @@ section_graph_programming_languages
 	(* <- lang_en;; *);
 <- not_enough_formed_structure;;
 
-	section_graph_programming_languages = [*^"file://section_graph_programming_languages.scsi"*];;
+	section_graph_programming_languages = [*
+                                         sc_node_not_relation -> graph_programming_language;;
+                                         graph_programming_language
+                                         => nrel_main_idtf:
+                                         	[графовый язык программирования]
+                                         	(* <- lang_ru;; *);
+                                         	[Graph programming language]
+                                         	(* <- lang_en;; *);;
+                                         	
+                                         graph_programming_language  
+                                         
+                                         	<= nrel_sc_text_translation:
+                                         	...	
+                                         		(*
+                                         			-> rrel_example:
+                                         
+                                         				"file://content_html/explanation_for_graph_programming_language.html"
+                                         			(*<- lang_ru;;*);;
+                                         	*);;
+                                         
 
+*];;
 rrel_key_sc_element -> (section_graph_programming_languages -> graph_programming_language);;
