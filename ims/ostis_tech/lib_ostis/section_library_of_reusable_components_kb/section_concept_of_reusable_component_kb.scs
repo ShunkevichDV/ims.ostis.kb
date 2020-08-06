@@ -1,0 +1,37 @@
+section_concept_of_reusable_component_kb
+<- atomic_section;
+=> nrel_main_idtf:
+	[Раздел. Понятие многократно используемого компонента sc-моделей баз знаний]
+	(* <- lang_ru;; *);
+	[Section. Concept of reusable component of sc-models of knowledge bases]
+	(* <- lang_en;; *);
+<- not_enough_formed_structure;;
+
+section_concept_of_reusable_component_kb = [*
+                                             library_of_reusable_components_of_knowledge_bases
+                                             
+                                             => nrel_main_idtf:
+                                             	[Библиотека многократно используемых компонентов sc-моделей баз знаний]
+                                             	(* <- lang_ru;; *);
+                                             	[Library of reusable components of knowledge bases sc-models]
+                                             	(* <- lang_en;; *);
+                                             
+                                             => nrel_idtf:
+                                             	[многократно используемый компонент sc-моделей баз знаний]
+                                             	(* <- lang_ru;; *);
+                                             
+                                             <- rrel_key_sc_element:
+                                             	...
+                                             	(*
+                                             	<- explanation;;
+                                             	<= nrel_sc_text_translation:	
+                                             		...
+                                             		(*
+                                             		-> rrel_example:
+                                             			"file://nl_files/library_of_reusable_components_of_knowledge_bases.html"
+                                             			(* <- lang_ru;;	*);;
+                                             		*);;
+                                             	*);;
+
+*];;
+section_concept_of_reusable_component_kb -> rrel_key_sc_element: library_of_reusable_components_of_knowledge_bases;;

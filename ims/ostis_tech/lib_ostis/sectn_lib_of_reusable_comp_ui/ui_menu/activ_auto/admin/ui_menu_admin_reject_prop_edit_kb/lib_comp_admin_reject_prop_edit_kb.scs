@@ -1,0 +1,49 @@
+lib_component_ui_menu_file_for_administrator_rejection_proposals_for_editing_kb
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса отклонения администратором предложения по редактированию базы знаний]
+	(* <- lang_ru;; *);
+	[Library component. User interface command of administrator rejection proposals for editing the knowledge base]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
+<- library_of_reusable_components_of_knowledge_bases;
+
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Ui_administrator_rejection.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+lib_component_ui_menu_file_for_administrator_rejection_proposals_for_editing_kb = [*
+                                                                                    ui_menu_file_for_administrator_rejection_proposals_for_editing_kb <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
+                                                                                    
+                                                                                    ui_menu_file_for_administrator_rejection_proposals_for_editing_kb => nrel_main_idtf: 
+                                                                                    	[Отклонить предложение по редактированию базы знаний. Администратор] 
+                                                                                    	(* <- lang_ru;; *);
+                                                                                    	[Reject proposal for editing the kb. Administrator] 
+                                                                                    	(* <- lang_en;; *);;
+                                                                                    
+                                                                                    ui_menu_file_for_administrator_rejection_proposals_for_editing_kb => ui_nrel_command_template:
+                                                                                    	[*
+                                                                                    		action_to_reject_the_proposal_for_editing_the_knowledge_base_administrator _-> ._action_to_reject_the_proposal_for_editing_the_knowledge_base_administrator_instance
+                                                                                    			(*
+                                                                                    				_-> ui_arg_1;;			
+                                                                                    			*);;
+                                                                                    		._action_to_reject_the_proposal_for_editing_the_knowledge_base_administrator_instance _<- question;;
+                                                                                    	*];;
+                                                                                    
+                                                                                    ui_menu_file_for_administrator_rejection_proposals_for_editing_kb => ui_nrel_command_lang_template: 
+                                                                                    	[Отклонить предложение: $ui_arg_1 по редактированию базы знаний. Администратор] 
+                                                                                    	(* <- lang_ru;; *);
+                                                                                    	[Reject proposal: $ui_arg_1 for editing the kb. Administrator] 
+                                                                                    	(* <- lang_en;; *);;
+
+*];;

@@ -1,0 +1,42 @@
+section_composition_of_OSTIS_technology
+
+=> nrel_main_idtf:
+	[Раздел. Тип, назначение и состав Технологии OSTIS]
+	(* <- lang_ru;; *);
+	[Section. Type, function and composition of OSTIS technology]
+	(* <- lang_en;; *);
+<- not_enough_formed_structure;;
+
+	section_composition_of_OSTIS_technology = [*
+                                             sc_node_not_relation -> technology_OSTIS;;
+                                             technology_OSTIS
+                                             => nrel_main_idtf:
+                                             	[Технология OSTIS]
+                                             	(* <- lang_ru;; *);
+                                             	[Technology OSTIS]
+                                             	(* <- lang_en;; *);
+                                             
+                                             => nrel_idtf:
+                                             	[Открытая семантическая технология разработки интеллектуальных систем];
+                                             	[Open Semantic Technology for Intelligent Systems];
+                                             	[Предлагаемая нами комплексная технология разработки интеллектуальных систем];
+                                             	[Открытая семантическая технология компонентного проектирования совместимых компьютерных систем, управляемых знаниями];;
+                                             
+                                             technology_OSTIS <- complex_technology_development_of_intelligent_systems;;
+                                             
+                                             technology_OSTIS
+                                             	<= nrel_sc_text_translation:
+                                              ...
+                                              (*
+                                              -> rrel_example:
+                                                "file://content_html/explanation_for_technology_OSTIS.html"
+                                                (*<- lang_ru;;*);;
+                                              *);;
+*];;
+rrel_key_sc_element -> (section_composition_of_OSTIS_technology -> technology_OSTIS)
+(*
+
+	=> nrel_key_sc_element_order: (complex_technology_development_of_intelligent_systems -> technology_OSTIS)
+	(* <- rrel_key_sc_element;; *);;	
+
+*);;

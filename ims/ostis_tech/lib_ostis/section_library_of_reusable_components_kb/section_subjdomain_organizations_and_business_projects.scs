@@ -1,0 +1,22 @@
+section_subjdomain_organizations_and_business_projects
+
+=> nrel_main_idtf:
+	[Раздел. Предметная область организаций и бизнес-процессов]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of organizations and business projects]
+	(* <- lang_en;; *);
+<- not_enough_formed_structure;;
+
+section_subjdomain_organizations_and_business_projects = [*
+                                                           subjdomain_organizations_and_business_projects
+                                                           <- sc_node_struct;
+                                                           <- structure;
+                                                           <- subject_domain;
+                                                           => nrel_main_idtf:
+                                                           	[Предметная область организаций и бизнес-процессов]
+                                                           	(* <- lang_ru;; *);
+                                                           	[Subject domain of organizations and business projects]
+                                                           	(* <- lang_en;; *);;
+
+*];;
+rrel_key_sc_element -> (section_subjdomain_organizations_and_business_projects -> subjdomain_organizations_and_business_projects);;

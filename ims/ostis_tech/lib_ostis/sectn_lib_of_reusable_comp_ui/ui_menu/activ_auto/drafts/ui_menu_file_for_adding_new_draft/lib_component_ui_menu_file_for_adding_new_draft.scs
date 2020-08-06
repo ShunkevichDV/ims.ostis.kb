@@ -1,0 +1,49 @@
+lib_component_ui_menu_file_for_adding_new_draft
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса добавления нового черновика]
+	(* <- lang_ru;; *);
+	[Library component. User interface command of adding new draft]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
+<- library_of_reusable_components_of_knowledge_bases;
+
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/UI_adding_new_draft.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+lib_component_ui_menu_file_for_adding_new_draft = [*
+                                                    ui_menu_file_for_adding_new_draft <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
+                                                    
+                                                    ui_menu_file_for_adding_new_draft => nrel_main_idtf: 
+                                                    	[Добавить новый черновик] 
+                                                    	(* <- lang_ru;; *);
+                                                    	[Add new draft] 
+                                                    	(* <- lang_en;; *);;
+                                                    
+                                                    ui_menu_file_for_adding_new_draft => ui_nrel_command_template:
+                                                    	[*
+                                                    		action_to_add_new_draft _-> ._action_to_add_new_draft_instance
+                                                    			(*
+                                                    			_-> ui_arg_1;;				
+                                                    			*);;
+                                                    		._action_to_add_new_draft_instance _<- question;;
+                                                    	*];;
+                                                    
+                                                    ui_menu_file_for_adding_new_draft => ui_nrel_command_lang_template: 
+                                                    	[Добавить новый черновик: $ui_arg_1] 
+                                                    	(* <- lang_ru;; *);
+                                                    	[Add new draft: $ui_arg_1] 
+                                                    	(* <- lang_en;; *);;
+
+*];; 

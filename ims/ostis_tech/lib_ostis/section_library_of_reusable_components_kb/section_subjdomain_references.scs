@@ -1,0 +1,22 @@
+section_subjdomain_references
+
+=> nrel_main_idtf:
+	[Раздел. Предметная область библиографических источников]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of references]
+	(* <- lang_en;; *);
+<- not_enough_formed_structure;;
+	
+section_subjdomain_references = [*
+                                  subjdomain_references
+                                  <- sc_node_struct;
+                                  <- structure;
+                                  <- subject_domain;
+                                  => nrel_main_idtf:
+                                  	[Предметная область библиографических источников]
+                                  	(* <- lang_ru;; *);
+                                  	[Subject domain of references]
+                                  	(* <- lang_en;; *);;
+
+*];;
+rrel_key_sc_element -> (section_subjdomain_references -> subjdomain_references);;

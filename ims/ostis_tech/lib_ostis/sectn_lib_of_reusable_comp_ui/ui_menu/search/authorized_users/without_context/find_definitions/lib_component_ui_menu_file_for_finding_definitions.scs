@@ -1,0 +1,74 @@
+lib_component_ui_menu_file_for_finding_definitions
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса для поиска определения или пояснения для заданного объекта]
+	(* <- lang_ru;; *);
+	[Library component. User interface command for definition or explanation for given object search]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
+<- library_of_reusable_components_of_knowledge_bases;
+
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Ui_Definitions.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);
+	
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- illustration;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://images/definition.png";; 
+		*);;
+	*);;
+
+lib_component_ui_menu_file_for_finding_definitions = [*
+                                                       ui_menu_file_for_finding_definitions <- ui_user_command_class_atom; ui_user_command_class_view_kb; ui_one_argument_command_class;;
+                                                       
+                                                       ui_menu_file_for_finding_definitions 
+                                                       => nrel_main_idtf: 
+                                                       	[Каково определение/пояснение указываемого понятия?] 
+                                                       	(* <- lang_ru;; *);
+                                                       => nrel_idtf: 
+                                                       	[Запрос определения/пояснения для заданного понятия] 
+                                                       	(* <- lang_ru;; *);;
+                                                       
+                                                       ui_menu_file_for_finding_definitions 
+                                                       => nrel_main_idtf: 
+                                                       	[What is definition/explanation for given concept?] 
+                                                       	(* <- lang_en;; *);
+                                                       => nrel_idtf: 
+                                                       	[Request of definition/explanation for given concept] 
+                                                       	(* <- lang_en;; *);;
+                                                       
+                                                       ui_menu_file_for_finding_definitions => ui_nrel_command_template:
+                                                       	[*
+                                                       		question_of_finding_definitions _-> ._question_of_finding_definitions_instance
+                                                       			(*
+                                                       			_-> ui_arg_1;;				
+                                                       			*);;
+                                                       		._question_of_finding_definitions_instance _<- question;question111;;
+                                                       	*];;
+                                                       
+                                                       ui_menu_file_for_finding_definitions => ui_nrel_command_lang_template: 
+                                                       	[Каково определение/пояснение понятия $ui_arg_1] 
+                                                       	(* <- lang_ru;; *);;
+                                                       
+                                                       ui_menu_file_for_finding_definitions => ui_nrel_command_lang_template: 
+                                                       	[What is definition/explanation for concept of $ui_arg_1] 
+                                                       	(* <- lang_en;; *);;
+                                                       
+
+*];;

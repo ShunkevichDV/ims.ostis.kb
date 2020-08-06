@@ -7,4 +7,13 @@ section_library_of_translators_to_sc
 	(* <- lang_en;; *);
 <- not_enough_formed_structure;;
 
+section_library_of_translators_to_sc = [*
+                                         library_of_translators_to_sc
+                                         
+                                         => nrel_main_idtf:
+                                         	[Библиотека трансляторов в sc-память]
+                                         	(* <- lang_ru;; *);
+                                         	[Library of translators to sc-memory]
+                                         	(* <- lang_en;; *);;
+*];;
 rrel_key_sc_element -> (section_library_of_translators_to_sc -> library_of_translators_to_sc);;

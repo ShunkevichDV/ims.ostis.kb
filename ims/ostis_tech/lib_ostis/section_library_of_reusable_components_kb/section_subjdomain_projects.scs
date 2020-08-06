@@ -1,0 +1,21 @@
+section_subjdomain_projects
+=> nrel_main_idtf:
+	[Раздел. Предметная область проектов]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of projects]
+	(* <- lang_en;; *);
+<- not_enough_formed_structure;;
+	
+section_subjdomain_projects = [*
+                                subjdomain_projects
+                                <- sc_node_struct;
+                                <- structure;
+                                <- subject_domain;
+                                => nrel_main_idtf:
+                                	[Предметная область проектов]
+                                	(* <- lang_ru;; *);
+                                	[Subject domain of projects]
+                                	(* <- lang_en;; *);;
+
+*];;
+rrel_key_sc_element -> (section_subjdomain_projects -> subjdomain_projects);;

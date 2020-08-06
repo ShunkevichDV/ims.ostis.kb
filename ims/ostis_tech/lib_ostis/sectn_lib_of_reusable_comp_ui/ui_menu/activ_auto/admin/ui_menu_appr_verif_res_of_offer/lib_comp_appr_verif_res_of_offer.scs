@@ -1,0 +1,42 @@
+lib_component_ui_menu_file_for_approval_verification_result_of_offer
+=> nrel_main_idtf:
+	[Компонент библиотеки. Действие. Утверждение результатов верификации предложения]
+	(* <- lang_ru;; *);
+	[Library component. Action. Approval the verification result of offer]
+	(* <- lang_en;; *);
+
+<- platform_independent_reusable_component_OSTIS;
+<- atomic_reusable_component_OSTIS;
+<- reusable_knowledge_base_sc_model_component;
+
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Ui_approval_verification_result_of_offer.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+lib_component_ui_menu_file_for_approval_verification_result_of_offer = [*
+                                                                         ui_approval_verification_result_of_offer <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
+                                                                         
+                                                                         ui_approval_verification_result_of_offer => nrel_main_idtf: [Утвердить результат верификации предложения] (* <- lang_ru;; *);;
+                                                                         ui_approval_verification_result_of_offer => nrel_main_idtf: [Approve the verification result of offer] (* <- lang_en;; *);;
+                                                                         ui_approval_verification_result_of_offer => ui_nrel_command_template:
+                                                                         	[*
+                                                                         		action_to_approve_the_result_of_proposal_verification _-> ._action_to_approve_the_result_of_proposal_verification_instance
+                                                                         			(*
+                                                                         				_-> rrel_1:: ui_arg_1;;			
+                                                                         			*);;
+                                                                         		._action_to_approve_the_result_of_proposal_verification_instance _<- question;;
+                                                                         	*];;
+                                                                         
+                                                                         ui_approval_verification_result_of_offer => ui_nrel_command_lang_template: [Утвердить результат верификации предложения: $ui_arg_1] (* <- lang_ru;; *);;
+                                                                         ui_approval_verification_result_of_offer => ui_nrel_command_lang_template: [Approve the verification result of offer: $ui_arg_1] (* <- lang_en;; *);;
+
+*];;

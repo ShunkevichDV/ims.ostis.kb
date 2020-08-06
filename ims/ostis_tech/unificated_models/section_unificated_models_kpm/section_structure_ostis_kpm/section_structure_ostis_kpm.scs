@@ -1,0 +1,35 @@
+section_structure_ostis_kpm
+
+=> nrel_main_idtf:
+	[Раздел. Структура абстрактной машины обработки знаний ostis-системы]
+	(* <- lang_ru;; *);
+	[Section. Structure of abstract knowledge processing machine of ostis-system]
+	(* <- lang_en;; *);
+<- not_enough_formed_structure;
+<- atomic_section;;
+
+section_structure_ostis_kpm = [*
+                                sc_model_of_processing_machine_knowledge
+                                <- sc_node_not_relation;
+                                => nrel_main_idtf:
+                                	[sc-модель машины обработки знаний]
+                                	(* <- lang_ru;; *);
+                                	[sc-model of processing machine knowledge]
+                                	(* <- lang_en;; *);
+                                <= nrel_strict_inclusion: non_atomic_abstract_sc_agent;
+                                <- rrel_key_sc_element:
+                                	...
+                                		(*
+                                			<- explanation;;
+                                			<= nrel_sc_text_translation:
+                                				...
+                                					(*
+                                					-> rrel_example:
+                                						"file://nl_files/explanation_for_sc_model_of_kpm.html"
+                                						(* <- lang_ru;; *);;
+                                					*);;
+                                		*);;
+*];;
+section_structure_ostis_kpm 
+-> rrel_key_sc_element:
+	sc_model_of_processing_machine_knowledge;;

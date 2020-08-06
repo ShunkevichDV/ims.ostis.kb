@@ -7,4 +7,14 @@ section_library_of_communication_environments
 	(* <- lang_en;; *);
 <- not_enough_formed_structure;;
 
+section_library_of_communication_environments = [*
+                                                  library_of_communication_environments
+                                                  
+                                                  => nrel_main_idtf:
+                                                  	[Библиотека сред общения]
+                                                  	(* <- lang_ru;; *);
+                                                  	[Library of communication environments]
+                                                  	(* <- lang_en;; *);;
+
+*];;
 rrel_key_sc_element -> (section_library_of_communication_environments -> library_of_communication_environments);;

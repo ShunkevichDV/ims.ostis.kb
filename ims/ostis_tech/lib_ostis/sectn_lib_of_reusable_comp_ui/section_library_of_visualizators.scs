@@ -7,4 +7,13 @@ section_library_of_visualizators
 	(* <- lang_en;; *);
 <- not_enough_formed_structure;;
 
+section_library_of_visualizators = [*
+                                     library_of_visualizators
+                                     
+                                     => nrel_main_idtf:
+                                     	[Библиотека визуализаторов]
+                                     	(* <- lang_ru;; *);
+                                     	[Library of visualizators]
+                                     	(* <- lang_en;; *);;
+*];;
 rrel_key_sc_element -> (section_library_of_visualizators -> library_of_visualizators);;

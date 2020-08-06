@@ -1,0 +1,49 @@
+lib_component_ui_menu_file_for_calculation_average_value_of_vertex_degrees
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса подсчета средней степени вершины онтологии]
+	(* <- lang_ru;; *);
+	[Library component. User interface command of calculation average value of vertex degrees]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
+<- library_of_reusable_components_of_knowledge_bases;
+
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/UI_calc_avg_val_vert_degr.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+lib_component_ui_menu_file_for_calculation_average_value_of_vertex_degrees = [*
+                                                                               ui_menu_file_for_calculation_average_value_of_vertex_degrees <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
+                                                                               
+                                                                               ui_menu_file_for_calculation_average_value_of_vertex_degrees => nrel_main_idtf: 
+                                                                               	[Посчитать среднюю степень вершины онтологии] 
+                                                                               	(* <- lang_ru;; *);
+                                                                               	[Calculate average value of vertex degrees] 
+                                                                               	(* <- lang_en;; *);;
+                                                                               
+                                                                               ui_menu_file_for_calculation_average_value_of_vertex_degrees => ui_nrel_command_template:
+                                                                               	[*
+                                                                               		action_to_calculate_average_value_of_vertex_degrees _-> ._action_to_calculate_average_value_of_vertex_degrees_instance
+                                                                               			(*
+                                                                               			_-> ui_arg_1;;				
+                                                                               			*);;
+                                                                               		._action_to_calculate_average_value_of_vertex_degrees_instance _<- question;;
+                                                                               	*];;
+                                                                               
+                                                                               ui_menu_file_for_calculation_average_value_of_vertex_degrees => ui_nrel_command_lang_template: 
+                                                                               	[Посчитать среднюю степень вершины онтологии: $ui_arg_1] 
+                                                                               	(* <- lang_ru;; *);
+                                                                               	[Calculate average value of vertex degrees: $ui_arg_1] 
+                                                                               	(* <- lang_en;; *);;
+
+*];; 

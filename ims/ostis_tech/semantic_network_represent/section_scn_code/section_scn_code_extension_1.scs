@@ -1,0 +1,46 @@
+section_scn_code_extension_1
+
+=> nrel_main_idtf: 
+	[Раздел. SCn-код. Расширение 1]
+	(* <- lang_ru;; *);
+	[Section. SCn-code. Extension 1]
+	(* <- lang_en;; *);
+<- not_enough_formed_structure;;
+
+section_scn_code_extension_1 = [*
+                                 scn_code_ext1 => nrel_main_idtf: 
+                                 	[SCn-код. Расширение 1] (* <- lang_ru;; *);
+                                 	[SCn-code. Extension 1] (* <- lang_en;; *);
+                                 
+                                 <- rrel_key_sc_element:
+                                 	..scn_code_ext1_explanation
+                                 	(*
+                                 	<- explanation;;
+                                 	<= nrel_sc_text_translation:	
+                                 			...
+                                 			(*
+                                 			-> rrel_example:
+                                 				"file://section_scn_code_scsi/scn_code_htmls/scn_code_ext1_text1.html"
+                                 				(*
+                                 				<- lang_ru;;
+                                 				*);;
+                                 			*);;
+                                                 <= nrel_sc_text_translation:	
+                                 			...
+                                 			(*
+                                 			-> rrel_example:
+                                 				"file://section_scn_code_scsi/scn_code_htmls/scn_code_ext1_text1_en.html"
+                                 				(*
+                                 				<- lang_en;;
+                                 				*);;
+                                 			*);;
+                                 		*);
+                                 
+                                 
+                                 
+                                 -> rrel_example:
+                                 		"file://section_scn_code_scsi/images/scn_text_example_2_1.png";
+                                 -> rrel_example:
+                                 		"file://section_scn_code_scsi/images/scn_text_example_2_2.png";;
+
+*];;section_scn_code_extension_1 -> rrel_key_sc_element: scn_code_ext1;;

@@ -1,0 +1,20 @@
+structure_IMS_user_interface
+=> nrel_main_idtf:
+	[Документация. Пользовательский интерфейс IMS]
+	(* <- lang_ru;; *);
+	[Documentation. IMS user interface]
+	(* <- lang_en;; *);
+<- not_enough_formed_structure;
+-> rrel_key_sc_element:
+	IMS_user_interface;;
+
+structure_IMS_user_interface = [*
+                                 IMS_user_interface
+                                 <- sc_node_not_relation;
+                                 => nrel_main_idtf:
+                                 	[Пользовательский интерфейс IMS]
+                                 	(* <- lang_ru;; *);
+                                 	[IMS user interface]
+                                 	(* <- lang_en;; *);
+                                 <- sc_model_computer_system_interface;;
+*];;

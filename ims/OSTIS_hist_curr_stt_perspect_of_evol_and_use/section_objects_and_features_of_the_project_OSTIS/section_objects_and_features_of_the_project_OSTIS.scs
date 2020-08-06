@@ -1,0 +1,22 @@
+section_objects_and_features_of_the_project_OSTIS
+
+=> nrel_main_idtf:
+	[Раздел. Цели и особенности Проекта OSTIS]
+	(* <- lang_ru;; *);
+	[Section. Objects and features of the project OSTIS]
+	(* <- lang_en;; *);
+<- not_enough_formed_structure;;
+
+section_objects_and_features_of_the_project_OSTIS = [*
+                                                      project_ostis <= nrel_sc_text_translation:
+                                                       ...
+                                                       (*
+                                                       -> rrel_example:
+                                                         "file://nl_files/section_objects_and_features_of_the_project_OSTIS.html"
+                                                      	(* <- lang_ru;;	*);;
+                                                       *);;
+
+*];;
+section_objects_and_features_of_the_project_OSTIS
+-> rrel_key_sc_element:
+	project_ostis;;
