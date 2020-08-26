@@ -1,0 +1,369 @@
+ui_editor_button_add_attribute
+=> nrel_main_idtf:
+	[Добавить отношение] (* <- lang_ru;; *);
+	[Add atribute] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, добавляющий новый аттрибут] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that adding attribute] (* <- lang_en;; *);; *);;
+	*);;
+
+
+// ------------------------------------------------
+ui_editor_button_change_arc_type
+=> nrel_main_idtf:
+	[Изменить тип дуги] (* <- lang_ru;; *);
+	[Change arc type] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, изменяющий тип выбранной дуги] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that change type of selected arc] (* <- lang_en;; *);; *);;
+	*);;
+
+
+// ------------------------------------------------
+ui_editor_button_add_contour
+=> nrel_main_idtf:
+	[->контур] (* <- lang_ru;; *);
+	[->contour] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, приводящий тип вершины к контуру] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that change type of node to contour] (* <- lang_en;; *);; *);;
+	*);;
+
+
+// ------------------------------------------------
+ui_editor_button_add_element
+=> nrel_main_idtf:
+	[->множество] (* <- lang_ru;; *);
+	[->set] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, приводящий тип вершины к множеству] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that change type of node to set] (* <- lang_en;; *);; *);;
+	*);;
+
+
+// ------------------------------------------------
+ui_editor_button_add_text
+=> nrel_main_idtf:
+	[->текст] (* <- lang_ru;; *);
+	[->text] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, приводящий тип вершины к текстовому] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that change type of node to text] (* <- lang_en;; *);; *);;
+	*);;
+
+
+// ------------------------------------------------
+ui_editor_button_link
+=> nrel_main_idtf:
+	[->файл] (* <- lang_ru;; *);
+	[->file] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, позволяющий создать ссылку или отредактировать] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [create or edit sc-link] (* <- lang_en;; *);; *);;
+	*);;
+
+
+// ------------------------------------------------
+ui_editor_button_save
+=> nrel_main_idtf:
+	[Сохранить] (* <- lang_ru;; *);
+	[Save] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, позволяющий сохранить текущую статью] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that allow to save current article] (* <- lang_en;; *);; *);;
+	*);;
+
+
+// ------------------------------------------------
+ui_editor_button_json_export
+=> nrel_main_idtf:
+	[Экспорт в JSON] (* <- lang_ru;; *);
+	[Export to JSON] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, экспортирующий статью в json] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that export scn article to json] (* <- lang_en;; *);; *);;
+	*);;
+
+
+// ------------------------------------------------
+ui_editor_button_scs_export
+=> nrel_main_idtf:
+	[Экспорт в SCS] (* <- lang_ru;; *);
+	[Export to SCS] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, экспортирующий статью в scs] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that export scn article to scs] (* <- lang_en;; *);; *);;
+	*);;
+
+
+// ------------------------------------------------
+ui_editor_button_download
+=> nrel_main_idtf:
+	[Скачать] (* <- lang_ru;; *);
+	[Download] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, позволяющий скачать статью] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that allow to download article] (* <- lang_en;; *);; *);;
+	*);;
+
+
+// ------------------------------------------------
+ui_editor_select_template
+=> nrel_main_idtf:
+	[Выбрать шаблон] (* <- lang_ru;; *);
+	[Select title] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, позволяющий выбрать шаблон для статьи] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that allow to select template for article] (* <- lang_en;; *);; *);;
+	*);;
+
+
+
+// ------------------------------------------------
+ui_editor_accordion_constant_arcs
+=> nrel_main_idtf:
+	[Константные дуги] (* <- lang_ru;; *);
+	[Constant arcs] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [Константные дуги, выпадающий список] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [Constant arcs, dropdown list] (* <- lang_en;; *);; *);;
+	*);;
+
+
+// ------------------------------------------------
+ui_editor_accordion_variable_arcs
+=> nrel_main_idtf:
+	[Переменные дуги] (* <- lang_ru;; *);
+	[Variable arcs] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [Переменные дуги, выпадающий список] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [Variable arcs, dropdown list] (* <- lang_en;; *);; *);;
+	*);;
+
+
+// ------------------------------------------------
+ui_editor_accordion_other_arcs
+=> nrel_main_idtf:
+	[Другие дуги] (* <- lang_ru;; *);
+	[Other arcs] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [Другие дуги, выпадающий список] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [Other arcs, dropdown list] (* <- lang_en;; *);; *);;
+	*);;
+
+
+// ------------------------------------------------
+ui_editor_label_toolbar
+=> nrel_main_idtf:
+	[Тулбар] (* <- lang_ru;; *);
+	[Toolbar] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, открывающий и скрывающий тулбар] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that open and hide toolbar] (* <- lang_en;; *);; *);;
+	*);;
+
+
+// ------------------------------------------------
+ui_editor_label_history
+=> nrel_main_idtf:
+	[История] (* <- lang_ru;; *);
+	[History] (* <- lang_en;; *);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [элемент управления, открывающий и скрывающий панель истории] (* <- lang_ru;; *);; *);;
+	*);
+
+<- rrel_key_sc_element:
+	...
+	(*
+	<- sc_explanation;;
+	<= nrel_sc_text_translation:
+		... (* -> [control that open and hide history panel] (* <- lang_en;; *);; *);;
+	*);;
+
+
+// ------------------------------------------------

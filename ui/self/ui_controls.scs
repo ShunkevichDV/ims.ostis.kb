@@ -87,8 +87,6 @@ ui_control_search_idtf_edit
 		... (* -> [control that allows to search sc-elements by their identifiers] (* <- lang_en;; *);; *);;
 	*);;
 
-ui_control_search_idtf_edit_example = "file://contents/ui_control_search_idtf_edit_example.gif";;
-
 
 // ------------------------------------------------
 ui_control_select_window_type
