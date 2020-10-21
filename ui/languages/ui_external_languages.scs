@@ -2,34 +2,6 @@ ui_external_languages <- sc_node_not_relation;;
 
 ui_external_languages -> scg_code; scs_code;;
 
-languages <- sc_node_not_relation;;
-
-languages -> lang_ru; lang_en;;
-
-lang_ru
-=> nrel_main_idtf:
-	[Русский язык]
-	(*
-	<- lang_ru;;
-	*);
-=> nrel_main_idtf:
-	[Russian language]
-	(*
-	<- lang_en;;
-	*);;
-
-lang_en
-=> nrel_main_idtf:
-	[Английский язык]
-	(*
-	<- lang_ru;;
-	*);
-=> nrel_main_idtf:
-	[English language]
-	(*
-	<- lang_en;;
-	*);;
-
 nrel_answer
 <- sc_node_norole_relation;;
 
