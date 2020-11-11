@@ -50,6 +50,8 @@ section_subjdomain_actions_and_tasks = [*
                                          	external_subject_ostis_system_interaction;
                                          	external_subject_ostis_system_without_interaction;
                                          	actions_class;
+                                            non_atomic_action_class;
+                                            atomic_action_class;
                                          	independent_actions_class;
                                          	non_independent_actions_class;
                                          	task;
@@ -98,6 +100,50 @@ section_subjdomain_actions_and_tasks = [*
                                          	nrel_class_of_arguments;
                                          	nrel_first_argument_class;
                                          	nrel_second_argument_class;;
+
+
+                                         non_atomic_action_class
+                                         <- sc_node_not_relation;
+                                         => nrel_main_idtf:
+                                         	[неатомарный класс действий]
+                                         	(* <- lang_ru;; *);
+                                         	[non-atomic action class]
+                                         	(* <- lang_en;; *);
+                                         	
+                                         <- rrel_key_sc_element:
+                                         	...
+                                         	(*
+                                         		<- explanation;;
+                                         		<= nrel_sc_text_translation:
+                                         		...
+                                         		(*
+                                         		-> rrel_example:
+                                         				"file://content_html/explanation_for_non_atomic_action_class.html"
+                                         			(* <- lang_ru;;	*);;
+                                         		*);;
+                                         	*);;
+
+                                         atomic_action_class
+                                         <- sc_node_not_relation;
+                                         => nrel_main_idtf:
+                                         	[атомарный класс действий]
+                                         	(* <- lang_ru;; *);
+                                         	[atomic action class]
+                                         	(* <- lang_en;; *);
+                                         	
+                                         <- rrel_key_sc_element:
+                                         	...
+                                         	(*
+                                         		<- explanation;;
+                                         		<= nrel_sc_text_translation:
+                                         		...
+                                         		(*
+                                         		-> rrel_example:
+                                         				"file://content_html/explanation_for_atomic_action_class.html"
+                                         			(* <- lang_ru;;	*);;
+                                         		*);;
+                                         	*);;
+
                                          
                                          question
                                          <- sc_node_not_relation;
@@ -707,6 +753,12 @@ section_subjdomain_actions_and_tasks = [*
                                          {
                                          	independent_actions_class;
                                          	non_independent_actions_class
+                                         };
+
+                                         <= nrel_subdividing:
+                                         {
+                                         	non_atomic_action_class;
+                                            atomic_action_class
                                          };	
                                          
                                          <- rrel_key_sc_element:
@@ -1828,6 +1880,12 @@ rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_o
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> actions_class)
 (*
 	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> non_atomic_action_class)
+(*
+	<- rrel_key_sc_element;;
+	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> atomic_action_class)
+(*
+	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> independent_actions_class)
 (*
 	<- rrel_key_sc_element;;
@@ -1962,4 +2020,4 @@ rrel_key_sc_element -> (section_subjdomain_actions_and_tasks -> subject_domain_o
 	<- rrel_key_sc_element;;
 	=> nrel_key_sc_element_order: (section_subjdomain_actions_and_tasks -> nrel_second_argument_class)
 	(* <- rrel_key_sc_element;; *);;
-*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
+*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;*);;
