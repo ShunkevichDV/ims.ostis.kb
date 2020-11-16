@@ -50,8 +50,8 @@ section_subjdomain_actions_and_tasks = [*
                                          	external_subject_ostis_system_interaction;
                                          	external_subject_ostis_system_without_interaction;
                                          	actions_class;
-                                            non_atomic_action_class;
-                                            atomic_action_class;
+                                         	non_atomic_action_class;
+                                         	atomic_action_class;
                                          	independent_actions_class;
                                          	non_independent_actions_class;
                                          	task;
@@ -758,7 +758,7 @@ section_subjdomain_actions_and_tasks = [*
                                          <= nrel_subdividing:
                                          {
                                          	non_atomic_action_class;
-                                            atomic_action_class
+                                         	atomic_action_class
                                          };	
                                          
                                          <- rrel_key_sc_element:
