@@ -1,0 +1,27 @@
+lib_component_proc_of_finding_action_semantic_neighborhood
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа поиска семантической окрестности действия]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Library component. scp-program of finding action semantic neighborhood]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+
+-> rrel_key_sc_element: 
+	proc_of_finding_action_semantic_neighborhood;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Proc_Find_Action_Semantic_Neighborhood.html" 
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+
+lib_component_proc_of_finding_action_semantic_neighborhood = [*^"file://find_action_semantic_neighborhood.scsi"*];;

@@ -1,0 +1,51 @@
+sc_agent_of_adding_comment_to_elem
+=> nrel_main_idtf:	
+	[sc-агент добавления комментария sc-элемента] (* <- lang_ru;; *);
+	[sc-agent of adding comment to sc-element] (* <- lang_en;; *);
+	
+<- abstract_sc_agent;
+
+=> nrel_primary_initiation_condition: 
+	(sc_event_add_output_arc => question_initiated);
+	
+=> nrel_initiation_condition_and_result: 
+	(..sc_agent_of_adding_comment_to_elem_condition => ..sc_agent_of_adding_comment_to_elem_result);
+	
+<= nrel_sc_agent_key_sc_elements: 
+	{
+	question_initiated;
+	question;
+	action_to_add_comment_to_sc_elem
+	};
+	
+=> nrel_inclusion: 
+	.platform_independent_realization_of_sc_agent_of_adding_comment_to_elem
+	(*
+	<- platform_independent_abstract_sc_agent;;
+	<= nrel_sc_agent_program: 
+		{
+		agent_of_adding_comment_to_elem
+		};;
+		
+	-> sc_agent_of_adding_comment_to_elem_scp 
+		(* <- active_sc_agent;; *);;
+	*);;
+
+..sc_agent_of_adding_comment_to_elem_condition
+= [*
+	action_to_add_comment_to_sc_elem _-> .._question;;
+	question_initiated _-> .._question;;
+	question _-> .._question;;
+	.._question _-> rrel_1:: .._parameter1;;
+	.._question _-> rrel_2:: .._parameter2;;
+*];;
+
+..sc_agent_of_adding_comment_to_elem_result
+= [*
+	action_to_add_comment_to_sc_elem _-> .._question;;
+	question_finished _-> .._question;;
+	question _-> .._question;;
+	.._question _-> rrel_1:: .._parameter1;;
+	.._question _-> rrel_2:: .._parameter2;;
+	.._question _=> nrel_answer:: .._answer;;
+*];;

@@ -1,0 +1,276 @@
+agent_of_adding_comment_to_elem
+=> nrel_main_idtf:
+	[агентная scp-программа добавления комментария к sc-элементу] (* <- lang_ru;; *);
+	[agent scp-program of adding comment to sc-element] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_adding_comment_to_elem 
+	(*
+	-> rrel_params: .agent_of_adding_comment_to_elem_params 
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_adding_comment_to_elem_operator_set
+		(*
+		-> rrel_init: .agent_of_adding_comment_to_elem_operator1A
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+	
+			=> nrel_then: .agent_of_adding_comment_to_elem_operator1B;;
+			=> nrel_else: .agent_of_adding_comment_to_elem_operator_return;;
+			*);;
+		
+		->.agent_of_adding_comment_to_elem_operator1B
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_add_comment_to_sc_elem;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_adding_comment_to_elem_operator1C1;;
+			=> nrel_else: .agent_of_adding_comment_to_elem_operator_return;;
+			*);;
+				
+		-> .agent_of_adding_comment_to_elem_operator1C1 
+			(*
+		  	<- searchElStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _sc_elem_param;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_1;;
+
+		  	=> nrel_then: .agent_of_adding_comment_to_elem_operator1C1_1;;
+		  	=> nrel_else: .agent_of_adding_comment_to_elem_operator_return;;
+			*);;
+
+		-> .agent_of_adding_comment_to_elem_operator1C1_1 
+			(*
+		  	<- searchElStr5;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: rrel_link: _message;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: rrel_2;;
+
+		  	=> nrel_then: .agent_of_adding_comment_to_elem_operator1C2;;
+		  	=> nrel_else: .agent_of_adding_comment_to_elem_operator_call_proc_of_adding_validating_message_wrong_second_param;;
+			*);;
+
+		-> .agent_of_adding_comment_to_elem_operator1C2
+			(*
+			<- searchElStr5;;
+			
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		  	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _auth_user;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_authors;;	
+
+		    => nrel_then: .agent_of_adding_comment_to_elem_operator1C3;;
+		  	=> nrel_else: .agent_of_adding_comment_to_elem_operator_return;;
+			*);;
+
+		-> .agent_of_adding_comment_to_elem_operator1C3
+			(*
+			<- searchElStr5;;
+			
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _auth_user;;
+		  	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _used_lang;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: ui_nrel_user_used_language;;	
+
+		    => nrel_then: .agent_of_adding_comment_to_elem_operator2A;;
+		  	=> nrel_else: .agent_of_adding_comment_to_elem_operator4B;;
+			*);;	
+
+		-> .agent_of_adding_comment_to_elem_operator2A
+            (*
+		 	<- genEl;;
+
+		 	-> rrel_1: rrel_assign: rrel_node: rrel_const: rrel_scp_var: _answer_of_adding_comment_to_elem;;
+
+		 	=> nrel_goto: .agent_of_adding_comment_to_elem_operator_call_proc_of_generating_comment;;
+		 	*);;
+
+		-> .agent_of_adding_comment_to_elem_operator_call_proc_of_generating_comment 
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_generating_validation_comment;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_adding_comment_to_elem_operator_call_proc_of_generating_comment_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _sc_elem_param;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _message;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _answer_of_adding_comment_to_elem;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_adding_comment_to_elem_operator_waitreturn_proc_of_generating_comment;;
+			*);;
+
+		-> .agent_of_adding_comment_to_elem_operator_waitreturn_proc_of_generating_comment
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_adding_comment_to_elem_operator1D4_1;;
+			*);; 
+
+		-> .agent_of_adding_comment_to_elem_operator1D4_1
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: lang_en;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _message;;
+
+			=> nrel_then: .agent_of_adding_comment_to_elem_operator1G_erase_lang_en_arc;;
+			=> nrel_else: .agent_of_adding_comment_to_elem_operator1D4;;
+			*);;	
+
+		-> .agent_of_adding_comment_to_elem_operator1G_erase_lang_en_arc 
+		    (*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc1;;
+
+			=> nrel_goto: .agent_of_adding_comment_to_elem_operator1D4_2;;
+			*);;
+			
+		-> .agent_of_adding_comment_to_elem_operator1D4_2
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_adding_comment_to_elem;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: lang_en;;
+
+			=> nrel_then: .agent_of_adding_comment_to_elem_operator1G_erase_lang_en_from_answer;;
+			=> nrel_else: .agent_of_adding_comment_to_elem_operator1D4;;
+			*);;
+
+		-> .agent_of_adding_comment_to_elem_operator1G_erase_lang_en_from_answer 
+		    (*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc1;;
+
+			=> nrel_goto: .agent_of_adding_comment_to_elem_operator1D4;;
+			*);;				
+
+		-> .agent_of_adding_comment_to_elem_operator1D4 
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _used_lang;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: rrel_const: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _message;;
+
+			=> nrel_goto: .agent_of_adding_comment_to_elem_operator1B3_add_lang_arcs_to_answer;;
+			*);;
+
+		-> .agent_of_adding_comment_to_elem_operator1B3_add_lang_arcs_to_answer 
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _used_lang;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _message;;
+		
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_of_adding_comment_to_elem;;
+
+			=> nrel_goto: .agent_of_adding_comment_to_elem_operator1C1_add_language_const_node_to_answer;;
+			*);;
+
+		-> .agent_of_adding_comment_to_elem_operator1C1_add_language_const_node_to_answer
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_of_adding_comment_to_elem;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _used_lang;;
+
+			=> nrel_goto: .agent_of_adding_comment_to_elem_operator3H;;
+			*);;	
+
+		-> .agent_of_adding_comment_to_elem_operator3H
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _answer_of_adding_comment_to_elem;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+
+			=> nrel_goto: .agent_of_adding_comment_to_elem_operator4A;; 
+			*);;
+
+		-> .agent_of_adding_comment_to_elem_operator4A
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_successfully;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+		  	=> nrel_goto: .agent_of_adding_comment_to_elem_operator_return;;
+			*);;
+
+		-> .agent_of_adding_comment_to_elem_operator4B
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: question_finished_unsuccessfully;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+		  	=> nrel_goto: .agent_of_adding_comment_to_elem_operator_return;; 
+			*);; 
+
+/*******************************************************************Wrong Parameters*****************************************************************************************/
+		
+		-> .agent_of_adding_comment_to_elem_operator_call_proc_of_adding_validating_message_wrong_second_param
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_validating_message;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_adding_comment_to_elem_operator_call_proc_of_adding_validating_message_wrong_second_param_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [Wrong 2nd parameter! It must be link];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr3;;
+
+		  	=> nrel_goto: .agent_of_adding_comment_to_elem_operator_waitreturn_proc_of_adding_validating_message_wrong_second_param;;
+			*);;
+
+		-> .agent_of_adding_comment_to_elem_operator_waitreturn_proc_of_adding_validating_message_wrong_second_param
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr3;;
+
+		  	=> nrel_goto: .agent_of_adding_comment_to_elem_operator_return;;
+			*);;	
+
+		-> .agent_of_adding_comment_to_elem_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;
+
+

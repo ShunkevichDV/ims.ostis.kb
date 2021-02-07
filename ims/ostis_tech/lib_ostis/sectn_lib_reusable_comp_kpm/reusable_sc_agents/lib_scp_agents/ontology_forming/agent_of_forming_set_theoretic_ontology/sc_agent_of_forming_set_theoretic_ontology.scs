@@ -1,7 +1,10 @@
 sc_agent_of_forming_set_theoretic_ontology
 => nrel_main_idtf:
-	[sc-агент формирования теоретико-множественной онтологии для заданной предметной области] (* <- lang_ru;; *);
-	[sc-agent of forming set-theoretic ontology for specified subject domain] (* <- lang_en;; *);
+	[sc-агент формирования теоретико-множественной онтологии для заданной предметной области]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[sc-agent of forming set-theoretic ontology for specified subject domain]
+	(* <- lang_en;; *);
 	
 <- abstract_sc_agent;
 
@@ -26,7 +29,9 @@ sc_agent_of_forming_set_theoretic_ontology
 		{
 		agent_of_forming_set_theoretic_ontology;
 		proc_of_forming_set_theoretic_semantic_neighbourhood_for_sc_element;
-		proc_of_finding_definitional_domain
+		proc_of_removing_previosly_formed_ontology;
+		proc_of_forming_answer_for_agents_of_forming_ontologies;
+		proc_of_adding_validating_message
 		};;
 
 	-> sc_agent_of_forming_set_theoretic_ontology_scp   

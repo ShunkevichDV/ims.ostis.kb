@@ -2,6 +2,7 @@ lib_ui_menu_file_for_forming_logical_ontology_for_the_given_domain
 => nrel_main_idtf:
 	[Компонент библиотеки. Команда пользовательского интерфейса для формирования логической онтологии заданной предметной области]
 	(* <- lang_ru;; *);
+=> nrel_main_idtf:
 	[Library component. User interface command for forming logical ontology for the given domain]
 	(* <- lang_en;; *);
 

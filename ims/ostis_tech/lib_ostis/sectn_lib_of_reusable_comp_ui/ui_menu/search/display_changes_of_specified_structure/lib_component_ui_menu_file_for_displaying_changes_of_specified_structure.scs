@@ -1,0 +1,26 @@
+lib_component_ui_menu_file_for_displaying_changes_of_specified_structure
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса вывода изменений заданной sc-структуры]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Library component. User interface command of displaying changes of specified structure]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;
+<- library_of_reusable_components_of_knowledge_bases;
+
+<- rrel_key_sc_element:
+	... 
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/UI_displaying_changes_of_specified_structure.html"
+				(* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+lib_component_ui_menu_file_for_displaying_changes_of_specified_structure = [*^"file://ui_menu_file_for_displaying_changes_of_specified_structure.scsi"*];;
