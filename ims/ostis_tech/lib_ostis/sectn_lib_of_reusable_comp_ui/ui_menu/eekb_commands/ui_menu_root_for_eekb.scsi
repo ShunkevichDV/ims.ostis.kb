@@ -36,10 +36,10 @@ ui_menu_root_for_eekb <- ui_user_command_class_noatom;
 	ui_menu_kb_verification_for_eekb
 		(*
 		=> nrel_command_order: 
-			ui_menu_ontology_forming_for_eekb;;
+			ui_menu_fragment_forming_for_eekb;;
 		*);	
 
-	ui_menu_ontology_forming_for_eekb
+	ui_menu_fragment_forming_for_eekb
 		(*
 		=> nrel_command_order: 
 			ui_menu_kb_evaluation_for_eekb;;

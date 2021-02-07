@@ -1,0 +1,24 @@
+ui_menu_agent_of_assign_user_as_administrator_of_project <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
+
+ui_menu_agent_of_assign_user_as_administrator_of_project => nrel_main_idtf: 
+	[Назначить пользователя администратором проекта] 
+	(* <- lang_ru;; *);
+	[Assign user as administrator of project] 
+	(* <- lang_en;; *);;
+
+ui_menu_agent_of_assign_user_as_administrator_of_project => ui_nrel_command_template:
+	[*
+		action_assign_user_role _-> ._action_assign_user_role_instance
+			(*
+			_-> rrel_1:: ui_arg_1;;
+			_-> rrel_2:: nrel_administrator;;	
+			_-> rrel_3:: ui_arg_2;;			
+			*);;
+		._action_assign_user_role_instance _<- question;;
+	*];;
+
+ui_menu_agent_of_assign_user_as_administrator_of_project => ui_nrel_command_lang_template: 
+	[Назначить пользователя: $ui_arg_1 администратором проекта: $ui_arg_2] 
+	(* <- lang_ru;; *);
+	[Assign user: $ui_arg_1 as administrator of project: $ui_arg_2] 
+	(* <- lang_en;; *);;

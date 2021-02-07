@@ -1,0 +1,269 @@
+agent_of_finding_all_unreviewed_proposals
+=> nrel_main_idtf:
+	[агентная scp-программа поиска всех нерассмотренных предложений] (* <- lang_ru;; *);
+	[agent scp-program of finding all unreviewed proposals] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_finding_all_unreviewed_proposals
+	(*
+	-> rrel_params: .agent_of_finding_all_unreviewed_proposals_params
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_finding_all_unreviewed_proposals_set
+		(*
+		-> rrel_init: .agent_of_finding_all_unreviewed_proposals1A
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_assign: rrel_scp_var: _temp_of_question;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+		 	=> nrel_goto: .agent_of_finding_all_unreviewed_proposals1B;;
+			*);;
+		
+		->.agent_of_finding_all_unreviewed_proposals1B
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_to_find_all_unreviewed_proposals;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_finding_all_unreviewed_proposals_gen_answer;;
+			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_return;;
+			*);;
+
+		-> .agent_of_finding_all_unreviewed_proposals_gen_answer
+			(*
+			<- genEl;;
+		  	
+			-> rrel_1: rrel_assign: rrel_const: rrel_scp_var: rrel_node: _answer_for_finding_all_unreviewed_proposals;;
+			
+			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_operator_J1;;
+			*);;  	
+
+		-> .agent_of_finding_all_unreviewed_proposals_operator_J1
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: question_initiated;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _sign_of_action;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_signs_of_action;;
+
+		  	=> nrel_then: .agent_of_finding_all_unreviewed_proposals_operator1D_gen_set_of_number_of_actions;;
+		  	=> nrel_else: .agent_of_finding_all_unreviewed_proposals_call_proc_of_adding_general_action_comment;;
+			*);;
+
+		-> .agent_of_finding_all_unreviewed_proposals_operator1D_gen_set_of_number_of_actions
+            (*
+		 	<- contAssign;;
+
+		 	-> rrel_1: rrel_assign: rrel_scp_var: _number_of_actions;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
+
+		 	=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_operator_J2_loop_enter;;
+		 	*);;
+
+		-> .agent_of_finding_all_unreviewed_proposals_operator_J2_loop_enter 
+			(*
+		  	<- searchElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _set_of_signs_of_action;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _init_action;;
+
+		  	=> nrel_then: .agent_of_finding_all_unreviewed_proposals_operator_J3;;
+		  	=> nrel_else: .agent_of_finding_all_unreviewed_proposals_operator_J9;;
+			*);;
+
+		-> .agent_of_finding_all_unreviewed_proposals_operator_J3 
+            (*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc1;;
+
+		 	=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_operator_J4;;
+		 	*);;	
+
+		-> .agent_of_finding_all_unreviewed_proposals_operator_J4
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _init_action;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _proposal;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_proposal;;
+
+			=> nrel_then: .agent_of_finding_all_unreviewed_proposals_operator_J5;;
+			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_operator_J2_loop_enter;;
+			*);;    
+
+		-> .agent_of_finding_all_unreviewed_proposals_operator_J5
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _init_action;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _some_user;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_approved;;
+
+			=> nrel_then: .agent_of_finding_all_unreviewed_proposals_operator_J2_loop_enter;;
+			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_operator_J6;;
+			*);;  
+
+		-> .agent_of_finding_all_unreviewed_proposals_operator_J6
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _init_action;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _some_user;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_rejected;;
+
+			=> nrel_then: .agent_of_finding_all_unreviewed_proposals_operator_J2_loop_enter;;
+			=> nrel_else: .agent_of_finding_all_unreviewed_proposals_operator_call_J7;;
+			*);;  		
+
+		-> .agent_of_finding_all_unreviewed_proposals_operator_call_J7
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_proposal_to_answer;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_all_unreviewed_proposals_operator_call_J7_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _init_action;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_waitreturn_J8;;
+			*);;
+
+		-> .agent_of_finding_all_unreviewed_proposals_waitreturn_J8
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_operator_increase_actions_count;;
+			*);;	
+
+		-> .agent_of_finding_all_unreviewed_proposals_operator_increase_actions_count
+			(*
+		  	<- contAdd;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _number_of_actions;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_var: _number_of_actions;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: [1];;
+
+		  	=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_operator_J10;;
+			*);;	
+
+		-> .agent_of_finding_all_unreviewed_proposals_operator_J10
+			(*
+		  	<- searchSetStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: question_initiated;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _init_action;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals;;
+
+		  	=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_operator_J2_loop_enter;;
+			*);;	
+
+		-> .agent_of_finding_all_unreviewed_proposals_operator_J9
+            (*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _set_of_signs_of_action;;
+
+		 	=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_operator_is_answer_empty;;
+		 	*);; 	
+
+        -> .agent_of_finding_all_unreviewed_proposals_operator_is_answer_empty
+            (*
+		 	<- ifEq;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _number_of_actions;;
+		 	-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
+
+		 	=> nrel_then: .agent_of_finding_all_unreviewed_proposals_call_proc_of_adding_general_action_comment;;
+		 	=> nrel_else: .agent_of_finding_all_unreviewed_proposals_operator_add_question_initiated_to_answer;;
+		 	*);;    
+
+        -> .agent_of_finding_all_unreviewed_proposals_operator_add_question_initiated_to_answer
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_const: question_initiated;;
+
+		  	=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_operator_gen_final_answer;;
+			*);;         	
+		
+		-> .agent_of_finding_all_unreviewed_proposals_operator_gen_final_answer
+			(*
+			<- genElStr5;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _answer_for_finding_all_unreviewed_proposals;;
+			-> rrel_4: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+
+			=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_operator_add_quest_to_last_entity_than_return;;
+			*);;
+
+		-> .agent_of_finding_all_unreviewed_proposals_call_proc_of_adding_general_action_comment
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_adding_general_action_comment;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_finding_all_unreviewed_proposals_call_proc_of_adding_general_action_comment_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: [The search hasn't given any results];;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_waitreturn_proc_of_adding_general_action_comment;;
+			*);;
+
+		-> .agent_of_finding_all_unreviewed_proposals_waitreturn_proc_of_adding_general_action_comment
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_operator_add_quest_to_last_entity_than_return;;
+			*);;
+
+		-> .agent_of_finding_all_unreviewed_proposals_operator_add_quest_to_last_entity_than_return
+			(*
+		  	<- genElStr3;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: last_entity;;
+		  	-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_const: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+		  	=> nrel_goto: .agent_of_finding_all_unreviewed_proposals_return;;
+			*);;  	
+
+		-> .agent_of_finding_all_unreviewed_proposals_return
+			(*
+			<- return;;
+			*);;
+
+		*);;
+	*);;

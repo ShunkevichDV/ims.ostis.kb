@@ -1,6 +1,6 @@
 lib_component_ui_menu_agent_of_assign_user_as_manager
 => nrel_main_idtf:
-	[Компонент библиотеки. Команда пользовательского интерфейса назначения менеджером]
+	[Компонент библиотеки. Команда пользовательского интерфейса назначения пользователя менеджером]
 	(* <- lang_ru;; *);
 	[Library component. User interface command of assign user as manager]
 	(* <- lang_en;; *);

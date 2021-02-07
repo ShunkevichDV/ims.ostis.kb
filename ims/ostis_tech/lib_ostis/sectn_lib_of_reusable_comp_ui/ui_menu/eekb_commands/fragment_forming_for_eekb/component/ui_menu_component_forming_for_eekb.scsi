@@ -1,0 +1,12 @@
+ui_menu_component_forming_for_eekb <- ui_user_command_class_noatom;
+=> nrel_main_idtf: [Формирование компонентов] (* <- lang_ru;; *);
+=> nrel_main_idtf: [Component forming] (* <- lang_en;; *);
+<= nrel_ui_commands_decomposition:
+	{
+		ui_menu_agent_of_forming_a_non_atomic_component_from_atomic_components
+	};;
+
+ui_menu_component_forming_for_eekb <= nrel_command_access: ...
+		(*
+			-> nrel_authorised_user;;
+		*);;

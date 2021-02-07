@@ -1,0 +1,39 @@
+lib_component_agent_of_adding_comment_to_elem
+=> nrel_main_idtf:
+	[Компонент библиотеки. sc-агент добавления комментария к sc-элементу]
+	(* <- lang_ru;; *);
+	[Library component. sc-agent of adding comment to sc-element]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components; 
+<- library_of_atomic_reusable_components;
+
+=> nrel_attendant_component: 
+	lib_component_ui_menu_file_of_adding_comment_to_elem;
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_adding_comment_to_elem;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/agent_of_adding_comment_to_elem.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+action_to_add_comment_to_sc_elem
+<- sc_node_not_relation;
+=> nrel_main_idtf:
+	[действие. добавить комментарий к sc-элементу]
+ 	(* <- lang_ru;; *);
+ 	[action. add comment to sc-element]
+ 	(* <- lang_en;; *);;
+
+
+

@@ -1,8 +1,11 @@
 agent_of_removing_sc_element
 => nrel_main_idtf:
-	[агентная scp-программа удаления sc-элемента] (* <- lang_ru;; *);
-	[agent scp-program of removing sc-element] (* <- lang_en;; *);
-	<- agent_scp_program;;
+	[агентная scp-программа удаления sc-элемента]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[agent scp-program of removing sc-element]
+	(* <- lang_en;; *);
+<- agent_scp_program;;
 
 scp_program -> agent_of_removing_sc_element 
 	(*
@@ -30,7 +33,7 @@ scp_program -> agent_of_removing_sc_element
 			<- searchElStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_const: action_of_removing_sc_element;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
 
 			=> nrel_then: .agent_of_removing_sc_element_operator1C;;
@@ -42,7 +45,7 @@ scp_program -> agent_of_removing_sc_element
 			<- searchElStr3;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
 			-> rrel_3: rrel_assign: rrel_scp_var: _param;;
 
 			=> nrel_then: .agent_of_removing_sc_element_operator2A;;
@@ -53,85 +56,146 @@ scp_program -> agent_of_removing_sc_element
 			(*
 			<- genEl;;
 
-			-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _removable_elem_set;;
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: _identifiers;;
 
 			=> nrel_goto: .agent_of_removing_sc_element_operator2B;;
 			*);;
 
-		->.agent_of_removing_sc_element_operator2B
+		-> .agent_of_removing_sc_element_operator2B
 			(*
-			<- searchSetStr5;;
+			<- searchElStr5;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
-			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _text;;
-			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_system_identifer;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _idtf;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_system_identifier;;
 
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _removable_elem_set;;
-
-			=> nrel_goto: .agent_of_removing_sc_element_operator2C;;
+			=> nrel_then: .agent_of_removing_sc_element_operator2C;;
+			=> nrel_else: .agent_of_removing_sc_element_operator2D;;
 			*);;
 
-		->.agent_of_removing_sc_element_operator2C
+		-> .agent_of_removing_sc_element_operator2C
 			(*
-			<- searchSetStr5;;
+			<- eraseEl;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
-			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _text;;
-			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
-			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
-
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _removable_elem_set;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _idtf;;
 
 			=> nrel_goto: .agent_of_removing_sc_element_operator2D;;
 			*);;
 
-		->.agent_of_removing_sc_element_operator2D
+		-> .agent_of_removing_sc_element_operator2D
 			(*
 			<- searchSetStr5;;
 
 			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
-			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: _text;;
-			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _idtf;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_main_idtf;;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _identifiers;;
+
+			=> nrel_goto: .agent_of_removing_sc_element_operator2E;;
+			*);;
+
+		-> .agent_of_removing_sc_element_operator2E
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _idtf;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
 			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_idtf;;
 
-			-> rrel_set_3: rrel_fixed: rrel_scp_var: _removable_elem_set;;
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: _identifiers;;
 
 			=> nrel_goto: .agent_of_removing_sc_element_operator3A;;
 			*);;
 
 		-> .agent_of_removing_sc_element_operator3A
 			(*
-			<- eraseSetStr3;;
+			<- searchElStr3;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: _removable_elem_set;;
-			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
-			-> rrel_3: rrel_assign: rrel_scp_var: rrel_erase: _elem;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _identifiers;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: rrel_common: _binary_arc;;
 
-			=> nrel_goto: .agent_of_removing_sc_element_operator3B;;
+			=> nrel_then: .agent_of_removing_sc_element_operator3B;;
+			=> nrel_else: .agent_of_removing_sc_element_operator8;;
 			*);;
 
 		-> .agent_of_removing_sc_element_operator3B
 			(*
 			<- eraseEl;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _param;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_pos_const_perm: rrel_erase: _arc1;;
 
-			=> nrel_goto: .agent_of_removing_sc_element_operator3C;;
+			=> nrel_goto: .agent_of_removing_sc_element_operator3C;; 
 			*);;
 
 		-> .agent_of_removing_sc_element_operator3C
 			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _node;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: rrel_common: _binary_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _idtf;;
+
+			=> nrel_goto: .agent_of_removing_sc_element_operator3D;;
+			*);;
+
+		-> .agent_of_removing_sc_element_operator3D
+			(*
 			<- eraseEl;;
 
-			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _removable_elem_set;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_common: rrel_erase: _binary_arc;;
 
-			=> nrel_goto: .agent_of_removing_sc_element_operator_return1;;
+			=> nrel_goto: .agent_of_removing_sc_element_operator3E;;
 			*);;
-			
+
+		-> .agent_of_removing_sc_element_operator3E
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _node;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _idtf;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_assign: rrel_scp_var: rrel_norole_relation: _relation;;
+
+			=> nrel_then: .agent_of_removing_sc_element_operator3A;;
+			=> nrel_else: .agent_of_removing_sc_element_operator3F;;
+			*);;
+
+		-> .agent_of_removing_sc_element_operator3F
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _idtf;;
+
+			=> nrel_goto: .agent_of_removing_sc_element_operator3A;;
+			*);;
+
+		-> .agent_of_removing_sc_element_operator8
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _identifiers;;
+
+			=> nrel_goto: .agent_of_removing_sc_element_operator9;;
+			*);;
+
+		-> .agent_of_removing_sc_element_operator9
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _param;;
+
+			=> nrel_goto: .agent_of_removing_sc_element_operator_return;;
+			*);;
+
 		-> .agent_of_removing_sc_element_operator_return 
 			(*
 			<- return;;

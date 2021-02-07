@@ -1,0 +1,6 @@
+sc_text_agent_of_finding_component_dependencies
+-> rrel_key_sc_element:
+	agent_of_finding_component_dependencies;
+<- scp_program_sc_text;;
+
+sc_text_agent_of_finding_component_dependencies = [*^"file://agent_of_finding_component_dependencies.scsi"*];;

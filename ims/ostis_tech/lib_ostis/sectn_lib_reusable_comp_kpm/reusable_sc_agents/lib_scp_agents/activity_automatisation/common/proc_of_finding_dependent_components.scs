@@ -1,0 +1,139 @@
+scp_program -> proc_of_finding_dependent_components 
+	(*	
+	-> rrel_params: .proc_of_finding_dependent_components_params 
+		(*
+		-> rrel_1: rrel_in: _component;;
+		-> rrel_2: rrel_in: _answer;;
+		*);;
+
+	-> rrel_operators: .proc_of_finding_dependent_components_operator_set 
+		(*
+		-> rrel_init: .proc_of_finding_dependent_components_operator1A
+			(*
+		 	<- searchSetStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _component;;
+		 	-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_assign: rrel_scp_var: _elem;;
+            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_attendant_component;;
+	         
+            -> rrel_set_3: rrel_assign: rrel_scp_var: _current_dependent_components;;
+
+            => nrel_then: .proc_of_finding_dependent_components_operator2A;;
+			=> nrel_else: .proc_of_finding_dependent_components_operator_return;;
+            *);;
+
+		-> .proc_of_finding_dependent_components_operator2A
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _current_dependent_components;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _dependent_component;;
+
+			=> nrel_then: .proc_of_finding_dependent_components_operator3A;;
+			=> nrel_else: .proc_of_finding_dependent_components_operator_return;;
+			*);; 
+
+        -> .proc_of_finding_dependent_components_operator3A
+			(*
+		 	<- eraseEl;;
+
+		 	-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc;;
+
+            => nrel_goto: .proc_of_finding_dependent_components_operator4A;;
+		 	*);;
+
+		-> .proc_of_finding_dependent_components_operator4A 
+			(*
+			<- searchSetStr5;;
+
+		 	-> rrel_1: rrel_fixed: rrel_scp_var: _component;;
+		 	-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _arc1;;
+		 	-> rrel_3: rrel_fixed: rrel_scp_var: _dependent_component;;
+            -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		 	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_attendant_component;;
+
+            -> rrel_set_2: rrel_fixed: rrel_scp_var: _answer;;
+            -> rrel_set_4: rrel_fixed: rrel_scp_var: _answer;;
+
+	        => nrel_goto: .proc_of_finding_dependent_components_operator5A;;
+            		*);;
+
+		-> .proc_of_finding_dependent_components_operator5A
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _dependent_component;;
+
+			=> nrel_then: .proc_of_finding_dependent_components_operator2A;;
+			=> nrel_else: .proc_of_finding_dependent_components_operator6A;;
+			*);; 
+
+		-> .proc_of_finding_dependent_components_operator6A
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _dependent_component;;
+
+			=> nrel_goto: .proc_of_finding_dependent_components_operator1B;;
+			*);; 
+
+		-> .proc_of_finding_dependent_components_operator1B
+			(*
+		  	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_of_finding_dependent_components;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_of_finding_dependent_components_operator1B_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _dependent_component;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _answer;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr;;
+
+		  	=> nrel_goto: .proc_of_finding_dependent_components_operator2B;;
+			*);;
+
+		-> .proc_of_finding_dependent_components_operator2B
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr;;
+
+		  	=> nrel_goto: .proc_of_finding_dependent_components_operator1C;;
+			*);;
+
+        -> .proc_of_finding_dependent_components_operator1C
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_attendant_component;;
+
+			=> nrel_then: .proc_of_finding_dependent_components_operator2A;;
+			=> nrel_else: .proc_of_finding_dependent_components_operator2C;;
+			*);;  
+
+        -> .proc_of_finding_dependent_components_operator2C
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_attendant_component;;
+
+			=> nrel_goto: .proc_of_finding_dependent_components_operator2A;;
+			*);;  
+
+		-> .proc_of_finding_dependent_components_operator_return 
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

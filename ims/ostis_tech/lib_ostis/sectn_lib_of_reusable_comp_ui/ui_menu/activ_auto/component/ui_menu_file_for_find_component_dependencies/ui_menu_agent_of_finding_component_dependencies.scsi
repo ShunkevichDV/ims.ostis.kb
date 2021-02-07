@@ -1,0 +1,22 @@
+ui_menu_agent_of_finding_component_dependencies <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
+
+ui_menu_agent_of_finding_component_dependencies => nrel_main_idtf: 
+	[Какие компоненты являются зависимыми?]
+	(* <- lang_ru;; *);
+	[What components are dependent?] 
+	(* <- lang_en;; *);;
+
+ui_menu_agent_of_finding_component_dependencies => ui_nrel_command_template:
+	[*
+		action_find_component_dependencies _-> ._action_find_component_dependencies_instance
+			(*
+			_-> rrel_1:: ui_arg_1;;	
+			*);;
+		._action_find_component_dependencies_instance _<- question;;
+	*];;
+
+ui_menu_agent_of_finding_component_dependencies => ui_nrel_command_lang_template: 
+	[Найти зависимые компоненты для компонента: $ui_arg_1] 
+	(* <- lang_ru;; *);
+	[Find dependent components for component: $ui_arg_1] 
+	(* <- lang_en;; *);;

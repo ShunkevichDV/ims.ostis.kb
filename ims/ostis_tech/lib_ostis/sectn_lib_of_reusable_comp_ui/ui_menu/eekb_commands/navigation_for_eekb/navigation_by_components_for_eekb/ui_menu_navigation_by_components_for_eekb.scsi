@@ -1,0 +1,14 @@
+ui_menu_navigation_by_components_for_eekb <- ui_user_command_class_noatom;
+=> nrel_main_idtf: [Поиск компонентов] (* <- lang_ru;; *);
+=> nrel_main_idtf: [Component search] (* <- lang_en;; *);
+<= nrel_ui_commands_decomposition:
+	{
+		ui_menu_agent_of_finding_components_within_which_the_concepts_are_described
+		ui_menu_agent_of_finding_component_dependencies;
+		ui_menu_agent_of_finding_all_non_atomic_components
+	};;
+
+ui_menu_navigation_by_components_for_eekb <= nrel_command_access: ...
+		(*
+			-> nrel_authorised_user;;
+		*);;

@@ -1,0 +1,22 @@
+ui_menu_agent_of_finding_components_within_which_the_concepts_are_described <- ui_user_command_class_atom; ui_user_command_class_view_kb;;
+
+ui_menu_agent_of_finding_components_within_which_the_concepts_are_described => nrel_main_idtf: 
+	[Найти компоненты в рамках которых описываются данные понятия] 
+	(* <- lang_ru;; *);
+	[Find components within which the concepts are described] 
+	(* <- lang_en;; *);;
+
+ui_menu_agent_of_finding_components_within_which_the_concepts_are_described => ui_nrel_command_template:
+	[*
+		action_find_components_within_which_the_concepts_are_described _-> ._action_find_components_within_which_the_concepts_are_described_instance
+			(*
+			_-> rrel_1:: ui_arg_1;;				
+			*);;
+		._action_find_components_within_which_the_concepts_are_described_instance _<- question;;
+	*];;
+
+ui_menu_agent_of_finding_components_within_which_the_concepts_are_described => ui_nrel_command_lang_template: 
+	[Найти компоненты в рамках которых описывается понятие: $ui_arg_1] 
+	(* <- lang_ru;; *);
+	[Find components within which the concept: $ui_arg_1 is described] 
+	(* <- lang_en;; *);;

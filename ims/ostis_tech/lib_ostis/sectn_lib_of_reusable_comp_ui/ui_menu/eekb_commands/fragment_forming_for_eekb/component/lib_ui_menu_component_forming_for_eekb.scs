@@ -1,0 +1,16 @@
+lib_ui_menu_component_forming_for_eekb
+=> nrel_main_idtf:
+	[Компонент библиотеки. Формирование компонентов]
+	(* <- lang_ru;; *);
+	[Library component. Component forming]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_non_atomic_reusable_components;
+
+<= nrel_library_component_decomposition:
+	{		
+		lib_component_ui_menu_agent_of_forming_a_non_atomic_component_from_atomic_components
+	};;
+
+lib_ui_menu_component_forming_for_eekb = [*^"file://ui_menu_component_forming_for_eekb.scsi"*];;

@@ -1,0 +1,228 @@
+scp_program -> proc_finding_nestings (*	
+	-> rrel_params: .proc_finding_nestings_params (*
+		-> rrel_1: rrel_in: _target;;
+		-> rrel_2: rrel_in: _base_arc;;
+	*);;
+
+       -> rrel_operators: .proc_finding_nestings_operator_set (*
+
+		-> rrel_init: .proc_finding_nestings_operator1C 
+			(*
+			  <- searchSetStr3;;
+
+			  -> rrel_1: rrel_assign: rrel_scp_var: _node;;
+			  -> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _base_arc;;
+			
+			  -> rrel_set_2: rrel_assign: rrel_scp_var: _input_arcs;;
+	
+			  => nrel_then: .proc_finding_nestings_operator_find_arc_in_arcs_set_loop_enter;;
+			  => nrel_else: .proc_finding_nestings_operator1C_output;;
+			*);; 
+
+		-> .proc_finding_nestings_operator_find_arc_in_arcs_set_loop_enter 
+			(*
+			  <- searchElStr3;;
+
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _input_arcs;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			  -> rrel_3: rrel_assign: rrel_scp_var: _new_base_arc;;
+
+			  => nrel_then: .proc_finding_nestings_operator_find_arc_in_arcs_set_loop_erase;;
+			  => nrel_else: .proc_finding_nestings_operator1C_output;;
+			*);;
+
+		 -> .proc_finding_nestings_operator_find_arc_in_arcs_set_loop_erase 
+			(*
+			 <- eraseEl;;
+
+			 -> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc1;;
+	
+			 => nrel_goto: .proc_finding_nestings_operator_find_node_for_gen;;
+			 *);;
+
+		-> .proc_finding_nestings_operator_find_node_for_gen
+			(*
+			  <- searchElStr3;;
+
+			  -> rrel_1: rrel_assign: rrel_scp_var: _node_for_gen;;
+			  -> rrel_2: rrel_fixed: rrel_pos_const_perm: rrel_scp_var: _new_base_arc;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _base_arc;;
+
+			  => nrel_then: .proc_finding_nestings_operator_input_arc_checker;;
+			  => nrel_else: .proc_finding_nestings_operator_return;;
+			*);;		
+
+
+		 -> .proc_finding_nestings_operator_input_arc_checker 
+			(*
+			 <- ifType;;
+
+			 -> rrel_1: rrel_fixed: rrel_scp_var: rrel_common: _new_base_arc;;
+	
+			 => nrel_then: .proc_finding_nestings_operator_gen_to_target_binary_arc;;
+			 => nrel_else: .proc_finding_nestings_operator_gen_to_target_accessories_arc;;
+			 *);;
+
+
+		-> .proc_finding_nestings_operator_gen_to_target_accessories_arc 
+			(*
+			  <- genElStr3;;
+
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _node_for_gen;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _new_target;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _target;;
+
+			  => nrel_goto: .proc_finding_nestings_operator_function_calling;;
+			*);;
+
+		-> .proc_finding_nestings_operator_gen_to_target_binary_arc 
+			(*
+			  <- genElStr3;;
+
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _node_for_gen;;
+			  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _new_target;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _target;;
+
+			  => nrel_goto: .proc_finding_nestings_operator_function_calling;;
+			*);;
+
+
+		-> .proc_finding_nestings_operator_function_calling
+			(*
+		 	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_finding_nestings;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_finding_nestings_operator_function_calling_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _new_target;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _new_base_arc;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .proc_finding_nestings_operator_descr;;
+			*);;
+
+		-> .proc_finding_nestings_operator_descr 
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr1;;
+
+		  	=> nrel_goto: .proc_finding_nestings_operator_find_arc_in_arcs_set_loop_enter;;
+			*);; 
+
+
+/*******************************************Output arcs*******************************************************************************/
+		-> .proc_finding_nestings_operator1C_output 
+			(*
+			  <- searchSetStr3;;
+
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _base_arc;;
+			  -> rrel_2: rrel_assign: rrel_scp_var: _arc1;;
+			  -> rrel_3: rrel_assign: rrel_scp_var: _node;;
+			
+			  -> rrel_set_2: rrel_assign: rrel_scp_var: _output_arcs;;
+	
+			  => nrel_then: .proc_finding_nestings_operator_find_output_arc_in_arcs_set_loop_enter;;
+			  => nrel_else: .proc_finding_nestings_operator_return;;
+			*);; 
+
+		-> .proc_finding_nestings_operator_find_output_arc_in_arcs_set_loop_enter 
+			(*
+			  <- searchElStr3;;
+
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _output_arcs;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			  -> rrel_3: rrel_assign: rrel_scp_var: _new_base_arc;;
+
+			  => nrel_then: .proc_finding_nestings_operator_find_output_arc_in_arcs_set_loop_erase;;
+			  => nrel_else: .proc_finding_nestings_operator_return;;
+			*);;
+
+		 -> .proc_finding_nestings_operator_find_output_arc_in_arcs_set_loop_erase 
+			(*
+			 <- eraseEl;;
+
+			 -> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc1;;
+	
+			 => nrel_goto: .proc_finding_nestings_operator_find_node_for_gen_output_arc;;
+			 *);;
+
+		-> .proc_finding_nestings_operator_find_node_for_gen_output_arc
+			(*
+			  <- searchElStr3;;
+
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _base_arc;;
+			  -> rrel_2: rrel_fixed: rrel_pos_const_perm: rrel_scp_var: _new_base_arc;;
+			  -> rrel_3: rrel_assign: rrel_scp_var: _node_for_gen;;
+
+			  => nrel_then: .proc_finding_nestings_operator_output_arc_checker;;
+			  => nrel_else: .proc_finding_nestings_operator_return;;
+			*);;		
+
+		 -> .proc_finding_nestings_operator_output_arc_checker 
+			(*
+			 <- ifType;;
+
+			 -> rrel_1: rrel_fixed: rrel_scp_var: rrel_common: _new_base_arc;;
+	
+			 => nrel_then: .proc_finding_nestings_operator_gen_to_target_binary_output_arc;;
+			 => nrel_else: .proc_finding_nestings_operator_gen_to_target_accessories_output_arc;;
+			 *);;
+
+
+		-> .proc_finding_nestings_operator_gen_to_target_accessories_output_arc 
+			(*
+			  <- genElStr3;;
+
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _target;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _new_target;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _node_for_gen;;
+
+			  => nrel_goto: .proc_finding_nestings_operator_function_calling_output_arc;;
+			*);;
+
+		-> .proc_finding_nestings_operator_gen_to_target_binary_output_arc 
+			(*
+			  <- genElStr3;;
+
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _target;;
+			  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _new_target;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _node_for_gen;;
+
+			  => nrel_goto: .proc_finding_nestings_operator_function_calling_output_arc;;
+			*);;
+
+
+		-> .proc_finding_nestings_operator_function_calling_output_arc
+			(*
+		 	<- call;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_const: proc_finding_nestings;;
+		  	-> rrel_2: rrel_fixed: rrel_scp_const: .proc_finding_nestings_operator_function_calling_output_arc_params 
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _new_target;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _new_base_arc;;
+				*);;
+		  	-> rrel_3: rrel_assign: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .proc_finding_nestings_operator_descr_output_arc;;
+			*);;
+
+		-> .proc_finding_nestings_operator_descr_output_arc 
+			(*
+		  	<- waitReturn;;
+
+		  	-> rrel_1: rrel_fixed: rrel_scp_var: _descr2;;
+
+		  	=> nrel_goto: .proc_finding_nestings_operator_find_output_arc_in_arcs_set_loop_enter;;
+			*);; 
+
+
+		-> .proc_finding_nestings_operator_return
+			(*
+			<- return;;
+			*);;
+	*);;
+*);;
